@@ -34,6 +34,7 @@ The following screenshots document the Windows Server installation process, from
 Follow the screenshots showing the Windows Server installation process.
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-01-Windows-Server-Installation/screenshots/21.png?raw=true)
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-01-Windows-Server-Installation/screenshots/22.png?raw=true)
 
 ### Step 3: Initial Server Setup
 
