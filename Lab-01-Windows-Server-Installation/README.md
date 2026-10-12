@@ -1,11 +1,46 @@
 # Lab 1: Installing Windows Server on VMware Workstation
 
 ## Objective
-Install Windows Server in a VMware virtual machine.
+
+Install Windows Server in a virtual machine using VMware Workstation and document the installation process with screenshots.
 
 ## Lab Environment
-- Virtualization: VMware Workstation
-- Server Name: DC-01
+
+- **Virtualization Platform:** VMware Workstation
+- **Virtual Machine Name:** DC-01
+- **Purpose:** Prepare a Windows Server virtual machine for future Active Directory labs.
 
 ## Installation Documentation
-Step-by-step instructions and screenshots will be added here.
+
+The following screenshots document the Windows Server installation process, from virtual machine setup through the installation stages.
+
+### Step 1: Virtual Machine Setup
+
+Review the screenshots showing the initial virtual machine configuration.
+
+### Step 2: Windows Server Installation
+
+Follow the screenshots showing the Windows Server installation process.
+
+### Step 3: Initial Server Setup
+
+Review the screenshots documenting the installation's final stages and the initial server environment.
+
+## Screenshots
+
+All 44 installation screenshots are available in the [`screenshots`](screenshots/) folder.
+
+Browse the images in sequence to follow the lab procedure.
+
+## Outcome
+
+A Windows Server virtual machine named **DC-01** was installed in VMware Workstation.
+
+This virtual machine will serve as the foundation for future Active Directory Domain Services labs.
+
+## Skills Practiced
+
+- Virtualization using VMware Workstation
+- Windows Server installation
+- Virtual machine configuration
+- Technical documentation using GitHub
