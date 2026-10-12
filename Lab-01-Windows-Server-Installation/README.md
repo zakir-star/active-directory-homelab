@@ -1,6 +1,6 @@
 # Lab 1: Installing Windows Server on VMware Workstation
 
-## Objective
+## 🎯Objective
 
 Install Windows Server in a virtual machine using VMware Workstation and document the installation process with screenshots.
 
