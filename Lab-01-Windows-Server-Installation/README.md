@@ -68,9 +68,9 @@ A Windows Server virtual machine named **DC-01** was installed in VMware Worksta
 
 This virtual machine will serve as the foundation for future Active Directory Domain Services labs.
 
-##🚀 Skills Practiced
+## Skills Practiced
 
-✅ Virtualization using VMware Workstation
-✅ Windows Server installation
-✅ Virtual machine configuration
-✅ Technical documentation using GitHub
+- ✅ Virtualization using VMware Workstation
+- ✅ Windows Server installation
+- ✅ Virtual machine configuration
+- ✅ Technical documentation using GitHub
