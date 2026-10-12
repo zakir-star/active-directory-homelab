@@ -16,7 +16,7 @@ The following screenshots document the Windows Server installation process, from
 
 ### Step 1: Virtual Machine Setup
 
-Review the screenshots showing the initial virtual machine configuration.
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-01-Windows-Server-Installation/screenshots/1.png?raw=true)
 
 ### Step 2: Windows Server Installation
 
