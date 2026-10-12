@@ -1,2 +1,2 @@
-# active-directory-homelab
+# Active-Directory-Homelab
 Hands-on Active Directory labs and Windows Server documentation.
