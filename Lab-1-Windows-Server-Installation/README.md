@@ -51,7 +51,7 @@ Follow the screenshots showing the Windows Server installation process.
 Review the screenshots documenting the installation's final stages and the initial server environment.
 
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/32.png?raw=true)
 ![image alt]()
 ![image alt]()
 ![image alt]()
