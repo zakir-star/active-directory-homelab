@@ -97,4 +97,4 @@ Confirm that `example.com` appears in the domain tree.
 
 ## Result✅✅✅
 
-Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`, and the NTDS service was verified as running.
+Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`
