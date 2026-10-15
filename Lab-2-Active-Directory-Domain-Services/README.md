@@ -1,6 +1,6 @@
 # Lab 2: Installing and Configuring Active Directory Domain Services
 
-## Objective
+## 🎯Objective
 
 Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to a domain controller, and create an Active Directory domain.
 
@@ -42,7 +42,8 @@ Confirm that `example.com` appears in the domain tree.
 
 ## Screenshots
 
-Screenshots documenting the installation, configuration, promotion, and verification process are included in the `screenshots` folder.
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(3).png?raw=true)
+
 
 ## Result
 
