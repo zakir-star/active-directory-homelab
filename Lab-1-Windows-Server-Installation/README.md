@@ -15,7 +15,7 @@ Install Windows Server in a virtual machine using VMware Workstation and documen
 The following screenshots document the Windows Server installation process, from virtual machine setup through the installation stages.
 
 ### Step 1: Virtual Machine Setup
-
+## 🖼Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/1.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/2.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/3.png?raw=true)
@@ -30,6 +30,7 @@ The following screenshots document the Windows Server installation process, from
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/18.png?raw=true)
 
 ### Step 2: Windows Server Installation
+## 🖼Screenshots
 
 Follow the screenshots showing the Windows Server installation process.
 
@@ -47,6 +48,7 @@ Follow the screenshots showing the Windows Server installation process.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/31.png?raw=true)
 
 ### Step 3: Initial Server Setup
+## 🖼Screenshots
 
 Review the screenshots documenting the installation's final stages and the initial server environment.
 
