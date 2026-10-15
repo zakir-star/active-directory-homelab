@@ -53,7 +53,8 @@ Confirm that `example.com` appears in the domain tree.
 # Step 2
 ## Configured Static IP Address
 ## 🖼Screenshots
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(12).png?raw=true)
+
 ## Result✅✅✅
 
 Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`, and the NTDS service was verified as running.
