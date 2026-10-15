@@ -19,7 +19,7 @@ Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to
 3. Configured the root domain name as `example.com`.
 4. Configured the domain controller options.
 5. Completed the domain controller promotion.
-6. 6. Checked the AD DS service status using PowerShell.
+6. Checked the AD DS service status using PowerShell.
 7. Verified the domain in Active Directory Users and Computers.
 
 ## 🔎Verification
