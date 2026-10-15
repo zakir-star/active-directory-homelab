@@ -37,7 +37,7 @@ Follow the screenshots showing the Windows Server installation process.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/21.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/22.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/23.png?raw=true)
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/24.png?raw=true)
 ![image alt](
 ![image alt]()
 ![image alt]()
