@@ -4,7 +4,7 @@
 
 Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to a domain controller, and create an Active Directory domain.
 
-## Lab Environment
+## 🛠Lab Environment
 
 - **Virtualization:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -40,13 +40,14 @@ Open **Server Manager → Tools → Active Directory Users and Computers**.
 
 Confirm that `example.com` appears in the domain tree.
 
-## Screenshots
+## 🖼Screenshots
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(3).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(5).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(6).png?raw=true)
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(8).png?raw=true)
 
 
-## Result
+## Result✅✅✅
 
 Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`, and the NTDS service was verified as running.
