@@ -86,6 +86,9 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(38).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(41).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(42).png?raw=true)
+# Verification
+## 🖼Screenshots
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(43).png?raw=true)
 
 ## Result✅✅✅
 
