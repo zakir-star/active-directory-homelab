@@ -39,7 +39,8 @@ Get-Service NTDS
 Open **Server Manager → Tools → Active Directory Users and Computers**.
 
 Confirm that `example.com` appears in the domain tree.
-
+# Step1
+## Change Server name to DC-01
 ## 🖼Screenshots
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(3).png?raw=true)
@@ -48,8 +49,11 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(8).png?raw=true)
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(9).png?raw=true)
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(10).png?raw=true)
-
-
+![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(11).png?raw=true)
+# Step 2
+## Configured Static IP Address
+## 🖼Screenshots
+![image alt]()
 ## Result✅✅✅
 
 Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`, and the NTDS service was verified as running.
