@@ -12,7 +12,7 @@ Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to
 - **Domain Name:** example.com
 - **Domain Controller FQDN:** DC-01.example.com
 
-## 📝📜Tasks Performed
+## 📜Tasks Performed
 
 1. Installed the Active Directory Domain Services role.
 2. Selected **Add a new forest** in the AD DS Configuration Wizard.
@@ -22,7 +22,7 @@ Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to
 6. Verified the domain in Active Directory Users and Computers.
 7. Checked the AD DS service status using PowerShell.
 
-## Verification
+## 🔎Verification
 
 ### 1. Verify the AD DS Service
 
@@ -47,6 +47,7 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(6).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(8).png?raw=true)
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(9).png?raw=true)
+![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(10).png?raw=true)
 
 
 ## Result✅✅✅
