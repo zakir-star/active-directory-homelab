@@ -4,7 +4,7 @@
 
 To create an Organizational Unit (OU) and a domain user in Active Directory Users and Computers, and verify that the user is located inside the correct OU.
 
-## 🧰Lab Environment
+## 🧪Lab Environment
 
 - **Operating System:** Windows Server 2022
 - **Virtualization:** VMware Workstation
@@ -13,7 +13,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ---
 
-## Step 1: Create an Organizational Unit (OU)
+## 📂Step 1: Create an Organizational Unit (OU)
 
 1. Open **Server Manager**.
 2. Click **Tools** and select **Active Directory Users and Computers**.
@@ -33,7 +33,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ---
 
-## Step 2: Create a Domain User
+## 👨‍💼Step 2: Create a Domain User
 
 1. In Active Directory Users and Computers, locate the `IT` OU.
 2. Right-click the `IT` OU and select **New → User**.
@@ -58,7 +58,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ---
 
-## Step 3: Verify the Domain User
+## 🔎Step 3: Verify the Domain User
 
 1. Open Active Directory Users and Computers.
 2. Select the `IT` OU under `example.com`.
