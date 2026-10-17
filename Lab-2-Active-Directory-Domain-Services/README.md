@@ -39,9 +39,9 @@ Get-Service NTDS
 Open **Server Manager → Tools → Active Directory Users and Computers**.
 
 Confirm that `example.com` appears in the domain tree.
-# Step1
+# 🏷️Step1
 ## Change Server name to DC-01
-## 🖼Screenshots
+## 📸Screenshots
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(3).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(5).png?raw=true)
@@ -50,17 +50,17 @@ Confirm that `example.com` appears in the domain tree.
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(9).png?raw=true)
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(10).png?raw=true)
 ![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(11).png?raw=true)
-# Step 2
+# 🌐Step 2
 ## Assign Static IP Address
-## 🖼Screenshots
+## 📸Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(12).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(13).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(14).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(15).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(16).png?raw=true)
-# Step 3
+# 📦Step 3
 ## Install AD DS Service Role
-## 🖼Screenshots
+## 📸Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(17).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(18).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(19).png?raw=true)
@@ -73,9 +73,9 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(27).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(28).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(29).png?raw=true)
-# Step 4 
+# 👑Step 4 
 ## Promote as Domain Controller
-## 🖼Screenshots
+## 📸Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(31).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(32).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(33).png?raw=true)
@@ -86,7 +86,7 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(38).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(41).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(42).png?raw=true)
-# Verification:
+# 🔎Verification:
 ## 🖼Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(43).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(44).png?raw=true)
@@ -95,6 +95,12 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(47).png?raw=true)
 
 
-## Result✅✅✅
+## ✅ Results:
+- ✅Installed Active Directory Domain Services (AD DS) role on Windows Server 2022.
+- ✅Configured new AD forest and promoted `DC-01` to a Domain Controller.
+- ✅Verified active domain status for `example.com`
+---
+## 🚀Conclusion
+This lab successfully established the primary Active Directory Domain Controller for `example.com`, laying the foundational
+identity and authentication infrastructure for managing domain users, OUs, and Group Policies in subsequent labs.
 
-Active Directory Domain Services was installed successfully. The server was promoted to a domain controller for `example.com`
