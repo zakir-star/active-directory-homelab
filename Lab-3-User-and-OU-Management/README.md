@@ -75,9 +75,9 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ## Results
 
-✅ Created an Organizational Unit named `IT`.
-✅ Created a domain user named `LabUser01`.
-✅ Verified that the user appears inside the correct OU.
+- ✅ Created an Organizational Unit named `IT`.
+- ✅ Created a domain user named `LabUser01`.
+- ✅ Verified that the user appears inside the correct OU.
 
 ## 🚀Conclusion
 
