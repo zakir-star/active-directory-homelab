@@ -43,7 +43,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
    - **User Logon Name:** LabUser01
 4. Click **Next**.
 5. Set a lab-only password.
-6. Configure the password options as required for the lab.
+6. Configure the password options as user must change password at next logon.
 7. Click **Next**, review the details, and select **Finish**.
 
 ### Screenshot 2: Domain User Creation
