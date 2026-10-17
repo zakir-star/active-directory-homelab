@@ -52,6 +52,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(53).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(54).png?raw=true)
 
 ---
 
