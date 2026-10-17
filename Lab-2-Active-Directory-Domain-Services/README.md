@@ -1,16 +1,16 @@
-# Lab 2: Installing and Configuring Active Directory Domain Services
+# 🌳Lab 2: Installing and Configuring Active Directory Domain Services
 
 ## 🎯Objective
 
 Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to a domain controller, and create an Active Directory domain.
 
-## 🧪Lab Environment
+## 💻Lab Environment
 
-- **Virtualization:** VMware Workstation
-- **Operating System:** Windows Server 2022
-- **Server Name:** DC-01
-- **Domain Name:** example.com
-- **Domain Controller FQDN:** DC-01.example.com
+- 💿**Virtualization:** VMware Workstation
+- 🖥️**Operating System:** Windows Server 2022
+- 🏷️**Server Name:** DC-01
+- 🌐**Domain Name:** example.com
+- 🔗**Domain Controller FQDN:** DC-01.example.com
 
 ## 📋Tasks Performed
 
@@ -87,7 +87,7 @@ Confirm that `example.com` appears in the domain tree.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(41).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(42).png?raw=true)
 # 🔎Verification:
-## 🖼Screenshots
+## 📸Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(43).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(44).png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(45).png?raw=true)
