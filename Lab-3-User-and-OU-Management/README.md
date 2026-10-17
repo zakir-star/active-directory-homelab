@@ -23,7 +23,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 6. Keep **Protect container from accidental deletion** checked.
 7. Click **OK**.
 
-### 📷Screenshots: IT Organizational Unit
+### 📸Screenshots: IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(48).png?raw=true)
 
@@ -46,7 +46,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 6. Configure the password options as user must change password at next logon.
 7. Click **Next**, review the details, and select **Finish**.
 
-### 📷Screenshots: Domain User Creation
+### 📸Screenshots: Domain User Creation
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(52).png?raw=true)
 
@@ -65,7 +65,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 3. Check the right-hand pane.
 4. Confirm that `LabUser01` appears in the list.
 
-### 📷Screenshots: Domain User Verification
+### 📸Screenshots: Domain User Verification
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(56).png?raw=true)
 
