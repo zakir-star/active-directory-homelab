@@ -1,15 +1,15 @@
-# Lab 3: Creating Organizational Units and Domain Users
+# 🏢Lab 3: Creating Organizational Units and Domain Users
 
 ## 🎯Objective
 
 To create an Organizational Unit (OU) and a domain user in Active Directory Users and Computers, and verify that the user is located inside the correct OU.
 
-## 🧪Lab Environment
+## 💻Lab Environment
 
-- **Operating System:** Windows Server 2022
-- **Virtualization:** VMware Workstation
-- **Server Name:** DC-01
-- **Domain Name:** example.com
+- 🖥️**Operating System:** Windows Server 2022
+- 💿**Virtualization:** VMware Workstation
+- 🏷️**Server Name:** DC-01
+- 🌐**Domain Name:** example.com
 
 ---
 
@@ -73,7 +73,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ---
 
-## Results
+## ✅Results
 
 - ✅ Created an Organizational Unit named `IT`.
 - ✅ Created a domain user named `LabUser01`.
