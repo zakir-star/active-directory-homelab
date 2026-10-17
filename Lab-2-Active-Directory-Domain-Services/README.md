@@ -4,7 +4,7 @@
 
 Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to a domain controller, and create an Active Directory domain.
 
-## 🛠Lab Environment
+## 🧪Lab Environment
 
 - **Virtualization:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -12,7 +12,7 @@ Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to
 - **Domain Name:** example.com
 - **Domain Controller FQDN:** DC-01.example.com
 
-## 📜Tasks Performed
+## 📋Tasks Performed
 
 1. Installed the Active Directory Domain Services role.
 2. Selected **Add a new forest** in the AD DS Configuration Wizard.
