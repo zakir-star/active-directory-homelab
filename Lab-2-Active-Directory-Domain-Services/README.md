@@ -39,7 +39,7 @@ Get-Service NTDS
 Open **Server Manager → Tools → Active Directory Users and Computers**.
 
 Confirm that `example.com` appears in the domain tree.
-# 🏷️Step1
+# 🏷️Step 1
 ## Change Server name to DC-01
 ## 📸Screenshots
 
