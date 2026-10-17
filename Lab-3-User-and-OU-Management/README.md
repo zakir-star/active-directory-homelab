@@ -48,7 +48,8 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ### Screenshot 2: Domain User Creation
 
-<!-- Insert screenshot 02-create-domain-user.png here -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(52).png?raw=true)
+
 
 
 
