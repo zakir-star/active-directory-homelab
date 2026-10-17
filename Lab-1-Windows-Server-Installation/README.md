@@ -1,21 +1,21 @@
-# Lab 1: Installing Windows Server on VMware Workstation
+# 🛠Lab 1: Installing Windows Server on VMware Workstation
 
 ## 🎯Objective
 
 Install Windows Server in a virtual machine using VMware Workstation and document the installation process with screenshots.
 
-## Lab Environment
+## 💻Lab Environment
 
-- **Virtualization Platform:** VMware Workstation
-- **Virtual Machine Name:** DC-01
-- **Purpose:** Prepare a Windows Server virtual machine for future Active Directory labs.
+- 💿 **Virtualization Platform:** VMware Workstation
+- 🏷️ **Virtual Machine Name:** DC-01
+- 🎯 **Purpose:** Prepare a Windows Server virtual machine for future Active Directory labs.
 
-## Installation Documentation
+## 📝Installation Documentation
 
 The following screenshots document the Windows Server installation process, from virtual machine setup through the installation stages.
 
-### Step 1: Virtual Machine Setup
-## 🖼Screenshots
+### ⚙️Step 1: Virtual Machine Setup
+## 📸Screenshots
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/1.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/2.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/3.png?raw=true)
@@ -29,8 +29,8 @@ The following screenshots document the Windows Server installation process, from
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/17.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/18.png?raw=true)
 
-### Step 2: Windows Server Installation
-## 🖼Screenshots
+### 🖥️Step 2: Windows Server Installation
+## 📸Screenshots
 
 Follow the screenshots showing the Windows Server installation process.
 
@@ -47,8 +47,8 @@ Follow the screenshots showing the Windows Server installation process.
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/30.png?raw=true)
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-1-Windows-Server-Installation/screenshots/31.png?raw=true)
 
-### Step 3: Initial Server Setup
-## 🖼Screenshots
+### 🧰Step 3: Initial Server Setup
+## 📸Screenshots
 
 Review the screenshots documenting the installation's final stages and the initial server environment.
 
@@ -71,7 +71,7 @@ A Windows Server virtual machine named **DC-01** was installed in VMware Worksta
 
 This virtual machine will serve as the foundation for future Active Directory Domain Services labs.
 
-## Skills Practiced
+## 🛠Skills Practiced
 
 - ✅ Virtualization using VMware Workstation
 - ✅ Windows Server installation
