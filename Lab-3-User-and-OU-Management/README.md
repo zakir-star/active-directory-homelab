@@ -4,7 +4,7 @@
 
 To create an Organizational Unit (OU) and a domain user in Active Directory Users and Computers, and verify that the user is located inside the correct OU.
 
-## Lab Environment
+## 🧰Lab Environment
 
 - **Operating System:** Windows Server 2022
 - **Virtualization:** VMware Workstation
@@ -23,7 +23,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 6. Keep **Protect container from accidental deletion** checked.
 7. Click **OK**.
 
-### Screenshot 1: IT Organizational Unit
+### 📷Screenshots: IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(48).png?raw=true)
 
@@ -46,7 +46,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 6. Configure the password options as user must change password at next logon.
 7. Click **Next**, review the details, and select **Finish**.
 
-### Screenshot 2: Domain User Creation
+### 📷Screenshots: Domain User Creation
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(52).png?raw=true)
 
@@ -65,7 +65,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 3. Check the right-hand pane.
 4. Confirm that `LabUser01` appears in the list.
 
-### Screenshot 3: Domain User Verification
+### 📷Screenshots: Domain User Verification
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(56).png?raw=true)
 
@@ -75,10 +75,10 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ## Results
 
-- Created an Organizational Unit named `IT`.
-- Created a domain user named `LabUser01`.
-- Verified that the user appears inside the correct OU.
+✅ Created an Organizational Unit named `IT`.
+✅ Created a domain user named `LabUser01`.
+✅ Verified that the user appears inside the correct OU.
 
-## Conclusion
+## 🚀Conclusion
 
 This lab demonstrated how to create an Organizational Unit, create a domain user, and verify the placement of the user account using Active Directory Users and Computers.
