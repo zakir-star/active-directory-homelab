@@ -1,6 +1,6 @@
 # Lab 3: Creating Organizational Units and Domain Users
 
-## Objective
+## 🎯Objective
 
 To create an Organizational Unit (OU) and a domain user in Active Directory Users and Computers, and verify that the user is located inside the correct OU.
 
@@ -30,6 +30,8 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(50).png?raw=true)
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(51).png?raw=true)
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(55).png?raw=true)
 
 ---
 
