@@ -67,7 +67,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ### Screenshot 3: Domain User Verification
 
-<!-- Insert screenshot 03-verify-domain-user.png here -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(56).png?raw=true)
 
 
 
