@@ -27,7 +27,6 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 1. In the ADUC console, locate the domain `example.com`.
 2. Expand the domain tree to display the available containers and Organizational Units.
-3. Locate the existing `IT` Organizational Unit.
 
 **📸Screenshots: Expanded Domain Tree and IT OU**
 
