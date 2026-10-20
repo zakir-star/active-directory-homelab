@@ -33,7 +33,7 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ---
 
-## 👨‍💼Step 2: Create a Domain User
+## 👤Step 2: Create a Domain User
 
 1. In Active Directory Users and Computers, locate the `IT` OU.
 2. Right-click the `IT` OU and select **New → User**.
