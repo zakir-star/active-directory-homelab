@@ -54,6 +54,8 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(6).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(79).png?raw=true)
+
 ## Step 4: Move user01 to the Existing IT OU
 
 1. Locate the newly created `user01` account.
