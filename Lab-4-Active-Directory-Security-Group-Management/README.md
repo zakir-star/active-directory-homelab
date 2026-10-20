@@ -95,16 +95,14 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ## Step 6: Add user01 to IT_Users_Group
 
 1. Locate `IT_Users_Group` in the `IT` OU.
-2. Right-click the group and select **Properties**.
-3. Open the **Members** tab.
-4. Click **Add**.
-5. Enter `user01`.
-6. Click **Check Names** to resolve the account.
-7. Verify that the correct user account is selected.
-8. Click **OK**.
-9. Click **Apply**, then **OK**.
+2. Right-click the user01 and select **ADD to a group**.
+3. Enter `IT_Users_Group`.
+4. Click **Check Names** to resolve the group name.
+5. Verify that the correct group is selected.
+6. Click **OK**.
+7. Click then **OK**.
 
-**📸Screenshots : Select user01 for Group Membership**
+**📸Screenshots**
 
 ![imagr alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(13).png?raw=true)
 
@@ -118,12 +116,11 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ## Step 7: Verify the Final Configuration
 
 1. Open the Properties of `IT_Users_Group`.
-2. Select the **Members** tab.
-3. Confirm that `user01` appears in the membership list.
-4. Navigate to the `IT` OU.
-5. Confirm that both `user01` and `IT_Users_Group` are present.
+2. In General tab verify the Group Scope and Group Type
+3. Select the **Members** tab.
+4. Confirm that `user01` appears in the membership list.
 
-**Screenshot 10: Final Verification of User and Security Group**
+**📸Screenshots : Final Verification of User and Security Group**
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(18).png?raw=true)
 
@@ -132,15 +129,15 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(20).png?raw=true)
 
 
-## Expected Results
+## ✅Results
 
-- The domain user `user01` was created successfully.
-- The user was moved into the existing `IT` Organizational Unit.
-- The Security Group `IT_Users_Group` was created.
-- The user `user01` was added to `IT_Users_Group`.
-- Group membership was verified using the Members tab.
+- ✅The domain user `user01` was created successfully.
+- ✅The user was moved into the existing `IT` Organizational Unit.
+- ✅The Security Group `IT_Users_Group` was created.
+- ✅The user `user01` was added to `IT_Users_Group`.
+- ✅Group membership was verified using the Members tab.
 
-## Conclusion
+## 🚀Conclusion
 
 In this lab, a new Active Directory domain user was created and moved into the existing IT Organizational Unit. A Global Security Group named `IT_Users_Group` was created, and `user01` was added as a member. The final configuration was verified using Active Directory Users and Computers.
 
