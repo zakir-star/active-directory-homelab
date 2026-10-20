@@ -104,6 +104,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![imagr alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(13).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(14).png?raw=true)
 
 
 
