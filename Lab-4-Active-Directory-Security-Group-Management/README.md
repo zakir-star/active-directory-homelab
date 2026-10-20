@@ -50,6 +50,8 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(4).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(5).png?raw=true)
+
 
 
 **Screenshot 4: Newly Created user01 Account**
