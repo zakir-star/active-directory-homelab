@@ -20,7 +20,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 **Screenshot 1: Active Directory Users and Computers Console**
 
-<!-- Insert screenshot here -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(1).png?raw=true)
 
 
 ## Step 2: Expand the Domain Tree
