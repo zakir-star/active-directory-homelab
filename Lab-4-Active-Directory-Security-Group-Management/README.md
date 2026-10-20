@@ -113,7 +113,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(17).png?raw=true)
 
 
-## Step 7: Verify the Final Configuration
+## 🔎Step 7: Verify the Final Configuration
 
 1. Open the Properties of `IT_Users_Group`.
 2. In General tab verify the Group Scope and Group Type
