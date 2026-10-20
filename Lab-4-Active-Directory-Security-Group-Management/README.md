@@ -90,6 +90,8 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(11).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(78).png?raw=true)
+
 ## Step 6: Add user01 to IT_Users_Group
 
 1. Locate `IT_Users_Group` in the `IT` OU.
