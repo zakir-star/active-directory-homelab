@@ -1,4 +1,4 @@
-# Lab 4: Active Directory User and Security Group Management
+# 🔒Lab 4: Active Directory User and Security Group Management
 
 ## 🎯Objective
 
@@ -6,13 +6,13 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ## 💻Lab Environment
 
-- Virtualization: VMware Workstation
-- Operating System: Windows Server 2022
-- Server Name: DC-01
-- Domain Name: example.com
-- Tool: Active Directory Users and Computers (ADUC)
+- 💿Virtualization: VMware Workstation
+- 🖥️Operating System: Windows Server 2022
+- 🏷️Server Name: DC-01
+- 🌐Domain Name: example.com
+- 🧰Tool: Active Directory Users and Computers (ADUC)
 
-## Step 1: Open Active Directory Users and Computers
+## 🚀Step 1: Open Active Directory Users and Computers
 
 1. Log in to DC-01.
 2. Open Server Manager.
@@ -23,7 +23,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(1).png?raw=true)
 
 
-## Step 2: Expand the Domain Tree
+## 🌳Step 2: Expand the Domain Tree
 
 1. In the ADUC console, locate the domain `example.com`.
 2. Expand the domain tree to display the available containers and Organizational Units.
@@ -34,7 +34,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(2).png?raw=true)
 
 
-## Step 3: Create a New Domain User
+## 👤Step 3: Create a New Domain User
 
 1. Right-click the appropriate location in the domain tree where you want to create the user.
 2. Select **New → User**.
@@ -56,7 +56,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(79).png?raw=true)
 
-## Step 4: Move user01 to the Existing IT OU
+## 🚚Step 4: Move user01 to the Existing IT OU
 
 1. Locate the newly created `user01` account.
 2. Right-click `user01`.
@@ -75,7 +75,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(9).png?raw=true)
 
 
-## Step 5: Create the Security Group
+## 👥Step 5: Create the Security Group
 
 1. Right-click the appropriate location for the group. For this lab, use the existing `IT` OU.
 2. Select **New → Group**.
@@ -92,7 +92,7 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(78).png?raw=true)
 
-## Step 6: Add user01 to IT_Users_Group
+## ➕Step 6: Add user01 to IT_Users_Group
 
 1. Locate `IT_Users_Group` in the `IT` OU.
 2. Right-click the user01 and select **ADD to a group**.
@@ -141,4 +141,4 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 In this lab, a new Active Directory domain user was created and moved into the existing IT Organizational Unit. A Global Security Group named `IT_Users_Group` was created, and `user01` was added as a member. The final configuration was verified using Active Directory Users and Computers.
 
-**Note:** An Organizational Unit organizes directory objects, while a Security Group organizes users for group-based access management. Adding a user to a group does not automatically grant access to resources; appropriate permissions must be assigned separately.
+**📌Note:** An Organizational Unit organizes directory objects, while a Security Group organizes users for group-based access management. Adding a user to a group does not automatically grant access to resources; appropriate permissions must be assigned separately.
