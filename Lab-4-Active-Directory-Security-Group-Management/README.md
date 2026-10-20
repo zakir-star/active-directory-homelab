@@ -111,11 +111,6 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(17).png?raw=true)
 
 
-**Screenshot 9: user01 Listed as a Member of IT_Users_Group**
-
-<!-- Insert screenshot here -->
-
-
 ## Step 7: Verify the Final Configuration
 
 1. Open the Properties of `IT_Users_Group`.
@@ -126,7 +121,9 @@ Create a new domain user, move the user into the existing IT Organizational Unit
 
 **Screenshot 10: Final Verification of User and Security Group**
 
-<!-- Insert screenshot here -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-4-Active-Directory-Security-Group-Management/screenshots/Screenshot%20(18).png?raw=true)
+
+
 
 
 ## Expected Results
