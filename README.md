@@ -50,26 +50,20 @@ This repository documents my journey of building and managing a complete Active 
 
 ---
 
-## 📸 Current Lab Status
-
-## 📌 Current Lab Status
-
-- ✅ **Lab 1:** Installing Windows Server on VMware Workstation — Completed
-- ✅ **Lab 2:** Installing and Configuring Active Directory Domain Services — Completed
-- ✅ **Lab 3:** Creating an Organizational Unit (OU) — Completed
-- ✅ **Lab 4:** Creating Domain Users and Security Groups — Completed
-- ✅ **Lab 5:** Joining Windows Client to the Domain — Completed
-
-**🚀 Next Step:** Lab 6 — Group Policy Objects (GPOs).
----
-
+## 🧠 Skills Demonstrated
+ 
+- Windows Server 2022 installation and initial configuration
+- Active Directory Domain Services: forest creation and DC promotion
+- OU design, user account and security group administration
+- Domain join and domain authentication from a Windows client
+- Technical documentation with screenshots
 ## 📌 Notes
-
+ 
 - This is a **learning / portfolio project**.
-- All configurations are done in a lab environment (not production).
-- Feedback and suggestions are welcome!
-
+- All configuration is done in an isolated lab environment, not production.
+- Passwords shown in screenshots are lab-only and are not reused anywhere.
+- Feedback and suggestions are welcome. Please open an issue.
 ---
 
-**Author**: Zakir Hussain (zakir-star)  
-**Last Updated**: October 2026
+**Author:** Zakir Hussain ([@zakir-star](https://github.com/zakir-star))
+· [LinkedIn](https://www.linkedin.com/in/zakir-hussain-18b998196)
