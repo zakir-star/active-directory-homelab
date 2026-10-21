@@ -21,13 +21,13 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 2. Log in with a local administrator account.
 3. Press `win+R` and type `ncpa.cpl`
 4. Right click on Adapter and click on properties
-5. Select IPV4 and click on properties
+5. Select IPv4 and click on properties
 6. Assign Static IP-address, point DNS towards domain controller
 7. Ensure the client has network connectivity to the Domain Controller (same virtual network / can ping DC-01).
 
 **📸 Screenshot: Windows 10 Client Desktop**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(0).png?raw=true)
 
 ![image alt]()
 
