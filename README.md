@@ -52,11 +52,15 @@ This repository documents my journey of building and managing a complete Active 
 
 ## 📸 Current Lab Status
 
-- ✅ Domain Controller is fully functional
-- ✅ Organizational Units and users created
-- ✅ Security groups implemented
-- 🔜 Next: Join Windows 10 client to the domain and log in as `user01`
+## 📌 Current Lab Status
 
+- ✅ **Lab 1:** Installing Windows Server on VMware Workstation — Completed
+- ✅ **Lab 2:** Installing and Configuring Active Directory Domain Services — Completed
+- ✅ **Lab 3:** Creating an Organizational Unit (OU) — Completed
+- ✅ **Lab 4:** Creating Domain Users and Security Groups — Completed
+- ✅ **Lab 5:** Joining Windows Client to the Domain — Completed
+
+**🚀 Next Step:** Lab 6 — Group Policy Objects (GPOs).
 ---
 
 ## 📌 Notes
