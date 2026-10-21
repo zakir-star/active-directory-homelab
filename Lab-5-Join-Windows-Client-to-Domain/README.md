@@ -86,7 +86,7 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 **📸 Screenshots: Domain Login**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(16).png?raw=true)
 
 ![image alt]()
 
