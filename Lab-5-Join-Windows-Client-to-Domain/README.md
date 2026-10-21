@@ -118,5 +118,6 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 ## 🎯 Conclusion
 
 Successfully joined the Windows 10 client to the `example.com` domain and verified domain login and computer account visibility in ADUC.
-
+> ⚠️ **Note:** If ping connectivity between the Windows client and `DC-01` does not work, check the Windows Firewall settings. If necessary, temporarily turn off the firewall for lab troubleshooting, then re-enable it after testing.
+> 
 **🏆 Lab 5 Status: Completed Successfully!**
