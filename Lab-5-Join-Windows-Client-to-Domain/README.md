@@ -23,7 +23,7 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 4. Right click on Adapter and click on properties
 5. Select IPv4 and click on properties
 6. Assign Static IP-address, point DNS towards domain controller
-7. Ensure the client has network connectivity to the Domain Controller (same virtual network / can ping DC-01).
+7. Ensure the client must ping DC-01.
 
 **📸 Screenshot: Windows 10 Client Desktop**
 
