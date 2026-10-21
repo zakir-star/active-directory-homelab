@@ -25,11 +25,11 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ### 📸Screenshots: IT Organizational Unit
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(48).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(50).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(51).png?raw=true)
+![image alt]()
 
 ---
 
@@ -48,13 +48,13 @@ To create an Organizational Unit (OU) and a domain user in Active Directory User
 
 ### 📸Screenshots: Domain User Creation
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(52).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(53).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(54).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshot/Screenshot%20(55).png?raw=true)
+![image alt]()
 
 ---
 
