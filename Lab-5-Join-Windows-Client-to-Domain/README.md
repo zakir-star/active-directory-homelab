@@ -19,7 +19,7 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 1. Power on the Windows 10 virtual machine.
 2. Log in with a local administrator account.
-3. Press `win+R` and type `ncpa.cpl`
+3. Press `win+r` and type `ncpa.cpl`
 4. Right click on Adapter and click on properties
 5. Select IPv4 and click on properties
 6. Assign Static IP-address, point DNS towards domain controller
@@ -41,16 +41,15 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 ---
 
-## 🔗 Step 3: Join the Domain
+## 🔗 Step 2: Join the Domain
 
-1. Right-click **This PC** → **Properties**.
-2. Click **Change settings** (or **Rename this PC** / **Domain or workgroup** depending on Windows 10 version).
+1. Press `win+r` and type `sysdm.cpl`
 3. Click **Change**.
 4. Under **Member of**, select **Domain**.
 5. Enter the domain name: `example.com`
 6. Click **OK**.
 7. When prompted, enter domain credentials:
-   - Username: `example.com\Administrator` (or another Domain Admin)
+   - Username: `administrator@example.com` 
    - Password: (your Domain Admin password)
 8. Click **OK**.
 9. You should see a welcome message: **"Welcome to the example.com domain"**.
@@ -58,11 +57,25 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 **📸 Screenshots: Domain Join Process**
 
-*(Add screenshots of the System Properties, domain entry, credential prompt, and welcome message)*
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
 
 ---
 
-## 👤 Step 4: Log in as Domain User
+## 👤 Step 3: Log in as Domain User
 
 1. After the restart, on the login screen click **Other user**.
 2. Enter the domain user credentials:
