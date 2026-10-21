@@ -99,7 +99,7 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 3. ` whoami`
 4. `systeminfo | findstr /B /C:"Domain"`
 5. Press `win+r` and type `dsa.msc` and click **OK** to open ADUC console
-6. Navigate to the **Computers** container **CLIENT01** must present
+6. Navigate to the **Computers** container, **CLIENT01** must present
 
 **📸 Screenshots: verification**
 
@@ -114,9 +114,9 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 - 🖥️ Windows 10 client successfully joins the `example.com` domain.
 - 🔐 Domain user `user01` successfully logs in.
 - 🔎 Domain membership is verified using Command Prompt.
-
+- 🗂️ Client computer account is visible in the **Computers** container in Active Directory Users and Computers (ADUC).
 ## 🎯 Conclusion
 
-Successfully joined the Windows 10 client to the `example.com` domain and verified domain login using `user01`.
+Successfully joined the Windows 10 client to the `example.com` domain and verified domain login and computer account visibility in ADUC.
 
 **🏆 Lab 5 Status: Completed Successfully!**
