@@ -98,3 +98,15 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 ```cmd
 whoami
 systeminfo | findstr /B /C:"Domain"
+
+## ✅ Expected Result
+
+- 🖥️ Windows 10 client successfully joins the `example.com` domain.
+- 🔐 Domain user `user01` successfully logs in.
+- 🔎 Domain membership is verified using Command Prompt.
+
+## 🎯 Conclusion
+
+Successfully joined the Windows 10 client to the `example.com` domain and verified domain login using `user01`.
+
+**🏆 Lab 5 Status: Completed Successfully!**
