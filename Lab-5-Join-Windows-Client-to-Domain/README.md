@@ -99,7 +99,7 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 3. ` whoami`
 4. `systeminfo | findstr /B /C:"Domain"`
 5. Press `win+r` and type `dsa.msc` and click **OK** to open ADUC console
-6. Navigate to the **Computers** container, **CLIENT01** must present
+6. Navigate to the **Computers** container, **CLIENT01** must present.
 
 **📸 Screenshots: verification**
 
