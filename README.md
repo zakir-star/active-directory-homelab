@@ -22,7 +22,7 @@ This repository documents my journey of building and managing a complete Active 
 | **Lab 2** | [Active Directory Domain Services](Lab-2-Active-Directory-Domain-Services) | ✅ Completed | Install AD DS, create a new forest, and promote the server to Domain Controller |
 | **Lab 3** | [User and OU Management](Lab-3-User-and-OU-Management) | ✅ Completed | Create Organizational Units and manage domain users |
 | **Lab 4** | [Security Group Management](Lab-4-Active-Directory-Security-Group-Management) | ✅ Completed | Create security groups and manage group memberships |
-| **Lab 5** | [Join Windows 10 Client to Domain](Lab-5-Join-Windows-10-Client-to-Domain) | ✅ Completed | Join a Windows 10 client to the domain and log in as domain user `user01` |
+| **Lab 5** | [Join Windows 10 Client to Domain](Lab-5-Join-Windows-Client-to-Domain/README.md) | ✅ Completed | Join a Windows 10 client to the domain and log in as domain user `user01` |
 | **Lab 6** | Group Policy Objects | 🔜 Planned | Create and link GPOs |
 | **Lab 7** | File Shares & NTFS Permissions | 🔜 Planned | Shared folders and permission management |
 
