@@ -93,11 +93,18 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 ## 🔎 Step 5: Verify Domain Membership
 
 1. After logging in, open **Command Prompt** or **PowerShell**.
-2. Run the following commands:
+2. Run the following commands in cmd or windows powershell.
+3. ` whoami`
+4. `systeminfo | findstr /B /C:"Domain"`
+5.Open Active Directory user and computer and go to `Computer` container client01 should present there.
 
-```cmd
-whoami
-systeminfo | findstr /B /C:"Domain"
+**📸 Screenshots: verification**
+
+![image alt]()
+
+![image alt]()
+
+![image alt]()
 
 ## ✅ Expected Result
 
