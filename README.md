@@ -52,10 +52,10 @@ This repository documents my journey of building and managing a complete Active 
 |   | DC-01                |      | Windows 10 Client   |  |
 |   | Windows Server 2022  |<---->| Domain-joined       |  |
 |   | AD DS + DNS          |      | Signs in as user01  |  |
-|   | IP: 10.0.0.1/24         |      | IP: 10.0.0.2/24        |  |
+|   | IP: 10.0.0.1/24      |      | IP: 10.0.0.2/24     |  |
 |   +----------------------+      +---------------------+  |
 |                                                          |
-|   Network mode: NAT / Host-only / Bridged (pick one)     |
+|   Network mode: NAT                                      |
 +----------------------------------------------------------+
 ```
 
