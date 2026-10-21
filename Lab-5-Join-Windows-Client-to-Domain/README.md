@@ -27,17 +27,17 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 **📸 Screenshot: Windows 10 Client Desktop**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(0).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(2).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(3).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(4).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(5).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(6).png?raw=true)
+![image alt]()
 
 ---
 
@@ -57,21 +57,21 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 **📸 Screenshots: Domain Join Process**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(8).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(9).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(10).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(11).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(12).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(13).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(14).png?raw=true)
+![image alt]()
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(15).png?raw=true)
+![image alt]()
 
 ---
 
@@ -86,7 +86,9 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 
 **📸 Screenshots: Domain Login**
 
-*(Add screenshots of the login screen and successful desktop login as user01)*
+![image alt]()
+
+![image alt]()
 
 ---
 
@@ -96,7 +98,8 @@ Join a Windows 10 client machine to the `example.com` domain and successfully lo
 2. Run the following commands in cmd or windows powershell.
 3. ` whoami`
 4. `systeminfo | findstr /B /C:"Domain"`
-5.Open Active Directory user and computer and go to `Computer` container client01 should present there.
+5. Press `win+r` and type `dsa.msc` and click **OK** to open ADUC console
+6. Navigate to the **Computers** container **CLIENT01** must present
 
 **📸 Screenshots: verification**
 
