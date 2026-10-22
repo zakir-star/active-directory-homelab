@@ -37,7 +37,7 @@
 2. Select **Disable Account**.
 3. Confirm the action if prompted.
 
-![Screenshot 02 - User account disabled](screenshots/Screenshot_02.png)
+![Screenshot 02 - User account disabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 3: Enable the Domain User
 
