@@ -56,7 +56,7 @@
 5. Leave **User must change password at next logon** unchecked for this lab.
 6. Click **OK**.
 
-![Screenshot 04 - Password reset confirmation](screenshots/Screenshot_04.png)
+![Screenshot 04 - Password reset confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(8).png?raw=true)
 
 **Note:** Never include passwords in screenshots or GitHub documentation.
 
