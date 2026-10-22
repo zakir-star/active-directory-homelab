@@ -29,7 +29,7 @@
 4. Open the `IT` Organizational Unit.
 5. Locate the domain user `user01`.
 
-![Screenshot 01 - Locate user01 in ADUC](screenshots/Screenshot_01.png)
+![Screenshot 01 - Locate user01 in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(00).png?raw=true)
 
 ### Step 2: Disable the Domain User
 
