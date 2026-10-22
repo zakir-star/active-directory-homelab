@@ -67,7 +67,7 @@
 3. Select **Unlock account**, if the account is locked.
 4. Click **Apply**, then **OK**.
 
-![Screenshot 05 - Unlock user account](screenshots/Screenshot_05.png)
+![Screenshot 05 - Unlock user account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 6: Configure Logon Hours
 
