@@ -11,13 +11,13 @@
 
 ## 🖥️ Lab Environment
 
-- **Domain Controller:** DC-01
-- **Operating System:** Windows Server 2022
-- **Domain Name:** example.com
-- **Domain User:** user01
-- **Organizational Unit:** IT
-- **Security Group:** IT_Users_Group
-- **Client Machine:** Windows client joined to the domain
+- 🏢 **Domain Controller:** DC-01
+- 💿 **Operating System:** Windows Server 2022
+- 🌐 **Domain Name:** example.com
+- 👤 **Domain User:** user01
+- 📂 **Organizational Unit:** IT
+- 👥 **Security Group:** IT_Users_Group
+- 💻 **Client Machine:** Windows client
 
 ## ⚙️ Lab Configuration
 
@@ -28,7 +28,8 @@
 3. Expand the `example.com` domain.
 4. Open the `IT` Organizational Unit.
 5. Locate the domain user `user01`.
-**📸 screenshot**
+6. 
+**📸Screenshot**
 
 ![Screenshot 01 - Locate user01 in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(00).png?raw=true)
 
@@ -37,7 +38,8 @@
 1. Right-click `user01`.
 2. Select **Disable Account**.
 3. Confirm the action if prompted.
-**📸 screenshot**
+4. 
+**📸Screenshot**
 
 ![Screenshot 02 - User account disabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(3).png?raw=true)
 
@@ -46,7 +48,8 @@
 1. Right-click `user01`.
 2. Select **Enable Account**.
 3. Confirm the action if prompted.
-**📸 screenshot**
+4. 
+**📸Screenshot**
 
 ![Screenshot 03 - User account enabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(6).png?raw=true)
 
@@ -58,7 +61,8 @@
 4. Confirm the password.
 5. Leave **User must change password at next logon** unchecked for this lab.
 6. Click **OK**.
-**📸 screenshot**
+7. 
+**📸Screenshot**
 
 ![Screenshot 04 - Password reset confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(8).png?raw=true)
 
@@ -70,7 +74,8 @@
 2. Open the **Account** tab.
 3. Select **Unlock account**, if the account is locked.
 4. Click **Apply**, then **OK**.
-**📸 screenshot**
+5. 
+**📸Screenshot**
 
 ![Screenshot 05 - Unlock user account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(10).png?raw=true)
 
@@ -83,7 +88,8 @@
 5. Configure Saturday and Sunday as **Logon Denied**.
 6. Click **OK**.
 7. Click **Apply**, then **OK** in the user properties window.
-**📸 screenshot**
+8. 
+**📸Screenshot**
 
 ![Screenshot 06 - Logon hours configuration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(12).png?raw=true)
 
@@ -95,9 +101,10 @@
 4. Enter the domain username `EXAMPLE\\user01`.
 5. Enter the latest password set on DC-01.
 6. Press **Enter** to sign in.
-**📸 screenshot**
+7. 
+**📸Screenshot**
 
-![Screenshot 07 - Successful domain user login](screenshots/Screenshot_07.png)
+![Screenshot 07 - Successful domain user login](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(15).png?raw=true)
 
 ## ✅ Expected Result
 
