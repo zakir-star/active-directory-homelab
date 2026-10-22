@@ -79,21 +79,6 @@ This repository documents my journey of building and managing a complete Active 
 
 ---
 
-## 🛠️ Troubleshooting
-
-Problems I ran into and how I fixed them are documented inside each lab. See the notes in [Lab 5](Lab-5-Join-Windows-Client-to-Domain).
-
----
-
-## 📌 Notes
-
-- This is a **learning / portfolio project**.
-- All configuration is done in an isolated lab environment, not production.
-- Passwords shown in screenshots are lab-only and are not reused anywhere.
-- Feedback and suggestions are welcome. Please open an issue.
-
----
-
 **👤Author:** 
 ---
 **Zakir Hussain**
@@ -103,4 +88,10 @@ Problems I ran into and how I fixed them are documented inside each lab. See the
 - LinkedIn: [Zakir Hussain](https://www.linkedin.com/in/zakir-hussain-18b998196)
 - 📧Email: zh24074@gmail.com
 ---
- **📌Note:** This is a personal learning repository. Commands and configurations are based on my homelab environment.
+## 📌 Notes
+
+- This is a **learning / portfolio project**.
+- All configuration is done in an isolated lab environment, not production.
+- Passwords shown in screenshots are lab-only and are not reused anywhere.
+- Feedback and suggestions are welcome. Please open an issue.
+
