@@ -45,7 +45,7 @@
 2. Select **Enable Account**.
 3. Confirm the action if prompted.
 
-![Screenshot 03 - User account enabled](screenshots/Screenshot_03.png)
+![Screenshot 03 - User account enabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 4: Reset the Domain User Password
 
