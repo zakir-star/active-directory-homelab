@@ -94,5 +94,13 @@ Problems I ran into and how I fixed them are documented inside each lab. See the
 
 ---
 
-**Author:** Zakir Hussain ([@zakir-star](https://github.com/zakir-star))
-· [LinkedIn](https://www.linkedin.com/in/zakir-hussain-18b998196)
+**👤Author:** 
+---
+**Zakir Hussain**
+---
+## 📬 Contact
+- GitHub: [zakir-star](https://github.com/zakir-star)
+- LinkedIn: [Zakir Hussain](https://www.linkedin.com/in/zakir-hussain-18b998196)
+- 📧Email: zh24074@gmail.com
+---
+ **📌Note:** This is a personal learning repository. Commands and configurations are based on my homelab environment.
