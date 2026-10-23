@@ -150,7 +150,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Verify `lockout.test` is locked in ADUC**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(22).png?raw=true)
 
 ### Step 13: Unlock the Test Account
 
