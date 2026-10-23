@@ -127,16 +127,17 @@ These labs expand on the policy fundamentals introduced in Labs 7, 8, 11, and 12
 | **45** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
 | **46** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
 | **47** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
-| **48** | VPN Server Configuration | 📋 Planned | Understand VPN roles, protocols, and lab connectivity requirements |
+| **48** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
+| **49** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
 
 ### Phase 12 — Backup and Disaster Recovery
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **49** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
-| **50** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
-| **51** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
-| **52** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+| **50** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
+| **51** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
+| **52** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **53** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
 ---
 
