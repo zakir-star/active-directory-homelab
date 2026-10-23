@@ -58,7 +58,9 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Account lockout duration set to 15 minutes**
 
-![Screenshot 5 - Account lockout duration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%285%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 5: Configure Reset Account Lockout Counter After
 
@@ -69,7 +71,9 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Reset counter interval set to 15 minutes**
 
-![Screenshot 6 - Reset account lockout counter after 15 minutes](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%286%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 6: Review the Three Account Lockout Settings
 
@@ -83,7 +87,9 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — Final account lockout policy settings**
 
-![Screenshot 7 - Final account lockout policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%287%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 7: Apply the Group Policy
 
@@ -99,7 +105,9 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — Successful Group Policy update**
 
-![Screenshot 8 - gpupdate completed successfully](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%288%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 8: Verify the Policy Settings
 
@@ -107,7 +115,9 @@ Return to **Group Policy Management Editor → Account Lockout Policy** and veri
 
 **📸 Screenshot — Verify the configured policy values**
 
-![Screenshot 9 - Verify account lockout settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 9: Create the Dedicated Test Account
 
@@ -118,7 +128,9 @@ Return to **Group Policy Management Editor → Account Lockout Policy** and veri
 
 **📸 Screenshot — Create the test account**
 
-![Screenshot 10 - Create lockout.test](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2810%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 10: Confirm the Test Account Is Enabled
 
@@ -126,7 +138,9 @@ Open `lockout.test` **Properties → Account**. Confirm the account is enabled a
 
 **📸 Screenshot — Check the test account's status**
 
-![Screenshot 11 - Test account status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 11: Enter the Domain Account on the Windows Client
 
@@ -138,7 +152,9 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Enter the domain username**
 
-![Screenshot 12 - Domain username on Windows client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2812%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 12: Trigger the Account Lockout
 
@@ -148,7 +164,9 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Windows displays the account-lockout message**
 
-![Screenshot 13 - Account lockout message](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2813%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 13: Verify the Lockout in ADUC
 
@@ -156,7 +174,9 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Confirm the account is locked**
 
-![Screenshot 14 - Locked account in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2814%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 14: Unlock the Test Account
 
@@ -166,7 +186,9 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Unlock the account in ADUC**
 
-![Screenshot 15 - Unlock test account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2815%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ### Step 15: Verify Domain Sign-In
 
@@ -174,7 +196,9 @@ On the Windows 10 client, sign in as `EXAMPLE\\lockout.test` using the correct l
 
 **📸 Screenshot — Successful domain sign-in**
 
-![Screenshot 16 - Successful domain sign-in](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2816%29.png?raw=true)
+**📸 Screenshot — Add the appropriate screenshot here**
+
+<!-- Add the appropriate screenshot link here. -->
 
 ## ✅ Expected Result
 
