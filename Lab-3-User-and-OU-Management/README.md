@@ -35,6 +35,8 @@
 
 **📸 Screenshot — IT Organizational Unit**
 
+![Screenshot - IT Organizational Unit](screenshots/Screenshot%20(1).png)
+
 ![Screenshot - IT Organizational Unit](screenshots/Screenshot%20(3).png)
 
 ### Step 3: Create a Domain User
