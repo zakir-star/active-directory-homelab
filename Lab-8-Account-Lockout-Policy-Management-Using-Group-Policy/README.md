@@ -72,9 +72,8 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Reset counter interval set to 15 minutes**
 
-**📸 Screenshot — Add the appropriate screenshot here**
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(9).png?raw=true)
 
-<!-- Add the appropriate screenshot link here. -->
 
 ### Step 6: Review the Three Account Lockout Settings
 
