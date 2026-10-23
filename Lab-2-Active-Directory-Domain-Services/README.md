@@ -1,106 +1,120 @@
-# 🌳Lab 2: Installing and Configuring Active Directory Domain Services
+# Lab 2: Installing and Configuring Active Directory Domain Services
 
-## 🎯Objective
+## 🎯 Objective
 
-Install Active Directory Domain Services (AD DS), promote Windows Server 2022 to a domain controller, and create an Active Directory domain.
+- Configure the Windows Server for the Active Directory lab.
+- Install Active Directory Domain Services (AD DS).
+- Promote `DC-01` to a domain controller and create the `example.com` domain.
+- Verify that Active Directory is running and the domain is available.
 
-## 💻Lab Environment
+## 🖥️ Lab Environment
 
-- 💿**Virtualization:** VMware Workstation
-- 🖥️**Operating System:** Windows Server 2022
-- 🏷️**Server Name:** DC-01
-- 🌐**Domain Name:** example.com
-- 🔗**Domain Controller FQDN:** DC-01.example.com
+- 💿 **Virtualization Platform:** VMware Workstation
+- 🪟 **Operating System:** Windows Server 2022
+- 🏷️ **Server Name:** `DC-01`
+- 🌐 **Domain Name:** `example.com`
+- 🔗 **Domain Controller FQDN:** `DC-01.example.com`
+- 🌐 **Static IPv4 Address:** `10.0.0.1/24`
+- 📡 **Preferred DNS Server:** `127.0.0.1`
 
-## 📋Tasks Performed
+## ⚙️ Lab Configuration
 
-1. Installed the Active Directory Domain Services role.
-2. Selected **Add a new forest** in the AD DS Configuration Wizard.
-3. Configured the root domain name as `example.com`.
-4. Configured the domain controller options.
-5. Completed the domain controller promotion.
-6. Checked the AD DS service status using PowerShell.
-7. Verified the domain in Active Directory Users and Computers.
+### Step 1: Rename the Server
 
-## 🔎Verification
+1. Open **Server Manager**.
+2. Navigate to **Local Server**.
+3. Open the computer name settings and rename the server to `DC-01`.
+4. Restart the server if prompted, then sign in again.
 
-### 1. Verify the AD DS Service
+**📸 Screenshot — Server name**
 
-Run the following command in PowerShell:
+![Screenshot - Server renamed to DC-01](screenshots/Screenshot%20(6).png)
 
-```powershell
-Get-Service NTDS
-```
+### Step 2: Configure a Static IP Address
 
-**Expected result:** The service status should show `Running`.
+1. In **Server Manager → Local Server**, open the network connection settings.
+2. Open the properties of the active network adapter.
+3. Open **Internet Protocol Version 4 (TCP/IPv4)**.
+4. Configure the static IP address as `10.0.0.1` with subnet mask `255.255.255.0`.
+5. Set the preferred DNS server to `127.0.0.1`.
+6. Leave the default gateway blank for this isolated lab network.
 
-### 2. Verify the Active Directory Domain
+**📸 Screenshot — Static network configuration**
 
-Open **Server Manager → Tools → Active Directory Users and Computers**.
+![Screenshot - IPv4 network configuration](screenshots/Screenshot%20(15).png)
 
-Confirm that `example.com` appears in the domain tree.
-# 🏷️Step 1
-## Change Server name to DC-01
-## 📸Screenshots
+### Step 3: Install the AD DS Role
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(3).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(5).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(6).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(8).png?raw=true)
-![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(9).png?raw=true)
-![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(10).png?raw=true)
-![IMAGE ALT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(11).png?raw=true)
-# 🌐Step 2
-## Assign Static IP Address
-## 📸Screenshots
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(12).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(13).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(14).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(15).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(16).png?raw=true)
-# 📦Step 3
-## Install AD DS Service Role
-## 📸Screenshots
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(17).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(18).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(19).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(20).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(21).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(22).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(23).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(25).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(26).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(27).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(28).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(29).png?raw=true)
-# 👑Step 4 
-## Promote as Domain Controller
-## 📸Screenshots
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(31).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(32).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(33).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(34).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(35).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(36).png?raw=true)
-![image](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(37).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(38).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(41).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(42).png?raw=true)
-# 🔎Verification:
-## 📸Screenshots
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(43).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(44).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(45).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(48).png?raw=true)
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-2-Active-Directory-Domain-Services/screenshots/Screenshot%20(47).png?raw=true)
+1. Open **Server Manager**.
+2. Select **Manage → Add Roles and Features**.
+3. Choose **Role-based or feature-based installation**.
+4. Select the local server, `DC-01`.
+5. Select **Active Directory Domain Services** and add the required features.
+6. Continue through the wizard and select **Install**.
+7. Wait for the installation to complete.
 
+**📸 Screenshot — AD DS role installation**
 
-## ✅ Results:
-- ✅Installed Active Directory Domain Services (AD DS) role on Windows Server 2022.
-- ✅Configured new AD forest and promoted `DC-01` to a Domain Controller.
-- ✅Verified active domain status for `example.com`
----
-## 🚀Conclusion
-This lab successfully established the primary Active Directory Domain Controller for `example.com`, laying the foundational
-identity and authentication infrastructure for managing domain users, OUs, and Group Policies in subsequent labs.
+![Screenshot - Active Directory Domain Services role installation](screenshots/Screenshot%20(23).png)
 
+### Step 4: Promote the Server to a Domain Controller
+
+1. In Server Manager, select the notification flag.
+2. Select **Promote this server to a domain controller**.
+3. Choose **Add a new forest**.
+4. Enter `example.com` as the root domain name.
+5. Configure the domain controller options and set the Directory Services Restore Mode (DSRM) password.
+6. Continue through the prerequisite checks.
+7. Select **Install** to begin promotion.
+8. Allow the server to restart, then sign in to the domain controller.
+
+**📸 Screenshot — Domain controller promotion**
+
+![Screenshot - Active Directory domain controller promotion](screenshots/Screenshot%20(38).png)
+
+### Step 5: Verify Active Directory
+
+1. Sign in to `DC-01` after the promotion and restart.
+2. Open PowerShell and run:
+
+   ```powershell
+   Get-Service NTDS
+   ```
+
+3. Confirm that the service status is `Running`.
+4. Open **Server Manager → Tools → Active Directory Users and Computers**.
+5. Confirm that the `example.com` domain appears in the domain tree.
+
+**📸 Screenshots — Service and domain verification**
+
+![Screenshot - NTDS service verification](screenshots/Screenshot%20(43).png)
+
+![Screenshot - example.com visible in Active Directory Users and Computers](screenshots/Screenshot%20(48).png)
+
+## ✅ Expected Result
+
+- Windows Server is named `DC-01` and has a static IP address configured.
+- The Active Directory Domain Services role is installed.
+- `DC-01` is promoted successfully as the domain controller for `example.com`.
+- The `NTDS` service shows `Running`.
+- The `example.com` domain is visible in Active Directory Users and Computers.
+
+## 🌍 Real-World Use Case
+
+A domain controller provides centralized authentication and directory services, allowing administrators to manage domain users, organizational units, groups, and policies from one place.
+
+## 📌 Outcome
+
+Successfully installed AD DS and promoted `DC-01` to a domain controller for `example.com`. The environment is ready for the next Active Directory lab.
+
+## 🙏 Acknowledgment
+
+This lab is part of my hands-on Active Directory homelab learning journey. Thank you for reviewing my documentation.
+
+## ✍️ Author's Note
+
+The original screenshots are preserved in the `screenshots` folder. Selected screenshots are embedded beside the relevant steps to keep this README clear and easy to follow.
+
+## ✅ Closing
+
+The Active Directory domain is now established and verified. More hands-on labs to follow!
