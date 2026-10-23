@@ -140,7 +140,7 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Windows account-lockout message displayed**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(20).png?raw=true)
 
 ### Step 12: Verify the Lockout in ADUC
 
