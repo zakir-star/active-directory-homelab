@@ -1,82 +1,91 @@
-# 🏢Lab 3: Creating Organizational Units and Domain Users
+# Lab 3: Creating Organizational Units and Domain Users
 
-## 🎯Objective
+## 🎯 Objective
 
-To create an Organizational Unit (OU) and a domain user in Active Directory Users and Computers, and verify that the user is located inside the correct OU.
+- Create an Organizational Unit (OU) in Active Directory.
+- Create a domain user inside the `IT` OU.
+- Verify that the user account appears in the correct OU.
 
-## 💻Lab Environment
+## 🖥️ Lab Environment
 
-- 🖥️**Operating System:** Windows Server 2022
-- 💿**Virtualization:** VMware Workstation
-- 🏷️**Server Name:** DC-01
-- 🌐**Domain Name:** example.com
+- 💿 **Virtualization Platform:** VMware Workstation
+- 🪟 **Operating System:** Windows Server 2022
+- 🏷️ **Domain Controller:** `DC-01`
+- 🌐 **Domain Name:** `example.com`
 
----
+## ⚙️ Lab Configuration
 
-## 📂Step 1: Create an Organizational Unit (OU)
+### Step 1: Open Active Directory Users and Computers
 
-1. Open **Server Manager**.
-2. Click **Tools** and select **Active Directory Users and Computers**.
-3. Expand the domain `example.com`.
-4. Right-click the domain and select **New → Organizational Unit**.
-5. Enter `IT` as the OU name.
-6. Keep **Protect container from accidental deletion** checked.
-7. Click **OK**.
+1. Sign in to `DC-01`.
+2. Open **Server Manager → Tools → Active Directory Users and Computers**.
+3. Expand the `example.com` domain.
 
-### 📸Screenshots: IT Organizational Unit
+**📸 Screenshot — Active Directory Users and Computers**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot - Active Directory Users and Computers](screenshots/Screenshot%20(1).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(2).png?raw=true)
+### Step 2: Create the IT Organizational Unit
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(3).png?raw=true)
+1. Right-click the `example.com` domain.
+2. Select **New → Organizational Unit**.
+3. Enter `IT` as the OU name.
+4. Keep **Protect container from accidental deletion** checked.
+5. Select **OK**.
 
----
+**📸 Screenshot — IT Organizational Unit**
 
-## 👤Step 2: Create a Domain User
+![Screenshot - IT Organizational Unit](screenshots/Screenshot%20(3).png)
 
-1. In Active Directory Users and Computers, locate the `IT` OU.
-2. Right-click the `IT` OU and select **New → User**.
+### Step 3: Create a Domain User
+
+1. In Active Directory Users and Computers, right-click the `IT` OU.
+2. Select **New → User**.
 3. Enter the following details:
-   - **First Name:** Lab
-   - **Last Name:** User01
-   - **User Logon Name:** LabUser01
-4. Click **Next**.
+   - **First Name:** `Lab`
+   - **Last Name:** `User01`
+   - **User Logon Name:** `LabUser01`
+4. Select **Next**.
 5. Set a lab-only password.
-6. Configure the password options as user must change password at next logon.
-7. Click **Next**, review the details, and select **Finish**.
+6. Select **User must change password at next logon** for this lab.
+7. Select **Next**, review the details, and select **Finish**.
 
-### 📸Screenshots: Domain User Creation
+**📸 Screenshot — Domain User Creation**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(4).png?raw=true)
+![Screenshot - Domain user creation](screenshots/Screenshot%20(5).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(5).png?raw=true)
+### Step 4: Verify the Domain User
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(6).png?raw=true)
+1. In Active Directory Users and Computers, select the `IT` OU under `example.com`.
+2. Check the right-hand pane.
+3. Confirm that `LabUser01` appears in the list.
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(7).png?raw=true)
+**📸 Screenshot — User in the IT OU**
 
----
+![Screenshot - LabUser01 visible in the IT OU](screenshots/Screenshot%20(9).png)
 
-## 🔎Step 3: Verify the Domain User
+## ✅ Expected Result
 
-1. Open Active Directory Users and Computers.
-2. Select the `IT` OU under `example.com`.
-3. Check the right-hand pane.
-4. Confirm that `LabUser01` appears in the list.
+- The `IT` Organizational Unit is created under `example.com`.
+- The `LabUser01` domain user is created successfully.
+- `LabUser01` is visible inside the `IT` OU in Active Directory Users and Computers.
 
-### 📸Screenshots: Domain User Verification
+## 🌍 Real-World Use Case
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-3-User-and-OU-Management/screenshots/Screenshot%20(9).png?raw=true)
+Organizational Units help administrators organize domain accounts and apply management settings to the appropriate groups of users.
 
----
+## 📌 Outcome
 
-## ✅Results
+Successfully created the `IT` OU, created the `LabUser01` domain user, and verified that the account is stored in the correct OU.
 
-- ✅ Created an Organizational Unit named `IT`.
-- ✅ Created a domain user named `LabUser01`.
-- ✅ Verified that the user appears inside the correct OU.
+## 🙏 Acknowledgment
 
-## 🚀Conclusion
+This lab is part of my hands-on Active Directory homelab learning journey. Thank you for reviewing my documentation.
 
-This lab demonstrated how to create an Organizational Unit, create a domain user, and verify the placement of the user account using Active Directory Users and Computers.
+## ✍️ Author's Note
+
+The existing screenshots are preserved in the `screenshots` folder. Selected screenshots are embedded beside the relevant steps to keep this README clear and easy to follow.
+
+## ✅ Closing
+
+The OU and domain user are in place and verified. More hands-on Active Directory labs to follow!
