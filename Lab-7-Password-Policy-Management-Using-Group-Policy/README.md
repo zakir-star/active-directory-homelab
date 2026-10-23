@@ -27,7 +27,7 @@
 
 **📸 Screenshot**
 
-![Screenshot 1 - Group Policy Management](screenshots/Screenshot%20(1).png)
+![Screenshot 1 - Group Policy Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Navigate to Password Policy
 
@@ -37,19 +37,19 @@ In Group Policy Management Editor, navigate to:
 
 **📸 Screenshots**
 
-![Screenshot 2 - Expand the domain tree](screenshots/Screenshot%20(2).png)
+![Screenshot 2 - Expand the domain tree](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(2).png?raw=true)
 
-![Screenshot 3 - Select the example.com domain](screenshots/Screenshot%20(3).png)
+![Screenshot 3 - Select the example.com domain](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(3).png?raw=true)
 
-![Screenshot 4 - Locate Default Domain Policy](screenshots/Screenshot%20(4).png)
+![Screenshot 4 - Locate Default Domain Policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(4).png?raw=true)
 
-![Screenshot 5 - Edit Default Domain Policy](screenshots/Screenshot%20(5).png)
+![Screenshot 5 - Edit Default Domain Policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(5).png?raw=true)
 
-![Screenshot 6 - Navigate through policy settings](screenshots/Screenshot%20(6).png)
+![Screenshot 6 - Navigate through policy settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(6).png?raw=true)
 
-![Screenshot 7 - Open Account Policies](screenshots/Screenshot%20(7).png)
+![Screenshot 7 - Open Account Policies](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(7).png?raw=true)
 
-![Screenshot 8 - Select Password Policy](screenshots/Screenshot%20(8).png)
+![Screenshot 8 - Select Password Policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(8).png?raw=true)
 
 ### Step 3: Review the Existing Password Policy
 
@@ -57,7 +57,7 @@ Review the initial values before changing them. The screenshot shows the origina
 
 **📸 Screenshot — Initial settings**
 
-![Screenshot 9 - Initial password policy settings](screenshots/Screenshot%20(9).png)
+![Screenshot 9 - Initial password policy settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 4: Configure Enforce Password History
 
@@ -67,11 +67,11 @@ Review the initial values before changing them. The screenshot shows the origina
 
 **📸 Screenshots**
 
-![Screenshot 10 - Open Enforce password history properties](screenshots/Screenshot%20(10).png)
+![Screenshot 10 - Open Enforce password history properties](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(10).png?raw=true)
 
-![Screenshot 11 - Set password history to 5 passwords](screenshots/Screenshot%20(11).png)
+![Screenshot 11 - Set password history to 5 passwords](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(11).png?raw=true)
 
-![Screenshot 12 - Confirm the password history setting](screenshots/Screenshot%20(12).png)
+![Screenshot 12 - Confirm the password history setting](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(12).png?raw=true)
 
 ### Step 5: Configure Maximum Password Age
 
@@ -81,11 +81,11 @@ Review the initial values before changing them. The screenshot shows the origina
 
 **📸 Screenshots**
 
-![Screenshot 13 - Open Maximum password age properties](screenshots/Screenshot%20(13).png)
+![Screenshot 13 - Open Maximum password age properties](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(13).png?raw=true)
 
-![Screenshot 14 - Set maximum password age to 60 days](screenshots/Screenshot%20(14).png)
+![Screenshot 14 - Set maximum password age to 60 days](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(14).png?raw=true)
 
-![Screenshot 15 - Confirm the maximum password age setting](screenshots/Screenshot%20(15).png)
+![Screenshot 15 - Confirm the maximum password age setting](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(15).png?raw=true)
 
 ### Step 6: Configure Minimum Password Age and Minimum Password Length
 
@@ -96,11 +96,11 @@ Review the initial values before changing them. The screenshot shows the origina
 
 **📸 Screenshots**
 
-![Screenshot 16 - Open Minimum password length properties](screenshots/Screenshot%20(16).png)
+![Screenshot 16 - Open Minimum password length properties](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(16).png?raw=true)
 
-![Screenshot 17 - Set minimum password length to 8 characters](screenshots/Screenshot%20(17).png)
+![Screenshot 17 - Set minimum password length to 8 characters](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(17).png?raw=true)
 
-![Screenshot 18 - Confirm the minimum password length setting](screenshots/Screenshot%20(18).png)
+![Screenshot 18 - Confirm the minimum password length setting](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(18).png?raw=true)
 
 ### Step 7: Apply and Verify the Policy
 
@@ -122,7 +122,7 @@ Review the initial values before changing them. The screenshot shows the origina
 
 **📸 Screenshot — Command-line verification**
 
-![Screenshot 19 - Run gpupdate /force and verify settings with net accounts](screenshots/Screenshot%20(19).png)
+![Screenshot 19 - Run gpupdate /force and verify settings with net accounts](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(19).png?raw=true)
 
 ### Step 8: Confirm the Final Password Policy
 
@@ -137,7 +137,7 @@ Confirm the final overview shows these settings:
 
 **📸 Screenshot — Final policy overview**
 
-![Screenshot 20 - Final password policy settings](screenshots/Screenshot%20(20).png)
+![Screenshot 20 - Final password policy settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-7-Password-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(20).png?raw=true)
 
 The uploaded screenshots show the final state for complexity and reversible encryption, but do not show separate properties dialogs for changing those two settings. This documentation records the visible final state without claiming those dialogs were captured.
 
