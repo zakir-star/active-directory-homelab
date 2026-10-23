@@ -25,63 +25,82 @@
 3. Expand **Forest: example.com → Domains → example.com**.
 4. Right-click **Default Domain Policy** and select **Edit**.
 
-### Step 2: Open Password Policy
-
-1. In Group Policy Management Editor, navigate to:
-
-   `Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Password Policy`
-
-2. Review the available password policy settings.
-
-**📸 Screenshot evidence:**
-
-[Open the uploaded Lab 7 screenshots](screenshots/)
-
-### Step 3: Configure Password History and Password Age
-
-Set the following values in **Password Policy**:
-
-| Policy setting | Configured value |
-|---|---:|
-| Enforce password history | 5 passwords remembered |
-| Maximum password age | 60 days |
-| Minimum password age | 1 day |
-
-For each setting, open its properties, enter the configured value, and select **Apply** and **OK**.
-
 **📸 Screenshot**
 
-[Open the uploaded Lab 7 screenshots](screenshots/)
+![Screenshot 1 - Group Policy Management](screenshots/Screenshot%20(1).png)
 
-### Step 4: Configure Minimum Password Length
+### Step 2: Navigate to Password Policy
 
-1. Double-click **Minimum password length**.
-2. Set the value to **8 characters**.
+In Group Policy Management Editor, navigate to:
+
+`Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Password Policy`
+
+**📸 Screenshots**
+
+![Screenshot 2 - Expand the domain tree](screenshots/Screenshot%20(2).png)
+
+![Screenshot 3 - Select the example.com domain](screenshots/Screenshot%20(3).png)
+
+![Screenshot 4 - Locate Default Domain Policy](screenshots/Screenshot%20(4).png)
+
+![Screenshot 5 - Edit Default Domain Policy](screenshots/Screenshot%20(5).png)
+
+![Screenshot 6 - Navigate through policy settings](screenshots/Screenshot%20(6).png)
+
+![Screenshot 7 - Open Account Policies](screenshots/Screenshot%20(7).png)
+
+![Screenshot 8 - Select Password Policy](screenshots/Screenshot%20(8).png)
+
+### Step 3: Review the Existing Password Policy
+
+Review the initial values before changing them. The screenshot shows the original policy settings, including 24 remembered passwords, a 42-day maximum password age, and a 7-character minimum password length.
+
+**📸 Screenshot — Initial settings**
+
+![Screenshot 9 - Initial password policy settings](screenshots/Screenshot%20(9).png)
+
+### Step 4: Configure Enforce Password History
+
+1. Right-click **Enforce password history** and select **Properties**.
+2. Set **Keep password history for** to **5 passwords remembered**.
 3. Select **Apply**, then **OK**.
 
-**📸 Screenshot**
+**📸 Screenshots**
 
-[Open the uploaded Lab 7 screenshots](screenshots/)
+![Screenshot 10 - Open Enforce password history properties](screenshots/Screenshot%20(10).png)
 
-### Step 5: Enable Password Complexity
+![Screenshot 11 - Set password history to 5 passwords](screenshots/Screenshot%20(11).png)
 
-1. Double-click **Password must meet complexity requirements**.
-2. Select **Enabled**.
+![Screenshot 12 - Confirm the password history setting](screenshots/Screenshot%20(12).png)
+
+### Step 5: Configure Maximum Password Age
+
+1. Right-click **Maximum password age** and select **Properties**.
+2. Set **Password will expire in** to **60 days**.
 3. Select **Apply**, then **OK**.
 
-Password complexity requires passwords to meet Windows complexity rules, including restrictions involving the account name and a combination of character types.
+**📸 Screenshots**
 
-### Step 6: Disable Reversible Password Storage
+![Screenshot 13 - Open Maximum password age properties](screenshots/Screenshot%20(13).png)
 
-1. Double-click **Store passwords using reversible encryption**.
-2. Select **Disabled**.
-3. Select **Apply**, then **OK**.
+![Screenshot 14 - Set maximum password age to 60 days](screenshots/Screenshot%20(14).png)
 
-This setting is kept disabled for this lab because reversible password storage provides a less secure way to store password information.
+![Screenshot 15 - Confirm the maximum password age setting](screenshots/Screenshot%20(15).png)
 
-**📸 Screenshot**
+### Step 6: Configure Minimum Password Age and Minimum Password Length
 
-[Open the uploaded Lab 7 screenshots](screenshots/)
+1. Confirm **Minimum password age** is **1 day**.
+2. Right-click **Minimum password length** and select **Properties**.
+3. Set the minimum length to **8 characters**.
+4. Select **Apply**, then **OK**.
+
+**📸 Screenshots**
+
+![Screenshot 16 - Open Minimum password length properties](screenshots/Screenshot%20(16).png)
+
+![Screenshot 17 - Set minimum password length to 8 characters](screenshots/Screenshot%20(17).png)
+
+![Screenshot 18 - Confirm the minimum password length setting](screenshots/Screenshot%20(18).png)
 
 ### Step 7: Apply and Verify the Policy
 
@@ -98,14 +117,29 @@ This setting is kept disabled for this lab because reversible password storage p
    net accounts
    ```
 
-4. Check the output for the minimum password length, password history, and password age values. The exact output can vary by Windows version; `net accounts` may not display every Group Policy setting, including password complexity and reversible password storage.
-5. If a setting is not shown by the command, verify it in the Password Policy page in Group Policy Management Editor.
+4. Review the output for minimum password age, maximum password age, minimum password length, password history, and computer role.
+5. Note that `net accounts` does not display every policy setting, including password complexity and reversible password storage.
 
-**📸 Screenshot**
+**📸 Screenshot — Command-line verification**
 
-[Open the uploaded Lab 7 screenshots](screenshots/)
+![Screenshot 19 - Run gpupdate /force and verify settings with net accounts](screenshots/Screenshot%20(19).png)
 
-> **Note:** This README describes the configured values. Use your own screenshots and actual Command Prompt output as evidence; do not substitute sample output for the lab's results.
+### Step 8: Confirm the Final Password Policy
+
+Confirm the final overview shows these settings:
+
+- **Enforce password history:** 5 passwords remembered
+- **Maximum password age:** 60 days
+- **Minimum password age:** 1 day
+- **Minimum password length:** 8 characters
+- **Password must meet complexity requirements:** Enabled
+- **Store passwords using reversible encryption:** Disabled
+
+**📸 Screenshot — Final policy overview**
+
+![Screenshot 20 - Final password policy settings](screenshots/Screenshot%20(20).png)
+
+The uploaded screenshots show the final state for complexity and reversible encryption, but do not show separate properties dialogs for changing those two settings. This documentation records the visible final state without claiming those dialogs were captured.
 
 ## ✅ Expected Result
 
@@ -115,7 +149,7 @@ This setting is kept disabled for this lab because reversible password storage p
 - 🔢 Minimum password length is **8 characters**.
 - ✅ Password complexity is **Enabled**.
 - 🛡️ Store passwords using reversible encryption is **Disabled**.
-- 🔄 Group Policy is refreshed and the available policy values are verified.
+- 🔄 Group Policy is refreshed and available values are verified.
 
 ## 🌍 Real-World Use Case
 
@@ -126,7 +160,7 @@ This setting is kept disabled for this lab because reversible password storage p
 
 ## 📌 Outcome
 
-Configured the domain password policy through Group Policy on DC-01 and refreshed the policy. Verification evidence should reflect the actual lab output and final policy settings.
+Configured the domain password policy through Group Policy on DC-01, refreshed the policy, and verified the available values using `net accounts` and Group Policy Management Editor.
 
 ## 🙏 Acknowledgment
 
