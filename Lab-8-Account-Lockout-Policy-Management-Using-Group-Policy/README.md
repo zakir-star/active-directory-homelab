@@ -142,6 +142,8 @@ Do not include the password in the screenshot.
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(20).png?raw=true)
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(21).png?raw=true)
+
 ### Step 12: Verify the Lockout in ADUC
 
 On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and verify that the account is shown as locked.
