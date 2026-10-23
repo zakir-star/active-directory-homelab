@@ -105,15 +105,13 @@ Confirm that the policy displays all three configured values:
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(11).png?raw=true)
 
-### Step 8: Verify the Policy Settings
+### Step 8: Confirm the Policy Was Applied
 
-Return to **Group Policy Management Editor → Account Lockout Policy** and verify the threshold, duration, and counter-reset interval match the values above.
+After `gpupdate /force` completes, return to **Group Policy Management Editor → Account Lockout Policy** and confirm the policy is applied. This step is a final check after the update, not a second configuration or review of the three settings.
 
-**📸 Screenshot — Verify the configured policy values**
+**📸 Screenshot — Leave space for your screenshot**
 
-**📸 Screenshot — Add the appropriate screenshot here**
-
-<!-- Add the appropriate screenshot link here. -->
+<!-- Add your screenshot here. -->
 
 ### Step 9: Create the Dedicated Test Account
 
