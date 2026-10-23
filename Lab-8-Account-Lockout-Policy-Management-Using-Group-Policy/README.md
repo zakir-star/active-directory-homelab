@@ -160,7 +160,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Unlock `lockout.test` in ADUC**
 
-<!-- Add the appropriate screenshot link here. -->
+![imag alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(23).png?raw=true)
 
 ### Step 14: Verify Domain Sign-In
 
