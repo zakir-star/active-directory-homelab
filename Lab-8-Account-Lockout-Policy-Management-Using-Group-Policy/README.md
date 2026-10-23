@@ -56,7 +56,7 @@ Review the current values before changing them. In this lab, the initial thresho
 3. Set the duration to **15 minutes**.
 4. Select **Apply → OK**.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Account lockout duration set to 15 minutes**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -67,7 +67,7 @@ Review the current values before changing them. In this lab, the initial thresho
 3. Set the interval to **15 minutes**.
 4. Select **Apply → OK**.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Reset account lockout counter set to 15 minutes**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -81,7 +81,7 @@ Confirm that the policy displays all three configured values:
 | Account lockout duration | 15 minutes |
 | Reset account lockout counter after | 15 minutes |
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — All three account lockout settings confirmed**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -97,7 +97,7 @@ Confirm that the policy displays all three configured values:
 
 4. Wait for both **User Policy** and **Computer Policy** updates to complete successfully.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Successful `gpupdate /force` result**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -108,7 +108,7 @@ Confirm that the policy displays all three configured values:
 3. Create a domain user named `lockout.test`.
 4. Set a lab-only password and complete the wizard.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Create the `lockout.test` domain account**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -116,7 +116,7 @@ Confirm that the policy displays all three configured values:
 
 Open `lockout.test` **Properties → Account**. Confirm the account is enabled and is not already locked before testing.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Confirm `lockout.test` is enabled and unlocked**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -128,7 +128,7 @@ On the Windows 10 client sign-in screen, select **Other user** if needed and ent
 
 Do not include the password in the screenshot.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Enter `EXAMPLE\\lockout.test` on the Windows client**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -138,7 +138,7 @@ Do not include the password in the screenshot.
 2. Repeat incorrect attempts only until the configured threshold is reached.
 3. Stop when Windows displays the account-lockout message.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Windows account-lockout message displayed**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -146,7 +146,7 @@ Do not include the password in the screenshot.
 
 On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and verify that the account is shown as locked.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Verify `lockout.test` is locked in ADUC**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -156,7 +156,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 2. Select **Apply → OK**.
 3. Reopen the Account tab and verify that the account is no longer locked.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Unlock `lockout.test` in ADUC**
 
 <!-- Add the appropriate screenshot link here. -->
 
@@ -164,7 +164,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 On the Windows 10 client, sign in as `EXAMPLE\\lockout.test` using the correct lab password. This step is complete only after the client successfully signs in.
 
-**📸 Screenshot — Add the appropriate screenshot here**
+**📸 Screenshot — Successful sign-in as `EXAMPLE\\lockout.test`**
 
 <!-- Add the appropriate screenshot link here. -->
 
