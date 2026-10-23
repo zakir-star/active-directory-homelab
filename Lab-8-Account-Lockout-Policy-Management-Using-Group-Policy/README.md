@@ -58,7 +58,7 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Account lockout duration set to 15 minutes**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(8).png?raw=true)
 
 ### Step 5: Configure Reset Account Lockout Counter After
 
