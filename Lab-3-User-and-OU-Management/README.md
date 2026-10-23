@@ -23,7 +23,7 @@
 
 **📸 Screenshot — Active Directory Users and Computers**
 
-![Screenshot - Active Directory Users and Computers](screenshots/Screenshot%20(1).png)
+![Screenshot - Active Directory Users and Computers](screenshots/Screenshot%20(0).png)
 
 ### Step 2: Create the IT Organizational Unit
 
