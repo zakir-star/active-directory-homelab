@@ -1,123 +1,117 @@
-# 💻 Lab 5: Join Windows 10 Client to the Domain
+# Lab 5: Join a Windows Client to the Domain
 
 ## 🎯 Objective
 
-Join a Windows 10 client machine to the `example.com` domain and successfully log in using the domain user `user01`.
+- Prepare a Windows 10 client for Active Directory domain membership.
+- Join the client to the `example.com` domain.
+- Sign in using the domain user `user01`.
+- Verify the client computer account in Active Directory Users and Computers (ADUC).
 
-## 💻 Lab Environment
+## 🖥️ Lab Environment
 
+- 🏢 **Domain Controller:** DC-01
+- 💿 **Server Operating System:** Windows Server 2022
+- 💻 **Client Operating System:** Windows 10
+- 🌐 **Domain Name:** `example.com`
+- 🔗 **Domain Controller IP:** `10.0.0.1/24`
+- 🧭 **Client Computer Name:** `client`
+- 👤 **Domain User:** `user01`
 - 💿 **Virtualization:** VMware Workstation
-- 🖥️ **Domain Controller:** Windows Server 2022 (DC-01)
-- 💻 **Client Machine:** Windows 10
-- 🌐 **Domain:** example.com
-- 🔗 **Domain Controller FQDN:** DC-01.example.com
-- 👤 **Domain User:** user01
 
----
+## ⚙️ Lab Configuration
 
-## 🚀 Step 1: Prepare the Windows 10 Client
+### Step 1: Configure the Windows Client
 
-1. Power on the Windows 10 virtual machine.
-2. Log in with a local administrator account.
-3. Press `win+r` and type `ncpa.cpl`
-4. Right click on Adapter and click on properties
-5. Select IPv4 and click on properties
-6. Assign Static IP-address, point DNS towards domain controller
-7. Ensure the client must ping DC-01.
+1. Start the Windows 10 virtual machine and sign in with a local administrator account.
+2. Press `Win + R`, enter `ncpa.cpl`, and press **Enter**.
+3. Right-click the active network adapter and select **Properties**.
+4. Select **Internet Protocol Version 4 (TCP/IPv4)**, then click **Properties**.
+5. Configure an unused static IP address in the same subnet as DC-01. For example, `10.0.0.10` with subnet mask `255.255.255.0`, if that address is available.
+6. Set **Preferred DNS server** to `10.0.0.1` (DC-01). Do not use a public DNS server for domain discovery.
+7. Rename the Windows client to `client` in Windows system settings, then restart if prompted.
+8. Confirm the client can reach DC-01 before attempting the domain join.
 
-**📸 Screenshot: Windows 10 Client Desktop**
+**📸 Screenshot — Client network configuration**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot 01 - Windows client network settings](screenshots/Screenshot%20(2).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(2).png?raw=true)
+![Screenshot 02 - Client network adapter configuration](screenshots/Screenshot%20(4).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(3).png?raw=true)
+![Screenshot 03 - Client configuration](screenshots/Screenshot%20(6).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(4).png?raw=true)
+**Note:** If ping fails, check the IP address, subnet mask, DNS setting, and firewall rules on both machines. Only temporarily turn off the firewall if required for troubleshooting in this isolated lab, then re-enable it after testing.
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(5).png?raw=true)
+### Step 2: Join the Client to the Domain
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(6).png?raw=true)
-
----
-
-## 🔗 Step 2: Join the Domain
-
-1. Press `win+r` and type `sysdm.cpl`
-3. Click **Change**.
+1. Press `Win + R`, enter `sysdm.cpl`, and press **Enter**.
+2. In **System Properties**, open the **Computer Name** tab and click **Change**.
+3. Confirm the computer name is `client`.
 4. Under **Member of**, select **Domain**.
-5. Enter the domain name: `example.com`
-6. Click **OK**.
-7. When prompted, enter domain credentials:
-   - Username: `administrator@example.com` 
-   - Password: (your Domain Admin password)
-8. Click **OK**.
-9. You should see a welcome message: **"Welcome to the example.com domain"**.
-10. Restart the computer when prompted.
+5. Enter `example.com`, then click **OK**.
+6. When prompted, enter an account authorized to join computers to the domain, such as the domain administrator account.
+7. Confirm the welcome message for the `example.com` domain.
+8. Close the dialog boxes and restart the client when prompted.
 
-**📸 Screenshots: Domain Join Process**
+**📸 Screenshot — Domain join process**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(8).png?raw=true)
+![Screenshot 04 - Domain join settings](screenshots/Screenshot%20(8).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(9).png?raw=true)
+![Screenshot 05 - Domain join confirmation](screenshots/Screenshot%20(10).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(10).png?raw=true)
+![Screenshot 06 - Successful domain join](screenshots/Screenshot%20(13).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(11).png?raw=true)
+### Step 3: Sign In as the Domain User
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(12).png?raw=true)
+1. After the client restarts, select **Other user** on the sign-in screen.
+2. Enter the domain username as `EXAMPLE\\user01` or `user01@example.com`.
+3. Enter the password configured for `user01` in the earlier lab.
+4. Press **Enter** and wait for the Windows session to load.
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(13).png?raw=true)
+**📸 Screenshot — Domain user sign-in**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(14).png?raw=true)
+![Screenshot 07 - Domain sign-in](screenshots/Screenshot%20(16).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(15).png?raw=true)
+![Screenshot 08 - Domain user session](screenshots/Screenshot%20(17).png)
 
----
+**Note:** Do not include passwords or other credentials in screenshots or GitHub documentation.
 
-## 👤 Step 3: Log in as Domain User
+### Step 4: Verify Domain Membership in ADUC
 
-1. After the restart, on the login screen click **Other user**.
-2. Enter the domain user credentials:
-   - Username: `user01` (or `example.com\user01`)
-   - Password: (the password you set for user01 in Lab 4)
-3. Press Enter / click the arrow.
-4. Confirm that you successfully log in to the domain.
+1. On DC-01, open **Server Manager → Tools → Active Directory Users and Computers**.
+2. Expand the `example.com` domain.
+3. Open the **Computers** container.
+4. Confirm that the computer account named `client` is present.
 
-**📸 Screenshots: Domain Login**
+**📸 Screenshot — Verify the client computer account**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(16).png?raw=true)
+![Screenshot 09 - Verify the domain client in ADUC](screenshots/Screenshot%20(18).png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(17).png?raw=true)
-
----
-
-## 🔎 Step 5: Verify Domain Membership
-
-1. After logging in, open **Command Prompt** or **PowerShell**.
-2. Run the following commands in cmd or windows powershell.
-3. ` whoami`
-4. `systeminfo | findstr /B /C:"Domain"`
-5. Press `win+r` and type `dsa.msc` and click **OK** to open ADUC console
-6. Navigate to the **Computers** container, **CLIENT01** must present.
-
-**📸 Screenshots: verification**
-
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(18).png?raw=true)
-
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(19).png?raw=true)
-
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-5-Join-Windows-Client-to-Domain/screenshots/Screenshot%20(20).png?raw=true)
+![Screenshot 10 - Client computer account in Computers container](screenshots/Screenshot%20(20).png)
 
 ## ✅ Expected Result
 
-- 🖥️ Windows 10 client successfully joins the `example.com` domain.
-- 🔐 Domain user `user01` successfully logs in.
-- 🔎 Domain membership is verified using Command Prompt.
-- 🗂️ Client computer account is visible in the **Computers** container in Active Directory Users and Computers (ADUC).
-## 🎯 Conclusion
+- 🖥️ The Windows 10 computer is named `client` and is joined to `example.com`.
+- 🔐 The domain user `user01` successfully signs in to the client.
+- 🗂️ The `client` computer account appears in the **Computers** container in ADUC on DC-01.
 
-Successfully joined the Windows 10 client to the `example.com` domain and verified domain login and computer account visibility in ADUC.
-> ⚠️ **Note:** If ping connectivity between the Windows client and `DC-01` does not work, check the Windows Firewall settings. If necessary, temporarily turn off the firewall for lab troubleshooting, then re-enable it after testing.
-> 
-**🏆 Lab 5 Status: Completed Successfully!**
+## 🌍 Real-World Use Case
+
+- Domain joining allows an organization to centrally manage Windows computers through Active Directory.
+- Domain users can sign in to authorized domain-joined computers with their organization accounts.
+- The computer account in ADUC confirms that the client is represented in the domain directory.
+
+## 📌 Outcome
+
+Successfully joined the Windows client to the `example.com` domain, signed in as `user01`, and verified the `client` computer account in ADUC.
+
+## 🙏 Acknowledgment
+
+This lab is part of my Active Directory homelab learning journey. Thank you for taking the time to review my documentation.
+
+## ✍️ Author's Note
+
+This exercise was performed in a VMware Workstation environment with Windows Server 2022 acting as the domain controller and Windows 10 as the domain client.
+
+## ✅ Closing
+
+Hands-on practice builds confidence in preparing Windows clients, joining an Active Directory domain, and verifying domain access. More labs to follow!
