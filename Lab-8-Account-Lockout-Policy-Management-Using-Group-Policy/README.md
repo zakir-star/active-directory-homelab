@@ -168,7 +168,7 @@ On the Windows 10 client, sign in as `EXAMPLE\\lockout.test` using the correct l
 
 **📸 Screenshot — Successful sign-in as `EXAMPLE\\lockout.test`**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(24).png?raw=true)
 
 ## ✅ Expected Result
 
