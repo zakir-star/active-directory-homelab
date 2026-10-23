@@ -198,3 +198,103 @@ This lab was performed in a Windows Server 2022 Active Directory environment for
 ## ✅ Closing
 
 Hands-on practice builds confidence in managing domain account policies. More labs to follow!
+
+## 📸 Complete Screenshot Gallery
+
+All 24 screenshots are embedded below in numerical order for easy review. The step-by-step sections above retain their contextual screenshots.
+
+### Screenshot 1
+
+![Lab 8 Screenshot 1](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%281%29.png?raw=true)
+
+### Screenshot 2
+
+![Lab 8 Screenshot 2](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%282%29.png?raw=true)
+
+### Screenshot 3
+
+![Lab 8 Screenshot 3](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%283%29.png?raw=true)
+
+### Screenshot 4
+
+![Lab 8 Screenshot 4](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%284%29.png?raw=true)
+
+### Screenshot 5
+
+![Lab 8 Screenshot 5](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%285%29.png?raw=true)
+
+### Screenshot 6
+
+![Lab 8 Screenshot 6](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%286%29.png?raw=true)
+
+### Screenshot 7
+
+![Lab 8 Screenshot 7](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%287%29.png?raw=true)
+
+### Screenshot 8
+
+![Lab 8 Screenshot 8](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%288%29.png?raw=true)
+
+### Screenshot 9
+
+![Lab 8 Screenshot 9](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
+
+### Screenshot 10
+
+![Lab 8 Screenshot 10](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2810%29.png?raw=true)
+
+### Screenshot 11
+
+![Lab 8 Screenshot 11](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
+
+### Screenshot 12
+
+![Lab 8 Screenshot 12](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2812%29.png?raw=true)
+
+### Screenshot 13
+
+![Lab 8 Screenshot 13](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2813%29.png?raw=true)
+
+### Screenshot 14
+
+![Lab 8 Screenshot 14](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2814%29.png?raw=true)
+
+### Screenshot 15
+
+![Lab 8 Screenshot 15](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2815%29.png?raw=true)
+
+### Screenshot 16
+
+![Lab 8 Screenshot 16](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2816%29.png?raw=true)
+
+### Screenshot 17
+
+![Lab 8 Screenshot 17](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2817%29.png?raw=true)
+
+### Screenshot 18
+
+![Lab 8 Screenshot 18](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2818%29.png?raw=true)
+
+### Screenshot 19
+
+![Lab 8 Screenshot 19](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2819%29.png?raw=true)
+
+### Screenshot 20
+
+![Lab 8 Screenshot 20](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2820%29.png?raw=true)
+
+### Screenshot 21
+
+![Lab 8 Screenshot 21](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2821%29.png?raw=true)
+
+### Screenshot 22
+
+![Lab 8 Screenshot 22](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2822%29.png?raw=true)
+
+### Screenshot 23
+
+![Lab 8 Screenshot 23](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2823%29.png?raw=true)
+
+### Screenshot 24
+
+![Lab 8 Screenshot 24](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2824%29.png?raw=true)
