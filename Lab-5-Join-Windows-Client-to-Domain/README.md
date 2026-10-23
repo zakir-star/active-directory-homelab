@@ -14,7 +14,7 @@
 - 💻 **Client Operating System:** Windows 10
 - 🌐 **Domain Name:** `example.com`
 - 🔗 **Domain Controller IP:** `10.0.0.1/24`
-- 🧭 **Client Computer Name:** `client`
+- 🧭 **Client Computer Name:** `client01`
 - 👤 **Domain User:** `user01`
 - 💿 **Virtualization:** VMware Workstation
 
@@ -26,9 +26,9 @@
 2. Press `Win + R`, enter `ncpa.cpl`, and press **Enter**.
 3. Right-click the active network adapter and select **Properties**.
 4. Select **Internet Protocol Version 4 (TCP/IPv4)**, then click **Properties**.
-5. Configure an unused static IP address in the same subnet as DC-01. For example, `10.0.0.10` with subnet mask `255.255.255.0`, if that address is available.
+5. Configure an unused static IP address in the same subnet as DC-01. For example, `10.0.0.2` with subnet mask `255.255.255.0`, if that address is available.
 6. Set **Preferred DNS server** to `10.0.0.1` (DC-01). Do not use a public DNS server for domain discovery.
-7. Rename the Windows client to `client` in Windows system settings, then restart if prompted.
+7. Rename the Windows client to `client01` in Windows system settings, then restart if prompted.
 8. Confirm the client can reach DC-01 before attempting the domain join.
 
 **📸 Screenshot — Client network configuration**
@@ -45,7 +45,7 @@
 
 1. Press `Win + R`, enter `sysdm.cpl`, and press **Enter**.
 2. In **System Properties**, open the **Computer Name** tab and click **Change**.
-3. Confirm the computer name is `client`.
+3. Confirm the computer name is `client01`.
 4. Under **Member of**, select **Domain**.
 5. Enter `example.com`, then click **OK**.
 6. When prompted, enter an account authorized to join computers to the domain, such as the domain administrator account.
@@ -80,7 +80,7 @@
 1. On DC-01, open **Server Manager → Tools → Active Directory Users and Computers**.
 2. Expand the `example.com` domain.
 3. Open the **Computers** container.
-4. Confirm that the computer account named `client` is present.
+4. Confirm that the computer account named `client01` is present.
 
 **📸 Screenshot — Verify the client computer account**
 
@@ -90,7 +90,7 @@
 
 ## ✅ Expected Result
 
-- 🖥️ The Windows 10 computer is named `client` and is joined to `example.com`.
+- 🖥️ The Windows 10 computer is named `client01` and is joined to `example.com`.
 - 🔐 The domain user `user01` successfully signs in to the client.
 - 🗂️ The `client` computer account appears in the **Computers** container in ADUC on DC-01.
 
@@ -102,7 +102,7 @@
 
 ## 📌 Outcome
 
-Successfully joined the Windows client to the `example.com` domain, signed in as `user01`, and verified the `client` computer account in ADUC.
+Successfully joined the Windows client to the `example.com` domain, signed in as `user01`, and verified the `client01` computer account in ADUC.
 
 ## 🙏 Acknowledgment
 
