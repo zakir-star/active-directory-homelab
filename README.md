@@ -60,6 +60,23 @@ Labs are organized in a practical sequence: build the domain, manage accounts an
 
 ---
 
+## 🛠️ Quick AD Administration Tasks
+
+Short, focused guides for common Active Directory tasks that complement the main lab sequence. These are separate from the numbered labs and will be documented as each task is completed.
+
+| Task | Topic | Status | What it covers |
+|------|-------|--------|----------------|
+| **1** | Delete an OU Protected from Accidental Deletion | 🔜 Next | Enable Advanced Features in ADUC, remove the protection setting, and safely delete a test OU |
+| **2** | Grant Administrative Privileges to a Domain User | 📋 Planned | Understand administrator groups and select appropriate privileges using least privilege |
+| **3** | Delegate Control of an OU | 📋 Planned | Delegate specific tasks without granting full Domain Admin privileges |
+| **4** | Unlock a Domain User Account | 📋 Planned | Unlock a user account and verify its status |
+| **5** | Reset a Domain User Password | 📋 Planned | Reset a password and understand next sign-in requirements |
+| **6** | Enable or Disable a Domain User | 📋 Planned | Manage account status and verify the result |
+
+> **Note:** Quick AD Administration Tasks are short reference guides, separate from the numbered lab sequence.
+
+---
+
 ## 🖥️ Lab Environment
 
 | Component | Details |
@@ -80,8 +97,8 @@ Labs are organized in a practical sequence: build the domain, manage accounts an
 |   +----------------------+      +---------------------+  |
 |   | DC-01                |      | Windows 10 Client   |  |
 |   | Windows Server 2022  |<---->| Domain-joined       |  |
-|   | AD DS + DNS          |      | Signs in as user01  |  |
-|   | IP: 10.0.0.1/24      |      | IP: 10.0.0.2/24     |  |
+|   | AD DS + DNS          |      | Signs in as user01  |
+|   | IP: 10.0.0.1/24      |      | IP: 10.0.0.2/24     |
 |   +----------------------+      +---------------------+  |
 |                                                          |
 |   Network mode: NAT                                      |
@@ -92,10 +109,11 @@ Labs are organized in a practical sequence: build the domain, manage accounts an
 
 ## 🚀 How to Follow Along
 
-1. Start with Lab 1 and follow the roadmap in order.
-2. Open a lab folder to read its `README.md` for the steps, configuration details, and selected screenshots.
-3. Build the lab in your own isolated environment and capture your own evidence as you work.
-4. Labs marked **Next** or **Planned** are roadmap items; they are not represented as completed.
+1. Start with Lab 1 and follow the numbered labs in order.
+2. Open each lab folder's `README.md` for steps, configuration details, and selected screenshots.
+3. Use **Quick AD Administration Tasks** for short guides to common administrative actions.
+4. Practice in an isolated lab environment and capture your own evidence.
+5. Items marked **Next** or **Planned** are roadmap items, not completed work.
 
 ---
 
