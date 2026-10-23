@@ -26,23 +26,23 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **1** | [Windows Server Installation](Lab-1-Windows-Server-Installation) | ✅ Completed | Install Windows Server 2022 in VMware Workstation |
-| **2** | [Active Directory Domain Services](Lab-2-Active-Directory-Domain-Services) | ✅ Completed | Install AD DS, create the domain forest, and promote the server to Domain Controller |
+| **1** | [Windows Server Installation](Lab-1-Windows-Server-Installation/README.md) | ✅ Completed | Install Windows Server 2022 in VMware Workstation |
+| **2** | [Active Directory Domain Services](Lab-2-Active-Directory-Domain-Services/README.md) | ✅ Completed | Install AD DS, create the domain forest, and promote the server to Domain Controller |
 
 ### Phase 2 — Manage Users and Join Clients
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **3** | [User and OU Management](Lab-3-User-and-OU-Management) | ✅ Completed | Create and organize Organizational Units and domain users |
-| **4** | [Security Group Management](Lab-4-Active-Directory-Security-Group-Management) | ✅ Completed | Create a security group and manage group membership |
-| **5** | [Join Windows Client to Domain](Lab-5-Join-Windows-Client-to-Domain) | ✅ Completed | Join a Windows client to `example.com` and sign in as `user01` |
-| **6** | [Domain User Account Management](Lab-6-Domain-User-Acount-Management) | ✅ Completed | Disable and enable accounts, reset passwords, unlock accounts, and configure logon hours |
+| **3** | [User and OU Management](Lab-3-User-and-OU-Management/README.md) | ✅ Completed | Create and organize Organizational Units and domain users |
+| **4** | [Security Group Management](Lab-4-Active-Directory-Security-Group-Management/README.md) | ✅ Completed | Create a security group and manage group membership |
+| **5** | [Join Windows Client to Domain](Lab-5-Join-Windows-Client-to-Domain/README.md) | ✅ Completed | Join a Windows client to `example.com` and sign in as `user01` |
+| **6** | [Domain User Account Management](Lab-6-Domain-User-Acount-Management/README.md) | ✅ Completed | Disable and enable accounts, reset passwords, unlock accounts, and configure logon hours |
 
 ### Phase 3 — Manage Account Policies
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **7** | [Password Policy Management Using Group Policy](Lab-7-Password-Policy-Management-Using-Group-Policy) | ✅ Completed | Configure domain password history, age, minimum length, complexity, and reversible encryption settings |
+| **7** | [Password Policy Management Using Group Policy](Lab-7-Password-Policy-Management-Using-Group-Policy/README.md) | ✅ Completed | Configure domain password history, age, minimum length, complexity, and reversible encryption settings |
 | **8** | [Account Lockout Policy Management Using Group Policy](Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/README.md) | ✅ Completed | Configure domain account lockout settings and verify lockout behavior with a test account |
 
 ### Phase 4 — Control Access to Resources
