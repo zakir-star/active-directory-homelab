@@ -75,7 +75,28 @@
 
 **Note:** Do not include passwords or other credentials in screenshots or GitHub documentation.
 
-### Step 4: Verify Domain Membership in ADUC
+### Step 4: Verify Domain Membership
+
+#### A. Verify from the Windows Client (Command Prompt)
+
+1. Sign in to the client as the domain user `user01`.
+2. Open **Command Prompt**.
+3. Run the following commands one at a time:
+
+   ```cmd
+   whoami
+   systeminfo | findstr /B /C:"Domain"
+   ```
+
+4. Check the output:
+   - `whoami` should show the domain and username, such as `example\\user01`.
+   - The `systeminfo` command should show `example.com` as the domain.
+
+**📸 Screenshot — CLI verification**
+
+![Screenshot 09 - Verify domain user and domain name in Command Prompt](screenshots/Screenshot%20(18).png)
+
+#### B. Verify from Active Directory Users and Computers
 
 1. On DC-01, open **Server Manager → Tools → Active Directory Users and Computers**.
 2. Expand the `example.com` domain.
@@ -84,25 +105,24 @@
 
 **📸 Screenshot — Verify the client computer account**
 
-![Screenshot 09 - Verify the domain client in ADUC](screenshots/Screenshot%20(18).png)
-
 ![Screenshot 10 - Client computer account in Computers container](screenshots/Screenshot%20(20).png)
 
 ## ✅ Expected Result
 
 - 🖥️ The Windows 10 computer is named `client01` and is joined to `example.com`.
 - 🔐 The domain user `user01` successfully signs in to the client.
-- 🗂️ The `client` computer account appears in the **Computers** container in ADUC on DC-01.
+- 💻 The `whoami` and `systeminfo` commands confirm the domain user and domain membership.
+- 🗂️ The `client01` computer account appears in the **Computers** container in ADUC on DC-01.
 
 ## 🌍 Real-World Use Case
 
 - Domain joining allows an organization to centrally manage Windows computers through Active Directory.
 - Domain users can sign in to authorized domain-joined computers with their organization accounts.
-- The computer account in ADUC confirms that the client is represented in the domain directory.
+- Administrators can verify domain membership from the client and confirm the computer account in ADUC.
 
 ## 📌 Outcome
 
-Successfully joined the Windows client to the `example.com` domain, signed in as `user01`, and verified the `client01` computer account in ADUC.
+Successfully joined the Windows client to the `example.com` domain, signed in as `user01`, verified domain membership using Command Prompt, and confirmed the `client01` computer account in ADUC.
 
 ## 🙏 Acknowledgment
 
