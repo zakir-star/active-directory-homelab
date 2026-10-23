@@ -83,7 +83,7 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — All three account lockout settings confirmed**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 7: Apply the Group Policy
 
