@@ -130,7 +130,7 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Enter `EXAMPLE\\lockout.test` on the Windows client**
 
-<!-- Add the appropriate screenshot link here. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20(19).png?raw=true)
 
 ### Step 11: Trigger the Account Lockout
 
