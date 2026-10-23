@@ -45,32 +45,41 @@ Review the current values before changing them. In this lab, the initial thresho
 
 ### Step 4: Configure Account Lockout Duration
 
-1. Double-click **Account lockout duration**.
-2. Define the policy setting and set it to **15 minutes**.
-3. Select **Apply → OK**.
+1. In **Account Lockout Policy**, double-click **Account lockout duration**.
+2. Select **Define this policy setting**.
+3. Set the duration to **15 minutes**.
+4. Select **Apply → OK**.
 
-![Screenshot 5 - Set account lockout duration to 15 minutes](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%285%29.png?raw=true)
+**📸 Screenshot — Account lockout duration set to 15 minutes**
+
+![Screenshot 5 - Account lockout duration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%285%29.png?raw=true)
 
 ### Step 5: Configure Reset Account Lockout Counter After
 
 1. Double-click **Reset account lockout counter after**.
-2. Define the policy setting and set it to **15 minutes**.
-3. Select **Apply → OK**.
-4. Review the three settings together.
+2. Select **Define this policy setting**.
+3. Set the interval to **15 minutes**.
+4. Select **Apply → OK**.
 
-The final configuration is:
+**📸 Screenshot — Reset counter interval set to 15 minutes**
 
-| Policy setting | Configured value |
-|---|---:|
+![Screenshot 6 - Reset account lockout counter after 15 minutes](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%286%29.png?raw=true)
+
+### Step 6: Review the Three Account Lockout Settings
+
+Confirm that the policy displays all three configured values:
+
+| Policy setting | Value |
+|---|---|
 | Account lockout threshold | 5 invalid logon attempts |
 | Account lockout duration | 15 minutes |
 | Reset account lockout counter after | 15 minutes |
 
-![Screenshot 6 - Configure the counter reset interval](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%286%29.png?raw=true)
+**📸 Screenshot — Final account lockout policy settings**
 
-![Screenshot 7 - Review all three account lockout settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%287%29.png?raw=true)
+![Screenshot 7 - Final account lockout policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%287%29.png?raw=true)
 
-### Step 6: Apply Group Policy
+### Step 7: Apply the Group Policy
 
 1. Close the Group Policy Management Editor.
 2. Open **Command Prompt as Administrator** on DC-01.
@@ -80,72 +89,86 @@ The final configuration is:
    gpupdate /force
    ```
 
-4. Confirm that both **User Policy** and **Computer Policy** updates complete successfully.
+4. Wait for both **User Policy** and **Computer Policy** updates to complete successfully.
 
-![Screenshot 8 - Successful Group Policy update](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%288%29.png?raw=true)
+**📸 Screenshot — Successful Group Policy update**
 
-### Step 7: Verify the Final Policy Settings
+![Screenshot 8 - gpupdate completed successfully](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%288%29.png?raw=true)
 
-Return to **Group Policy Management Editor → Account Lockout Policy** and confirm the values are:
+### Step 8: Verify the Policy Settings
 
-- **Account lockout threshold:** 5 invalid logon attempts
-- **Account lockout duration:** 15 minutes
-- **Reset account lockout counter after:** 15 minutes
+Return to **Group Policy Management Editor → Account Lockout Policy** and verify the threshold, duration, and counter-reset interval match the values above.
 
-![Screenshot 9 - Verify the final account lockout settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
+**📸 Screenshot — Verify the configured policy values**
 
-### Step 8: Create a Dedicated Test Account
+![Screenshot 9 - Verify account lockout settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
 
-1. Open **Server Manager → Tools → Active Directory Users and Computers**.
+### Step 9: Create the Dedicated Test Account
+
+1. Open **Server Manager → Tools → Active Directory Users and Computers (ADUC)**.
 2. Expand `example.com` and open the existing **IT** Organizational Unit.
-3. Create a user named `lockout.test`.
-4. Set a lab-only password and ensure the account is enabled.
+3. Create a domain user named `lockout.test`.
+4. Set a lab-only password and complete the wizard.
 
-![Screenshot 10 - Create the dedicated test account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2810%29.png?raw=true)
+**📸 Screenshot — Create the test account**
 
-### Step 9: Confirm the Test Account Is Enabled
+![Screenshot 10 - Create lockout.test](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2810%29.png?raw=true)
 
-Open the `lockout.test` account's **Properties → Account** tab. Confirm **Account is disabled** is not selected and the account is not already locked.
+### Step 10: Confirm the Test Account Is Enabled
 
-![Screenshot 11 - Check the test account status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
+Open `lockout.test` **Properties → Account**. Confirm the account is enabled and is not already locked before testing.
 
-### Step 10: Prepare the Windows Client
+**📸 Screenshot — Check the test account's status**
 
-On the Windows 10 client, go to the sign-in screen and select **Other user** if required. Enter the domain test username:
+![Screenshot 11 - Test account status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
 
-`EXAMPLE\lockout.test`
+### Step 11: Enter the Domain Account on the Windows Client
 
-Do not enter or show the password in the screenshot.
+On the Windows 10 client sign-in screen, select **Other user** if needed and enter:
 
-![Screenshot 12 - Enter the domain test username](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2812%29.png?raw=true)
+`EXAMPLE\\lockout.test`
 
-### Step 11: Test Account Lockout
+Do not include the password in the screenshot.
 
-1. Enter an intentionally incorrect password for `EXAMPLE\lockout.test`.
-2. Repeat only until the configured lockout threshold is reached.
-3. Stop when Windows displays the account-lockout message. Do not continue making attempts.
+**📸 Screenshot — Enter the domain username**
 
-![Screenshot 13 - Windows reports that the account is locked](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2813%29.png?raw=true)
+![Screenshot 12 - Domain username on Windows client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2812%29.png?raw=true)
 
-### Step 12: Verify the Lockout in ADUC
+### Step 12: Trigger the Account Lockout
 
-On DC-01, open **Active Directory Users and Computers → IT → lockout.test → Properties → Account**. Verify that the account is locked.
+1. Enter an incorrect password for `EXAMPLE\\lockout.test`.
+2. Repeat incorrect attempts only until the configured threshold is reached.
+3. Stop when Windows displays the account-lockout message.
 
-![Screenshot 14 - Verify the locked account in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2814%29.png?raw=true)
+**📸 Screenshot — Windows displays the account-lockout message**
 
-### Step 13: Unlock the Test Account
+![Screenshot 13 - Account lockout message](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2813%29.png?raw=true)
+
+### Step 13: Verify the Lockout in ADUC
+
+On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and verify that the account is shown as locked.
+
+**📸 Screenshot — Confirm the account is locked**
+
+![Screenshot 14 - Locked account in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2814%29.png?raw=true)
+
+### Step 14: Unlock the Test Account
 
 1. In the account's **Account** tab, select **Unlock account**.
 2. Select **Apply → OK**.
-3. Reopen the Account tab and confirm the account is no longer locked.
+3. Reopen the Account tab and verify that the account is no longer locked.
 
-![Screenshot 15 - Verify the test account is unlocked](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2815%29.png?raw=true)
+**📸 Screenshot — Unlock the account in ADUC**
 
-### Step 14: Verify Domain Sign-In
+![Screenshot 15 - Unlock test account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2815%29.png?raw=true)
 
-On the Windows 10 client, sign in using `EXAMPLE\lockout.test` and the correct lab password. A successful sign-in confirms that the unlocked account can authenticate again.
+### Step 15: Verify Domain Sign-In
 
-![Screenshot 16 - Successful sign-in with the test account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2816%29.png?raw=true)
+On the Windows 10 client, sign in as `EXAMPLE\\lockout.test` using the correct lab password. This step is complete only after the client successfully signs in.
+
+**📸 Screenshot — Successful domain sign-in**
+
+![Screenshot 16 - Successful domain sign-in](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2816%29.png?raw=true)
 
 ## ✅ Expected Result
 
