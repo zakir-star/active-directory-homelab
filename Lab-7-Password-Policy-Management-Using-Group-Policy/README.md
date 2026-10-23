@@ -33,9 +33,9 @@
 
 2. Review the available password policy settings.
 
-**📸 Screenshot**
+**📸 Screenshot evidence:**
 
-![Password Policy settings in Group Policy Management](screenshots/Screenshot%20(1).png)
+[Open the uploaded Lab 7 screenshots](screenshots/)
 
 ### Step 3: Configure Password History and Password Age
 
@@ -51,7 +51,7 @@ For each setting, open its properties, enter the configured value, and select **
 
 **📸 Screenshot**
 
-![Password history and age settings](screenshots/Screenshot%20(2).png)
+[Open the uploaded Lab 7 screenshots](screenshots/)
 
 ### Step 4: Configure Minimum Password Length
 
@@ -61,7 +61,7 @@ For each setting, open its properties, enter the configured value, and select **
 
 **📸 Screenshot**
 
-![Minimum password length set to 8 characters](screenshots/Screenshot%20(3).png)
+[Open the uploaded Lab 7 screenshots](screenshots/)
 
 ### Step 5: Enable Password Complexity
 
@@ -81,7 +81,7 @@ This setting is kept disabled for this lab because reversible password storage p
 
 **📸 Screenshot**
 
-![Password complexity enabled and reversible password storage disabled](screenshots/Screenshot%20(4).png)
+[Open the uploaded Lab 7 screenshots](screenshots/)
 
 ### Step 7: Apply and Verify the Policy
 
@@ -103,7 +103,7 @@ This setting is kept disabled for this lab because reversible password storage p
 
 **📸 Screenshot**
 
-![Actual gpupdate and net accounts verification output](screenshots/Screenshot%20(20).png)
+[Open the uploaded Lab 7 screenshots](screenshots/)
 
 > **Note:** This README describes the configured values. Use your own screenshots and actual Command Prompt output as evidence; do not substitute sample output for the lab's results.
 
