@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–6 complete · Lab 7 (Password Policy Management Using Group Policy) is next  
+> **Status:** Labs 1–7 complete · Lab 8 (Account Lockout Policy Management Using Group Policy) is next  
 > **Last updated:** October 2026
 
 ---
@@ -42,7 +42,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **7** | Password Policy Management Using Group Policy | 🔜 Next | Configure domain password settings such as length, complexity, history, and age |
+| **7** | [Password Policy Management Using Group Policy](Lab-7-Password-Policy-Management-Using-Group-Policy) | ✅ Completed | Configure domain password history, age, minimum length, complexity, and reversible encryption settings |
 | **8** | Account Lockout Policy Management Using Group Policy | 📋 Planned | Configure and test account lockout threshold and duration |
 
 ### Phase 4 — Control Access to Resources
@@ -274,6 +274,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Organizational Unit, domain user, and security group administration
 - Domain joining and domain authentication from a Windows client
 - Domain user account administration, including password resets and account unlocks
+- Group Policy password policy configuration and verification
 - Screenshot-supported technical documentation
 
 ---
