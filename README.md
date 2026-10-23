@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–7 complete · Lab 8 (Account Lockout Policy Management Using Group Policy) is next  
+> **Status:** Labs 1–8 complete · Lab 9 (File Shares and NTFS Permissions) is next  
 > **Last updated:** October 2026
 
 ---
@@ -43,13 +43,13 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **7** | [Password Policy Management Using Group Policy](Lab-7-Password-Policy-Management-Using-Group-Policy) | ✅ Completed | Configure domain password history, age, minimum length, complexity, and reversible encryption settings |
-| **8** | Account Lockout Policy Management Using Group Policy | 📋 Planned | Configure and test account lockout threshold and duration |
+| **8** | [Account Lockout Policy Management Using Group Policy](Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy) | ✅ Completed | Configure domain account lockout settings and verify lockout behavior with a test account |
 
 ### Phase 4 — Control Access to Resources
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **9** | File Shares and NTFS Permissions | 📋 Planned | Create shared folders and apply share and NTFS permissions |
+| **9** | File Shares and NTFS Permissions | 🔜 Next | Create shared folders and apply share and NTFS permissions |
 | **10** | Map Network Drives Using Group Policy Preferences | 📋 Planned | Deploy a mapped drive to domain users or groups |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
@@ -275,6 +275,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Domain joining and domain authentication from a Windows client
 - Domain user account administration, including password resets and account unlocks
 - Group Policy password policy configuration and verification
+- Account lockout policy configuration and testing
 - Screenshot-supported technical documentation
 
 ---
