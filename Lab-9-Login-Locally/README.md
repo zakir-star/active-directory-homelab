@@ -51,7 +51,7 @@ Navigate to:
 
 **📸Screenshot**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20(10).png?raw=true)
+![Screenshot 1 - Local account sign-in restriction on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%281%29.png?raw=true)
 
 ### Step 5: Check Deny Log on Locally
 
@@ -75,6 +75,12 @@ Wait for the policy refresh to complete.
 2. Sign in to DC-01 as `EXAMPLE\\user01`.
 3. Sign out, then sign in as `EXAMPLE\\user02`.
 4. Confirm that both domain users can load the desktop.
+   
+**📸Screenshots**
+
+
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20(16.png?raw=true)
 
 ## ✅ Expected Result
 
