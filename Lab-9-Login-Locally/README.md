@@ -51,7 +51,7 @@ Navigate to:
 
 **📸Screenshot**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 5: Check Deny Log on Locally
 
