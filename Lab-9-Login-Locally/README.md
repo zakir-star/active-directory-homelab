@@ -17,7 +17,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 ### Step 1: Demonstrate the Local Account Sign-in Restriction
 
 1. At the DC-01 sign-in screen, choose **Other user**.
-2. Attempt to sign in using a confirmed local account, in the format ` .\\LocalUser ` (replace `LocalUser` with the actual local account name; omit the spaces).
+2. Attempt to sign in using a confirmed local account, in the format ` .\\LocalUser ` (replace `LocalUser` with the actual local account name).
 3. Record the result before changing Group Policy.
 
 **📸 Screenshot — Local account sign-in restriction on DC-01**
