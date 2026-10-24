@@ -47,6 +47,10 @@ Navigate to:
 3. Add `EXAMPLE\\user01` and `EXAMPLE\\user02`.
 4. Apply the changes.
 
+**📸Screenshot**
+
+![image alt]()
+
 ### Step 5: Check Deny Log on Locally
 
 1. Open **Deny log on locally** in the same section.
