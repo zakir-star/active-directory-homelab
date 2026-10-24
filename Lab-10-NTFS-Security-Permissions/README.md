@@ -9,10 +9,10 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 🏢 **Domain Controller:** DC-01
 - 💿 **Operating System:** Windows Server 2022
 - 🌐 **Domain:** `example.com`
-- 💽 **IT_DATA Drive:** E:
-- 📁 **IT_DATA Folder:** `E:\IT_DATA`
-- 👤 **Domain Accounts:** `user01`, `user02`, `administrator@example.com`
-- 🛠️ **Tool:** File Explorer — Folder Properties — Security — Advanced
+- 💽 **Data Drive:** `E:`
+- 📁 **Data Folder:** `E:\IT_DATA`
+- 👤 **Domain Accounts:** `user01` (read/write), `user02` (read-only), `administrator@example.com` (Full Control)
+- 🛠️ **Management Tool:** File Explorer — Folder Properties — Security — Advanced
 
 ## ⚙️ Lab Configuration
 
@@ -112,11 +112,11 @@ I am user02 with only read permission
 
 ## ✅ Expected Result
 
-- The E: data volume and `E:\IT_DATA` folder are created.
+- The `E:` data volume and `E:\IT_DATA` folder are created successfully.
 - The folder contains `Test1.txt` and `Test2.rtf`.
-- NTFS permissions are configured for the three specified domain accounts.
-- `user01` can modify and save a file.
-- `user02` can open the file but cannot save the attempted change under the configured read-only permissions.
+- NTFS permissions are configured for `user01`, `user02`, and `administrator@example.com`.
+- `user01` can modify and save changes to a file.
+- `user02` can open a file but cannot save the attempted modification.
 - The administrator account is assigned Full Control.
 
 ## 🌍 Real-World Use Case
