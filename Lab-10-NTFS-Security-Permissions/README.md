@@ -90,7 +90,7 @@ I am user01 with read and write permission
 
 **📸 Screenshot — user01's modified file saved successfully**
 
-![Screenshot 5 - user01 successfully saves a modified file](screenshots/Screenshot_05.png)
+![Screenshot 5 - user01 successfully saves a modified file](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(31).png?raw=true)
 
 ### Step 6: Verify Read-Only Access as user02
 
