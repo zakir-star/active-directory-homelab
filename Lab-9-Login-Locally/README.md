@@ -51,7 +51,7 @@ Navigate to:
 
 **📸Screenshot**
 
-![image alt]()
+![Screenshot 10 - Allow log on locally policy configuration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2810%29.png?raw=true)
 
 ### Step 5: Check Deny Log on Locally
 
@@ -78,11 +78,10 @@ Wait for the policy refresh to complete.
    
 **📸Screenshots**
 
-![image alt]()
+![Screenshot 16 - Domain user sign-in verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2816%29.png?raw=true)
 
-![image alt]()
+![Screenshot 17 - Domain user sign-in verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2817%29.png?raw=true)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20(16.png?raw=true)
 
 ## ✅ Expected Result
 
