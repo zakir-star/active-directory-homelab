@@ -78,7 +78,7 @@ Wait for the policy refresh to complete.
    
 **📸Screenshots**
 
-![Screenshot 16 - Domain user sign-in verification](screenshots/Screenshot%20%2816%29.png)
+![Screenshot 16 - Domain user sign-in verification]()
 
 ![Screenshot 17 - Domain user sign-in verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2817%29.png?raw=true)
 
