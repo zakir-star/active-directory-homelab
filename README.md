@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–8 complete · Lab 9 (Log on Locally) is next  
-> **Last updated:** October 23, 2026
+> **Status:** Labs 1–9 complete · Lab 10 (Map Network Drives Using Group Policy Preferences) is next  
+> **Last updated:** October 24, 2026
 
 ---
 
@@ -49,8 +49,8 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | 🔜 Next | Demonstrate the local-account sign-in restriction, then configure GPO to allow selected domain users to log on locally to DC-01 |
-| **10** | Map Network Drives Using Group Policy Preferences | 📋 Planned | Deploy a mapped drive to domain users or groups |
+| **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
+| **10** | Map Network Drives Using Group Policy Preferences | 🔜 Next | Deploy a mapped drive to domain users or groups |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
 
@@ -72,7 +72,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 ### Phase 7 — File Services and Advanced Storage
 
-Builds on the shared-folder and mapped-drive fundamentals introduced in Labs 9 and 10.
+Builds on the mapped-drive fundamentals introduced in Lab 10.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -276,6 +276,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Domain user account administration, including password resets and account unlocks
 - Group Policy password policy configuration and verification
 - Account lockout policy configuration and testing
+- User Rights Assignment through Default Domain Controllers Policy, including local logon rights
 - Screenshot-supported technical documentation
 
 ---
