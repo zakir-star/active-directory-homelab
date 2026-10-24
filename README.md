@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–9 complete · Lab 10 (NTFS / Security Permissions) is next  
+> **Status:** Labs 1–10 complete · Lab 11 (Configure Client Restrictions Using Group Policy) is next  
 > **Last updated:** October 24, 2026
 
 ---
@@ -50,13 +50,13 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
-| **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | 🔜 Next | Configure NTFS permissions on files and folders for domain users or groups, then verify access |
+| **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | ✅ Completed | Configure NTFS permissions for domain accounts and verify read/write versus read-only access |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **11** | Configure Client Restrictions Using Group Policy | 📋 Planned | Apply selected desktop or system restrictions to domain clients |
+| **11** | Configure Client Restrictions Using Group Policy | 🔜 Next | Apply selected desktop or system restrictions to domain clients |
 | **12** | Troubleshoot and Verify Group Policy Application | 📋 Planned | Check policy application and troubleshoot common client-side issues |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
