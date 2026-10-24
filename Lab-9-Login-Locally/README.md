@@ -22,7 +22,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 
 ![Screenshot 01 - Local account sign-in restriction on DC-01](screenshots/Screenshot_01.png)
 
-> **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local. Use a confirmed local account for this demonstration.
+ > **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local. Use a confirmed local account for this demonstration.
 
 ### Step 2: Open Group Policy Management
 
@@ -33,14 +33,14 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 
 ![Screenshot 02 - Open Group Policy Management](screenshots/Screenshot_02.png)
 
-### Step 3: Create and Link a Dedicated GPO
+### Step 3: Edit the Default Domain Controllers Policy
 
-1. Right-click the **Domain Controllers** OU.
-2. Select **Create a GPO in this domain, and Link it here**.
-3. Name the GPO **Allow Local Logon for Lab Users**.
-4. Right-click the new GPO and select **Edit**.
+1. In Group Policy Management, select the **Domain Controllers** OU.
+2. Locate **Default Domain Controllers Policy**, which is already linked to this OU.
+3. Right-click **Default Domain Controllers Policy** and select **Edit**.
+4. Do not create or link a new GPO for this lab.
 
-![Screenshot 03 - Create and link the local logon GPO](screenshots/Screenshot_03.png)
+![Screenshot 03 - Edit Default Domain Controllers Policy](screenshots/Screenshot_03.png)
 
 ### Step 4: Open Allow Log on Locally
 
@@ -97,7 +97,7 @@ gpupdate /force
 ## ✅ Expected Results
 
 - The local-account sign-in restriction is demonstrated before changing policy.
-- A dedicated GPO is linked to the **Domain Controllers** OU.
+- **Default Domain Controllers Policy** is edited under the **Domain Controllers** OU; no new GPO is created or linked.
 - `user01` and `user02` are included in **Allow log on locally**.
 - Existing required entries are preserved, and neither test account is blocked by **Deny log on locally**.
 - Group Policy refreshes successfully.
@@ -105,8 +105,10 @@ gpupdate /force
 
 ## 📝 Conclusion
 
-Demonstrated the local sign-in restriction and configured Group Policy to allow the selected domain users to log on locally to DC-01.
+Demonstrated the local sign-in restriction and edited **Default Domain Controllers Policy** to allow the selected domain users to log on locally to DC-01.
 
 ## 📌 Lab Note
+
+This lab edits **Default Domain Controllers Policy** as requested for the isolated lab. In production, carefully assess changes to default policies and prefer a dedicated GPO where appropriate.
 
 This configuration is for an isolated learning environment. Allowing ordinary domain users to sign in interactively to a Domain Controller is not recommended for production systems.
