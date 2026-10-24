@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–10 complete · Lab 11 (Configure Client Restrictions Using Group Policy) is next  
+> **Status:** Labs 1–10 complete · Lab 11 (Share Permissions) is next  
 > **Last updated:** October 24, 2026
 
 ---
@@ -52,11 +52,11 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
 | **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | ✅ Completed | Configure NTFS permissions for domain accounts and verify read/write versus read-only access |
 
-### Phase 5 — Manage Domain Clients with Group Policy
+### Phase 5 — File Sharing and Access Permissions
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **11** | Configure Client Restrictions Using Group Policy | 🔜 Next | Apply selected desktop or system restrictions to domain clients |
+| **11** | Share Permissions | 🔜 Next | Configure share permissions on the existing `E:\\IT_DATA` folder and compare network access with NTFS permissions |
 | **12** | Troubleshoot and Verify Group Policy Application | 📋 Planned | Check policy application and troubleshoot common client-side issues |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
@@ -77,7 +77,7 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **19** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
-| **20** | Share Permissions and Effective Access | 📋 Planned | Configure share permissions in a separate session and compare effective access with NTFS permissions |
+| **20** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
 | **21** | Access-Based Enumeration (ABE) | 📋 Planned | Hide files and folders from users who lack permission to access them |
 | **22** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **23** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
