@@ -50,7 +50,6 @@ Hi! there this is for testing purpose
 2. Open the **Security** tab.
 3. Click **Advanced**.
 4. Disable inheritance and apply the inheritance choice you used in the lab.
-5. Review the permission entries before applying the final settings.
 
 **📸 Screenshot — Advanced Security Settings for the IT_DATA folder**
 
