@@ -25,7 +25,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 
 **📸 Screenshot — Disk Management showing the new E: drive**
 
-![Screenshot 1 - Disk Management showing the E drive](screenshots/Screenshot_01.png)
+![Screenshot 1 - Disk Management showing the E drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 2: Create the Data Folder and Test Files
 
