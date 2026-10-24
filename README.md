@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–8 complete · Lab 9 (File Shares and NTFS Permissions) is next  
+> **Status:** Labs 1–8 complete · Lab 9 (NTFS/Security Permissions) is next  
 > **Last updated:** October 23, 2026
 
 ---
@@ -49,7 +49,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **9** | File Shares and NTFS Permissions | 🔜 Next | Create shared folders and apply share and NTFS permissions |
+| **9** | [NTFS/Security Permissions](Lab-9-NTFS-Security-Permissions/README.md) | 🔜 Next | Prepare DC-01, create a data volume, and apply/test NTFS permissions for domain users |
 | **10** | Map Network Drives Using Group Policy Preferences | 📋 Planned | Deploy a mapped drive to domain users or groups |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
@@ -77,7 +77,7 @@ Builds on the shared-folder and mapped-drive fundamentals introduced in Labs 9 a
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **19** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
-| **20** | Share Permissions vs NTFS Permissions | 📋 Planned | Compare permission layers and test effective access |
+| **20** | Share Permissions and Effective Access | 📋 Planned | Configure share permissions in a separate session and compare effective access with NTFS permissions |
 | **21** | Access-Based Enumeration (ABE) | 📋 Planned | Hide files and folders from users who lack permission to access them |
 | **22** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **23** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
