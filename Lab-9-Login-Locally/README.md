@@ -20,7 +20,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 2. Attempt to sign in using a known local account, using the format `.\LocalUser` (replace `LocalUser` with the actual local account name).
 3. Record the result. If the message says the sign-in method is not allowed, capture it as the initial state before changing Group Policy.
 
-![Screenshot 01 - Local account sign-in restriction on DC-01](screenshots/Screenshot_01.png)
+![Screenshot 1 - Local account sign-in restriction on DC-01](screenshots/Screenshot%20%281%29.png)
 
  > **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local. Use a confirmed local account for this demonstration.
 
@@ -31,7 +31,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 3. Expand **Forest: example.com → Domains → example.com**.
 4. Locate the **Domain Controllers** OU.
 
-![Screenshot 02 - Open Group Policy Management](screenshots/Screenshot_02.png)
+![Screenshot 2 - Open Group Policy Management](screenshots/Screenshot%20%282%29.png)
 
 ### Step 3: Edit the Default Domain Controllers Policy
 
@@ -40,7 +40,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 3. Right-click **Default Domain Controllers Policy** and select **Edit**.
 4. Do not create or link a new GPO for this lab.
 
-![Screenshot 03 - Edit Default Domain Controllers Policy](screenshots/Screenshot_03.png)
+![Screenshot 3 - Edit Default Domain Controllers Policy](screenshots/Screenshot%20%283%29.png)
 
 ### Step 4: Open Allow Log on Locally
 
@@ -50,7 +50,9 @@ In Group Policy Management Editor, navigate to:
 
 Open **Allow log on locally**.
 
-![Screenshot 04 - Open Allow log on locally](screenshots/Screenshot_04.png)
+![Screenshot 4 - Open Allow log on locally](screenshots/Screenshot%20%284%29.png)
+
+![Screenshot 11 - Default Domain Controllers Policy settings](screenshots/Screenshot%20%2811%29.png)
 
 ### Step 5: Add user01 and user02
 
@@ -59,7 +61,9 @@ Open **Allow log on locally**.
 3. Preserve existing required entries; do not replace the list with only the two test users.
 4. Select **Apply → OK**.
 
-![Screenshot 05 - Select user01 and user02](screenshots/Screenshot_05.png)
+![Screenshot 5 - Select user01 and user02](screenshots/Screenshot%20%285%29.png)
+
+![Screenshot 10 - Select the matching domain accounts](screenshots/Screenshot%20%2810%29.png)
 
 ### Step 6: Check Deny Log on Locally
 
@@ -67,7 +71,9 @@ Open **Allow log on locally**.
 2. Check that neither test user, nor a group containing either user, is denied local logon.
 3. Remember that a deny assignment takes precedence over an allow assignment.
 
-![Screenshot 06 - Review Deny log on locally](screenshots/Screenshot_06.png)
+![Screenshot 6 - Review Deny log on locally](screenshots/Screenshot%20%286%29.png)
+
+![Screenshot 12 - Review local logon policy entries](screenshots/Screenshot%20%2812%29.png)
 
 ### Step 7: Apply Group Policy
 
@@ -81,7 +87,9 @@ gpupdate /force
 
 4. Wait for the policy refresh to complete.
 
-![Screenshot 07 - Successful Group Policy refresh](screenshots/Screenshot_07.png)
+![Screenshot 7 - Successful Group Policy refresh](screenshots/Screenshot%20%287%29.png)
+
+![Screenshot 13 - Group Policy refresh](screenshots/Screenshot%20%2813%29.png)
 
 ### Step 8: Verify Domain User Sign-in
 
@@ -90,9 +98,17 @@ gpupdate /force
 3. Sign out, then sign in as `EXAMPLE\user02`.
 4. Confirm the desktop loads for this account too.
 
-![Screenshot 08 - user01 signed in to DC-01](screenshots/Screenshot_08.png)
+![Screenshot 8 - user01 signed in to DC-01](screenshots/Screenshot%20%288%29.png)
 
-![Screenshot 09 - user02 signed in to DC-01](screenshots/Screenshot_09.png)
+![Screenshot 9 - user02 signed in to DC-01](screenshots/Screenshot%20%289%29.png)
+
+![Screenshot 14 - Verify local logon configuration](screenshots/Screenshot%20%2814%29.png)
+
+![Screenshot 15 - Verify domain user sign-in](screenshots/Screenshot%20%2815%29.png)
+
+![Screenshot 16 - Additional lab evidence](screenshots/Screenshot%20%2816%29.png)
+
+![Screenshot 17 - Additional lab evidence](screenshots/Screenshot%20%2817%29.png)
 
 ## ✅ Expected Results
 
