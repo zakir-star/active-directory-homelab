@@ -12,7 +12,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 - 👤 **Domain users:** `user01`, `user02`
 - 🛠️ **Tool:** Group Policy Management
 
-## ⚙️ Configuration Steps
+## ⚙️ Lab Configuration
 
 ### Step 1: Demonstrate the Local Account Sign-in Restriction
 
@@ -20,7 +20,9 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 2. Attempt to sign in using a confirmed local account, in the format ` .\\LocalUser ` (replace `LocalUser` with the actual local account name; omit the spaces).
 3. Record the result before changing Group Policy.
 
-![Local account sign-in restriction](screenshots/Screenshot%20%281%29.png)
+**📸 Screenshot — Local account sign-in restriction on DC-01**
+
+![Screenshot 1 - Local account sign-in restriction on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%281%29.png?raw=true)
 
 > **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local.
 
@@ -74,7 +76,7 @@ Wait for the policy refresh to complete.
 3. Sign out, then sign in as `EXAMPLE\\user02`.
 4. Confirm that both domain users can load the desktop.
 
-## ✅ Expected Results
+## ✅ Expected Result
 
 - The local-account sign-in restriction is demonstrated before changing policy.
 - **Default Domain Controllers Policy** is edited under the **Domain Controllers** OU; no new GPO is created or linked.
@@ -83,12 +85,26 @@ Wait for the policy refresh to complete.
 - Group Policy refreshes successfully.
 - Both domain users can sign in interactively to DC-01.
 
-## 📝 Conclusion
+## 🌍 Real-World Use Case
 
-Demonstrated the local sign-in restriction and edited **Default Domain Controllers Policy** to allow the selected domain users to log on locally to DC-01.
+User Rights Assignment controls which accounts can sign in interactively to a Windows system. On a Domain Controller, these rights should be restricted carefully and managed according to the organization's security requirements.
+
+## 📌 Outcome
+
+Demonstrated the local-account sign-in restriction and edited **Default Domain Controllers Policy** to allow the selected domain users to log on locally to DC-01.
+
+## 🙏 Acknowledgment
+
+This lab is part of my Active Directory homelab learning journey. Thanks for taking the time to review my documentation.
+
+## ✍️ Author's Note
+
+This lab was performed in a Windows Server 2022 Active Directory environment for learning and practice.
+
+## ✅ Closing
+
+Hands-on practice builds confidence in managing domain logon rights. More labs to follow!
 
 ## 📌 Lab Note
-
-This lab edits **Default Domain Controllers Policy** as requested for the isolated lab. In production, carefully assess changes to default policies and prefer a dedicated GPO where appropriate.
 
 This configuration is for an isolated learning environment. Allowing ordinary domain users to sign in interactively to a Domain Controller is not recommended for production systems.
