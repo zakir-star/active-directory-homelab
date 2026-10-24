@@ -9,8 +9,8 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 🏢 **Domain Controller:** DC-01
 - 💿 **Operating System:** Windows Server 2022
 - 🌐 **Domain:** `example.com`
-- 💽 **Data Drive:** E:
-- 📁 **Data Folder:** `E:\IT_DATA`
+- 💽 **IT_DATA Drive:** E:
+- 📁 **IT_DATA Folder:** `E:\IT_DATA`
 - 👤 **Domain Accounts:** `user01`, `user02`, `administrator@example.com`
 - 🛠️ **Tool:** File Explorer — Folder Properties — Security — Advanced
 
@@ -30,7 +30,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 ### Step 2: Create the Data Folder and Test Files
 
 1. Open the E: drive.
-2. Create a folder named **Data**.
+2. Create a folder named **IT_DATA**.
 3. Inside `E:\IT_DATA`, create these two files:
    - `Test1.txt` — a text file.
    - `Test2.rtf` — a Rich Text Format file.
@@ -42,7 +42,7 @@ Hi! there this is for testing purpose
 
 **📸 Screenshot — E:\IT_DATA containing Test1.txt and Test2.rtf**
 
-![Screenshot 2 - IT_DATA folder with both test files](screenshots/Screenshot_02.png)
+![Screenshot 2 - IT_DATA folder with both test files](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(4).png?raw=true)
 
 ### Step 3: Open Advanced Security Settings
 
