@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–9 complete · Lab 10 (Map Network Drives Using Group Policy Preferences) is next  
+> **Status:** Labs 1–9 complete · Lab 10 (NTFS / Security Permissions) is next  
 > **Last updated:** October 24, 2026
 
 ---
@@ -50,7 +50,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
-| **10** | Map Network Drives Using Group Policy Preferences | 🔜 Next | Deploy a mapped drive to domain users or groups |
+| **10** | NTFS / Security Permissions | 🔜 Next | Configure NTFS permissions on files and folders for domain users or groups, then verify access |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
 
@@ -72,7 +72,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 ### Phase 7 — File Services and Advanced Storage
 
-Builds on the mapped-drive fundamentals introduced in Lab 10.
+Builds on the NTFS and file/folder access-control fundamentals introduced in Lab 10.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
