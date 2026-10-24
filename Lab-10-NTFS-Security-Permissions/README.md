@@ -54,7 +54,7 @@ Hi! there this is for testing purpose
 
 **📸 Screenshot — Advanced Security Settings for the IT_DATA folder**
 
-![Screenshot 3 - Advanced Security Settings for IT_DATA](screenshots/Screenshot_03.png)
+![Screenshot 3 - Advanced Security Settings for IT_DATA](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(23).png?raw=true)
 
 ### Step 4: Configure Permissions for the Domain Accounts
 
