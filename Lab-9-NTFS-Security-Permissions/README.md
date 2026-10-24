@@ -47,7 +47,7 @@ Open **Allow log on locally**.
 ### Step 4: Add user01 and user02
 
 1. Review the existing entries.
-2. Add `EXAMPLE\\user01` and `EXAMPLE\\user02`.
+2. Add `EXAMPLE\user01` and `EXAMPLE\user02`.
 3. Preserve existing required entries; do not replace the list with only the two test users.
 4. Select **Apply → OK**.
 
@@ -76,8 +76,8 @@ Wait for the policy update to complete.
 ### Step 7: Verify Local Logon for user01 and user02
 
 1. Sign out of the administrator session.
-2. Sign in to DC-01 as `EXAMPLE\\user01` and confirm the desktop loads.
-3. Sign out, then sign in as `EXAMPLE\\user02`.
+2. Sign in to DC-01 as `EXAMPLE\user01` and confirm the desktop loads.
+3. Sign out, then sign in as `EXAMPLE\user02`.
 4. Confirm the desktop loads for this account too.
 
 ![Screenshot 07 - user01 signed in to DC-01](screenshots/Screenshot_07.png)
@@ -108,15 +108,15 @@ Wait for the policy update to complete.
 
 1. Open `E:` in File Explorer.
 2. Create a folder named `data`.
-3. Inside `E:\\data`, create a text file named `Test1.txt`.
+3. Inside `E:\data`, create a text file named `Test1.txt`.
 4. Enter sample text, save the file, and close it.
-5. Open Paint, create a simple image, and save it as a bitmap named `Test2.bmp` inside `E:\\data`.
+5. Open Paint, create a simple image, and save it as a bitmap named `Test2.bmp` inside `E:\data`.
 
-![Screenshot 12 - E:\\data with Test1.txt and Test2.bmp](screenshots/Screenshot_12.png)
+![Screenshot 12 - E:\data with Test1.txt and Test2.bmp](screenshots/Screenshot_12.png)
 
 ### Step 11: Inspect Advanced Security Settings
 
-1. Right-click `E:\\data` and select **Properties → Security → Advanced**.
+1. Right-click `E:\data` and select **Properties → Security → Advanced**.
 2. Review the current permission entries and inheritance state before changing them.
 3. If inheritance is already disabled, do not disable it again.
 4. Preserve essential entries for `SYSTEM` and `Administrators`; do not remove entries blindly.
@@ -125,13 +125,13 @@ Wait for the policy update to complete.
 
 ### Step 12: Configure NTFS/Security Permissions
 
-Configure permissions on `E:\\data` for the lab accounts:
+Configure permissions on `E:\data` for the lab accounts:
 
 | Account | Permission | Purpose |
 |---|---|---|
 | `administrator@example.com` | **Full control** | Manage the folder and its contents |
-| `EXAMPLE\\user01` | **Modify** | Read, create, edit, and delete test files |
-| `EXAMPLE\\user02` | **Read & execute** | Read and open files without modifying them |
+| `EXAMPLE\user01` | **Modify** | Read, create, edit, and delete test files |
+| `EXAMPLE\user02` | **Read & execute** | Read and open files without modifying them |
 
 1. If inheritance is enabled and this lab requires a separate ACL, select **Disable inheritance**.
 2. Choose to convert inherited entries to explicit permissions so entries can be reviewed.
@@ -146,8 +146,8 @@ Configure permissions on `E:\\data` for the lab accounts:
 ### Step 13: Test Access as user01
 
 1. Sign out of the administrator account.
-2. Sign in to DC-01 as `EXAMPLE\\user01`.
-3. Open `E:\\data` and open both test files.
+2. Sign in to DC-01 as `EXAMPLE\user01`.
+3. Open `E:\data` and open both test files.
 4. Edit and save `Test1.txt`.
 5. Create a new test file in the folder.
 
@@ -156,8 +156,8 @@ Configure permissions on `E:\\data` for the lab accounts:
 ### Step 14: Test Access as user02
 
 1. Sign out of `user01`.
-2. Sign in to DC-01 as `EXAMPLE\\user02`.
-3. Open `E:\\data` and read `Test1.txt) and `Test2.bmp`.
+2. Sign in to DC-01 as `EXAMPLE\user02`.
+3. Open `E:\data` and read `Test1.txt` and `Test2.bmp`.
 4. Attempt to edit and save `Test1.txt`, then attempt to create a new file.
 5. Verify that reading is allowed but writing or creating files is denied.
 
@@ -166,7 +166,7 @@ Configure permissions on `E:\\data` for the lab accounts:
 ## ✅ Expected Results
 
 - `user01` and `user02` can sign in interactively to DC-01 in this isolated lab.
-- The `E:` volume is formatted as NTFS and contains `E:\\data`.
+- The `E:` volume is formatted as NTFS and contains `E:\data`.
 - `Test1.txt` and `Test2.bmp` are present in the data folder.
 - `administrator@example.com` has Full Control.
 - `user01` can read and modify files.
