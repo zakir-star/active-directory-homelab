@@ -17,98 +17,58 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 ### Step 1: Demonstrate the Local Account Sign-in Restriction
 
 1. At the DC-01 sign-in screen, choose **Other user**.
-2. Attempt to sign in using a known local account, using the format `.\LocalUser` (replace `LocalUser` with the actual local account name).
-3. Record the result. If the message says the sign-in method is not allowed, capture it as the initial state before changing Group Policy.
+2. Attempt to sign in using a confirmed local account, in the format ` .\\LocalUser ` (replace `LocalUser` with the actual local account name; omit the spaces).
+3. Record the result before changing Group Policy.
 
-![Screenshot 1 - Local account sign-in restriction on DC-01](screenshots/Screenshot%20%281%29.png)
+![Local account sign-in restriction](screenshots/Screenshot%20%281%29.png)
 
- > **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local. Use a confirmed local account for this demonstration.
+> **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local.
 
 ### Step 2: Open Group Policy Management
 
 1. Sign in to **DC-01** using the domain administrator account.
 2. Open **Server Manager → Tools → Group Policy Management**.
-3. Expand **Forest: example.com → Domains → example.com**.
-4. Locate the **Domain Controllers** OU.
+3. Expand **Forest: example.com → Domains → example.com** and select the **Domain Controllers** OU.
 
-![Screenshot 2 - Open Group Policy Management](screenshots/Screenshot%20%282%29.png)
+### Step 3: Edit Default Domain Controllers Policy
 
-### Step 3: Edit the Default Domain Controllers Policy
+1. Locate **Default Domain Controllers Policy**, already linked to the **Domain Controllers** OU.
+2. Right-click it and select **Edit**.
+3. Do not create or link a new GPO.
 
-1. In Group Policy Management, select the **Domain Controllers** OU.
-2. Locate **Default Domain Controllers Policy**, which is already linked to this OU.
-3. Right-click **Default Domain Controllers Policy** and select **Edit**.
-4. Do not create or link a new GPO for this lab.
+### Step 4: Configure Allow Log on Locally
 
-![Screenshot 3 - Edit Default Domain Controllers Policy](screenshots/Screenshot%20%283%29.png)
-
-### Step 4: Open Allow Log on Locally
-
-In Group Policy Management Editor, navigate to:
+Navigate to:
 
 `Computer Configuration → Policies → Windows Settings → Security Settings → Local Policies → User Rights Assignment`
 
-Open **Allow log on locally**.
+1. Open **Allow log on locally**.
+2. Preserve existing required entries.
+3. Add `EXAMPLE\\user01` and `EXAMPLE\\user02`.
+4. Apply the changes.
 
-![Screenshot 4 - Open Allow log on locally](screenshots/Screenshot%20%284%29.png)
+### Step 5: Check Deny Log on Locally
 
-![Screenshot 11 - Default Domain Controllers Policy settings](screenshots/Screenshot%20%2811%29.png)
-
-### Step 5: Add user01 and user02
-
-1. Review the existing entries in **Allow log on locally**.
-2. Add `EXAMPLE\user01` and `EXAMPLE\user02`.
-3. Preserve existing required entries; do not replace the list with only the two test users.
-4. Select **Apply → OK**.
-
-![Screenshot 5 - Select user01 and user02](screenshots/Screenshot%20%285%29.png)
-
-![Screenshot 10 - Select the matching domain accounts](screenshots/Screenshot%20%2810%29.png)
-
-### Step 6: Check Deny Log on Locally
-
-1. Open **Deny log on locally** in the same User Rights Assignment section.
-2. Check that neither test user, nor a group containing either user, is denied local logon.
+1. Open **Deny log on locally** in the same section.
+2. Verify that neither test user, nor a group containing either user, is denied local logon.
 3. Remember that a deny assignment takes precedence over an allow assignment.
 
-![Screenshot 6 - Review Deny log on locally](screenshots/Screenshot%20%286%29.png)
+### Step 6: Apply Group Policy
 
-![Screenshot 12 - Review local logon policy entries](screenshots/Screenshot%20%2812%29.png)
-
-### Step 7: Apply Group Policy
-
-1. Close Group Policy Management Editor.
-2. Open **Command Prompt as Administrator** on DC-01.
-3. Run:
+Open **Command Prompt as Administrator** on DC-01 and run:
 
 ```cmd
 gpupdate /force
 ```
 
-4. Wait for the policy refresh to complete.
+Wait for the policy refresh to complete.
 
-![Screenshot 7 - Successful Group Policy refresh](screenshots/Screenshot%20%287%29.png)
-
-![Screenshot 13 - Group Policy refresh](screenshots/Screenshot%20%2813%29.png)
-
-### Step 8: Verify Domain User Sign-in
+### Step 7: Verify Domain User Sign-in
 
 1. Sign out of the administrator session.
-2. Sign in to DC-01 as `EXAMPLE\user01` and confirm the desktop loads.
-3. Sign out, then sign in as `EXAMPLE\user02`.
-4. Confirm the desktop loads for this account too.
-
-![Screenshot 8 - user01 signed in to DC-01](screenshots/Screenshot%20%288%29.png)
-
-![Screenshot 9 - user02 signed in to DC-01](screenshots/Screenshot%20%289%29.png)
-
-![Screenshot 14 - Verify local logon configuration](screenshots/Screenshot%20%2814%29.png)
-
-![Screenshot 15 - Verify domain user sign-in](screenshots/Screenshot%20%2815%29.png)
-
-![Screenshot 16 - Additional lab evidence](screenshots/Screenshot%20%2816%29.png)
-
-![Screenshot 17 - Additional lab evidence](screenshots/Screenshot%20%2817%29.png)
+2. Sign in to DC-01 as `EXAMPLE\\user01`.
+3. Sign out, then sign in as `EXAMPLE\\user02`.
+4. Confirm that both domain users can load the desktop.
 
 ## ✅ Expected Results
 
