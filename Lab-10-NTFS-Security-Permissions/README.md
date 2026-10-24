@@ -108,7 +108,7 @@ I am user02 with only read permission
 
 **📸 Screenshot — Save operation denied for user02**
 
-![Screenshot 6 - user02 receives a save denied message](screenshots/Screenshot_06.png)
+![Screenshot 6 - user02 receives a save denied message](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(30).png?raw=true)
 
 ## ✅ Expected Result
 
