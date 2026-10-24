@@ -45,7 +45,7 @@ Navigate to:
 
 1. Open **Allow log on locally**.
 2. Preserve existing required entries.
-3. Add `EXAMPLE\\user01` and `EXAMPLE\\user02`.
+3. Add `EXAMPLE\user01` and `EXAMPLE\user02`.
 4. Apply the changes.
 
 **📸Screenshot**
@@ -71,8 +71,8 @@ Wait for the policy refresh to complete.
 ### Step 7: Verify Domain User Sign-in
 
 1. Sign out of the administrator session.
-2. Sign in to DC-01 as `EXAMPLE\\user01`.
-3. Sign out, then sign in as `EXAMPLE\\user02`.
+2. Sign in to DC-01 as `EXAMPLE\user01`.
+3. Sign out, then sign in as `EXAMPLE\user02`.
 4. Confirm that both domain users can load the desktop.
    
 **📸Screenshot**
