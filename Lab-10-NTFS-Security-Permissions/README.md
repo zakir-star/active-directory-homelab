@@ -10,7 +10,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 💿 **Operating System:** Windows Server 2022
 - 🌐 **Domain:** `example.com`
 - 💽 **Data Drive:** E:
-- 📁 **Data Folder:** `E:\\IT_DATA`
+- 📁 **Data Folder:** `E:\IT_DATA`
 - 👤 **Domain Accounts:** `user01`, `user02`, `administrator@example.com`
 - 🛠️ **Tool:** File Explorer — Folder Properties — Security — Advanced
 
@@ -31,7 +31,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 
 1. Open the E: drive.
 2. Create a folder named **Data**.
-3. Inside `E:\\IT_DATA`, create these two files:
+3. Inside `E:\IT_DATA`, create these two files:
    - `Test1.txt` — a text file.
    - `Test2.rtf` — a Rich Text Format file.
 4. Enter the following initial text in both files and save them:
@@ -40,7 +40,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 Hi! there this is for testing purpose only
 ```
 
-**📸 Screenshot — E:\\IT_DATA containing Test1.txt and Test2.rtf**
+**📸 Screenshot — E:\IT_DATA containing Test1.txt and Test2.rtf**
 
 ![Screenshot 2 - IT_DATA folder with both test files](screenshots/Screenshot_02.png)
 
@@ -79,7 +79,7 @@ Configure the following intended permissions on the **IT_DATA** folder:
 
 1. Sign out of the administrator session.
 2. Sign in to DC-01 as `user01`.
-3. Open `E:\\IT_DATA\\Test1.txt`.
+3. Open `E:\IT_DATA\Test1.txt`.
 4. Modify the contents to:
 
 ```text
@@ -96,7 +96,7 @@ I am user01 with read and write permission
 
 1. Sign out of the `user01` session.
 2. Sign in to DC-01 as `user02`.
-3. Open `E:\\IT_DATA\\Test2.rtf`.
+3. Open `E:\IT_DATA\Test2.rtf`.
 4. Attempt to modify the contents to:
 
 ```text
@@ -112,7 +112,7 @@ I am user02 with only read permission
 
 ## ✅ Expected Result
 
-- The E: data volume and `E:\\IT_DATA` folder are created.
+- The E: data volume and `E:\IT_DATA` folder are created.
 - The folder contains `Test1.txt` and `Test2.rtf`.
 - NTFS permissions are configured for the three specified domain accounts.
 - `user01` can modify and save a file.
@@ -125,7 +125,7 @@ NTFS permissions help administrators control which users can read, modify, or ma
 
 ## 📌 Outcome
 
-Configured NTFS permissions on `E:\\IT_DATA` and verified the difference between read/write access and read-only access using two domain user accounts.
+Configured NTFS permissions on `E:\IT_DATA` and verified the difference between read/write access and read-only access using two domain user accounts.
 
 ## 🙏 Acknowledgment
 
