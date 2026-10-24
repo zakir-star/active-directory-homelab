@@ -37,7 +37,7 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 4. Enter the following initial text in both files and save them:
 
 ```text
-Hi! there this is for testing purpose only
+Hi! there this is for testing purpose
 ```
 
 **📸 Screenshot — E:\IT_DATA containing Test1.txt and Test2.rtf**
