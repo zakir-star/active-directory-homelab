@@ -17,14 +17,14 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 ### Step 1: Demonstrate the Local Account Sign-in Restriction
 
 1. At the DC-01 sign-in screen, choose **Other user**.
-2. Attempt to sign in using a confirmed local account, in the format ` .\\LocalUser ` (replace `LocalUser` with the actual local account name).
+2. Attempt to sign in using a domain user's account.
 3. Record the result before changing Group Policy.
 
 **📸 Screenshot — Local account sign-in restriction on DC-01**
 
 ![Screenshot 1 - Local account sign-in restriction on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%281%29.png?raw=true)
 
-> **Note:** The sign-in error indicates that the sign-in method is blocked; it does not, by itself, prove the account is local.
+> **Note:** The sign-in error indicates that the sign-in method is blocked.
 
 ### Step 2: Open Group Policy Management
 
@@ -36,7 +36,6 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 
 1. Locate **Default Domain Controllers Policy**, already linked to the **Domain Controllers** OU.
 2. Right-click it and select **Edit**.
-3. Do not create or link a new GPO.
 
 ### Step 4: Configure Allow Log on Locally
 
