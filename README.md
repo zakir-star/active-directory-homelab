@@ -50,7 +50,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
-| **10** | NTFS / Security Permissions | 🔜 Next | Configure NTFS permissions on files and folders for domain users or groups, then verify access |
+| **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | 🔜 Next | Configure NTFS permissions on files and folders for domain users or groups, then verify access |
 
 ### Phase 5 — Manage Domain Clients with Group Policy
 
