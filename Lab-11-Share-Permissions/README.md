@@ -122,7 +122,7 @@ The successful edit to `Test2.rtf` was visible through the share and on the serv
 
 | Account / Group | NTFS permissions from Lab 10 | Share permissions | Observed result |
 |---|---|---|---|
-| `user01` | Read + Write | Read + Change through `IT_Users_Group` | Successfully modified `Test1.txt` |
+| `user01` | Read + Write | Read + Change through `IT_Users_Group` | Successfully modified `Test2.rtf` |
 | `user02` | Read only | Read + Change through `IT_Users_Group` | Could read the shared file but could not save a modification to `Test2.rtf` |
 | `administrator@example.com` | Full Control | Depends on its share permissions | NTFS Full Control retained |
 
@@ -132,7 +132,7 @@ The successful edit to `Test2.rtf` was visible through the share and on the serv
 - `Everyone` retains its default **Read** share permission.
 - `IT_Users_Group` has **Read** and **Change** share permissions.
 - Both `user01` and `user02` can open the network share because both are members of `IT_Users_Group`.
-- `user01` can modify `Test1.txt` because the applicable share and NTFS permissions allow the operation.
+- `user01` can modify `Test2.rtf` because the applicable share and NTFS permissions allow the operation.
 - `user02` can read files but cannot save modifications because the NTFS permission is read-only.
 - The client-side file state is checked again on `DC-01`.
 
