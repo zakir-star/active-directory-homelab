@@ -27,7 +27,7 @@ Configure share permissions on the existing `E:\IT_DATA` folder and test how Sha
 
 **📸 Screenshot — Advanced Sharing window for IT_DATA**
 
-![Screenshot 1 - Advanced Sharing window](screenshots/01-advanced-sharing.png)
+![Screenshot 1 - Advanced Sharing window](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Enable Folder Sharing and Open Permissions
 
