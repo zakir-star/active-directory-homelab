@@ -50,7 +50,7 @@ The default configuration showed `Everyone` with **Allow — Read**.
 
 **📸 Screenshot — Everyone and IT_Users_Group listed**
 
-![Screenshot 3 - Share permission entries](screenshots/03-group-added.png)
+![Screenshot 3 - Share permission entries](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 4: Configure Share Permissions for IT_Users_Group
 
