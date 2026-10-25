@@ -97,27 +97,18 @@ Share permission test successful
 
 ![Screenshot 6 - user01 modifies Test1.txt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(15).png?raw=true)
 
-### Step 7: Verify the Shared Change as user02
+### Step 7: Test Read and Write Access as user02
 
 1. Sign in to the Windows 10 client as the domain account `user02`.
-2. Open `\\DC-01\IT_DATA\Test2.txt`.
-3. Confirm that the text added by `user01` is visible.
+2. Open `\\DC-01\IT_DATA\Test2.txt` and confirm that the text added by `user01` is visible.
+3. Attempt to modify the file and save the change.
+4. Confirm that Windows denies the save operation.
 
-**📸 Screenshot — user02 can see the updated Test2.txt**
+Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has only **Read** permission at the NTFS level. The NTFS restriction allows the user to read the shared file but prevents modifications over the network.
 
-![Screenshot 7 - user02 reads the updated file](screenshots/07-user02-read-test.png)
+**📸 Screenshot — user02 receives an access-denied message when saving**
 
-### Step 8: Verify the NTFS Read-Only Restriction
-
-1. While signed in as `user02`, open the existing `Test2.rtf` file through the network share.
-2. Attempt to modify the file and save the change.
-3. Confirm that Windows denies the save operation.
-
-Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has only **Read** permission at the NTFS level. The NTFS restriction prevents the user from modifying the file over the network.
-
-**📸 Screenshot — Windows denies the save operation for user02**
-
-![Screenshot 8 - user02 cannot save changes](screenshots/08-user02-save-denied.png)
+![Screenshot - user02 save denied](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(19).png?raw=true)
 
 ### Step 9: Verify the Files on DC-01
 
