@@ -84,7 +84,7 @@ The resulting share permission configuration was:
 
 ### Step 6: Verify Write Access as user01
 
-1. While signed in as `user01`, open the existing `Test1.txt` file through `\\DC-01\IT_DATA`.
+1. While signed in as `user01`, open the existing `Test2.txt` file through `\\DC-01\IT_DATA`.
 2. Add the text below to the file and save it:
 
 ```text
