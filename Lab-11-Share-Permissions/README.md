@@ -69,7 +69,7 @@ The resulting share permission configuration was:
 
 **📸 Screenshot — IT_Users_Group with Read and Change allowed**
 
-![Screenshot 4 - IT_Users_Group Read and Change permissions](screenshots/04-group-read-change.png)
+![Screenshot 4 - IT_Users_Group Read and Change permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(7).png?raw=true)
 
 ### Step 5: Access the Shared Folder from Windows 10
 
