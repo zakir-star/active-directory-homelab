@@ -93,17 +93,17 @@ Share permission test successful
 
 3. Confirm that the edit is saved.
 
-**📸 Screenshot — Test1.txt showing the added text**
+**📸 Screenshot — Test2.txt showing the added text**
 
-![Screenshot 6 - user01 modifies Test1.txt](screenshots/06-user01-write-test.png)
+![Screenshot 6 - user01 modifies Test1.txt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(15).png?raw=true)
 
 ### Step 7: Verify the Shared Change as user02
 
 1. Sign in to the Windows 10 client as the domain account `user02`.
-2. Open `\\DC-01\IT_DATA\Test1.txt`.
+2. Open `\\DC-01\IT_DATA\Test2.txt`.
 3. Confirm that the text added by `user01` is visible.
 
-**📸 Screenshot — user02 can see the updated Test1.txt**
+**📸 Screenshot — user02 can see the updated Test2.txt**
 
 ![Screenshot 7 - user02 reads the updated file](screenshots/07-user02-read-test.png)
 
