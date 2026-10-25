@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–11 complete · Lab 12 (Troubleshoot and Verify Group Policy Application) is next  
+> **Status:** Labs 1–11 complete · Lab 12 (Map Network Drive) is next  
 > **Last updated:** October 25, 2026
 
 ---
@@ -57,7 +57,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\\IT_DATA` folder and verify access alongside NTFS permissions |
-| **12** | Troubleshoot and Verify Group Policy Application | 🔜 Next | Check policy application and troubleshoot common client-side issues |
+| **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | 🔜 Next | Map the shared `\\DC-01\\IT_DATA` folder as a network drive on the Windows 10 domain client and verify access |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
 
@@ -96,7 +96,7 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 
 ### Phase 9 — Group Policy Administration
 
-These labs expand on the policy fundamentals introduced in Labs 7, 8, 11, and 12.
+These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group Policy troubleshooting remains a future topic.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
