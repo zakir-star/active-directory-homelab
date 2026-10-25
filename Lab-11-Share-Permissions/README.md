@@ -39,7 +39,7 @@ The default configuration showed `Everyone` with **Allow — Read**.
 
 **📸 Screenshot — Default Everyone Read permission**
 
-![Screenshot 2 - Default share permission](screenshots/02-default-share-permissions.png)
+![Screenshot 2 - Default share permission](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 3: Add the Security Group
 
