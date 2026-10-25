@@ -80,7 +80,7 @@ The resulting share permission configuration was:
 
 **📸 Screenshot — Shared folder opened from the Windows client**
 
-![Screenshot 5 - Shared folder opened](screenshots/05-client-share-access.png)
+![Screenshot 5 - Shared folder opened](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(13).png?raw=true)
 
 ### Step 6: Verify Write Access as user01
 
