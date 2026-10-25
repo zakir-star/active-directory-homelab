@@ -108,7 +108,7 @@ Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has 
 
 **📸 Screenshot — user02 receives an access-denied message when saving**
 
-![Screenshot - user02 save denied](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(19).png?raw=true)
+![Screenshot - user02 save denied](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(18).png?raw=true)
 
 ### Step 9: Verify the Files on DC-01
 
