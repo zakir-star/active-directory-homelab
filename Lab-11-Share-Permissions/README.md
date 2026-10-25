@@ -84,7 +84,7 @@ The resulting share permission configuration was:
 
 ### Step 6: Verify Write Access as user01
 
-1. While signed in as `user01`, open the existing `Test2.txt` file through `\\DC-01\IT_DATA`.
+1. While signed in as `user01`, open the existing `Test2.rtf` file through `\\DC-01\IT_DATA`.
 2. Add the text below to the file and save it:
 
 ```text
@@ -93,14 +93,14 @@ Share permission test successful
 
 3. Confirm that the edit is saved.
 
-**📸 Screenshot — Test2.txt showing the added text**
+**📸 Screenshot — Test2.rtf showing the added text**
 
-![Screenshot 6 - user01 modifies Test1.txt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(15).png?raw=true)
+![Screenshot 6 - user01 modifies Test2.rtf](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(15).png?raw=true)
 
 ### Step 7: Test Read and Write Access as user02
 
 1. Sign in to the Windows 10 client as the domain account `user02`.
-2. Open `\\DC-01\IT_DATA\Test2.txt` and confirm that the text added by `user01` is visible.
+2. Open `\\DC-01\IT_DATA\Test2.rtf` and confirm that the text added by `user01` is visible.
 3. Attempt to modify the file and save the change.
 4. Confirm that Windows denies the save operation.
 
@@ -114,9 +114,9 @@ Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has 
 
 1. Return to `DC-01`.
 2. Open `E:\IT_DATA`.
-3. Check the existing `Test1.txt` and `Test2.rtf` files to verify the server-side file state after the client tests.
+3. Check the existing `Test2.rtf` files to verify the server-side file state after the client tests.
 
-The successful edit to `Test1.txt` was visible through the share and on the server. The attempted modification by `user02` was denied.
+The successful edit to `Test2.rtf` was visible through the share and on the server. The attempted modification by `user02` was denied.
 
 ## 🔐 Permission Summary
 
