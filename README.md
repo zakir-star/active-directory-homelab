@@ -63,7 +63,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **13** | Disk Initialization: MBR vs GPT | 📋 Planned | Understand disk partitioning styles and initialize lab disks |
+| **13** | Access-Based Enumeration (ABE) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
 | **14** | Disk Partitions: Primary, Extended, and Logical | 📋 Planned | Learn MBR partition types and compare them with GPT partitioning |
 | **15** | Create, Format, and Manage Volumes | 📋 Planned | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
@@ -78,7 +78,7 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 |-----|-------|--------|----------------|
 | **19** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
 | **20** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
-| **21** | Access-Based Enumeration (ABE) | 📋 Planned | Hide files and folders from users who lack permission to access them |
+| **21** | Disk Initialization: MBR vs GPT | 📋 Planned | Understand disk partitioning styles and initialize lab disks |
 | **22** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **23** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
 
