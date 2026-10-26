@@ -73,7 +73,7 @@ Return to **This PC** and confirm that the `IT_DATA` network drive appears as `Z
 
 **📸 Screenshot — IT_DATA mapped as Z: using Method 2**
 
-![Screenshot 5 - IT_DATA mapped as Z drive using Method 2](screenshots/Screenshot_05.png)
+![Screenshot 5 - IT_DATA mapped as Z drive using Method 2](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(10).png?raw=true)
 
 ## ✅ Verification
 
