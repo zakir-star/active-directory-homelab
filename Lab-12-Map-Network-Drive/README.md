@@ -23,9 +23,8 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 #### Step 1: Browse to DC-01
 
 1. Sign in to the Windows 10 client using the domain account `user01`.
-2. Open **File Explorer**.
-3. Enter `\\DC-01` in the address bar and press **Enter**.
-4. Locate the shared folder named `IT_DATA`.
+2. Enter `\\DC-01` in the search bar and press **Enter**.
+3. Locate the shared folder named `IT_DATA`.
 
 **📸 Screenshot — IT_DATA shared folder visible under DC-01**
 
@@ -61,12 +60,12 @@ After verifying Method 1, right-click the mapped `Z:` drive and select **Disconn
 2. Click the **Computer** tab.
 3. Click **Map network drive**.
 4. Select `Z:` as the drive letter.
-5. Under the **Folder** field, click **Browse** and use the dropdown to select `\\DC-01\IT_DATA`.
+5. Under the **Folder** field, click the dropdown to select `\\DC-01\IT_DATA`.
 6. Click **Finish**.
 
 **📸 Screenshot — Map Network Drive wizard with the UNC path selected**
 
-![Screenshot 4 - UNC path selected in Map Network Drive wizard](screenshots/Screenshot_04.png)
+![Screenshot 4 - UNC path selected in Map Network Drive wizard](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(9).png?raw=true)
 
 #### Step 5: Verify the Mapped Drive Again
 
