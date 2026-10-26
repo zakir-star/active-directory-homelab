@@ -57,7 +57,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\\IT_DATA` folder and verify access alongside NTFS permissions |
-| **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | 🔜 Next | Map the shared `\\DC-01\\IT_DATA` folder as a network drive on the Windows 10 domain client and verify access |
+| **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
 
@@ -277,6 +277,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Group Policy password policy configuration and verification
 - Account lockout policy configuration and testing
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
+- Mapping shared folders as network drives using File Explorer
 - Screenshot-supported technical documentation
 
 ---
