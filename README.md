@@ -63,6 +63,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 ### Phase 6 — Disk Management and Storage Fundamentals
 
 | Lab | Title | Status | What it covers |
+|-----|-------|--------|----------------|
 | **14** | Disk Partitions: Primary, Extended, and Logical | 📋 Planned | Learn MBR partition types and compare them with GPT partitioning |
 | **15** | Create, Format, and Manage Volumes | 📋 Planned | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
