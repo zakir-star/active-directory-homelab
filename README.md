@@ -58,12 +58,11 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 |-----|-------|--------|----------------|
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\\IT_DATA` folder and verify access alongside NTFS permissions |
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
+| **13** | Access-Based Enumeration (ABE) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
 
 | Lab | Title | Status | What it covers |
-|-----|-------|--------|----------------|
-| **13** | Access-Based Enumeration (ABE) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
 | **14** | Disk Partitions: Primary, Extended, and Logical | 📋 Planned | Learn MBR partition types and compare them with GPT partitioning |
 | **15** | Create, Format, and Manage Volumes | 📋 Planned | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
