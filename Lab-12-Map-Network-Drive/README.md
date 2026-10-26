@@ -49,7 +49,7 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 
 **📸 Screenshot — IT_DATA mapped as Z: under This PC**
 
-![Screenshot 3 - IT_DATA mapped as Z drive](screenshots/Screenshot_03.png)
+![Screenshot 3 - IT_DATA mapped as Z drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(5).png?raw=true)
 
 After verifying Method 1, right-click the mapped `Z:` drive and select **Disconnect**. Confirm it is no longer listed under **This PC**. This is done so Method 2 can be demonstrated separately; no separate screenshot is required.
 
