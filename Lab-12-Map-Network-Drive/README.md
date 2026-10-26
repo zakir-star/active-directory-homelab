@@ -54,18 +54,19 @@ After verifying Method 1, right-click the mapped `Z:` drive and select **Disconn
 
 ### Method 2: Map the Drive from This PC
 
-#### Step 4: Open Map Network Drive
+#### Step 4: Open Map Network Drive from This PC
 
 1. Open **This PC** in File Explorer.
 2. Click the **Computer** tab.
 3. Click **Map network drive**.
-4. Select `Z:` as the drive letter.
+
+**📸 Screenshot — This PC showing the Map network drive icon under the Computer tab**
+
+![Screenshot 4 - Map network drive icon under the Computer tab](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(8).png?raw=true)
+
+4. In the Map Network Drive wizard, select `Z:` as the drive letter.
 5. Under the **Folder** field, click the dropdown to select `\\DC-01\IT_DATA`.
 6. Click **Finish**.
-
-**📸 Screenshot — Map Network Drive wizard with the UNC path selected**
-
-![Screenshot 4 - UNC path selected in Map Network Drive wizard](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(9).png?raw=true)
 
 #### Step 5: Verify the Mapped Drive Again
 
