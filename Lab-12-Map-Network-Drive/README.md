@@ -40,7 +40,7 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 
 **📸 Screenshot — Map Network Drive wizard with Z: selected**
 
-![Screenshot 2 - Map IT_DATA as Z drive](screenshots/Screenshot_02.png)
+![Screenshot 2 - Map IT_DATA as Z drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(4).png?raw=true)
 
 #### Step 3: Verify the Mapped Drive
 
