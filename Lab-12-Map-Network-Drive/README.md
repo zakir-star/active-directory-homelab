@@ -62,7 +62,7 @@ After verifying Method 1, right-click the mapped `Z:` drive and select **Disconn
 
 **📸 Screenshot — This PC showing the Map network drive icon under the Computer tab**
 
-![Screenshot 4 - Map network drive icon under the Computer tab](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(8).png?raw=true)
+![Screenshot 4 - Map network drive icon under the Computer tab](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(7).png?raw=true)
 
 4. In the Map Network Drive wizard, select `Z:` as the drive letter.
 5. Under the **Folder** field, click the dropdown to select `\\DC-01\IT_DATA`.
