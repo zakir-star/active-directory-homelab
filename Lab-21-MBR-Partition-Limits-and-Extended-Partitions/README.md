@@ -37,7 +37,6 @@ Demonstrate the four-entry partition-table limit of an MBR disk by creating four
 diskpart
 list disk
 select disk 1
-detail disk
 ```
 
 3. After confirming Disk 1 is the fresh 10 GB test disk, create four 2 GB primary partitions. Run the primary-partition command four times, then list the partitions.
@@ -52,9 +51,9 @@ list partition
 
 The output should show four primary partitions on the MBR disk.
 
-**📸 Screenshot 2 — DiskPart commands creating all four primary partitions and the final partition list**
+**📸 Screenshot 2 — DiskPart commands creating all four primary partitions**
 
-![Screenshot 2 — Four primary partitions created and verified](screenshots/2.png)
+![Screenshot 2 — Four primary partitions created](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 3: Attempt to Create a Fifth Primary Partition
 
@@ -68,7 +67,7 @@ On an MBR disk whose four partition-table entries are already occupied, DiskPart
 
 **📸 Screenshot 4 — DiskPart rejects the fifth primary partition**
 
-![Screenshot 4 — Fifth primary partition attempt](screenshots/4.png)
+![Screenshot 4 — Fifth primary partition attempt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(5).png?raw=true)
 
 ### Step 4: Reset the Disposable Test Disk
 
@@ -94,7 +93,7 @@ The output should show three primary partitions and one extended partition.
 
 **📸 Screenshot 5 — Three primary partitions and one extended partition**
 
-![Screenshot 5 — Extended partition layout](screenshots/5.png)
+![Screenshot 5 — Extended partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 5: Create a Logical Partition Inside the Extended Partition
 
@@ -109,7 +108,7 @@ The output should show three primary partitions, one extended partition, and one
 
 **📸 Screenshot 6 — Logical partition created inside the extended partition**
 
-![Screenshot 6 — Logical partition verification](screenshots/6.png)
+![Screenshot 6 — Logical partition verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(9).png?raw=true)
 
 ## 🧠 Key Concepts
 
