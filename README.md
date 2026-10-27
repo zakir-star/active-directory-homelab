@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–13 documented · Lab 14 (Disk Partitions) is next  
+> **Status:** Labs 1–14 documented · Lab 15 (Create, Format, and Manage Volumes) is next  
 > **Last updated:** October 27, 2026
 
 ---
@@ -64,8 +64,8 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **14** | Disk Partitions: Primary, Extended, and Logical | 🔜 Next | Learn MBR partition types and compare them with GPT partitioning |
-| **15** | Create, Format, and Manage Volumes | 📋 Planned | Use Disk Management to create and manage volumes |
+| **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/README.md) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
+| **15** | Create, Format, and Manage Volumes | 🔜 Next | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
 | **17** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
 | **18** | Practical RAID Configuration | 📋 Planned | Practice supported software, Storage Spaces, or virtual/hardware RAID approaches as available in the lab |
