@@ -48,7 +48,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 2 — Security permissions showing user01 and administrator access, with user02 not granted access**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 4: Test Visibility Before Enabling ABE
 
