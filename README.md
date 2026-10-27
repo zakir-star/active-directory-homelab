@@ -64,7 +64,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/README.md) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
+| **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
 | **15** | Create, Format, and Manage Volumes | 🔜 Next | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
 | **17** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
