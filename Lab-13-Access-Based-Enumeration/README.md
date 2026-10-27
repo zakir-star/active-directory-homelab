@@ -75,7 +75,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 3 — IT_DATA share settings with Enable access-based enumeration selected**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(8).png?raw=true)
 
 ### Step 7: Verify ABE as user01
 
