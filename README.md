@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–12 documented · Lab 13 (Access-Based Enumeration) is next  
+> **Status:** Labs 1–13 documented · Lab 14 (Disk Partitions) is next  
 > **Last updated:** October 27, 2026
 
 ---
@@ -58,13 +58,13 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 |-----|-------|--------|----------------|
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\\IT_DATA` folder and verify access alongside NTFS permissions |
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
-| **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
+| **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **14** | Disk Partitions: Primary, Extended, and Logical | 📋 Planned | Learn MBR partition types and compare them with GPT partitioning |
+| **14** | Disk Partitions: Primary, Extended, and Logical | 🔜 Next | Learn MBR partition types and compare them with GPT partitioning |
 | **15** | Create, Format, and Manage Volumes | 📋 Planned | Use Disk Management to create and manage volumes |
 | **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
 | **17** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
@@ -278,6 +278,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Account lockout policy configuration and testing
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
 - Mapping shared folders as network drives using File Explorer
+- Configuring Access-Based Enumeration and verifying folder visibility against permissions
 - Screenshot-supported technical documentation
 
 ---
