@@ -27,7 +27,7 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 **📸 Screenshot 1 — VMware settings showing the additional 10 GB virtual disk**
 
-![Screenshot 1 — Additional virtual disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(0).png?raw=true)
+![Screenshot 1 — Additional virtual disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Initialize the Disk as MBR
 
