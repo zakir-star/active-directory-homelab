@@ -30,8 +30,6 @@ Open Disk Management (\`diskmgmt.msc\`). Initialize the new 10 GB Disk 2 using *
 
 Right-click the unallocated space on Disk 2 and select **New Simple Volume**. Use the default maximum size, assign an available drive letter, and format the volume as NTFS.
 
-![GPT disk volume creation and formatting](screenshots/Screenshot%20(2).png)
-
 ### Step 4 — Verify both partition styles
 
 Open PowerShell as Administrator and run:
@@ -42,11 +40,13 @@ Get-Disk | Format-Table Number, PartitionStyle, Size
 
 Confirm that Disk 1 reports **MBR** and Disk 2 reports **GPT**. Disk numbers can vary if the VM configuration changes, so verify the displayed number and size rather than relying on the number alone.
 
-![PowerShell verification of MBR and GPT](screenshots/Screenshot%20(3).png)
+![PowerShell verification of MBR and GPT](screenshots/Screenshot%20(2).png)
 
 ### Step 5 — Compare the disks in Disk Management
 
 Inspect Disk Management to compare the existing MBR disk with the new GPT disk and verify that the GPT disk has a healthy formatted volume.
+
+![Disk Management comparison of the MBR and GPT disks](screenshots/Screenshot%20(3).png)
 
 ## 📚 MBR vs. GPT Comparison
 
