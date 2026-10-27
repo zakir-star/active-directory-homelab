@@ -28,10 +28,10 @@ Demonstrate the four-entry partition-table limit of an MBR disk by creating four
 
 ![Screenshot 1 — Fresh MBR test disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(1).png?raw=true)
 
-### Step 2: Create the First Primary Partition
+### Step 2: Create Four Primary Partitions
 
 1. Open **Command Prompt as Administrator**.
-2. Start DiskPart and verify the target disk.
+2. Start DiskPart and verify the target disk before making changes.
 
 ```text
 diskpart
@@ -40,22 +40,10 @@ select disk 1
 detail disk
 ```
 
-3. After confirming Disk 1 is the 10 GB test disk, create a 2 GB primary partition.
+3. After confirming Disk 1 is the fresh 10 GB test disk, create four 2 GB primary partitions. Run the primary-partition command four times, then list the partitions.
 
 ```text
 create partition primary size=2048
-list partition
-```
-
-**📸 Screenshot 2 — First primary partition created**
-
-![Screenshot 2 — First primary partition](screenshots/2.png)
-
-### Step 3: Create Four Primary Partitions
-
-With Disk 1 still selected, create the remaining three primary partitions:
-
-```text
 create partition primary size=2048
 create partition primary size=2048
 create partition primary size=2048
@@ -64,11 +52,11 @@ list partition
 
 The output should show four primary partitions on the MBR disk.
 
-**📸 Screenshot 3 — Four primary partitions listed in DiskPart**
+**📸 Screenshot 2 — DiskPart commands creating all four primary partitions and the final partition list**
 
-![Screenshot 3 — Four primary partitions](screenshots/3.png)
+![Screenshot 2 — Four primary partitions created and verified](screenshots/2.png)
 
-### Step 4: Attempt to Create a Fifth Primary Partition
+### Step 3: Attempt to Create a Fifth Primary Partition
 
 Attempt to create a fifth primary partition:
 
@@ -82,7 +70,7 @@ On an MBR disk whose four partition-table entries are already occupied, DiskPart
 
 ![Screenshot 4 — Fifth primary partition attempt](screenshots/4.png)
 
-### Step 5: Reset the Disposable Test Disk
+### Step 4: Reset the Disposable Test Disk
 
 To demonstrate the alternative layout on the same test disk, clear its partition information and convert it back to MBR. **Only do this after verifying that Disk 1 is the disposable 10 GB lab disk and contains no data to keep.**
 
@@ -108,7 +96,7 @@ The output should show three primary partitions and one extended partition.
 
 ![Screenshot 5 — Extended partition layout](screenshots/5.png)
 
-### Step 6: Create a Logical Partition Inside the Extended Partition
+### Step 5: Create a Logical Partition Inside the Extended Partition
 
 Create one logical partition inside the extended partition:
 
