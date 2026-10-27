@@ -27,7 +27,7 @@ Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share an
 
 **📸 Screenshot 1 — Existing IT_DATA share and its normal UNC path**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(0).png?raw=true)
+![image alt]()
 
 ### Step 2: Create the IT_Confidential Folder
 
@@ -47,6 +47,8 @@ Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share an
 Do not remove required system or administrator permissions. Review inherited entries carefully before changing them.
 
 **📸 Screenshot 2 — Security permissions showing user01 and administrator access, with user02 not granted access**
+
+![image alt]()
 
 ### Step 4: Test Visibility Before Enabling ABE
 
@@ -73,6 +75,8 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 3 — IT_DATA share settings with Enable access-based enumeration selected**
 
+![image alt]()
+
 ### Step 7: Verify ABE as user01
 
 1. On the Windows 10 client, sign in as `user01`.
@@ -82,17 +86,18 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 4 — user01 can see and open IT_Confidential**
 
+![image alt]()
+
 ### Step 8: Verify ABE as user02
 
 1. Sign out or switch users on the Windows 10 client.
 2. Sign in as `user02`.
 3. Open `\\DC-01\IT_DATA`.
 4. Confirm that `IT_Confidential` is not displayed in the share listing.
-5. Try opening the folder using its direct path, `\\DC-01\IT_DATA\IT_Confidential`, and confirm that access is denied.
 
 **📸 Screenshot 5 — user02 browsing IT_DATA with IT_Confidential hidden**
 
-**📸 Screenshot 6 — Direct-path attempt by user02 showing access denied**
+![image alt]()
 
 ### Step 9: Confirm Existing Share Access Remains Available
 
