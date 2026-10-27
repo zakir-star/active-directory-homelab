@@ -97,7 +97,7 @@ The final `list partition` output should show the **Primary**, **Extended**, and
 
 **📸 Screenshot 6 — Final Disk Management layout showing F: Primary, G: Logical, and remaining free space**
 
-![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(16).png?raw=true)
+![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(19.9).png?raw=true)
 
 ### Step 7: Verify the Volumes in File Explorer
 
@@ -108,7 +108,7 @@ The final `list partition` output should show the **Primary**, **Extended**, and
 
 **📸 Screenshot 7 — This PC showing the Primary (F:) and Logical (G:) volumes**
 
-![Screenshot 7 — F and G volumes in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(10).png?raw=true)
+![Screenshot 7 — F and G volumes in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(20).png?raw=true)
 
 ## 🧠 MBR Partition Notes
 
