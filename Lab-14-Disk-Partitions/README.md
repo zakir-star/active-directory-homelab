@@ -38,7 +38,7 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 **📸 Screenshot 2 — Disk 1 initialized as MBR with unallocated space**
 
-![Screenshot 2 — MBR disk initialization](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot 2 — MBR disk initialization](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 3: Create and Format the Primary Partition
 
@@ -50,7 +50,7 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 **📸 Screenshot 3 — 2 GB NTFS primary partition assigned to F:**
 
-![Screenshot 3 — Primary partition](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(2).png?raw=true)
+![Screenshot 3 — Primary partition](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 4: Verify the Primary Partition with DiskPart
 
@@ -68,7 +68,7 @@ list partition
 
 **📸 Screenshot 4 — DiskPart showing the primary partition on Disk 1**
 
-![Screenshot 4 — Primary partition in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(3).png?raw=true)
+![Screenshot 4 — Primary partition in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(14).png?raw=true)
 
 ### Step 5: Create and Verify the Extended and Logical Partitions
 
@@ -85,7 +85,7 @@ The final `list partition` output should show the **Primary**, **Extended**, and
 
 **📸 Screenshot 5 — DiskPart commands and output showing primary, extended, and logical partitions**
 
-![Screenshot 5 — Extended and logical partitions in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(4).png?raw=true)
+![Screenshot 5 — Extended and logical partitions in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(15).png?raw=true)
 
 ### Step 6: Format the Logical Drive and Assign a Drive Letter
 
@@ -97,7 +97,7 @@ The final `list partition` output should show the **Primary**, **Extended**, and
 
 **📸 Screenshot 6 — Final Disk Management layout showing F: Primary, G: Logical, and remaining free space**
 
-![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(8).png?raw=true)
+![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(16).png?raw=true)
 
 ### Step 7: Verify the Volumes in File Explorer
 
