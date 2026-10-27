@@ -97,7 +97,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 5 — user02 browsing IT_DATA with IT_Confidential hidden**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 9: Confirm Existing Share Access Remains Available
 
