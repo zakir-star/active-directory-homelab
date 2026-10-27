@@ -79,7 +79,6 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 |-----|-------|--------|----------------|
 | **20** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
 | **21** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
-| **22** | GPT Partitioning and Comparison | 📋 Planned | Compare GPT with the MBR layout using a separate virtual disk |
 | **22** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **23** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
 
