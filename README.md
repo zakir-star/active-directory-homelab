@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–15 documented · Lab 16 (MBR vs. GPT Partitions) in progress · Lab 17 (Create, Format, and Manage Volumes) is next  
+> **Status:** Labs 1–16 documented · Lab 17 (Create, Format, and Manage Volumes) is next  
 > **Last updated:** October 28, 2026
 
 ---
@@ -66,7 +66,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 |-----|-------|--------|----------------|
 | **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
 | **15** | [MBR Partition Limits and Extended Partitions](Lab-15-MBR-Partition-Limits-and-Extended-Partitions/) | ✅ Completed | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
-| **16** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | 🛠️ In Progress | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
+| **16** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
 | **17** | Create, Format, and Manage Volumes | 🔜 Next | Use Disk Management to create and manage volumes |
 | **18** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
 | **19** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
