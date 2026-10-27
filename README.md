@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–14 documented · Lab 15 (Create, Format, and Manage Volumes) is next  
-> **Last updated:** October 27, 2026
+> **Status:** Labs 1–14 documented · Lab 15 (MBR Partition Limits and Extended Partitions) in progress · Lab 16 (Create, Format, and Manage Volumes) is next  
+> **Last updated:** October 28, 2026
 
 ---
 
@@ -65,10 +65,11 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
-| **15** | Create, Format, and Manage Volumes | 🔜 Next | Use Disk Management to create and manage volumes |
-| **16** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
-| **17** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
-| **18** | Practical RAID Configuration | 📋 Planned | Practice supported software, Storage Spaces, or virtual/hardware RAID approaches as available in the lab |
+| **15** | [MBR Partition Limits and Extended Partitions](Lab-15-MBR-Partition-Limits-and-Extended-Partitions/) | 🛠️ In Progress | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
+| **16** | Create, Format, and Manage Volumes | 🔜 Next | Use Disk Management to create and manage volumes |
+| **17** | NTFS vs ReFS File Systems | 📋 Planned | Compare supported features and use cases for Windows file systems |
+| **18** | RAID Concepts | 📋 Planned | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
+| **19** | Practical RAID Configuration | 📋 Planned | Practice supported software, Storage Spaces, or virtual/hardware RAID approaches as available in the lab |
 
 ### Phase 7 — File Services and Advanced Storage
 
@@ -76,9 +77,9 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **19** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
-| **20** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
-| **21** | MBR Partition Limits and GPT Comparison | 📋 Planned | Demonstrate the MBR four-entry partition-table limit, extended and logical partitions, and compare the layout with GPT using a separate virtual disk |
+| **20** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
+| **21** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
+| **22** | GPT Partitioning and Comparison | 📋 Planned | Compare GPT with the MBR layout using a separate virtual disk |
 | **22** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **23** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
 
