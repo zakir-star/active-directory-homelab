@@ -26,7 +26,7 @@ Demonstrate the four-entry partition-table limit of an MBR disk by creating four
 
 **📸 Screenshot 1 — Fresh 10 GB Disk 1 initialized as MBR**
 
-![Screenshot 1 — Fresh MBR test disk](screenshots/1.png)
+![Screenshot 1 — Fresh MBR test disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Create the First Primary Partition
 
