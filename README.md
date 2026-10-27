@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–11 complete · Lab 12 (Map Network Drive) is next  
-> **Last updated:** October 25, 2026
+> **Status:** Labs 1–12 documented · Lab 13 (Access-Based Enumeration) is next  
+> **Last updated:** October 27, 2026
 
 ---
 
@@ -58,7 +58,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 |-----|-------|--------|----------------|
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\\IT_DATA` folder and verify access alongside NTFS permissions |
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
-| **13** | Access-Based Enumeration (ABE) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
+| **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | 🔜 Next | Configure ABE on a shared folder and verify that users see only items they have permission to access |
 
 ### Phase 6 — Disk Management and Storage Fundamentals
 
