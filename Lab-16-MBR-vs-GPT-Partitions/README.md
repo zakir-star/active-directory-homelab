@@ -40,13 +40,13 @@ Get-Disk | Format-Table Number, PartitionStyle, Size
 
 Confirm that Disk 1 reports **MBR** and Disk 2 reports **GPT**. Disk numbers can vary if the VM configuration changes, so verify the displayed number and size rather than relying on the number alone.
 
-![PowerShell verification of MBR and GPT](screenshots/Screenshot%20(2).png)
+![PowerShell verification of MBR and GPT](screenshots/Screenshot%20(10).png)
 
 ### Step 5 — Compare the disks in Disk Management
 
 Inspect Disk Management to compare the existing MBR disk with the new GPT disk and verify that the GPT disk has a healthy formatted volume.
 
-![Disk Management comparison of the MBR and GPT disks](screenshots/Screenshot%20(3).png)
+![Disk Management comparison of the MBR and GPT disks](screenshots/Screenshot%20(11).png)
 
 ## 📚 MBR vs. GPT Comparison
 
