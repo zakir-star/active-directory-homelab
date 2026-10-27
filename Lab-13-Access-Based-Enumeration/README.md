@@ -86,7 +86,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 4 — user01 can see and open IT_Confidential**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 8: Verify ABE as user02
 
