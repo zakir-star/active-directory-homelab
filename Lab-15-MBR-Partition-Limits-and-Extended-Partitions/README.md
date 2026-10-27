@@ -26,7 +26,7 @@ Demonstrate the four-entry partition-table limit of an MBR disk by creating four
 
 **📸 Screenshot 1 — Fresh 10 GB Disk 1 initialized as MBR**
 
-![Screenshot 1 — Fresh MBR test disk](https://github.com/zakir-star/active-directory-homelab/blob/main/../Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot 1 — Fresh MBR test disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Create Four Primary Partitions
 
@@ -53,7 +53,7 @@ The output should show four primary partitions on the MBR disk.
 
 **📸 Screenshot 2 — DiskPart commands creating all four primary partitions**
 
-![Screenshot 2 — Four primary partitions created](https://github.com/zakir-star/active-directory-homelab/blob/main/../Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(3).png?raw=true)
+![Screenshot 2 — Four primary partitions created](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 3: Attempt to Create a Fifth Primary Partition
 
@@ -65,9 +65,9 @@ create partition primary size=512
 
 On an MBR disk whose four partition-table entries are already occupied, DiskPart should reject the attempt. Capture the error message as evidence of the limit.
 
-**📸 Screenshot 4 — DiskPart rejects the fifth primary partition**
+**📸 Screenshot 3 — DiskPart rejects the fifth primary partition**
 
-![Screenshot 4 — Fifth primary partition attempt](https://github.com/zakir-star/active-directory-homelab/blob/main/../Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(5).png?raw=true)
+![Screenshot 3 — Fifth primary partition attempt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(5).png?raw=true)
 
 ### Step 4: Reset the Disposable Test Disk
 
@@ -91,9 +91,9 @@ list partition
 
 The output should show three primary partitions and one extended partition.
 
-**📸 Screenshot 5 — Three primary partitions and one extended partition**
+**📸 Screenshot 4 — Three primary partitions and one extended partition**
 
-![Screenshot 5 — Extended partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/../Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(6).png?raw=true)
+![Screenshot 4 — Extended partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 5: Create a Logical Partition Inside the Extended Partition
 
@@ -106,9 +106,9 @@ list partition
 
 The output should show three primary partitions, one extended partition, and one logical partition contained within the extended partition.
 
-**📸 Screenshot 6 — Logical partition created inside the extended partition**
+**📸 Screenshot 5 — Logical partition created inside the extended partition**
 
-![Screenshot 6 — Logical partition verification](https://github.com/zakir-star/active-directory-homelab/blob/main/../Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(9).png?raw=true)
+![Screenshot 5 — Logical partition verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-21-MBR-Partition-Limits-and-Extended-Partitions/screenshots/Screenshot%20(9).png?raw=true)
 
 ## 🧠 Key Concepts
 
