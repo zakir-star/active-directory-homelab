@@ -27,7 +27,7 @@ Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share an
 
 **📸 Screenshot 1 — Existing IT_DATA share and its normal UNC path**
 
-![image alt]()
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(0).png?raw=true)
 
 ### Step 2: Create the IT_Confidential Folder
 
