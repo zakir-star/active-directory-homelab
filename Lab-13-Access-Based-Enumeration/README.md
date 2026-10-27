@@ -4,8 +4,6 @@
 
 Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share and verify that users see only the shared folders and files they have permission to access.
 
-This lab builds on Lab 10 (NTFS / Security Permissions), Lab 11 (Share Permissions), and Lab 12 (Map Network Drive). The existing share will remain `\\DC-01\IT_DATA`; a dollar sign (`$`) will not be used because this lab demonstrates ABE, not a hidden share.
-
 ## 🖥️ Lab Environment
 
 - 🏢 **Domain Controller:** `DC-01`
@@ -26,9 +24,10 @@ This lab builds on Lab 10 (NTFS / Security Permissions), Lab 11 (Share Permissio
 1. On `DC-01`, open File Explorer and navigate to `E:\IT_DATA`.
 2. Confirm that the existing `IT_DATA` folder is shared with the network share name `IT_DATA`.
 3. Confirm that the client can reach the normal share path: `\\DC-01\IT_DATA`.
-4. Do not rename the share or add `$` to its name.
 
 **📸 Screenshot 1 — Existing IT_DATA share and its normal UNC path**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(0).png?raw=true)
 
 ### Step 2: Create the IT_Confidential Folder
 
