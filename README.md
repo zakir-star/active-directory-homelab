@@ -80,7 +80,7 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **23** | Hidden Shares and Administrative Shares | 🔜 Next | Create and access hidden shares and understand share naming |
+| **23** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
 | **24** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
 | **25** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 | **27** | Storage Spaces | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
