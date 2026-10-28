@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–19 documented · Lab 20 (Practical RAID 1 Configuration) is next  
+> **Status:** Labs 1–20 documented · Lab 21 (Practical RAID 5 Configuration) is next  
 > **Last updated:** October 28, 2026
 
 ---
@@ -70,8 +70,8 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **17** | [Volume Formatting: FAT32, NTFS, and ReFS](Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/README.md) | ✅ Completed | Create test volumes, compare FAT32, NTFS, and ReFS, and verify the file systems |
 | **18** | [RAID Concepts](Lab-18-RAID-Concepts/README.md) | ✅ Completed | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including diagrams, capacity calculations, performance, and fault tolerance |
 | **19** | [Practical RAID 0 Configuration](Lab-19-Practical-RAID-Configuration/README.md) | ✅ Completed | Configure a two-disk striped volume, create a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline |
-| **20** | Practical RAID 1 Configuration | 🔜 Next | Configure a two-disk mirrored volume and demonstrate continued data access during a single-disk outage |
-| **21** | Practical RAID 5 Configuration | 📋 Planned | Configure a three-disk parity volume and demonstrate one-disk fault tolerance |
+| **20** | [Practical RAID 1 Configuration](Lab-20-Practical-RAID-1-Configuration/README.md) | ✅ Completed | Configure a two-disk mirrored volume and verify continued data access while one member disk is offline |
+| **21** | Practical RAID 5 Configuration | 🔜 Next | Configure a three-disk parity volume and demonstrate one-disk fault tolerance |
 
 ### Phase 7 — File Services and Advanced Storage
 
@@ -280,7 +280,8 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Group Policy password policy configuration and verification
 - Account lockout policy configuration and testing
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
-- MBR and GPT partition styles, disk partition limits, and basic volume verification
+- MBR and GPT partition styles, disk partition limits, and volume formatting verification
+- RAID 0 striping and RAID 1 mirroring configuration, including single-member offline availability tests
 - Mapping shared folders as network drives using File Explorer
 - Configuring Access-Based Enumeration and verifying folder visibility against permissions
 - Screenshot-supported technical documentation
