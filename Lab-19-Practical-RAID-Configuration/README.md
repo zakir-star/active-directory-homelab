@@ -27,13 +27,13 @@ Windows Disk Management creates these traditional software RAID volumes using **
 
 ## 🛠️ Lab Procedure
 
-### Step 1 — Prepare the additional disks
+### Step 1 — Prepare the initial data disks
 
-Add four 10 GB virtual hard disks to the `DC-01` virtual machine in VMware Workstation. In Disk Management, identify the new disks by their capacity and disk number, bring them online if necessary, and initialize them as GPT. Leave the disks unallocated.
+Add three 10 GB virtual hard disks to the `DC-01` virtual machine in VMware Workstation. In Disk Management, identify the new disks by their capacity and disk number, bring them online if necessary, and initialize them as GPT. Leave the disks unallocated.
 
 The disks were added while the server was running. If a newly attached disk does not appear, use **Action → Rescan Disks** in Disk Management.
 
-![Additional data disks visible in Disk Management](screenshots/Screenshot%20(3).png)
+![Three additional data disks online and unallocated](screenshots/Screenshot%20(4).png)
 
 ### Step 2 — Create the RAID 0 striped volume
 
@@ -51,7 +51,11 @@ Open **File Explorer → This PC** and verify that `RAID0_STRIPED` is accessible
 
 ![RAID 0 volume visible in This PC](screenshots/Screenshot%20(11).png)
 
-### Step 3 — Create the RAID 1 mirrored volume
+### Step 3 — Add a fourth disk and create the RAID 1 mirrored volume
+
+After RAID 0 was created, add one more 10 GB virtual disk in VMware Workstation. In Disk Management, rescan if needed, bring the new disk online, and initialize it as GPT. Confirm that it is unallocated. Identify it by size and layout; in this lab it appeared as Disk 4.
+
+![Fourth data disk detected alongside the existing RAID 0 volume](screenshots/Screenshot%20(13).png)
 
 1. In Disk Management, right-click the unallocated space on **Disk 3**.
 2. Select **New Mirrored Volume**.
