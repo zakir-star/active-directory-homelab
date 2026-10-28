@@ -2,24 +2,24 @@
 
 ## 🎯 Objective
 
-Create a two-disk RAID 0 striped volume in Windows Server 2022, save test data to it, and demonstrate what happens when one member disk is taken offline.
+Create a two-disk RAID 0 striped volume on Windows Server 2022, save a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline.
 
 ## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
 - **Server:** `DC-01`
-- **Tool:** Disk Management (`diskmgmt.msc`) and File Explorer
+- **Tool:** Disk Management and File Explorer
 - **Operating-system disk:** Disk 0 — left unchanged
-- **Additional virtual disks:** Two 10 GB virtual disks
+- **Data disks:** Two 10 GB virtual disks
 
 ## 🛠️ Lab Procedure
 
-### Step 1 — Prepare the two data disks
+### Step 1 — Prepare the data disks
 
-Attach two 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Management**, identify the two new disks by their capacity and disk number, bring them online, and initialize them. Leave their space unallocated.
+Attach two 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Management**, bring both disks online, and initialize them. Leave the new disk space unallocated.
 
-Do not modify the operating-system disk (Disk 0).
+Do not modify Disk 0, which contains the operating system.
 
 ![Two 10 GB data disks initialized and online](screenshots/01-two-disks-online.png)
 
@@ -31,31 +31,29 @@ Do not modify the operating-system disk (Disk 0).
 4. Assign an available drive letter.
 5. Set the volume label to `RAID0_STRIPED`.
 6. Select **NTFS** and keep **Perform a quick format** checked.
-7. Review the settings and complete the wizard.
+7. Complete the wizard.
 
-Confirm that the new striped volume appears in Disk Management.
+Confirm that Disk Management shows the new striped volume.
 
 ![RAID 0 striped volume created in Disk Management](screenshots/02-raid0-created.png)
 
 ### Step 3 — Verify the volume in This PC
 
-Open **File Explorer → This PC** and confirm that the `RAID0_STRIPED` drive is visible and accessible.
+Open **File Explorer → This PC** and confirm that the `RAID0_STRIPED` drive is visible.
 
 ![RAID0_STRIPED drive visible in This PC](screenshots/03-raid0-in-this-pc.png)
 
-### Step 4 — Create test data
+### Step 4 — Create the test file
 
-Inside the `RAID0_STRIPED` drive, create a folder named `RAID0_STRIPED`.
+Open the `RAID0_STRIPED` drive and create a folder named `RAID0_STRIPED`.
 
-Inside that folder, create a text file named `RAID0_STRIPED_DATA.txt` and enter the following text:
+Inside that folder, create a text document named `RAID0_STRIPED_DATA.txt`. Enter the following text and save the file:
 
 ```text
 THIS IS A RAID0 STRIPED FILE
 ```
 
-Save the file and open it to verify the contents.
-
-The resulting structure is:
+The resulting folder structure is:
 
 ```text
 RAID0_STRIPED (drive)
@@ -68,42 +66,44 @@ RAID0_STRIPED (drive)
 ### Step 5 — Take Disk 1 offline
 
 1. Return to **Disk Management**.
-2. Locate **Disk 1**, one of the member disks used by the striped volume.
-3. Right-click the **Disk 1 label** and select **Offline**.
-4. Observe the disk and volume status in Disk Management.
+2. Right-click the **Disk 1 label**.
+3. Select **Offline**.
+
+Observe the resulting status of the striped volume.
 
 ![Disk 1 offline during the RAID 0 test](screenshots/05-disk1-offline.png)
 
-### Step 6 — Verify the RAID 0 failure behavior
+### Step 6 — Verify the failure behavior
 
-Open **This PC** again and check the `RAID0_STRIPED` drive.
+Open **File Explorer → This PC** again.
 
-**Observed result:** After Disk 1 was taken offline, the `RAID0_STRIPED` drive disappeared from This PC. This demonstrates that the striped volume became unavailable when one member disk was offline.
+**Observed result:** The `RAID0_STRIPED` drive was no longer visible in This PC after Disk 1 was taken offline. This demonstrates that the RAID 0 volume became unavailable when one of its member disks was unavailable.
 
 ![RAID0_STRIPED drive missing from This PC](screenshots/06-raid0-unavailable.png)
 
 ## ⚠️ Important Notes
 
-- **RAID 0 has no redundancy.** Data is striped across both member disks, so the volume depends on both disks being available.
-- Taking a virtual disk **Offline** demonstrates temporary unavailability; it is not the same as a permanent physical disk failure.
+- **RAID 0 provides no redundancy.** Data is striped across both member disks, so both must be available for the volume to function.
+- Taking a virtual disk **Offline** demonstrates unavailability; it is not the same as a permanent physical disk failure.
+- This lab demonstrates the failure impact only. It does not include disk restoration or recovery.
 - RAID is not a backup. Keep separate backups of important data.
 - Disk 0, the operating-system disk, was not modified.
-- This lab covers RAID 0 only. RAID 1 and RAID 5 will be documented in separate labs.
+- RAID 1 and RAID 5 will be covered in separate labs.
 
 ## ✅ Expected Result
 
-- Two 10 GB data disks are online and initialized.
-- A striped volume labeled `RAID0_STRIPED` is formatted with NTFS.
+- Two 10 GB data disks are initialized and online before configuration.
+- A striped NTFS volume labeled `RAID0_STRIPED` is created.
 - The `RAID0_STRIPED_DATA.txt` file contains the expected test text.
-- Taking Disk 1 offline makes the striped drive disappear from This PC.
+- Taking Disk 1 offline causes the striped drive to disappear from This PC.
 
 ## 🌍 Real-World Use Case
 
-RAID 0 can improve throughput by distributing data across multiple disks, but it provides no fault tolerance. This exercise demonstrates why a striped volume is unsuitable when continued access after a member-disk failure is required.
+RAID 0 distributes data across multiple disks to improve performance, but it does not provide fault tolerance. This lab demonstrates why a striped volume is unsuitable when continued access after a member-disk failure is required.
 
 ## 📌 Outcome
 
-Created a two-disk Windows Server RAID 0 striped volume, stored a test file, and demonstrated that the volume became unavailable when one member disk was taken offline.
+Created a two-disk RAID 0 striped volume, saved a test file, and demonstrated that the volume became unavailable when one member disk was taken offline.
 
 ## 🙏 Acknowledgment
 
@@ -111,7 +111,7 @@ This lab builds on the disk-management and RAID concepts covered in the previous
 
 ## ✍️ Author's Note
 
-The failure demonstration used the **Offline** action in Disk Management. It shows the availability impact of losing access to a RAID 0 member; it is not a destructive disk-failure or recovery test.
+The demonstration used the **Offline** action in Disk Management. It shows the availability impact of losing access to a RAID 0 member; it is not a destructive disk-failure or recovery test.
 
 ## ✅ Closing
 
