@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–17 documented · Lab 18 (RAID Concepts) is next  
+> **Status:** Labs 1–18 documented · Lab 19 (Practical RAID Configuration) is next  
 > **Last updated:** October 28, 2026
 
 ---
@@ -68,8 +68,8 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **15** | [MBR Partition Limits and Extended Partitions](Lab-15-MBR-Partition-Limits-and-Extended-Partitions/) | ✅ Completed | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
 | **16** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
 | **17** | [Volume Formatting: FAT32, NTFS, and ReFS](Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/README.md) | ✅ Completed | Create test volumes, compare FAT32, NTFS, and ReFS, and verify the file systems |
-| **18** | RAID Concepts | 🔜 Next | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including performance, capacity, and fault tolerance |
-| **19** | Practical RAID Configuration | 📋 Planned | Practice supported software, Storage Spaces, or virtual/hardware RAID approaches as available in the lab |
+| **18** | [RAID Concepts](Lab-18-RAID-Concepts/README.md) | ✅ Completed | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including diagrams, capacity calculations, performance, and fault tolerance |
+| **19** | Practical RAID Configuration | 🔜 Next | Practice supported software, Storage Spaces, or virtual/hardware RAID approaches as available in the lab |
 | **20** | RAID Failure and Recovery | 📋 Planned | Explore disk-failure behavior, rebuild/recovery concepts, and limitations in the lab environment |
 
 ### Phase 7 — File Services and Advanced Storage
