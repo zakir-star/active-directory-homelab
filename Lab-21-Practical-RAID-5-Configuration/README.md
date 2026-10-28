@@ -23,7 +23,7 @@ Attach three 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Man
 
 Do not modify Disk 0, which contains the operating system.
 
-![Three 10 GB data disks initialized and online](screenshots/Screenshot%20(1).png)
+![Three 10 GB data disks initialized and online](screenshots/Screenshot%20(2).png)
 
 ### Step 2 — Create the RAID 5 volume
 
@@ -37,13 +37,13 @@ Do not modify Disk 0, which contains the operating system.
 
 Confirm that the `RAID5_PARITY` volume is created successfully.
 
-![RAID 5 volume created in Disk Management](screenshots/Screenshot%20(2).png)
+![RAID 5 volume created in Disk Management](screenshots/Screenshot%20(12).png)
 
 ### Step 3 — Verify the drive in This PC
 
 Open **File Explorer → This PC** and confirm that the `RAID5_PARITY` drive is visible.
 
-![RAID5_PARITY drive visible in This PC](screenshots/Screenshot%20(3).png)
+![RAID5_PARITY drive visible in This PC](screenshots/Screenshot%20(13).png)
 
 ### Step 4 — Create the test folder and file
 
@@ -63,7 +63,7 @@ RAID5_PARITY (drive)
     └── RAID5_PARITY_DATA.txt
 ```
 
-![RAID 5 test folder and text file](screenshots/Screenshot%20(4).png)
+![RAID 5 test folder and text file](screenshots/Screenshot%20(16).png)
 
 ### Step 5 — Take Disk 1 offline
 
@@ -73,7 +73,7 @@ RAID5_PARITY (drive)
 
 Observe the state of the RAID 5 volume after Disk 1 is taken offline.
 
-![Disk 1 offline during the RAID 5 availability test](screenshots/Screenshot%20(5).png)
+![Disk 1 offline during the RAID 5 availability test](screenshots/Screenshot%20(15).png)
 
 ### Step 6 — Verify access to the existing data
 
@@ -81,7 +81,7 @@ Open **File Explorer → This PC** again. Confirm that the `RAID5_PARITY` drive 
 
 **Observed result:** The `RAID5_PARITY` drive remained visible in This PC after Disk 1 was taken offline, and the existing folder and text file remained accessible.
 
-![RAID5_PARITY drive and test data accessible while Disk 1 is offline](screenshots/Screenshot%20(6).png)
+![RAID5_PARITY drive and test data accessible while Disk 1 is offline](screenshots/Screenshot%20(14).png)
 
 ## ⚠️ Important Notes
 
