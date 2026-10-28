@@ -223,6 +223,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 | **4** | Unlock a Domain User Account | 📋 Planned | Unlock a user account and verify its status |
 | **5** | Reset a Domain User Password | 📋 Planned | Reset a password and understand next sign-in requirements |
 | **6** | Enable or Disable a Domain User | 📋 Planned | Manage account status and verify the result |
+| **7** | Enable Active Directory Recycle Bin | 📋 Planned | Use Active Directory Administrative Center (ADAC) to enable recovery of accidentally deleted users, groups, and OUs; only objects deleted after enablement are recoverable |
 
 > **Note:** Quick AD Administration Tasks are short reference guides, separate from the numbered lab sequence.
 
