@@ -30,9 +30,9 @@ RAID 0 splits data into stripes and distributes them across at least two disks. 
 
 ```mermaid
 flowchart TB
-    D[Data stream] --> S{Stripe data}
-    S --> A[Disk 1: A1 | A3 | A5]
-    S --> B[Disk 2: A2 | A4 | A6]
+    D["Data stream"] --> S{"Split into stripes"}
+    S --> A["Disk 1<br/>A1, A3, A5"]
+    S --> B["Disk 2<br/>A2, A4, A6"]
     style A fill:#dbeafe,stroke:#2563eb,color:#111827
     style B fill:#dbeafe,stroke:#2563eb,color:#111827
 ```
