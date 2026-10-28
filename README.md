@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–21 documented · Lab 22 (Hidden Shares and Administrative Shares) is next  
+> **Status:** Labs 1–21 completed · Lab 22 (Hidden Shares and Administrative Shares) is next  
 > **Last updated:** October 29, 2026
 
 ---
