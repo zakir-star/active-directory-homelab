@@ -37,13 +37,13 @@ Do not modify Disk 0, which contains the operating system.
 
 Confirm that the mirrored volume is created successfully.
 
-![RAID 1 mirrored volume created in Disk Management](screenshots/Screenshot%20(2).png)
+![RAID 1 mirrored volume created in Disk Management](screenshots/Screenshot%20(10).png)
 
 ### Step 3 — Verify the drive in This PC
 
 Open **File Explorer → This PC** and confirm that the `RAID1_MIRROR` drive is visible.
 
-![RAID1_MIRROR drive visible in This PC](screenshots/Screenshot%20(3).png)
+![RAID1_MIRROR drive visible in This PC](screenshots/Screenshot%20(11).png)
 
 ### Step 4 — Create the test folders and file
 
@@ -65,7 +65,7 @@ RAID1_MIRROR (drive)
     └── Report
 ```
 
-![RAID 1 test folders and file visible in File Explorer](screenshots/Screenshot%20(4).png)
+![RAID 1 test folders and file visible in File Explorer](screenshots/Screenshot%20(13).png)
 
 ### Step 5 — Take Disk 1 offline
 
@@ -75,13 +75,13 @@ RAID1_MIRROR (drive)
 
 Observe the state of the mirrored volume after Disk 1 is taken offline.
 
-![Disk 1 offline during the RAID 1 availability test](screenshots/Screenshot%20(5).png)
+![Disk 1 offline during the RAID 1 availability test](screenshots/Screenshot%20(16).png)
 
 ### Step 6 — Verify access to the existing data
 
 Open **File Explorer → This PC** again. Confirm that the `RAID1_MIRROR` drive is still present. Open the drive and verify that the `RAID1_MIRROR` folder, its `Documents` and `Report` subfolders, and `RAID1_TEST_DATA.txt` remain visible.
 
-![RAID1_MIRROR drive remains visible with its test data while Disk 1 is offline](screenshots/Screenshot%20(6).png)
+![RAID1_MIRROR drive remains visible with its test data while Disk 1 is offline](screenshots/Screenshot%20(14).png)
 
 **Observed result:** The mirrored drive remained accessible in This PC while Disk 1 was offline, and the existing folders and test file were still visible.
 
