@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–19 documented · Lab 20 (Practical RAID 5 Configuration) is next  
+> **Status:** Labs 1–18 completed · Lab 19 (Practical RAID 0 Configuration) is next  
 > **Last updated:** October 28, 2026
 
 ---
@@ -69,8 +69,9 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **16** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
 | **17** | [Volume Formatting: FAT32, NTFS, and ReFS](Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/README.md) | ✅ Completed | Create test volumes, compare FAT32, NTFS, and ReFS, and verify the file systems |
 | **18** | [RAID Concepts](Lab-18-RAID-Concepts/README.md) | ✅ Completed | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including diagrams, capacity calculations, performance, and fault tolerance |
-| **19** | [Practical RAID Configuration](Lab-19-Practical-RAID-Configuration/README.md) | ✅ Completed | Configure Windows Server software RAID 0 and RAID 1 volumes, create test data, simulate one member disk becoming unavailable, and verify restoration |
-| **20** | Practical RAID 5 Configuration | 🔜 Next | Configure a supported RAID 5/parity layout, calculate usable capacity, and demonstrate one-disk fault tolerance when resources allow |
+| **19** | [Practical RAID 0 Configuration](Lab-19-Practical-RAID-Configuration/README.md) | 🔜 Next | Configure a two-disk striped volume, verify test data, simulate one member disk failure, and demonstrate that RAID 0 becomes unavailable |
+| **20** | Practical RAID 1 Configuration | 📋 Planned | Configure a two-disk mirrored volume, verify test data remains accessible during a single-disk failure, and restore the mirror |
+| **21** | Practical RAID 5 Configuration | 📋 Planned | Configure a three-disk parity volume, verify test data remains accessible during a single-disk failure, and restore the volume |
 
 ### Phase 7 — File Services and Advanced Storage
 
@@ -78,22 +79,22 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **21** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
-| **22** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
-| **23** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
-| **24** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
+| **22** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
+| **23** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
+| **24** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
+| **25** | Storage Spaces and iSCSI | 📋 Planned | Configure storage pools/virtual disks and learn iSCSI target and initiator concepts |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **25** | Additional Domain Controller | 📋 Planned | Add a Domain Controller to the existing domain and verify replication |
-| **26** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
-| **27** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
-| **28** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
-| **29** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
-| **30** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
-| **31** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
+| **26** | Additional Domain Controller | 📋 Planned | Add a Domain Controller to the existing domain and verify replication |
+| **27** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
+| **28** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
+| **29** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
+| **30** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
+| **31** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
+| **32** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
 
 ### Phase 9 — Group Policy Administration
 
@@ -101,44 +102,44 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **32** | Deploy Wallpaper to Specific OUs or Groups | 📋 Planned | Configure and scope a desktop wallpaper policy |
-| **33** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
-| **34** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
-| **35** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
-| **36** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
-| **37** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
-| **38** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
-| **39** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
+| **33** | Deploy Wallpaper to Specific OUs or Groups | 📋 Planned | Configure and scope a desktop wallpaper policy |
+| **34** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
+| **35** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
+| **36** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
+| **37** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
+| **38** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
+| **39** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
+| **40** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
 
 ### Phase 10 — DNS and DHCP Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **40** | DNS Fundamentals and Forward Lookup Zones | 📋 Planned | Review DNS records and forward name resolution |
-| **41** | Reverse Lookup Zones | 📋 Planned | Configure reverse lookup and PTR records |
-| **42** | Primary and Secondary DNS Zones | 📋 Planned | Understand zone replication and secondary-zone configuration |
-| **43** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
-| **44** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
-| **45** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
+| **41** | DNS Fundamentals and Forward Lookup Zones | 📋 Planned | Review DNS records and forward name resolution |
+| **42** | Reverse Lookup Zones | 📋 Planned | Configure reverse lookup and PTR records |
+| **43** | Primary and Secondary DNS Zones | 📋 Planned | Understand zone replication and secondary-zone configuration |
+| **44** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
+| **45** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
+| **46** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
 
 ### Phase 11 — Web, Deployment, and Remote Access
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **46** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
-| **47** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
-| **48** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
-| **49** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
-| **50** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
+| **47** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
+| **48** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
+| **49** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
+| **50** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
+| **51** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
 
 ### Phase 12 — Backup and Disaster Recovery
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **51** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
-| **52** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
-| **53** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
-| **54** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+| **52** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
+| **53** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
+| **54** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **55** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
 ### Phase 13 — Advanced File Services and Caching
 
@@ -146,10 +147,10 @@ These labs extend the file-server fundamentals in Phases 4 and 7.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **55** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
-| **56** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
-| **57** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
-| **58** | Data Deduplication and NFS | 📋 Planned | Explore supported data deduplication scenarios and Windows Server NFS file services |
+| **56** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
+| **57** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
+| **58** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
+| **59** | Data Deduplication and NFS | 📋 Planned | Explore supported data deduplication scenarios and Windows Server NFS file services |
 
 ### Phase 14 — Hyper-V and Virtualization
 
@@ -157,10 +158,10 @@ Hyper-V labs will be performed only where the host hardware and nested-virtualiz
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **59** | Install and Configure Hyper-V | 📋 Planned | Review role prerequisites and configure Hyper-V where supported |
-| **60** | Hyper-V Virtual Machines and Virtual Switches | 📋 Planned | Create a VM and compare external, internal, and private virtual switches |
-| **61** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
-| **62** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
+| **60** | Install and Configure Hyper-V | 📋 Planned | Review role prerequisites and configure Hyper-V where supported |
+| **61** | Hyper-V Virtual Machines and Virtual Switches | 📋 Planned | Create a VM and compare external, internal, and private virtual switches |
+| **62** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
+| **63** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
 
 ### Phase 15 — High Availability and Resilience
 
@@ -168,31 +169,31 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **63** | Windows Server Failover Clustering | 📋 Planned | Understand cluster prerequisites, validation, nodes, and clustered roles |
-| **64** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
-| **65** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
-| **66** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
+| **64** | Windows Server Failover Clustering | 📋 Planned | Understand cluster prerequisites, validation, nodes, and clustered roles |
+| **65** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
+| **66** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
+| **67** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
 
 ### Phase 16 — Advanced Identity and Certificate Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **67** | Active Directory Certificate Services (AD CS) | 📋 Planned | Explore certificate authorities, certificate templates, enrollment, and revocation |
-| **68** | Kerberos Authentication and Troubleshooting | 📋 Planned | Understand ticket-based authentication and investigate common authentication issues |
-| **69** | Active Directory Federation Services (AD FS) | 📋 Planned | Learn federation concepts, prerequisites, and supported lab scenarios |
-| **70** | Active Directory Lightweight Directory Services (AD LDS) | 📋 Planned | Explore application directory instances outside the domain directory |
-| **71** | Active Directory Rights Management Services (AD RMS) | 📋 Planned | Understand information-protection concepts and the role's prerequisites |
-| **72** | Active Directory Auditing and Certificate-Based Authentication | 📋 Planned | Configure selected audit policies and explore certificate-based identity scenarios where supported |
+| **68** | Active Directory Certificate Services (AD CS) | 📋 Planned | Explore certificate authorities, certificate templates, enrollment, and revocation |
+| **69** | Kerberos Authentication and Troubleshooting | 📋 Planned | Understand ticket-based authentication and investigate common authentication issues |
+| **70** | Active Directory Federation Services (AD FS) | 📋 Planned | Learn federation concepts, prerequisites, and supported lab scenarios |
+| **71** | Active Directory Lightweight Directory Services (AD LDS) | 📋 Planned | Explore application directory instances outside the domain directory |
+| **72** | Active Directory Rights Management Services (AD RMS) | 📋 Planned | Understand information-protection concepts and the role's prerequisites |
+| **73** | Active Directory Auditing and Certificate-Based Authentication | 📋 Planned | Configure selected audit policies and explore certificate-based identity scenarios where supported |
 
 ### Phase 17 — Server Operations and Maintenance
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **73** | Windows Server Update Services (WSUS) | 📋 Planned | Explore update synchronization, approvals, and client update management |
-| **74** | Server Core and Remote Administration | 📋 Planned | Compare Server Core with Desktop Experience and manage a server remotely |
-| **75** | PowerShell for Windows Server Administration | 📋 Planned | Use PowerShell to inspect services, roles, users, and system configuration |
-| **76** | Event Viewer and Performance Monitoring | 📋 Planned | Use event logs, Performance Monitor, and Resource Monitor to investigate issues |
-| **77** | Server Role Maintenance, Migration, and Troubleshooting | 📋 Planned | Review role servicing, migration planning, and structured troubleshooting |
+| **74** | Windows Server Update Services (WSUS) | 📋 Planned | Explore update synchronization, approvals, and client update management |
+| **75** | Server Core and Remote Administration | 📋 Planned | Compare Server Core with Desktop Experience and manage a server remotely |
+| **76** | PowerShell for Windows Server Administration | 📋 Planned | Use PowerShell to inspect services, roles, users, and system configuration |
+| **77** | Event Viewer and Performance Monitoring | 📋 Planned | Use event logs, Performance Monitor, and Resource Monitor to investigate issues |
+| **78** | Server Role Maintenance, Migration, and Troubleshooting | 📋 Planned | Review role servicing, migration planning, and structured troubleshooting |
 
 ### Phase 18 — Additional Windows Server Infrastructure Services
 
@@ -200,12 +201,12 @@ These topics focus on Windows Server roles and infrastructure features rather th
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **78** | IP Address Management (IPAM) | 📋 Planned | Explore centralized management and monitoring of supported DHCP and DNS infrastructure |
-| **79** | Network Policy Server (NPS) and RADIUS | 📋 Planned | Understand network policy, RADIUS authentication, and supported test scenarios |
-| **80** | DirectAccess and Remote Connectivity Concepts | 📋 Planned | Learn DirectAccess purpose, prerequisites, and how it differs from VPN; practical setup depends on supported infrastructure |
-| **81** | IPv6 Configuration on Windows Server | 📋 Planned | Configure and verify IPv6 settings in an isolated Windows Server lab |
-| **82** | DNSSEC | 📋 Planned | Explore DNSSEC signing, validation, and prerequisites |
-| **83** | DHCP Troubleshooting, Backup, and Migration | 📋 Planned | Investigate lease and scope issues and practice supported backup/restore or migration workflows |
+| **79** | IP Address Management (IPAM) | 📋 Planned | Explore centralized management and monitoring of supported DHCP and DNS infrastructure |
+| **80** | Network Policy Server (NPS) and RADIUS | 📋 Planned | Understand network policy, RADIUS authentication, and supported test scenarios |
+| **81** | DirectAccess and Remote Connectivity Concepts | 📋 Planned | Learn DirectAccess purpose, prerequisites, and how it differs from VPN; practical setup depends on supported infrastructure |
+| **82** | IPv6 Configuration on Windows Server | 📋 Planned | Configure and verify IPv6 settings in an isolated Windows Server lab |
+| **83** | DNSSEC | 📋 Planned | Explore DNSSEC signing, validation, and prerequisites |
+| **84** | DHCP Troubleshooting, Backup, and Migration | 📋 Planned | Investigate lease and scope issues and practice supported backup/restore or migration workflows |
 
 ---
 
