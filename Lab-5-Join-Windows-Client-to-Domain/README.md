@@ -63,7 +63,7 @@
 ### Step 3: Sign In as the Domain User
 
 1. After the client restarts, select **Other user** on the sign-in screen.
-2. Enter the domain username as `EXAMPLE\\user01` or `user01@example.com`.
+2. Enter the domain username as `EXAMPLE\user01` or `user01@example.com`.
 3. Enter the password configured for `user01` in the earlier lab.
 4. Press **Enter** and wait for the Windows session to load.
 
@@ -89,7 +89,7 @@
    ```
 
 4. Check the output:
-   - `whoami` should show the domain and username, such as `example\\user01`.
+   - `whoami` should show the domain and username, such as `example\user01`.
    - The `systeminfo` command should show `example.com` as the domain.
 
 **📸 Screenshot — CLI verification**
