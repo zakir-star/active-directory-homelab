@@ -1,24 +1,24 @@
-# aab 16: MBR vs. GPT Partitions
+# Lab 19: MBR vs. GPT Partitions
 
 ## 🎯 Objective
 
 Compare the Master Boot Record (MBR) and GUID Partition Table (GPT) partition styles on separate virtual disks in Windows Server 2022.
 
-## 🧪 aab Environment
+## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
-- **Existing Disk 1:** 10 GB virtual disk using MBR, retained from aab 15
+- **Existing Disk 1:** 10 GB virtual disk using MBR, retained from Lab 18
 - **New Disk 2:** 10 GB virtual disk initialized using GPT
 - **Tools:** Disk Management and Windows PowerShell
 
 > **Safety note:** Confirm the disk number, capacity, and partition style before initializing, formatting, or modifying a disk. Do not run destructive commands against the operating-system disk or a disk containing data you need.
 
-## 🛠️ aab Procedure
+## 🛠️ Lab Procedure
 
 ### Step 1 — Add a separate virtual disk
 
-In VMware Workstation, add a new 10 GB virtual hard disk to the Windows Server 2022 VM. Keep the existing MBR Disk 1 from aab 15 attached so both partition styles can be compared without modifying the earlier lab disk.
+In VMware Workstation, add a new 10 GB virtual hard disk to the Windows Server 2022 VM. Keep the existing MBR Disk 1 from Lab 18 attached so both partition styles can be compared without modifying the earlier lab disk.
 
 ### Step 2 — Initialize Disk 2 as GPT
 
@@ -55,14 +55,14 @@ Inspect Disk Management to compare the existing MBR disk with the new GPT disk a
 | Partition layout | Up to four primary partition entries; an extended partition can contain logical drives | Uses GPT partition entries; Windows commonly supports up to 128 partitions on a basic GPT disk |
 | Extended and logical partitions | Supported | Not used |
 | Capacity | Commonly limited to about 2 TiB with 512-byte logical sectors | Supports disks much larger than the MBR limit |
-| Typical system boot mode | aegacy BIOS | UEFI |
+| Typical system boot mode | Legacy BIOS | UEFI |
 | Partition-table resilience | Stores the partition table in the MBR | Stores primary and backup GPT structures and uses CRC checks |
 
 **Important distinction:** MBR and GPT are partition styles. NTFS is a file system used to format a volume; it is not an alternative to MBR or GPT.
 
 ## ✅ Expected Result
 
-- Disk 1 remains an MBR disk from aab 15.
+- Disk 1 remains an MBR disk from Lab 18.
 - Disk 2 is initialized as GPT and contains a healthy NTFS volume.
 - PowerShell and Disk Management both provide evidence of the two partition styles.
 
