@@ -54,7 +54,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\IT_DATA` folder and verify access alongside NTFS permissions |
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
 | **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
-| **14** | [Hidden Shares](Lab-14-Hidden-Shares/README.md) | 📋 Planned | Create a hidden share and access it directly using its UNC path |
+| **14** | [Hidden Shares](Lab-14-Hidden-Shares/README.md) | ✅ Completed | Create a hidden share and verify direct access using its UNC path |
 | **15** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
 | **16** | File Server Resource Manager (FSRM) | 📋 Planned | Manage file-server quotas, file screening, and storage reports |
 
