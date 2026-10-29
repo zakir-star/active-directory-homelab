@@ -58,7 +58,19 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **24** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
 | **25** | File Server Resource Manager (FSRM) | 📋 Planned | Manage file-server quotas, file screening, and storage reports |
 
-### Phase 5 — Disk Management and Storage Fundamentals
+### Phase 5 — Advanced File Services and Caching
+
+These labs cover distributed file access, replication, caching, and storage efficiency, extending the file-server fundamentals introduced in Phase 4.
+
+| Lab | Title | Status | What it covers |
+|-----|-------|--------|----------------|
+| **57** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
+| **58** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
+| **59** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
+| **60** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
+| **61** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
+
+### Phase 6 — Disk Management and Storage Fundamentals
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -129,18 +141,6 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **54** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
 | **55** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
 | **56** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
-
-### Phase 12 — Advanced File Services and Caching
-
-These labs cover distributed file access, replication, caching, and storage efficiency, extending the file-server fundamentals introduced in Phase 4.
-
-| Lab | Title | Status | What it covers |
-|-----|-------|--------|----------------|
-| **57** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
-| **58** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
-| **59** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
-| **60** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
-| **61** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
 ### Phase 13 — Hyper-V and Virtualization
 
