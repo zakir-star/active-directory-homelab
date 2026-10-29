@@ -38,11 +38,11 @@ Create a hidden network share on Windows Server 2022 and verify that a domain us
 
 **📸 Screenshot 1 — Advanced Sharing showing the share name `HiddenData$`**
 
-<!-- Add the relevant screenshot from the screenshots folder after uploading it. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Hidden-Shares/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 3: Browse the Server's Network Shares
 
-1. On the Windows 10 client, sign in as `EXAMPLE\\user01`.
+1. On the Windows 10 client, sign in as `EXAMPLE\user01`.
 2. Open File Explorer.
 3. Enter the server path:
 
@@ -53,7 +53,7 @@ Create a hidden network share on Windows Server 2022 and verify that a domain us
 
 **📸 Screenshot 2 — Browsing `\\DC-01` without the hidden share listed**
 
-<!-- Add the relevant screenshot from the screenshots folder after uploading it. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Hidden-Shares/screenshots/Screenshot%20(6).png?raw=true)
 
 ### Step 4: Access the Hidden Share Directly
 
@@ -66,7 +66,7 @@ Create a hidden network share on Windows Server 2022 and verify that a domain us
 
 **📸 Screenshot 3 — Direct access to `\\DC-01\HiddenData$` showing `Confidential.txt`**
 
-<!-- Add the relevant screenshot from the screenshots folder after uploading it. -->
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Hidden-Shares/screenshots/Screenshot%20(8).png?raw=true)
 
 ## 🔎 Verification
 
