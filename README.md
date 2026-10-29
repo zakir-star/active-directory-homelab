@@ -56,6 +56,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
 | **23** | Hidden Shares and Administrative Shares | 📋 Planned | Create and access hidden shares and understand share naming |
 | **24** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
+| **25** | File Server Resource Manager (FSRM) | 📋 Planned | Manage file-server quotas, file screening, and storage reports |
 
 ### Phase 5 — Disk Management and Storage Fundamentals
 
@@ -71,14 +72,6 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **21** | [Practical RAID 5 Configuration](Lab-21-Practical-RAID-5-Configuration/README.md) | ✅ Completed | Configure a three-disk parity volume and verify continued data access while one member disk is offline |
 | **22** | [Practical iSCSI Configuration](Lab-22-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
 | **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
-
-### Phase 6 — File Server Resource Management
-
-Focuses on managing file-server storage usage and controlling which data can be stored on server volumes.
-
-| Lab | Title | Status | What it covers |
-|-----|-------|--------|----------------|
-| **25** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
 
 ### Phase 7 — Advanced Active Directory Infrastructure
 
