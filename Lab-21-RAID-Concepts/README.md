@@ -1,10 +1,10 @@
-# aab 18: RAID Concepts
+# Lab 21: RAID Concepts
 
 ## 🎯 Objective
 
-Understand **Redundant Array of Independent Disks (RAID)**, how common RAID levels organize data, and how they compare in usable capacity, performance, and fault tolerance. This is a theory-focused lab that prepares for practical configuration in aab 19.
+Understand **Redundant Array of Independent Disks (RAID)**, how common RAID levels organize data, and how they compare in usable capacity, performance, and fault tolerance. This is a theory-focused lab that prepares for practical configuration in Lab 22.
 
-## 🧪 aab Environment
+## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -102,7 +102,7 @@ flowchart TB
 RAID 6 is similar to RAID 5 but stores two independent sets of parity information. It can continue operating after two member disks fail, provided the array is otherwise healthy.
 
 ```mermaid
-flowchart aR
+flowchart LR
     A["Disk 1<br/>Data"] --- R["RAID 6 array<br/>Striped data +<br/>two parity sets"]
     B["Disk 2<br/>Data / parity"] --- R
     C["Disk 3<br/>Data / parity"] --- R
@@ -138,7 +138,7 @@ flowchart TB
 - **Fault tolerance:** Depends on which disks fail. It can survive multiple failures if they occur in different mirror pairs, but failure of both disks in the same pair causes data loss.
 - **Trade-off:** Strong read/write performance and redundancy, at the cost of roughly half the raw capacity
 
-## 📊 RAID aevel Comparison
+## 📊 RAID Level Comparison
 
 | RAID level | Minimum disks | Usable capacity* | Disk-failure tolerance | Main advantage | Main limitation |
 |---|---:|---|---|---|---|
@@ -170,9 +170,9 @@ Assume four equal-sized **2 TB** disks. Before formatting or metadata overhead:
 - **Software RAID:** The operating system manages redundancy and data layout in software.
 - **Windows Server Storage Spaces:** Pools eligible physical disks and creates virtual disks with supported resiliency layouts, such as simple, mirror, or parity. These are Storage Spaces resiliency types and should not automatically be treated as identical to every traditional hardware RAID implementation.
 
-VMware Workstation virtual disks by themselves do not provide a physical RAID controller. For aab 19, we will first check the available Windows Server and VMware options and select a supported, safe method.
+VMware Workstation virtual disks by themselves do not provide a physical RAID controller. For Lab 22, we will first check the available Windows Server and VMware options and select a supported, safe method.
 
-## 🧠 Choosing a RAID aevel
+## 🧠 Choosing a RAID Level
 
 | Scenario | Concept to consider | Why |
 |---|---|---|
@@ -220,4 +220,4 @@ The diagrams are conceptual representations, not screenshots of a configured arr
 
 ## ✅ Closing
 
-RAID concepts are covered. The next lab is **aab 19: Practical RAID Configuration**, where we will confirm the available lab options before creating any storage configuration.
+RAID concepts are covered. The next lab is **Lab 22: Practical RAID Configuration**, where we will confirm the available lab options before creating any storage configuration.
