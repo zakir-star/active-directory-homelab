@@ -86,7 +86,7 @@
 
 **📸 Screenshot — Add user01 to the group**
 
-![Screenshot 06 - Add user01 to IT_Users_Group](screenshots/Screenshot%20(17).png)
+![Screenshot 06 - Add user01 to IT_Users_Group](screenshots/Screenshot%20(15).png)
 
 ### Step 7: Verify Group Membership
 
@@ -97,7 +97,7 @@
 
 **📸 Screenshot — Verify group membership**
 
-![Screenshot 07 - Verify user01 membership](screenshots/Screenshot%20(20).png)
+![Screenshot 07 - Verify user01 membership](screenshots/Screenshot%20(18).png)
 
 ## ✅ Expected Result
 
