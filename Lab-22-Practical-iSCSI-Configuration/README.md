@@ -28,6 +28,8 @@ Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Win
 
 On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under **File and Storage Services → File and iSCSI Services**, install **iSCSI Target Server**.
 
+![iSCSI Target Server role service installed on DC-01](screenshots/01-iSCSI-Target-Server-Role-Installed.png)
+
 ### Step 2 — Create the iSCSI virtual disk
 
 1. In Server Manager, open **File and Storage Services → iSCSI**.
