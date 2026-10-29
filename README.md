@@ -38,7 +38,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **5** | [Join Windows Client to Domain](Lab-5-Join-Windows-Client-to-Domain/README.md) | ✅ Completed | Join a Windows client to `example.com` and sign in as `user01` |
 | **6** | [Domain User Account Management](Lab-6-Domain-User-Acount-Management/README.md) | ✅ Completed | Disable and enable accounts, reset passwords, unlock accounts, and configure logon hours |
 
-### Phase 3 — Manage Account Policies
+### Phase 3 — Manage Account Policies and Logon Rights
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -56,6 +56,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
+| **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | ✅ Completed | Configure NTFS permissions for domain accounts and verify read/write versus read-only access |
 | **11** | [Share Permissions](Lab-11-Share-Permissions/README.md) | ✅ Completed | Configure share permissions on the existing `E:\IT_DATA` folder and verify access alongside NTFS permissions |
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
 | **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
