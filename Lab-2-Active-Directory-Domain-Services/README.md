@@ -28,7 +28,7 @@
 
 **📸 Screenshot — Server name**
 
-![Screenshot - Server renamed to DC-01](screenshots/Screenshot%20(6).png)
+![Screenshot - Server renamed to DC-01](screenshots/Screenshot%20(3).png)
 
 ### Step 2: Configure a Static IP Address
 
@@ -41,7 +41,7 @@
 
 **📸 Screenshot — Static network configuration**
 
-![Screenshot - IPv4 network configuration](screenshots/Screenshot%20(15).png)
+![Screenshot - IPv4 network configuration](screenshots/Screenshot%20(11).png)
 
 ### Step 3: Install the AD DS Role
 
@@ -55,7 +55,7 @@
 
 **📸 Screenshot — AD DS role installation**
 
-![Screenshot - Active Directory Domain Services role installation](screenshots/Screenshot%20(23).png)
+![Screenshot - Active Directory Domain Services role installation](screenshots/Screenshot%20(19).png)
 
 ### Step 4: Promote the Server to a Domain Controller
 
@@ -70,7 +70,7 @@
 
 **📸 Screenshot — Domain controller promotion**
 
-![Screenshot - Active Directory domain controller promotion](screenshots/Screenshot%20(38).png)
+![Screenshot - Active Directory domain controller promotion](screenshots/Screenshot%20(32).png)
 
 ### Step 5: Verify Active Directory
 
@@ -87,9 +87,9 @@
 
 **📸 Screenshots — Service and domain verification**
 
-![Screenshot - NTDS service verification](screenshots/Screenshot%20(43).png)
+![Screenshot - NTDS service verification](screenshots/Screenshot%20(36).png)
 
-![Screenshot - example.com visible in Active Directory Users and Computers](screenshots/Screenshot%20(48).png)
+![Screenshot - example.com visible in Active Directory Users and Computers](screenshots/Screenshot%20(41).png)
 
 ## ✅ Expected Result
 
