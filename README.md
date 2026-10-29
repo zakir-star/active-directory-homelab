@@ -60,6 +60,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
+| **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
 | **14** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
 | **15** | [MBR Partition Limits and Extended Partitions](Lab-15-MBR-Partition-Limits-and-Extended-Partitions/) | ✅ Completed | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
 | **16** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
@@ -78,7 +79,6 @@ Builds on the NTFS and file/folder access-control fundamentals introduced in Lab
 |-----|-------|--------|----------------|
 | **24** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
 | **25** | File Server Resource Manager (FSRM) | 📋 Planned | Explore quotas, file screening, and storage reports |
-| **27** | Storage Spaces | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
 
 ### Phase 7 — Advanced Active Directory Infrastructure
 
