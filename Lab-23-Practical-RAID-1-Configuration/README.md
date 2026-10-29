@@ -1,10 +1,10 @@
-# aab 20: Practical RAID 1 Configuration
+# Lab 23: Practical RAID 1 Configuration
 
 ## 🎯 Objective
 
 Create a two-disk RAID 1 mirrored volume in Windows Server 2022, save test data, and verify that the volume and its existing folders and file remain accessible while one member disk is taken offline.
 
-## 🧪 aab Environment
+## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -15,7 +15,7 @@ Create a two-disk RAID 1 mirrored volume in Windows Server 2022, save test data,
 - **Volume label:** `RAID1_MIRROR`
 - **File system:** NTFS
 
-## 🛠️ aab Procedure
+## 🛠️ Lab Procedure
 
 ### Step 1 — Prepare the data disks
 
