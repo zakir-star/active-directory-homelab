@@ -46,7 +46,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **8** | [Account Lockout Policy Management Using Group Policy](Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/README.md) | ✅ Completed | Configure domain account lockout settings and verify lockout behavior with a test account |
 | **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
 
-### Phase 5 — File Sharing and Access Permissions
+### Phase 4 — File Sharing and Access Permissions
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
