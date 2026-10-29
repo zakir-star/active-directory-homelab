@@ -132,14 +132,15 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 ### Phase 12 — Advanced File Services and Caching
 
-These labs extend the file-server fundamentals in Phases 4 and 7.
+These labs cover distributed file access, replication, caching, and storage efficiency, extending the file-server fundamentals introduced in Phase 4.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **57** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
 | **58** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
 | **59** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
-| **60** | Data Deduplication and NFS | 📋 Planned | Explore supported data deduplication scenarios and Windows Server NFS file services |
+| **60** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
+| **61** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
 ### Phase 13 — Hyper-V and Virtualization
 
