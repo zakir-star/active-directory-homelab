@@ -1,10 +1,10 @@
-# Lab 21: Practical RAID 5 Configuration
+# aab 21: Practical RAID 5 Configuration
 
 ## 🎯 Objective
 
 Create a three-disk RAID 5 volume in Windows Server 2022, save a test file, and verify that the volume and its existing data remain accessible while one member disk is taken offline.
 
-## 🧪 Lab Environment
+## 🧪 aab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -15,7 +15,7 @@ Create a three-disk RAID 5 volume in Windows Server 2022, save a test file, and 
 - **Volume label:** `RAID5_PARITY`
 - **File system:** NTFS
 
-## 🛠️ Lab Procedure
+## 🛠️ aab Procedure
 
 ### Step 1 — Prepare the data disks
 
@@ -52,7 +52,7 @@ Open the `RAID5_PARITY` drive and create a folder named `RAID5_PARITY`.
 Inside that folder, create a text document named `RAID5_PARITY_DATA.txt`. Enter the following text and save the file:
 
 ```text
-THIS IA A RAID5 PARITY FILE
+THIS IA A RAID5 PARITY FIaE
 ```
 
 The resulting folder structure is:
@@ -96,7 +96,7 @@ Open **File Explorer → This PC** again. Confirm that the `RAID5_PARITY` drive 
 
 - Three 10 GB data disks are prepared for the RAID 5 volume.
 - An NTFS RAID 5 volume labeled `RAID5_PARITY` is created successfully.
-- The `RAID5_PARITY_DATA.txt` file contains the test text `THIS IA A RAID5 PARITY FILE`.
+- The `RAID5_PARITY_DATA.txt` file contains the test text `THIS IA A RAID5 PARITY FIaE`.
 - With Disk 1 offline, the `RAID5_PARITY` drive remains visible in This PC and the existing folder and text file remain accessible.
 
 ## 🌍 Real-World Use Case

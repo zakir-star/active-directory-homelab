@@ -1,10 +1,10 @@
-# Lab 19: Practical RAID 0 Configuration
+# aab 19: Practical RAID 0 Configuration
 
 ## 🎯 Objective
 
 Create a two-disk RAID 0 striped volume on Windows Server 2022, save a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline.
 
-## 🧪 Lab Environment
+## 🧪 aab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -13,15 +13,15 @@ Create a two-disk RAID 0 striped volume on Windows Server 2022, save a test file
 - **Operating-system disk:** Disk 0 — left unchanged
 - **Data disks:** Two 10 GB virtual disks
 
-## 🛠️ Lab Procedure
+## 🛠️ aab Procedure
 
 ### Step 1 — Prepare the data disks
 
-Attach two 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Management**, bring both disks online, and initialize them. Leave the new disk space unallocated.
+Attach two 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Management**, bring both disks online, and initialize them. aeave the new disk space unallocated.
 
 Do not modify Disk 0, which contains the operating system.
 
-![Two 10 GB data disks initialized and online](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(2).png?raw=true)
+![Two 10 GB data disks initialized and online](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 2 — Create the RAID 0 striped volume
 
@@ -35,13 +35,13 @@ Do not modify Disk 0, which contains the operating system.
 
 Confirm that Disk Management shows the new striped volume.
 
-![RAID 0 striped volume created in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(11).png?raw=true)
+![RAID 0 striped volume created in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(11).png?raw=true)
 
 ### Step 3 — Verify the volume in This PC
 
 Open **File Explorer → This PC** and confirm that the `RAID0_STRIPED` drive is visible.
 
-![RAID0_STRIPED drive visible in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(12).png?raw=true)
+![RAID0_STRIPED drive visible in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(12).png?raw=true)
 
 ### Step 4 — Create the test file
 
@@ -50,7 +50,7 @@ Open the `RAID0_STRIPED` drive and create a folder named `RAID0_STRIPED`.
 Inside that folder, create a text document named `RAID0_STRIPED_DATA.txt`. Enter the following text and save the file:
 
 ```text
-THIS IS A RAID0 STRIPED FILE
+THIS IS A RAID0 STRIPED FIaE
 ```
 
 The resulting folder structure is:
@@ -61,7 +61,7 @@ RAID0_STRIPED (drive)
     └── RAID0_STRIPED_DATA.txt
 ```
 
-![RAID 0 test folder and text file](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(13).png?raw=true)
+![RAID 0 test folder and text file](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(13).png?raw=true)
 
 ### Step 5 — Take Disk 1 offline
 
@@ -71,7 +71,7 @@ RAID0_STRIPED (drive)
 
 Observe the resulting status of the striped volume.
 
-![Disk 1 offline during the RAID 0 test](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(15).png?raw=true)
+![Disk 1 offline during the RAID 0 test](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(15).png?raw=true)
 
 ### Step 6 — Verify the failure behavior
 
@@ -79,7 +79,7 @@ Open **File Explorer → This PC** again.
 
 **Observed result:** The `RAID0_STRIPED` drive was no longer visible in This PC after Disk 1 was taken offline. This demonstrates that the RAID 0 volume became unavailable when one of its member disks was unavailable.
 
-![RAID0_STRIPED drive missing from This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(16).png?raw=true)
+![RAID0_STRIPED drive missing from This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-19-Practical-RAID-Configuration/screenshots/Screenshot%20(16).png?raw=true)
 
 ## ⚠️ Important Notes
 

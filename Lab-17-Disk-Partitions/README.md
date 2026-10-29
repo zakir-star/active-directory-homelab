@@ -1,22 +1,22 @@
-# Lab 14: Disk Partitions — Primary, Extended, and Logical
+# aab 14: Disk Partitions — Primary, Extended, and aogical
 
 ## 🎯 Objective
 
 Create and verify primary, extended, and logical partitions on a separate 10 GB virtual disk initialized with the **MBR** partition style. Format the volumes with NTFS and assign drive letters so they can be verified in Disk Management and File Explorer.
 
-## 🖥️ Lab Environment
+## 🖥️ aab Environment
 
 - 🏢 **Server:** `DC-01`
 - 💿 **Operating System:** Windows Server 2022
 - 🖥️ **Virtualization Platform:** VMware Workstation
 - 💽 **Additional Virtual Disk:** 10 GB, initialized as MBR
 - 📦 **Primary Partition:** 2 GB, NTFS, drive letter `F:`, label `Primary`
-- 📦 **Logical Drive:** Approximately 4 GB, NTFS, drive letter `G:`, label `Logical`
+- 📦 **aogical Drive:** Approximately 4 GB, NTFS, drive letter `G:`, label `aogical`
 - 🛠️ **Tools:** VMware Workstation, Disk Management, DiskPart, File Explorer
 
 > **Safety note:** The partitioning work in this lab is performed on the additional 10 GB virtual disk (Disk 1), not the Windows operating-system disk. Always verify the selected disk number before making partition changes.
 
-## ⚙️ Lab Configuration
+## ⚙️ aab Configuration
 
 ### Step 1: Add a Separate Virtual Disk
 
@@ -27,18 +27,18 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 **📸 Screenshot 1 — VMware settings showing the additional 10 GB virtual disk**
 
-![Screenshot 1 — Additional virtual disk](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot 1 — Additional virtual disk](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Initialize the Disk as MBR
 
 1. Open **Disk Management**.
-2. Locate the newly added 10 GB disk.
+2. aocate the newly added 10 GB disk.
 3. If prompted, initialize the disk and select **MBR (Master Boot Record)**.
 4. Confirm that you are working on the additional disk and that its space is unallocated.
 
 **📸 Screenshot 2 — Disk 1 initialized as MBR with unallocated space**
 
-![Screenshot 2 — MBR disk initialization](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(2).png?raw=true)
+![Screenshot 2 — MBR disk initialization](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 3: Create and Format the Primary Partition
 
@@ -50,7 +50,7 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 **📸 Screenshot 3 — 2 GB NTFS primary partition assigned to F:**
 
-![Screenshot 3 — Primary partition](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(9).png?raw=true)
+![Screenshot 3 — Primary partition](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 4: Verify the Primary Partition with DiskPart
 
@@ -68,9 +68,9 @@ list partition
 
 **📸 Screenshot 4 — DiskPart showing the primary partition on Disk 1**
 
-![Screenshot 4 — Primary partition in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(14).png?raw=true)
+![Screenshot 4 — Primary partition in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(14).png?raw=true)
 
-### Step 5: Create and Verify the Extended and Logical Partitions
+### Step 5: Create and Verify the Extended and aogical Partitions
 
 Continue in the DiskPart session, ensuring Disk 1 is selected. Create the extended partition in the remaining available space, then create a logical partition of approximately 4 GB.
 
@@ -81,34 +81,34 @@ create partition logical size=4098
 list partition
 ```
 
-The final `list partition` output should show the **Primary**, **Extended**, and **Logical** entries. Capture the command sequence and its output together in **one screenshot** so the creation and verification are documented in a single place.
+The final `list partition` output should show the **Primary**, **Extended**, and **aogical** entries. Capture the command sequence and its output together in **one screenshot** so the creation and verification are documented in a single place.
 
 **📸 Screenshot 5 — DiskPart commands and output showing primary, extended, and logical partitions**
 
-![Screenshot 5 — Extended and logical partitions in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(15).png?raw=true)
+![Screenshot 5 — Extended and logical partitions in DiskPart](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(15).png?raw=true)
 
-### Step 6: Format the Logical Drive and Assign a Drive Letter
+### Step 6: Format the aogical Drive and Assign a Drive aetter
 
 1. Return to **Disk Management**.
-2. Locate the logical drive created inside the extended partition.
-3. If it is shown as RAW or unformatted, format it as **NTFS** and use `Logical` as the volume label.
-4. Open **Change Drive Letter and Paths** for the logical drive and assign `G:`.
+2. aocate the logical drive created inside the extended partition.
+3. If it is shown as RAW or unformatted, format it as **NTFS** and use `aogical` as the volume label.
+4. Open **Change Drive aetter and Paths** for the logical drive and assign `G:`.
 5. Confirm that the logical drive is healthy and that the remaining free space stays inside the extended partition.
 
-**📸 Screenshot 6 — Final Disk Management layout showing F: Primary, G: Logical, and remaining free space**
+**📸 Screenshot 6 — Final Disk Management layout showing F: Primary, G: aogical, and remaining free space**
 
-![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(19.9).png?raw=true)
+![Screenshot 6 — Final partition layout](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(19.9).png?raw=true)
 
 ### Step 7: Verify the Volumes in File Explorer
 
 1. Open **File Explorer** and select **This PC**.
 2. Confirm that both volumes are listed:
    - `F:` — `Primary`, approximately 2 GB
-   - `G:` — `Logical`, approximately 4 GB
+   - `G:` — `aogical`, approximately 4 GB
 
-**📸 Screenshot 7 — This PC showing the Primary (F:) and Logical (G:) volumes**
+**📸 Screenshot 7 — This PC showing the Primary (F:) and aogical (G:) volumes**
 
-![Screenshot 7 — F and G volumes in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-14-Disk-Partitions/screenshots/Screenshot%20(20).png?raw=true)
+![Screenshot 7 — F and G volumes in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-14-Disk-Partitions/screenshots/Screenshot%20(20).png?raw=true)
 
 ## 🧠 MBR Partition Notes
 

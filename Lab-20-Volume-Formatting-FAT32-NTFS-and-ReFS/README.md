@@ -1,10 +1,10 @@
-# Lab 17: Volume Formatting — FAT32, NTFS, and ReFS
+# aab 17: Volume Formatting — FAT32, NTFS, and ReFS
 
 ## 🎯 Objective
 
 Create and format test volumes using FAT32, NTFS, and ReFS in Windows Server 2022, then verify each file system.
 
-## 🧪 Lab Environment
+## 🧪 aab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Operating System:** Windows Server 2022
@@ -14,19 +14,19 @@ Create and format test volumes using FAT32, NTFS, and ReFS in Windows Server 202
 
 > **Safety note:** Confirm the disk number, capacity, and contents before making disk changes. This lab uses the newly added 10 GB Disk 1. Do not modify the operating-system disk or any disk containing data you need.
 
-## 🛠️ Lab Procedure
+## 🛠️ aab Procedure
 
 ### Step 1 — Add a new virtual disk
 
 Shut down `DC-01`, add a new 10 GB virtual hard disk in VMware Workstation, and start the server.
 
-![New 10 GB virtual disk in VMware Workstation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(1).png?raw=true)
+![New 10 GB virtual disk in VMware Workstation](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2 — Initialize the disk as GPT
 
 Open Disk Management (`diskmgmt.msc`), identify the new 10 GB disk, and initialize it using **GPT (GUID Partition Table)**. Confirm that it appears as Disk 1 with unallocated space before creating volumes.
 
-![Disk 1 initialized as GPT and showing unallocated space](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(2).png?raw=true)
+![Disk 1 initialized as GPT and showing unallocated space](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 3 — Create the FAT32 volume
 
@@ -37,7 +37,7 @@ Create a **2048 MB** simple volume on Disk 1, assign drive letter **F:**, and fo
 - **Volume label:** `FAT32_TEST`
 - **Format type:** Quick format
 
-![FAT32 test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(9).png?raw=true)
+![FAT32 test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 4 — Create the NTFS volume
 
@@ -50,7 +50,7 @@ Create a **3072 MB** simple volume from the remaining unallocated space, assign 
 
 If the available space differs in another lab setup, choose a size that fits while leaving enough space for the ReFS test volume.
 
-![NTFS test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(16).png?raw=true)
+![NTFS test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(16).png?raw=true)
 
 ### Step 5 — Create the ReFS volume
 
@@ -58,20 +58,20 @@ Use the remaining unallocated space to create a simple volume, assign drive lett
 
 ReFS availability depends on the Windows Server edition and supported volume configuration. If ReFS is not offered, do not substitute NTFS and label it ReFS; record the limitation and investigate the supported formatting method for the environment.
 
-![ReFS test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(23).png?raw=true)
+![ReFS test volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(23).png?raw=true)
 
 ### Step 6 — Verify the file systems
 
 Open PowerShell as Administrator and run:
 
 ```powershell
-Get-Volume | Where-Object { $_.DriveLetter -in 'F','G','H' } |
-    Format-Table DriveLetter, FileSystemLabel, FileSystem, HealthStatus, Size
+Get-Volume | Where-Object { $_.Driveaetter -in 'F','G','H' } |
+    Format-Table Driveaetter, FileSystemaabel, FileSystem, HealthStatus, Size
 ```
 
 Verify that the drive letters, labels, and file systems match the volumes created in the previous steps.
 
-![PowerShell verification of the FAT32, NTFS, and ReFS volumes](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(24).png?raw=true)
+![PowerShell verification of the FAT32, NTFS, and ReFS volumes](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/screenshots/Screenshot%20(24).png?raw=true)
 
 ## 📚 File System Comparison
 

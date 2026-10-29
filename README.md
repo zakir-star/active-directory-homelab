@@ -64,15 +64,15 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **17** | [Disk Partitions: Primary, Extended, and Logical](Lab-14-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
-| **18** | [MBR Partition Limits and Extended Partitions](Lab-15-MBR-Partition-Limits-and-Extended-Partitions/) | ✅ Completed | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
-| **19** | [MBR vs. GPT Partitions](Lab-16-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
-| **20** | [Volume Formatting: FAT32, NTFS, and ReFS](Lab-17-Volume-Formatting-FAT32-NTFS-and-ReFS/README.md) | ✅ Completed | Create test volumes, compare FAT32, NTFS, and ReFS, and verify the file systems |
-| **21** | [RAID Concepts](Lab-18-RAID-Concepts/README.md) | ✅ Completed | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including diagrams, capacity calculations, performance, and fault tolerance |
-| **22** | [Practical RAID 0 Configuration](Lab-19-Practical-RAID-Configuration/README.md) | ✅ Completed | Configure a two-disk striped volume, create a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline |
-| **23** | [Practical RAID 1 Configuration](Lab-20-Practical-RAID-1-Configuration/README.md) | ✅ Completed | Configure a two-disk mirrored volume and verify continued data access while one member disk is offline |
-| **24** | [Practical RAID 5 Configuration](Lab-21-Practical-RAID-5-Configuration/README.md) | ✅ Completed | Configure a three-disk parity volume and verify continued data access while one member disk is offline |
-| **25** | [Practical iSCSI Configuration](Lab-22-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
+| **17** | [Disk Partitions: Primary, Extended, and Logical](Lab-17-Disk-Partitions/) | ✅ Completed | Create and verify MBR primary, extended, and logical partitions on a separate virtual disk |
+| **18** | [MBR Partition Limits and Extended Partitions](Lab-18-MBR-Partition-Limits-and-Extended-Partitions/) | ✅ Completed | Demonstrate the MBR four-entry limit, attempt a fifth primary partition, and create an extended partition containing a logical partition |
+| **19** | [MBR vs. GPT Partitions](Lab-19-MBR-vs-GPT-Partitions/README.md) | ✅ Completed | Compare MBR and GPT partition styles on separate 10 GB virtual disks and verify the layouts using Disk Management and PowerShell |
+| **20** | [Volume Formatting: FAT32, NTFS, and ReFS](Lab-20-Volume-Formatting-FAT32-NTFS-and-ReFS/README.md) | ✅ Completed | Create test volumes, compare FAT32, NTFS, and ReFS, and verify the file systems |
+| **21** | [RAID Concepts](Lab-21-RAID-Concepts/README.md) | ✅ Completed | Understand RAID 0, RAID 1, RAID 5, RAID 6, and RAID 10, including diagrams, capacity calculations, performance, and fault tolerance |
+| **22** | [Practical RAID 0 Configuration](Lab-22-Practical-RAID-Configuration/README.md) | ✅ Completed | Configure a two-disk striped volume, create a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline |
+| **23** | [Practical RAID 1 Configuration](Lab-23-Practical-RAID-1-Configuration/README.md) | ✅ Completed | Configure a two-disk mirrored volume and verify continued data access while one member disk is offline |
+| **24** | [Practical RAID 5 Configuration](Lab-24-Practical-RAID-5-Configuration/README.md) | ✅ Completed | Configure a three-disk parity volume and verify continued data access while one member disk is offline |
+| **25** | [Practical iSCSI Configuration](Lab-25-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
 | **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
 
 ### Phase 7 — Advanced Active Directory Infrastructure
