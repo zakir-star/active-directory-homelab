@@ -72,9 +72,9 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **22** | [Practical iSCSI Configuration](Lab-22-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
 | **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
 
-### Phase 6 — File Services and Advanced Storage
+### Phase 6 — File Server Resource Management
 
-Builds on the NTFS and file/folder access-control fundamentals introduced in Lab 10.
+Focuses on managing file-server storage usage and controlling which data can be stored on server volumes.
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
