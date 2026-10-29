@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–21 completed · Lab 22 (Practical iSCSI Configuration) is next  
+> **Status:** Labs 1–22 completed  
 > **Last updated:** October 29, 2026
 
 ---
@@ -72,7 +72,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **19** | [Practical RAID 0 Configuration](Lab-19-Practical-RAID-Configuration/README.md) | ✅ Completed | Configure a two-disk striped volume, create a test file, and demonstrate that the volume becomes unavailable when one member disk is taken offline |
 | **20** | [Practical RAID 1 Configuration](Lab-20-Practical-RAID-1-Configuration/README.md) | ✅ Completed | Configure a two-disk mirrored volume and verify continued data access while one member disk is offline |
 | **21** | [Practical RAID 5 Configuration](Lab-21-Practical-RAID-5-Configuration/README.md) | ✅ Completed | Configure a three-disk parity volume and verify continued data access while one member disk is offline |
-| **22** | Practical iSCSI Configuration | 🔜 Next | Configure a Windows Server iSCSI target, connect from a separate initiator, and verify access to the remote block-storage volume |
+| **22** | [Practical iSCSI Configuration](Lab-22-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
 
 ### Phase 7 — File Services and Advanced Storage
 
@@ -283,6 +283,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
 - MBR and GPT partition styles, disk partition limits, and volume formatting verification
 - RAID 0 striping, RAID 1 mirroring, and RAID 5 parity configuration, including single-member offline availability tests
+- iSCSI target creation, initiator IQN authorization, remote disk initialization, NTFS formatting, and client read/write verification
 - Mapping shared folders as network drives using File Explorer
 - Configuring Access-Based Enumeration and verifying folder visibility against permissions
 - Screenshot-supported technical documentation
