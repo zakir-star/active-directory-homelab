@@ -54,11 +54,11 @@
 
 **📸 Screenshot — Domain join process**
 
-![Screenshot 04 - Domain join settings](screenshots/Screenshot%20(8).png)
+![Screenshot 04 - Domain join settings](screenshots/Screenshot%20(7).png)
 
-![Screenshot 05 - Domain join confirmation](screenshots/Screenshot%20(10).png)
+![Screenshot 05 - Domain join confirmation](screenshots/Screenshot%20(9).png)
 
-![Screenshot 06 - Successful domain join](screenshots/Screenshot%20(13).png)
+![Screenshot 06 - Successful domain join](screenshots/Screenshot%20(11).png)
 
 ### Step 3: Sign In as the Domain User
 
@@ -69,9 +69,9 @@
 
 **📸 Screenshot — Domain user sign-in**
 
-![Screenshot 07 - Domain sign-in](screenshots/Screenshot%20(16).png)
+![Screenshot 07 - Domain sign-in](screenshots/Screenshot%20(15).png)
 
-![Screenshot 08 - Domain user session](screenshots/Screenshot%20(17).png)
+![Screenshot 08 - Domain user session](screenshots/Screenshot%20(16).png)
 
 **Note:** Do not include passwords or other credentials in screenshots or GitHub documentation.
 
@@ -94,7 +94,7 @@
 
 **📸 Screenshot — CLI verification**
 
-![Screenshot 09 - Verify domain user and domain name in Command Prompt](screenshots/Screenshot%20(18).png)
+![Screenshot 09 - Verify domain user and domain name in Command Prompt](screenshots/Screenshot%20(17).png)
 
 #### B. Verify from Active Directory Users and Computers
 
@@ -105,7 +105,7 @@
 
 **📸 Screenshot — Verify the client computer account**
 
-![Screenshot 10 - Client computer account in Computers container](screenshots/Screenshot%20(20).png)
+![Screenshot 10 - Client computer account in Computers container](screenshots/Screenshot%20(19).png)
 
 ## ✅ Expected Result
 
