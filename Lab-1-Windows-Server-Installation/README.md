@@ -38,11 +38,11 @@
 
 **📸 Screenshot — Windows Server installation**
 
-![Screenshot 20 - Windows Setup begins](screenshots/20.png)
+![Screenshot 20 - Windows Setup begins](screenshots/14.png)
 
-![Screenshot 25 - Windows Server installation progress](screenshots/25.png)
+![Screenshot 25 - Windows Server installation progress](screenshots/19.png)
 
-![Screenshot 31 - Windows Server setup stage](screenshots/31.png)
+![Screenshot 31 - Windows Server setup stage](screenshots/25.png)
 
 ### Step 3: Complete Initial Setup
 
@@ -53,11 +53,11 @@
 
 **📸 Screenshot — Installed server and initial environment**
 
-![Screenshot 34 - Initial Windows Server environment](screenshots/34.png)
+![Screenshot 34 - Initial Windows Server environment](screenshots/28.png)
 
-![Screenshot 39 - Server configuration stage](screenshots/39.png)
+![Screenshot 39 - Server configuration stage](screenshots/32.png)
 
-![Screenshot 43 - Final installation documentation screenshot](screenshots/43.png)
+![Screenshot 43 - Final installation documentation screenshot](screenshots/36.png)
 
 ## ✅ Expected Result
 
