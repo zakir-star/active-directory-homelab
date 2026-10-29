@@ -42,15 +42,9 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
+| **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
 | **7** | [Password Policy Management Using Group Policy](Lab-7-Password-Policy-Management-Using-Group-Policy/README.md) | ✅ Completed | Configure domain password history, age, minimum length, complexity, and reversible encryption settings |
 | **8** | [Account Lockout Policy Management Using Group Policy](Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/README.md) | ✅ Completed | Configure domain account lockout settings and verify lockout behavior with a test account |
-
-### Phase 4 — Control Access to Resources
-
-| Lab | Title | Status | What it covers |
-|-----|-------|--------|----------------|
-| **9** | [Log on Locally](Lab-9-Login-Locally/README.md) | ✅ Completed | Demonstrate the local-account sign-in restriction and edit Default Domain Controllers Policy to allow selected domain users to log on locally to DC-01 |
-| **10** | [NTFS / Security Permissions](Lab-10-NTFS-Security-Permissions/README.md) | ✅ Completed | Configure NTFS permissions for domain accounts and verify read/write versus read-only access |
 
 ### Phase 5 — File Sharing and Access Permissions
 
