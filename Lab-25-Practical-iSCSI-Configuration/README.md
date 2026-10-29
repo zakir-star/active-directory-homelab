@@ -1,10 +1,10 @@
-# aab 22: Practical iSCSI Configuration
+# Lab 25: Practical iSCSI Configuration
 
 ## 🎯 Objective
 
 Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Windows 10 client as an iSCSI initiator. Initialize and format the remote disk, then verify read/write access from the client.
 
-## 🧪 aab Environment
+## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
 - **Target Server:** Windows Server 2022 — `DC-01`
@@ -12,7 +12,7 @@ Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Win
 - **Network:** Both machines are on the same network
 - **Target Server IP:** `10.0.0.1`
 - **Virtual Disk Name:** `iSCSI-Disk01`
-- **Virtual Disk aocation:** Server-side `F:\` volume
+- **Virtual Disk Location:** Server-side `F:\` volume
 - **Virtual Disk Capacity:** 5 GB
 - **Provisioning Type:** Dynamically expanding
 - **iSCSI Target Name:** `WIN10-Target`
@@ -22,13 +22,13 @@ Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Win
 - **Partition Style:** GPT
 - **File System:** NTFS
 
-## 🛠️ aab Procedure
+## 🛠️ Lab Procedure
 
 ### Step 1 — Install the iSCSI Target Server role service
 
 On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under **File and Storage Services → File and iSCSI Services**, install **iSCSI Target Server**.
 
-![iSCSI Target Server role service installed on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(1).png?raw=true)
+![iSCSI Target Server role service installed on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2 — Create the iSCSI virtual disk
 
@@ -45,10 +45,10 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 2. Name the target `WIN10-Target`.
 3. On the Windows 10 client, open **iSCSI Initiator → Configuration** and note the complete Initiator Name (IQN).
 4. In the target wizard's **Access** section, add the client using its exact IQN.
-5. aeave CHAP disabled for this introductory lab.
+5. Leave CHAP disabled for this introductory lab.
 6. Review the configuration and create the virtual disk and target.
 
-![iSCSI virtual disk and target configuration confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(10).png?raw=true)
+![iSCSI virtual disk and target configuration confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 4 — Discover the target from Windows 10
 
@@ -58,7 +58,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 4. Open the **Targets** tab and refresh the list.
 5. Confirm that `WIN10-Target` appears with an **Inactive** status before connecting.
 
-![iSCSI target portal discovered on the Windows 10 client](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(20).png?raw=true)
+![iSCSI target portal discovered on the Windows 10 client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(20).png?raw=true)
 
 ### Step 5 — Connect to the iSCSI target
 
@@ -67,7 +67,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 3. Keep the appropriate default connection options. Select **Add this connection to the list of Favorite Targets** if the connection should persist after restarts.
 4. Click **OK** and verify that the target status becomes **Connected**.
 
-![WIN10-Target showing Connected status](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(22).png?raw=true)
+![WIN10-Target showing Connected status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(22).png?raw=true)
 
 ### Step 6 — Initialize and format the remote disk
 
@@ -80,9 +80,9 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 7. Set the volume label to `iSCSI-Storage`.
 8. Finish the wizard and confirm that the volume status is **Healthy**.
 
-![iSCSI disk initialized using GPT](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(23).png?raw=true)
+![iSCSI disk initialized using GPT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(23).png?raw=true)
 
-![Healthy NTFS iSCSI volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(25).png?raw=true)
+![Healthy NTFS iSCSI volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(25).png?raw=true)
 
 ### Step 7 — Verify read/write access
 
@@ -91,7 +91,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 3. Inside it, create `Verification.txt`.
 4. Enter a test message, save the file, close it, and reopen it to verify the saved content.
 
-![iSCSI test folder and verification file on the client](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(28).png?raw=true)
+![iSCSI test folder and verification file on the client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(28).png?raw=true)
 
 ### Step 8 — Final verification
 
@@ -99,7 +99,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 2. On Windows 10, verify that the target remains connected.
 3. Confirm that `F:\\iSCSI-Test\\Verification.txt` exists and opens successfully.
 
-![Final iSCSI target verification on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/aab-22-Practical-iSCSI-Configuration/screenshots/Screenshot%20(30).png?raw=true)
+![Final iSCSI target verification on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(30).png?raw=true)
 
 ## ⚠️ Important Notes
 
