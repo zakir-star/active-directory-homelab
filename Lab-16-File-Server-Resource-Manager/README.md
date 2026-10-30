@@ -23,6 +23,8 @@ Install and use File Server Resource Manager (FSRM) on Windows Server 2022 to ma
 
 **📸 Screenshot 1 — Server Manager showing File Server Resource Manager installed**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(2).png?raw=true)
+
 ### Step 2: Create the Test Folders
 
 On `DC-01`, create the following separate folders on the `E:\` volume:
