@@ -27,7 +27,7 @@ Configure NTFS and share permissions on a Windows Server 2022 shared folder, com
 
 **📸 Screenshot 1 — DC-01 showing the E:\Troubleshooting_Test folder, Access_Test.txt, and its contents**
 
-![Test folder and file](screenshots/1.png)
+![Test folder and file](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2: Configure NTFS Permissions
 
@@ -43,7 +43,7 @@ Configure NTFS and share permissions on a Windows Server 2022 shared folder, com
 
 **📸 Screenshot 2 — Advanced Security Settings showing inheritance disabled and user01 assigned Modify permission**
 
-![NTFS permission for user01](screenshots/2.png)
+![NTFS permission for user01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 3: Configure the Initial Share Permission
 
@@ -54,7 +54,7 @@ Configure NTFS and share permissions on a Windows Server 2022 shared folder, com
 
 **📸 Screenshot 3 — Share Permissions showing Everyone with Read permission only**
 
-![Initial share permission](screenshots/3.png)
+![Initial share permission](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 4: Check user01's Effective Network Access Before the Share Change
 
@@ -63,7 +63,7 @@ Configure NTFS and share permissions on a Windows Server 2022 shared folder, com
 
 **📸 Screenshot 4 — Effective network access for user01 before enabling Change on the share**
 
-![Effective network access before share change](screenshots/4.png)
+![Effective network access before share change](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(7).png?raw=true)
 
 ### Step 5: Test the Initial Access
 
@@ -77,7 +77,7 @@ Configure NTFS and share permissions on a Windows Server 2022 shared folder, com
 
 **📸 Screenshot 5 — user01 receives an access-denied message when attempting to modify the shared file**
 
-![Access denied before share permission change](screenshots/5.png)
+![Access denied before share permission change](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(8).png?raw=true)
 
 ### Step 6: Enable Change on the Share
 
@@ -91,7 +91,7 @@ The NTFS Modify permission assigned to user01 remains unchanged.
 
 **📸 Screenshot 6 — Share Permissions showing Everyone with Read and Change enabled**
 
-![Updated share permissions](screenshots/6.png)
+![Updated share permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(9).png?raw=true)
 
 ### Step 7: Check user01's Effective Network Access After the Share Change
 
@@ -106,7 +106,7 @@ The NTFS Modify permission assigned to user01 remains unchanged.
 
 **📸 Screenshot 7 — Effective network access for user01 after enabling Change on the share**
 
-![Effective network access after share change](screenshots/7.png)
+![Effective network access after share change](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 8: Verify Successful File Modification
 
@@ -121,7 +121,7 @@ The NTFS Modify permission assigned to user01 remains unchanged.
 
 **📸 Screenshot 8 — user01 successfully saves the shared file, with the modification verified on DC-01**
 
-![Successful shared file modification](screenshots/8.png)
+![Successful shared file modification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-15-Effective-Access-and-Share-Troubleshooting/screenshots/Screenshot%20(12).png?raw=true)
 
 ## 🔎 Verification
 
