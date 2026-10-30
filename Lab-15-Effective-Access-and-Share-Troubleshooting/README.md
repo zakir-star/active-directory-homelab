@@ -46,9 +46,7 @@ Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 s
 
 **📸 Screenshot 2 — Advanced Security Settings showing inheritance disabled and the explicit permission entries**
 
-![Advanced Security Settings](screenshots/2.png)
-
-**📸 Screenshot 3 — NTFS permissions showing user01 with Modify and user02 with Read & Execute**
+**📸 Screenshot 2 — Advanced Security Settings showing both user01 with Modify and user02 with Read & Execute**
 
 ![NTFS permissions for user01 and user02](screenshots/3.png)
 
