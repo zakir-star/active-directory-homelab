@@ -44,8 +44,6 @@ Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 s
 | `EXAMPLE\\user01` | Modify |
 | `EXAMPLE\\user02` | Read & Execute |
 
-**📸 Screenshot 2 — Advanced Security Settings showing inheritance disabled and the explicit permission entries**
-
 **📸 Screenshot 2 — Advanced Security Settings showing both user01 with Modify and user02 with Read & Execute**
 
 ![NTFS permissions for user01 and user02](screenshots/3.png)
@@ -60,7 +58,7 @@ Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 s
 6. Keep `Everyone` with **Read** permission only.
 7. Apply the settings.
 
-**📸 Screenshot 4 — Share Permissions showing Everyone with Read permission**
+**📸 Screenshot 3 — Share Permissions showing Everyone with Read permission**
 
 ![Initial share permissions](screenshots/4.png)
 
@@ -74,7 +72,7 @@ Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 s
 3. Open `Access_Test.txt`, make a change, and attempt to save it.
 4. Observe that the file cannot be saved to the share while the share permission is Read only.
 
-**📸 Screenshot 5 — user01's initial write attempt with the share configured as Read only**
+**📸 Screenshot 4 — user01's initial write attempt with the share configured as Read only**
 
 ![user01 initial write attempt](screenshots/5.png)
 
@@ -99,11 +97,11 @@ The NTFS permissions remain unchanged.
 4. Save the file.
 5. On `DC-01`, open the original file at `E:\\Troubleshooting_Test\\Access_Test.txt` and verify that the change is present.
 
-**📸 Screenshot 7 — The shared file showing the successful user01 modification**
+**📸 Screenshot 5 — The shared file showing the successful user01 modification**
 
 ![user01 successfully modified the shared file](screenshots/7.png)
 
-**📸 Screenshot 8 — The same modification verified in the original file on DC-01**
+**📸 Screenshot 6 — The same modification verified in the original file on DC-01**
 
 ![Server-side verification of user01 modification](screenshots/8.png)
 
@@ -111,12 +109,12 @@ The NTFS permissions remain unchanged.
 
 1. On the Windows 10 client, sign in as `EXAMPLE\\user02`.
 2. Open `\\\\DC-01\\Troubleshooting_Test`.
-3. Open `Access_Test.txt) and verify that its contents can be read.
+3. Open `Access_Test.txt` and verify that its contents can be read.
 4. During the test, a local copy could be saved, but this did not modify the original file on the server.
 5. On `DC-01`, inspect the original file at `E:\\Troubleshooting_Test\\Access_Test.txt`.
 6. Confirm that the original server-side contents remain unchanged after user02's test.
 
-**📸 Screenshot 10 — Original file on DC-01 showing that user02's test did not change the server-side contents**
+**📸 Screenshot 7 — Original file on DC-01 showing that user02's test did not change the server-side contents**
 
 ![Original server-side file unchanged](screenshots/10.png)
 
@@ -128,7 +126,7 @@ The NTFS permissions remain unchanged.
 4. Verify that `Everyone` has **Read** and **Change** share permissions.
 5. Do not change the settings during this verification.
 
-**📸 Screenshot 11 — Advanced Security Settings showing user02 with Read & Execute**
+**📸 Screenshot 8 — Advanced Security Settings showing user02 with Read & Execute**
 
 ![user02 NTFS Read and Execute permission](screenshots/11.png)
 
