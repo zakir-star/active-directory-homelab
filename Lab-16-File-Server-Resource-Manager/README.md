@@ -36,7 +36,6 @@ On `DC-01`, create the following separate folders on the `E:\` volume:
 | `E:\FSRM_Active_Screen` | Active file-screening test |
 | `E:\FSRM_Passive_Screen` | Reserved for a future passive-screening exercise |
 
-The existing `E:\IT_DATA` folder from previous labs is not modified.
 
 **📸 Screenshot 2 — File Explorer showing the dedicated FSRM test folders**
 
