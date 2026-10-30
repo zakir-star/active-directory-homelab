@@ -81,26 +81,26 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **34** | Deploy Wallpaper to Specific OUs or Groups | 📋 Planned | Configure and scope a desktop wallpaper policy |
-| **35** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
-| **36** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
-| **37** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
-| **38** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
-| **39** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
-| **40** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
-| **41** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
+| **27** | Deploy Wallpaper to Specific OUs or Groups | 📋 Planned | Configure and scope a desktop wallpaper policy |
+| **28** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
+| **29** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
+| **30** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
+| **31** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
+| **32** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
+| **33** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
+| **34** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **27** | Additional Domain Controller | 📋 Planned | Add a Domain Controller to the existing domain and verify replication |
-| **28** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
-| **29** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
-| **30** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
-| **31** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
-| **32** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
-| **33** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
+| **35** | Additional Domain Controller | 📋 Planned | Add a Domain Controller to the existing domain and verify replication |
+| **36** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
+| **37** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
+| **38** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
+| **39** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
+| **40** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
+| **41** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
 
 ### Phase 10 — DNS and DHCP Services
 
