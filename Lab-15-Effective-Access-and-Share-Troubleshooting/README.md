@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 shared folder. Test access from two domain users and demonstrate how the most restrictive permission determines their network access.
+Configure NTFS and share permissions on a Windows Server 2022 shared folder, compare the effective network access before and after changing the share permission, and verify that the domain user can modify the shared file after the permission correction.
 
 ## 🖥️ Lab Environment
 
@@ -10,153 +10,142 @@ Configure and troubleshoot NTFS and share permissions on a Windows Server 2022 s
 - 💿 **Operating System:** Windows Server 2022
 - 🌐 **Domain:** `example.com`
 - 🖥️ **Client:** Domain-joined Windows 10
-- 👤 **Domain Users:** `user01`, `user02`
-- 📁 **Folder:** `E:\\Troubleshooting_Test`
+- 👤 **Domain User:** `user01`
+- 📁 **Folder:** `E:\Troubleshooting_Test`
 - 📄 **Test File:** `Access_Test.txt`
 - 🔗 **Share Name:** `Troubleshooting_Test`
-- 🛠️ **Tools:** File Explorer, Folder Properties, Advanced Security Settings, Advanced Sharing
 
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create the Test Folder and File
 
-1. On `DC-01`, create a folder named `Troubleshooting_Test` on the `E:` drive.
-2. Inside the folder, create a text file named `Access_Test.txt`.
-3. Enter the following text and save the file:
+1. On `DC-01`, create `E:\Troubleshooting_Test`.
+2. Inside the folder, create `Access_Test.txt`.
+3. Add the following text and save the file:
 
    `This file is used to test effective access and troubleshoot share permissions.`
 
-**📸 Screenshot 1 — The `Troubleshooting_Test` folder containing `Access_Test.txt`**
+**📸 Screenshot 1 — DC-01 showing the E:\Troubleshooting_Test folder, Access_Test.txt, and its contents**
 
-![Troubleshooting_Test folder and test file](screenshots/1.png)
+![Test folder and file](screenshots/1.png)
 
 ### Step 2: Configure NTFS Permissions
 
-1. Right-click `E:\\Troubleshooting_Test` and select **Properties**.
-2. Open the **Security** tab and click **Advanced**.
-3. Disable inheritance and convert the inherited permissions into explicit permissions.
-4. Remove the `EXAMPLE\\Users` permission entries.
-5. Keep the required system and administrator entries.
-6. Add the following domain-user permissions. Set **Applies to** to **This folder, subfolders and files**.
+1. Right-click `E:\Troubleshooting_Test` and select **Properties → Security → Advanced**.
+2. Disable inheritance and convert inherited permissions into explicit permissions.
+3. Configure the following permissions. Set **Applies to** to **This folder, subfolders and files**.
 
-| Domain user | NTFS permission |
-|-------------|-----------------|
-| `EXAMPLE\\user01` | Modify |
-| `EXAMPLE\\user02` | Read & Execute |
+| User | NTFS permission |
+|---|---|
+| `EXAMPLE\user01` | Modify |
 
-**📸 Screenshot 2 — Advanced Security Settings showing both user01 with Modify and user02 with Read & Execute**
+4. Keep the required system and administrator entries.
 
-![NTFS permissions for user01 and user02](screenshots/3.png)
+**📸 Screenshot 2 — Advanced Security Settings showing inheritance disabled and user01 assigned Modify permission**
 
-### Step 3: Create the Network Share with Read Permission
+![NTFS permission for user01](screenshots/2.png)
 
-1. Open the folder's **Properties** and select the **Sharing** tab.
-2. Click **Advanced Sharing**.
-3. Select **Share this folder**.
-4. Set the share name to `Troubleshooting_Test`.
-5. Open **Permissions**.
-6. Keep `Everyone` with **Read** permission only.
-7. Apply the settings.
+### Step 3: Configure the Initial Share Permission
 
-**📸 Screenshot 3 — Share Permissions showing Everyone with Read permission**
+1. Open **Properties → Sharing → Advanced Sharing**.
+2. Select **Share this folder** and set the share name to `Troubleshooting_Test`.
+3. Open **Permissions**.
+4. Set `Everyone` to **Read** only.
 
-![Initial share permissions](screenshots/4.png)
+**📸 Screenshot 3 — Share Permissions showing Everyone with Read permission only**
 
-### Step 4: Test user01 Access with the Initial Share Permission
+![Initial share permission](screenshots/3.png)
 
-1. On the Windows 10 client, sign in as `EXAMPLE\\user01`.
-2. Open the shared folder using:
+### Step 4: Check user01's Effective Network Access Before the Share Change
 
-   `\\\\DC-01\\Troubleshooting_Test`
+1. From the Windows client, check the effective network access for `EXAMPLE\user01` to the shared folder.
+2. Verify that the resulting network access is limited to **Read** while the share permission is Read only.
 
-3. Open `Access_Test.txt`, make a change, and attempt to save it.
-4. Observe that the file cannot be saved to the share while the share permission is Read only.
+**📸 Screenshot 4 — Effective network access for user01 before enabling Change on the share**
 
-**📸 Screenshot 4 — user01's initial write attempt with the share configured as Read only**
+![Effective network access before share change](screenshots/4.png)
 
-![user01 initial write attempt](screenshots/5.png)
+### Step 5: Test the Initial Access
 
-### Step 5: Change the Share Permission to Change
+1. Sign in to the Windows client as `EXAMPLE\user01`.
+2. Open the shared file using:
+
+   `\\DC-01\Troubleshooting_Test\Access_Test.txt`
+
+3. Attempt to edit and save the file.
+4. Confirm that the save attempt is denied while the share permission is Read only.
+
+**📸 Screenshot 5 — user01 receives an access-denied message when attempting to modify the shared file**
+
+![Access denied before share permission change](screenshots/5.png)
+
+### Step 6: Enable Change on the Share
 
 1. Return to `DC-01`.
-2. Open **Advanced Sharing** for `E:\\Troubleshooting_Test`.
-3. Click **Permissions**.
-4. Keep `Everyone` selected and allow **Read** and **Change**.
+2. Open **Properties → Sharing → Advanced Sharing → Permissions** for the shared folder.
+3. Keep `Everyone` selected.
+4. Enable **Change**, while retaining **Read**.
 5. Apply the settings.
 
-The NTFS permissions remain unchanged.
+The NTFS Modify permission assigned to user01 remains unchanged.
 
-### Step 6: Retest user01 Access
+**📸 Screenshot 6 — Share Permissions showing Everyone with Read and Change enabled**
 
-1. On the Windows 10 client, sign in as `EXAMPLE\\user01`.
-2. Open `\\\\DC-01\\Troubleshooting_Test\\Access_Test.txt`.
-3. Add the following line:
+![Updated share permissions](screenshots/6.png)
 
-   `user01 successfully modified the file after share permission correction.`
+### Step 7: Check user01's Effective Network Access After the Share Change
 
-4. Save the file.
-5. On `DC-01`, open the original file at `E:\\Troubleshooting_Test\\Access_Test.txt` and verify that the change is present.
+1. Recheck the effective network access for `EXAMPLE\user01`.
+2. Verify that the resulting network access now includes the required write and delete operations.
 
-**📸 Screenshot 5 — The shared file showing the successful user01 modification**
+| Permission layer | Permission |
+|---|---|
+| NTFS | Modify |
+| Share | Read + Change |
+| **Combined network access** | **Modify** |
 
-![user01 successfully modified the shared file](screenshots/7.png)
+**📸 Screenshot 7 — Effective network access for user01 after enabling Change on the share**
 
-**📸 Screenshot 6 — The same modification verified in the original file on DC-01**
+![Effective network access after share change](screenshots/7.png)
 
-![Server-side verification of user01 modification](screenshots/8.png)
+### Step 8: Verify Successful File Modification
 
-### Step 7: Test user02 Read Access
+1. On the Windows client, open the shared `Access_Test.txt` file as `EXAMPLE\user01`.
+2. Add a new line:
 
-1. On the Windows 10 client, sign in as `EXAMPLE\\user02`.
-2. Open `\\\\DC-01\\Troubleshooting_Test`.
-3. Open `Access_Test.txt` and verify that its contents can be read.
-4. During the test, a local copy could be saved, but this did not modify the original file on the server.
-5. On `DC-01`, inspect the original file at `E:\\Troubleshooting_Test\\Access_Test.txt`.
-6. Confirm that the original server-side contents remain unchanged after user02's test.
+   `user01 successfully modified the shared file after the share permission correction.`
 
-**📸 Screenshot 7 — Original file on DC-01 showing that user02's test did not change the server-side contents**
+3. Save the file.
+4. On `DC-01`, open the original file at `E:\Troubleshooting_Test\Access_Test.txt`.
+5. Verify that the new line is present in the original server-side file.
 
-![Original server-side file unchanged](screenshots/10.png)
+**📸 Screenshot 8 — user01 successfully saves the shared file, with the modification verified on DC-01**
 
-### Step 8: Verify the Final NTFS and Share Permissions
-
-1. On `DC-01`, open **Properties → Security → Advanced** for `E:\\Troubleshooting_Test`.
-2. Select `user02` and verify that the NTFS permission is **Read & Execute**.
-3. Open **Sharing → Advanced Sharing → Permissions**.
-4. Verify that `Everyone` has **Read** and **Change** share permissions.
-5. Do not change the settings during this verification.
-
-**📸 Screenshot 8 — Advanced Security Settings showing user02 with Read & Execute**
-
-![user02 NTFS Read and Execute permission](screenshots/11.png)
+![Successful shared file modification](screenshots/8.png)
 
 ## 🔎 Verification
 
-- Created `E:\\Troubleshooting_Test` and `Access_Test.txt` on `DC-01`.
-- Configured NTFS permissions: `user01` — Modify; `user02` — Read & Execute.
-- Initially configured the share with `Everyone` — Read.
-- Confirmed that user01 could not save changes to the share while the share permission was Read only.
-- Changed the share permission for `Everyone` to Read and Change, without changing the NTFS entries.
-- Confirmed that user01 could then modify the shared file and verified the change on `DC-01`.
-- Confirmed that user02 could read the file, while the original server-side file remained unchanged after the local-save test.
-- Rechecked user02's NTFS Read & Execute permission and the share's Read and Change permissions.
+- Created the separate `E:\Troubleshooting_Test` folder and `Access_Test.txt` file.
+- Disabled NTFS inheritance and assigned user01 Modify permission.
+- Initially configured the share with Everyone: Read.
+- Confirmed user01's effective network access was Read and the initial modification attempt was denied.
+- Enabled Change for Everyone on the share without changing user01's NTFS Modify permission.
+- Confirmed the resulting network access allowed Modify operations.
+- Successfully modified the shared file and verified the change in the original file on DC-01.
 
 ## 🎯 Expected Result
 
-The share permission allows Read and Change, but NTFS permissions still distinguish the two users:
+Before the share permission change, user01's network access is limited to Read because the share permission is more restrictive.
 
-- **user01:** NTFS Modify + Share Change = Modify access over the network.
-- **user02:** NTFS Read & Execute + Share Change = Read access over the network.
-
-The more restrictive permission set determines the effective network access.
+After enabling Change on the share, user01's NTFS Modify permission and the share's Read + Change permission combine to provide Modify access over the network.
 
 ## 🌍 Real-World Use Case
 
-When users report that they can open a shared file but cannot modify it, administrators should inspect both the share permissions and the NTFS permissions. Checking only one permission layer may not explain the access result.
+When a user can open a network share but cannot modify its files, an administrator should check both NTFS permissions and share permissions. The effective network access is determined by the more restrictive result of the two permission layers.
 
 ## 📌 Outcome
 
-This lab demonstrates how to troubleshoot file-share access by checking both permission layers and testing with separate domain accounts. It also demonstrates that changing share permissions does not override a more restrictive NTFS permission.
+This lab demonstrates how to identify a share-permission restriction, correct it without changing NTFS permissions, and verify the resulting network access with a real file modification test.
 
 ## 🙏 Acknowledgment
 
@@ -168,11 +157,10 @@ This lab was performed in a Windows Server 2022 Active Directory environment wit
 
 ## ✅ Closing
 
-Share permissions and NTFS permissions work together to determine network access. Always verify both layers and test with the intended user accounts.
+Always check both NTFS and share permissions when troubleshooting network file access. A user must have sufficient permissions at both layers to perform the intended operation.
 
 ## 📌 Lab Note
 
-- For network access, Windows combines share and NTFS permissions; the more restrictive result applies.
-- The **Effective Access** view in Advanced Security Settings evaluates NTFS permissions. It does not display the combined share-and-NTFS result for a network connection.
-- Saving a separate local copy does not demonstrate write access to the original shared file. Verify the original file on the server when testing whether a network change was saved.
-- The test folder is separate from the existing `E:\\IT_DATA` folder used in earlier labs.
+- For network access, Windows combines NTFS and share permissions; the more restrictive result applies.
+- The **Effective Access** tab in a folder's Advanced Security Settings evaluates NTFS permissions only. It does not calculate the combined NTFS-and-share result. The before-and-after network access comparison in this lab must therefore be based on the combined permission calculation or an appropriate network-access test, not a claim that the NTFS-only tab changes when share permissions change.
+- The test folder is separate from the existing `E:\IT_DATA` folder used in earlier labs.
