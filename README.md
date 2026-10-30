@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–22 completed  
-> **Last updated:** October 29, 2026
+> **Status:** Labs 1–15 and 17–25 completed  
+> **Last updated:** October 30, 2026
 
 ---
 
@@ -55,7 +55,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **12** | [Map Network Drive](Lab-12-Map-Network-Drive/README.md) | ✅ Completed | Map the shared `\\DC-01\IT_DATA` folder as drive `Z:` on the Windows 10 domain client using two methods and verify the mapped drive |
 | **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
 | **14** | [Hidden Shares](Lab-14-Hidden-Shares/README.md) | ✅ Completed | Create a hidden share and verify direct access using its UNC path |
-| **15** | Effective Access and Share Troubleshooting | 📋 Planned | Investigate combined share and NTFS permissions and troubleshoot access results |
+| **15** | [Effective Access and Share Troubleshooting](Lab-15-Effective-Access-and-Share-Troubleshooting/README.md) | ✅ Completed | Compare effective network access before and after changing share permissions, troubleshoot access denial, and verify a successful file modification on DC-01 |
 | **16** | File Server Resource Manager (FSRM) | 📋 Planned | Manage file-server quotas, file screening, and storage reports |
 
 
@@ -277,6 +277,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - iSCSI target creation, initiator IQN authorization, remote disk initialization, NTFS formatting, and client read/write verification
 - Mapping shared folders as network drives using File Explorer
 - Configuring Access-Based Enumeration and verifying folder visibility against permissions
+- Troubleshooting effective network access by comparing NTFS and share permissions, then verifying successful shared-file modification
 - Screenshot-supported technical documentation
 
 ---
