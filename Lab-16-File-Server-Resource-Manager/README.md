@@ -40,6 +40,8 @@ The existing `E:\IT_DATA` folder from previous labs is not modified.
 
 **📸 Screenshot 2 — File Explorer showing the dedicated FSRM test folders**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(0).png?raw=true)
+
 ### Step 3: Create and Apply a Hard Quota
 
 1. In the FSRM console, open **Quota Management → Quota Templates**.
@@ -52,7 +54,11 @@ A hard quota prevents additional data from being written once the configured lim
 
 **📸 Screenshot 3 — Hard quota template showing the 100 MB limit and notification thresholds**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(4).png?raw=true)
+
 **📸 Screenshot 4 — Quota entry applied to E:\FSRM_Test**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 4: Test Hard Quota Enforcement
 
@@ -63,6 +69,8 @@ A hard quota prevents additional data from being written once the configured lim
 
 **📸 Screenshot 5 — Hard quota usage at approximately 80% and the fifth file copy being blocked**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(15).png?raw=true)
+
 ### Step 5: Create and Apply a Soft Quota
 
 1. Under **Quota Management → Quota Templates**, create a template named `100 MB Soft Limit`.
@@ -72,7 +80,9 @@ A hard quota prevents additional data from being written once the configured lim
 
 A soft quota monitors usage against the configured limit but does not prevent users from exceeding it.
 
-**📸 Screenshot 6 — Soft quota template showing the 100 MB limit and notification thresholds**
+**📸 Screenshot 6 — Soft quota template showing the 100 MB limit**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(12).png?raw=true)
 
 ### Step 6: Test Soft Quota Behavior
 
@@ -82,6 +92,8 @@ A soft quota monitors usage against the configured limit but does not prevent us
 4. Verify that the copy succeeds and FSRM reports approximately **120%** usage.
 
 **📸 Screenshot 7 — Soft quota usage at 120% with all six test files present**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(18).png?raw=true)
 
 ### Step 7: Configure Active File Screening
 
@@ -96,6 +108,8 @@ The predefined template uses the **Image Files** file group to prevent matching 
 
 **📸 Screenshot 8 — Active file screen applied to E:\FSRM_Active_Screen using Block Image File**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(22).png?raw=true)
+
 ### Step 8: Test Active File Screening
 
 1. On `DC-01`, attempt to copy a `.jpg` or `.png` image into `E:\FSRM_Active_Screen`.
@@ -105,7 +119,7 @@ The predefined template uses the **Image Files** file group to prevent matching 
 
 **📸 Screenshot 9 — Image file blocked when copied into the active screening folder**
 
-**📸 Screenshot 10 — Event Viewer entry confirming the Image Files screening violation**
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(23).png?raw=true)
 
 ## 🔎 Verification
 
@@ -114,8 +128,7 @@ The predefined template uses the **Image Files** file group to prevent matching 
 - Applied a **100 MB hard quota** and confirmed that a fifth 20 MB file was blocked after usage reached approximately 80%.
 - Applied a **100 MB soft quota** and confirmed that six 20 MB files were permitted, taking usage to approximately 120%.
 - Applied the predefined **Block Image File** template to `E:\FSRM_Active_Screen`.
-- Confirmed that a JPG image was blocked and that the Application event log recorded the Image Files screening violation.
-
+- Confirmed that a JPG image was blocked.
 ## 🎯 Expected Result
 
 - A hard quota prevents writes that would exceed its configured limit.
