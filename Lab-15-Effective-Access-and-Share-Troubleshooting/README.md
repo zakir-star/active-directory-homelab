@@ -131,7 +131,7 @@ The NTFS Modify permission assigned to user01 remains unchanged.
 - Confirmed user01's effective network access was Read and the initial modification attempt was denied.
 - Enabled Change for Everyone on the share without changing user01's NTFS Modify permission.
 - Confirmed the resulting network access allowed Modify operations.
-- Successfully modified the shared file and verified the change in the original file on DC-01.
+- Successfully modified the shared file as user01 and verified on DC-01 that the original `Access_Test.txt` contains user01's saved change, confirming the permission correction worked.
 
 ## 🎯 Expected Result
 
