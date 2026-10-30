@@ -56,7 +56,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **13** | [Access-Based Enumeration (ABE)](Lab-13-Access-Based-Enumeration/README.md) | ✅ Completed | Enable ABE on the existing share and verify folder visibility and access for authorized and restricted users |
 | **14** | [Hidden Shares](Lab-14-Hidden-Shares/README.md) | ✅ Completed | Create a hidden share and verify direct access using its UNC path |
 | **15** | [Effective Access and Share Troubleshooting](Lab-15-Effective-Access-and-Share-Troubleshooting/README.md) | ✅ Completed | Compare effective network access before and after changing share permissions, troubleshoot access denial, and verify a successful file modification on DC-01 |
-| **16** | File Server Resource Manager (FSRM) | 📋 Planned | Manage file-server quotas, file screening, and storage reports |
+| **16** | [File Server Resource Manager (FSRM)](Lab-16-File-Server-Resource-Manager/README.md) | ✅ Completed | Configure hard and soft quotas and enforce active image-file screening |
 
 
 
@@ -278,6 +278,8 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Mapping shared folders as network drives using File Explorer
 - Configuring Access-Based Enumeration and verifying folder visibility against permissions
 - Troubleshooting effective network access by comparing NTFS and share permissions, then verifying successful shared-file modification
+- File Server Resource Manager (FSRM) quota management using hard and soft quotas
+- Active file screening to block image files using predefined FSRM templates
 - Screenshot-supported technical documentation
 
 ---
