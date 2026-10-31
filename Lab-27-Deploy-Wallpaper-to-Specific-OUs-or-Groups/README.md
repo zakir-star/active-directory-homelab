@@ -87,18 +87,7 @@ The group now has read access through both the share permissions and NTFS permis
 
 ![Desktop Wallpaper policy configuration](screenshots/04-Desktop-Wallpaper-Policy.png)
 
-### Step 6 — Verify the GPO scope
-
-1. Select the GPO in Group Policy Management.
-2. Open the **Scope** tab.
-3. Keep the default **Authenticated Users** entry under **Security Filtering**.
-4. Confirm that the GPO link is under the `IT` Organizational Unit.
-
-![GPO scope and security filtering](screenshots/05-GPO-Scope.png)
-
-This lab demonstrates OU-level GPO deployment. The security filtering remains at its default setting; group-based GPO security filtering is not part of this exercise.
-
-### Step 7 — Update Group Policy
+### Step 6 — Update Group Policy
 
 1. Open Command Prompt on `DC-01`.
 2. Run:
@@ -109,7 +98,7 @@ This lab demonstrates OU-level GPO deployment. The security filtering remains at
 
 3. Allow the policy update to complete.
 
-### Step 8 — Verify the wallpaper with user01
+### Step 7 — Verify the wallpaper with user01
 
 1. Switch to the Windows client.
 2. Sign in using the domain account `user01`.
@@ -118,7 +107,7 @@ This lab demonstrates OU-level GPO deployment. The security filtering remains at
 
 ![Wallpaper applied for user01](screenshots/06-Wallpaper-User01.png)
 
-### Step 9 — Verify the wallpaper with user02
+### Step 8 — Verify the wallpaper with user02
 
 1. Sign out from `user01`.
 2. Sign in using the domain account `user02`.
@@ -130,14 +119,13 @@ This lab demonstrates OU-level GPO deployment. The security filtering remains at
 
 - Confirm that the wallpaper share is accessible through `\\DC-01\Wallpaper`.
 - Confirm that `IT_Users_Group` has read access through share and NTFS permissions.
-- Confirm that the GPO is linked to the `IT` OU and retains **Authenticated Users** under Security Filtering.
+- Confirm that the GPO is linked to the `IT` OU.
 - Confirm that both `user01` and `user02` see the configured wallpaper after signing in.
 
 ## ⚠️ Important Notes
 
 - The Desktop Wallpaper setting is a **User Configuration** policy.
 - The GPO is linked to the `IT` OU, where the target user accounts are located.
-- **Authenticated Users** remains in the GPO's default Security Filtering configuration.
 - The wallpaper policy uses a UNC path so domain clients can retrieve the image from the shared folder.
 - `IT_Users_Group` has **Read** share permission and **Read & Execute** NTFS permission.
 - Both `user01` and `user02` are members of `IT_Users_Group` and can read the shared wallpaper.
@@ -166,7 +154,7 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 ## ✍️ Author's Note
 
-This lab focuses on deploying a desktop wallpaper through an OU-linked user policy. The GPO retained the default **Authenticated Users** security filtering, while access to the shared wallpaper file was controlled through `IT_Users_Group`.
+This lab focuses on deploying a desktop wallpaper through an OU-linked user policy. The GPO was linked directly to the `IT` OU, while access to the shared wallpaper file was controlled through `IT_Users_Group`.
 
 ## ✅ Closing
 
