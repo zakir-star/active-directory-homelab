@@ -40,7 +40,6 @@ The shared folder is accessed through this UNC path:
 \\DC-01\screensaver
 ```
 
-![Share permissions showing Read access for IT_Users_Group only](screenshots/REPLACE_WITH_RELEVANT_SCREENSHOT.png)
 
 ### Step 3 — Create and link the Group Policy Object
 
