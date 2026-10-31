@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–16 and 17–26 completed  
+> **Status:** Labs 1–16 and 17–27 completed  
 > **Last updated:** October 31, 2026
 
 ---
@@ -81,7 +81,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **27** | Deploy Wallpaper to Specific OUs or Groups | 📋 Planned | Configure and scope a desktop wallpaper policy |
+| **27** | [Deploy Wallpaper to Specific OUs or Groups](Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/README.md) | ✅ Completed | Deploy a shared desktop wallpaper through a user-based GPO linked to the IT OU and verify it with domain users |
 | **28** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
 | **29** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
 | **30** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
