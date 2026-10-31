@@ -13,7 +13,7 @@ Deploy a custom desktop wallpaper to users in the IT Organizational Unit using G
 - **Organizational Unit:** `IT`
 - **Security Group:** `IT_Users_Group`
 - **Domain Users:** `user01` and `user02`
-- **Wallpaper Folder:** `E:\\Wallpaper`
+- **Wallpaper Folder:** `E:\Wallpaper`
 - **Share Name:** `Wallpaper`
 - **GPO Name:** `IT Group Desktop Wallpaper`
 
@@ -22,18 +22,20 @@ Deploy a custom desktop wallpaper to users in the IT Organizational Unit using G
 ### Step 1 — Create the wallpaper folder
 
 1. Sign in to `DC-01`.
-2. Open File Explorer and create a folder named `Wallpaper` on the `E:\\` drive.
+2. Open File Explorer and create a folder named `Wallpaper` on the `E:\` drive.
 3. Place the PNG wallpaper image inside the folder.
 
 ### Step 2 — Share the wallpaper folder
 
-1. Right-click `E:\\Wallpaper` and select **Properties**.
+1. Right-click `E:\Wallpaper` and select **Properties**.
 2. Open the **Sharing** tab and select **Advanced Sharing**.
 3. Select **Share this folder** and set the share name to `Wallpaper`.
 4. Open **Permissions**.
 5. Remove the default `Everyone` entry.
 6. Add `IT_Users_Group` and allow **Read** permission.
 7. Apply the changes.
+
+![Wallpaper share permissions](screenshots/01-Wallpaper-Share-Permissions.png)
 
 The shared folder can be accessed using the UNC path:
 
@@ -48,6 +50,8 @@ The shared folder can be accessed using the UNC path:
 3. Allow **Read & Execute**, **List folder contents**, and **Read** permissions.
 4. Apply the changes.
 
+![Wallpaper NTFS permissions](screenshots/02-Wallpaper-NTFS-Permissions.png)
+
 The group now has read access through both the share permissions and NTFS permissions.
 
 ### Step 4 — Create and link the Group Policy Object
@@ -58,6 +62,8 @@ The group now has read access through both the share permissions and NTFS permis
 4. Select **Create a GPO in this domain, and Link it here**.
 5. Name the GPO `IT Group Desktop Wallpaper`.
 6. Confirm that the GPO is linked to the `IT` OU.
+
+![GPO linked to the IT OU](screenshots/03-GPO-Linked-to-IT-OU.png)
 
 ### Step 5 — Configure the desktop wallpaper policy
 
@@ -79,12 +85,16 @@ The group now has read access through both the share permissions and NTFS permis
 6. Set **Wallpaper Style** to **Fill**.
 7. Apply the settings and close the Group Policy editor.
 
+![Desktop Wallpaper policy configuration](screenshots/04-Desktop-Wallpaper-Policy.png)
+
 ### Step 6 — Verify the GPO scope
 
 1. Select the GPO in Group Policy Management.
 2. Open the **Scope** tab.
 3. Keep the default **Authenticated Users** entry under **Security Filtering**.
 4. Confirm that the GPO link is under the `IT` Organizational Unit.
+
+![GPO scope and security filtering](screenshots/05-GPO-Scope.png)
 
 This lab demonstrates OU-level GPO deployment. The security filtering remains at its default setting; group-based GPO security filtering is not part of this exercise.
 
@@ -106,11 +116,22 @@ This lab demonstrates OU-level GPO deployment. The security filtering remains at
 3. Allow the user policy to apply.
 4. Verify that the desktop displays the configured wallpaper.
 
+![Wallpaper applied for user01](screenshots/06-Wallpaper-User01.png)
+
 ### Step 9 — Verify the wallpaper with user02
 
 1. Sign out from `user01`.
 2. Sign in using the domain account `user02`.
 3. Verify that the same wallpaper appears on the desktop.
+
+![Wallpaper applied for user02](screenshots/07-Wallpaper-User02.png)
+
+## 🔎 Verification
+
+- Confirm that the wallpaper share is accessible through `\\DC-01\Wallpaper`.
+- Confirm that `IT_Users_Group` has read access through share and NTFS permissions.
+- Confirm that the GPO is linked to the `IT` OU and retains **Authenticated Users** under Security Filtering.
+- Confirm that both `user01` and `user02` see the configured wallpaper after signing in.
 
 ## ⚠️ Important Notes
 
@@ -120,11 +141,11 @@ This lab demonstrates OU-level GPO deployment. The security filtering remains at
 - The wallpaper policy uses a UNC path so domain clients can retrieve the image from the shared folder.
 - `IT_Users_Group` has **Read** share permission and **Read & Execute** NTFS permission.
 - Both `user01` and `user02` are members of `IT_Users_Group` and can read the shared wallpaper.
-- The share permission and NTFS permission work together to determine the effective network access.
+- Share permissions and NTFS permissions work together to determine effective network access.
 
-## ✅ Expected Result
+## 🎯 Expected Result
 
-- The `E:\\Wallpaper` folder is shared as `Wallpaper` on `DC-01`.
+- The `E:\Wallpaper` folder is shared as `Wallpaper` on `DC-01`.
 - `IT_Users_Group` has read access to the shared wallpaper.
 - The `IT Group Desktop Wallpaper` GPO is linked to the `IT` OU.
 - The Desktop Wallpaper policy is enabled and configured with the wallpaper's UNC path.
