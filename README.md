@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–16 and 17–27 completed  
+> **Status:** Labs 1–16 and 17–29 completed  
 > **Last updated:** October 31, 2026
 
 ---
@@ -83,7 +83,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 |-----|-------|--------|----------------|
 | **27** | [Deploy Wallpaper to Specific OUs or Groups](Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/README.md) | ✅ Completed | Deploy a shared desktop wallpaper through a user-based GPO linked to the IT OU and verify it with domain users |
 | **28** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
-| **29** | Configure Screen Saver Policies | 📋 Planned | Configure screen saver settings and policy scope |
+| **29** | [Configure Screen Saver Policies](Lab-29-Configure-Screen-Saver-Policies/README.md) | ✅ Completed | Deploy the Bubbles screen saver through a user-based GPO linked to the IT OU, using a restricted network share for the screen saver file |
 | **30** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
 | **31** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
 | **32** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
