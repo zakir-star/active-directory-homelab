@@ -18,7 +18,7 @@ Create a Storage Spaces storage pool from three additional virtual disks, create
 - **Provisioning Type:** Thin
 - **Virtual Disk Capacity:** 9 GB
 - **File System:** NTFS
-- **Drive Letter:** `F:\\`
+- **Drive Letter:** `F\:`
 
 ## 🛠️ Lab Procedure
 
@@ -74,47 +74,47 @@ list disk
 5. Review the configuration and complete the wizard.
 6. Confirm that the new storage pool appears in the Storage Pools list.
 
-![POOL1 storage pool created using the three physical disks](screenshots/Screenshot%20(5).png)
+![POOL1 storage pool created using the three physical disks](screenshots/Screenshot%20(12).png)
 
 ### Step 6 — Create the virtual disk
 
 1. Under **Storage Pools**, select the newly created `POOL1` pool.
-2. Open its **Tasks** menu and select **New Virtual Disk**.
+2. Right click on the newly created pool `POOL1` and select **New Virtual Disk**.
 3. Name the virtual disk `VHD-1`.
 4. Select **Two-way Mirror** as the resiliency type.
 5. Select **Thin** provisioning.
 6. Specify a virtual disk size of **9 GB**.
 7. Review the settings and complete the wizard.
 
-![VHD-1 configured with Two-way Mirror and Thin provisioning](screenshots/Screenshot%20(6).png)
+![VHD-1 configured with Two-way Mirror and Thin provisioning](screenshots/Screenshot%20(21).png)
 
 ### Step 7 — Create and format the volume
 
 1. After the virtual disk is created, continue to the **New Volume Wizard**.
 2. Select the newly created `VHD-1` virtual disk.
 3. Use the available volume capacity.
-4. Assign the drive letter `F:\\`.
+4. Assign the drive letter `F:\`.
 5. Select **NTFS** as the file system.
 6. Complete the wizard and allow the volume to be formatted.
 
-![New volume configuration for VHD-1](screenshots/Screenshot%20(7).png)
+![New volume configuration for VHD-1](screenshots/Screenshot%20(29).png)
 
 ### Step 8 — Verify the virtual disk and volume
 
 1. Open **Disk Management**.
 2. Locate the virtual disk created from `POOL1`.
 3. Confirm that the virtual disk is initialized and its volume is allocated.
-4. Verify that the volume is formatted as NTFS and assigned drive letter `F:\\`.
+4. Verify that the volume is formatted as NTFS and assigned drive letter `F:\`.
 
-![Allocated NTFS volume on the Storage Spaces virtual disk](screenshots/Screenshot%20(8).png)
+![Allocated NTFS volume on the Storage Spaces virtual disk](screenshots/Screenshot%20(31).png)
 
 ### Step 9 — Verify the drive in This PC
 
 1. Open **File Explorer → This PC**.
-2. Confirm that the new `F:\\` drive is visible.
+2. Confirm that the new `F:\` drive is visible.
 3. Verify that the drive is available for storing files.
 
-![F drive visible in This PC](screenshots/Screenshot%20(9).png)
+![F drive visible in This PC](screenshots/Screenshot%20(32).png)
 
 ## ⚠️ Important Notes
 
@@ -132,9 +132,9 @@ list disk
 - Three additional 5 GB physical disks are visible and online in Windows Server 2022.
 - A storage pool named `POOL1` is created using the three physical disks.
 - A 9 GB virtual disk named `VHD-1` is created with **Two-way Mirror** resiliency and **Thin** provisioning.
-- An NTFS volume is created on the virtual disk and assigned drive letter `F:\\`.
+- An NTFS volume is created on the virtual disk and assigned drive letter `F:\`.
 - Disk Management confirms that the virtual disk volume is allocated.
-- The `F:\\` drive is visible in This PC and available for use.
+- The `F:\` drive is visible in This PC and available for use.
 
 ## 🌍 Real-World Use Case
 
