@@ -32,13 +32,7 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 
 ### Step 2 — Share the screen saver folder
 
-1. Right-click `E:\screensaver` and select **Properties**.
-2. Open the **Sharing** tab and select **Advanced Sharing**.
-3. Select **Share this folder** and use `screensaver` as the share name.
-4. Select **Permissions**.
-5. Remove the default `Everyone` entry.
-6. Add `IT_Users_Group` and allow **Read** permission.
-7. Apply the changes.
+Share the `E:\screensaver` folder as `screensaver`. Configure the share permissions to grant **Read** access to `IT_Users_Group` only, and remove `Everyone`.
 
 The shared folder is accessed through this UNC path:
 
@@ -46,7 +40,7 @@ The shared folder is accessed through this UNC path:
 \\DC-01\screensaver
 ```
 
-![Share permissions for IT_Users_Group](screenshots/Screenshot%20(3).png)
+![Share permissions showing Read access for IT_Users_Group only](screenshots/REPLACE_WITH_RELEVANT_SCREENSHOT.png)
 
 ### Step 3 — Create and link the Group Policy Object
 
