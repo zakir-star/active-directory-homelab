@@ -154,4 +154,4 @@ This lab focuses on creating a Storage Spaces pool and a thin-provisioned two-wa
 
 ## ✅ Closing
 
-The Storage Spaces configuration was created successfully. The `POOL1` storage pool, `VHD-1` virtual disk, and NTFS `F:\\` volume were verified in Server Manager, Disk Management, and This PC.
+The Storage Spaces configuration was created successfully. The `POOL1` storage pool, `VHD-1` virtual disk, and NTFS `F:\` volume were verified in Server Manager, Disk Management, and This PC.
