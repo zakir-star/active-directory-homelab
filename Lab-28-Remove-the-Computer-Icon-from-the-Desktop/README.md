@@ -29,7 +29,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from changing 
 
 **📸 Screenshot — GPO created and linked to the IT OU**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-28-Remove-the-Computer-Icon-from-the-Desktop/screenshots/Screenshot%20(2).png?raw=true)
+![image alt](screenshots/Screenshot%20%282%29.png)
 
 ### Step 2 — Configure the desktop policy
 
@@ -45,7 +45,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from changing 
 
 **📸 Screenshot — Remove Computer icon on the desktop policy enabled**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-28-Remove-the-Computer-Icon-from-the-Desktop/screenshots/Screenshot%20(4).png?raw=true)
+![image alt](screenshots/Screenshot%20%284%29.png)
 
 
 ### Step 3 — Update Group Policy on the server
@@ -70,7 +70,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from changing 
 
 **📸 Screenshot — Computer checkbox greyed out in Desktop Icon Settings**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-28-Remove-the-Computer-Icon-from-the-Desktop/screenshots/Screenshot%20(6).png?raw=true)
+![image alt](screenshots/Screenshot%20%286%29.png)
 
 
 ## 🔎 Verification
