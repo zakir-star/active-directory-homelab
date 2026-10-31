@@ -14,6 +14,7 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 - **Security Group:** `IT_Users_Group`
 - **Screen Saver Folder:** `E:\screensaver`
 - **Share Name:** `screensaver`
+- **UNC Path:** `\\DC-01\\screensaver`
 - **Screen Saver File:** `Bubbles.scr`
 - **GPO Name:** `deploy_screen_saver`
 
@@ -45,7 +46,6 @@ The shared folder is accessed through this UNC path:
 \\DC-01\screensaver
 ```
 
-![Advanced Sharing configuration](screenshots/Screenshot%20(2).png)
 ![Share permissions for IT_Users_Group](screenshots/Screenshot%20(3).png)
 
 ### Step 3 — Create and link the Group Policy Object
