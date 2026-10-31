@@ -103,6 +103,12 @@ The shared folder can be accessed using:
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(8).png?raw=true)
 
+### Step 7 — verify the policy
+
+1. Sign out from the user and sign in again after completing the Group Policy update.
+2. Wait for 10 seconds 
+
+
 **📸 Screenshot — Bubbles screen saver applied in the user session**
 
 ![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(9).png?raw=true)
