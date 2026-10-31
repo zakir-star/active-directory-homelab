@@ -4,28 +4,28 @@
 
 Deploy a custom desktop wallpaper to users in the IT Organizational Unit using Group Policy. The wallpaper is stored in a shared folder on the Domain Controller, and access to the image is provided to members of the `IT_Users_Group` security group.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Domain Controller:** Windows Server 2022 — `DC-01`
-- **Client Machine:** Windows 10
-- **Domain:** `example.com`
-- **Organizational Unit:** `IT`
-- **Security Group:** `IT_Users_Group`
-- **Domain Users:** `user01` and `user02`
-- **Wallpaper Folder:** `E:\Wallpaper`
-- **Share Name:** `Wallpaper`
-- **GPO Name:** `IT Group Desktop Wallpaper`
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Domain Controller:** Windows Server 2022 — `DC-01`
+- 💻 **Client Machine:** Windows 10
+- 🌐 **Domain:** `example.com`
+- 🗂️ **Organizational Unit:** `IT`
+- 👥 **Security Group:** `IT_Users_Group`
+- 👤 **Domain Users:** `user01` and `user02`
+- 📁 **Wallpaper Folder:** `E:\Wallpaper`
+- 🔗 **Share Name:** `Wallpaper`
+- ⚙️ **GPO Name:** `IT Group Desktop Wallpaper`
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
-### Step 1 — Create the wallpaper folder
+### Step 1 — 📁 Create the wallpaper folder
 
 1. Sign in to `DC-01`.
 2. Open File Explorer and create a folder named `Wallpaper` on the `E:\` drive.
 3. Place the PNG wallpaper image inside the folder.
 
-### Step 2 — Share the wallpaper folder
+### Step 2 — 🔗 Share the wallpaper folder
 
 1. Right-click `E:\Wallpaper` and select **Properties**.
 2. Open the **Sharing** tab and select **Advanced Sharing**.
@@ -35,6 +35,8 @@ Deploy a custom desktop wallpaper to users in the IT Organizational Unit using G
 6. Add `IT_Users_Group` and allow **Read** permission.
 7. Apply the changes.
 
+**📸 Screenshot — Wallpaper share permissions**
+
 ![Wallpaper share permissions](screenshots/Screenshot%20%282%29.png)
 
 The shared folder can be accessed using the UNC path:
@@ -43,7 +45,7 @@ The shared folder can be accessed using the UNC path:
 \\DC-01\Wallpaper
 ```
 
-### Step 3 — Create and link the Group Policy Object
+### Step 3 — ⚙️ Create and link the Group Policy Object
 
 1. On `DC-01`, open **Server Manager → Tools → Group Policy Management**.
 2. Expand the `example.com` domain.
@@ -52,9 +54,11 @@ The shared folder can be accessed using the UNC path:
 5. Name the GPO `IT Group Desktop Wallpaper`.
 6. Confirm that the GPO is linked to the `IT` OU.
 
+**📸 Screenshot — GPO linked to the IT OU**
+
 ![GPO linked to the IT OU](screenshots/Screenshot%20%286%29.png)
 
-### Step 4 — Configure the desktop wallpaper policy
+### Step 4 — 🖼️ Configure the desktop wallpaper policy
 
 1. Right-click `IT Group Desktop Wallpaper` and select **Edit**.
 2. Navigate to:
@@ -74,9 +78,11 @@ The shared folder can be accessed using the UNC path:
 6. Set **Wallpaper Style** to **Fill**.
 7. Apply the settings and close the Group Policy editor.
 
+**📸 Screenshot — Desktop Wallpaper policy configuration**
+
 ![Desktop Wallpaper policy configuration](screenshots/Screenshot%20%288%29.png)
 
-### Step 5 — Update Group Policy
+### Step 5 — 🔄 Update Group Policy
 
 1. Open Command Prompt on `DC-01`.
 2. Run:
@@ -87,20 +93,24 @@ The shared folder can be accessed using the UNC path:
 
 3. Allow the policy update to complete.
 
-### Step 6 — Verify the wallpaper with user01
+### Step 6 — 💻 Verify the wallpaper with user01
 
 1. Switch to the Windows client.
 2. Sign in using the domain account `user01`.
 3. Allow the user policy to apply.
 4. Verify that the desktop displays the configured wallpaper.
 
+**📸 Screenshot — Wallpaper applied for user01**
+
 ![Wallpaper applied for user01](screenshots/Screenshot%20%2811%29.png)
 
-### Step 7 — Verify the wallpaper with user02
+### Step 7 — 💻 Verify the wallpaper with user02
 
 1. Sign out from `user01`.
 2. Sign in using the domain account `user02`.
 3. Verify that the same wallpaper appears on the desktop.
+
+**📸 Screenshot — Wallpaper applied for user02**
 
 ![Wallpaper applied for user02](screenshots/Screenshot%20%2813%29.png)
 
