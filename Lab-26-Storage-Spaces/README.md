@@ -4,34 +4,36 @@
 
 Create a Storage Spaces storage pool from three additional virtual disks, create a thin-provisioned two-way mirror virtual disk, and format the resulting volume for use in Windows Server 2022.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Operating System:** Windows Server 2022
-- **Server:** `DC-01`
-- **Tool:** Server Manager, Disk Management, and DiskPart
-- **Physical Data Disks:** Three 5 GB virtual disks
-- **Total Raw Disk Capacity:** 15 GB
-- **Storage Pool Name:** `POOL1`
-- **Virtual Disk Name:** `VHD-1`
-- **Resiliency:** Two-way Mirror
-- **Provisioning Type:** Thin
-- **Virtual Disk Capacity:** 9 GB
-- **File System:** NTFS
-- **Drive Letter:** `F\:`
+- 🖥️ **Hypervisor:** VMware Workstation
+- 💿 **Operating System:** Windows Server 2022
+- 🏢 **Server:** `DC-01`
+- 🛠️ **Tools:** Server Manager, Disk Management, and DiskPart
+- 💽 **Physical Data Disks:** Three 5 GB virtual disks
+- 📊 **Total Raw Disk Capacity:** 15 GB
+- 🗄️ **Storage Pool Name:** `POOL1`
+- 💾 **Virtual Disk Name:** `VHD-1`
+- 🛡️ **Resiliency:** Two-way Mirror
+- ⚙️ **Provisioning Type:** Thin
+- 📏 **Virtual Disk Capacity:** 9 GB
+- 📁 **File System:** NTFS
+- 🔤 **Drive Letter:** `F\:`
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
-### Step 1 — Attach three additional virtual disks
+### Step 1 — 💽 Attach three additional virtual disks
 
 1. Shut down the `DC-01` virtual machine.
 2. Open the virtual machine settings in VMware Workstation.
 3. Add three new SCSI virtual hard disks, each with a capacity of **5 GB**.
 4. Save the settings and start the virtual machine.
 
+**📸 Screenshot — Three additional 5 GB virtual disks attached to DC-01**
+
 ![Three additional 5 GB virtual disks attached to DC-01](screenshots/Screenshot%20(1).png)
 
-### Step 2 — Initialize and bring the disks online
+### Step 2 — ⚙️ Initialize and bring the disks online
 
 1. On `DC-01`, open **Disk Management**.
 2. Locate the three newly added 5 GB disks.
@@ -39,9 +41,11 @@ Create a Storage Spaces storage pool from three additional virtual disks, create
 4. Initialize the disks using the available initialization option.
 5. Confirm that all three disks are online and available.
 
+**📸 Screenshot — Three additional disks online in Disk Management**
+
 ![Three additional disks online in Disk Management](screenshots/Screenshot%20(2).png)
 
-### Step 3 — Verify the disks using DiskPart
+### Step 3 — 🔍 Verify the disks using DiskPart
 
 1. Open **Command Prompt** as administrator.
 2. Enter `diskpart`.
@@ -54,18 +58,22 @@ list disk
 4. Confirm that the three additional disks appear in the disk list and show an online status.
 5. Enter `exit` to leave DiskPart.
 
+**📸 Screenshot — DiskPart list disk showing the available disks**
+
 ![DiskPart list disk showing the available disks](screenshots/Screenshot%20(3).png)
 
-### Step 4 — Verify available disks in Server Manager
+### Step 4 — 🔍 Verify available disks in Server Manager
 
 1. Open **Server Manager**.
 2. Navigate to **File and Storage Services → Disks**.
 3. Review the disk list.
 4. Confirm that the three additional physical disks are visible.
 
+**📸 Screenshot — Additional physical disks listed in Server Manager**
+
 ![Additional physical disks listed in Server Manager](screenshots/Screenshot%20(4).png)
 
-### Step 5 — Create the storage pool
+### Step 5 — 🗄️ Create the storage pool
 
 1. In Server Manager, navigate to **File and Storage Services → Storage Pools**.
 2. Open the **Tasks** menu and select **New Storage Pool**.
@@ -74,9 +82,11 @@ list disk
 5. Review the configuration and complete the wizard.
 6. Confirm that the new storage pool appears in the Storage Pools list.
 
+**📸 Screenshot — POOL1 storage pool created using the three physical disks**
+
 ![POOL1 storage pool created using the three physical disks](screenshots/Screenshot%20(12).png)
 
-### Step 6 — Create the virtual disk
+### Step 6 — 💾 Create the virtual disk
 
 1. Under **Storage Pools**, select the newly created `POOL1` pool.
 2. Right click on the newly created pool `POOL1` and select **New Virtual Disk**.
@@ -86,9 +96,11 @@ list disk
 6. Specify a virtual disk size of **9 GB**.
 7. Review the settings and complete the wizard.
 
+**📸 Screenshot — VHD-1 configured with Two-way Mirror and Thin provisioning**
+
 ![VHD-1 configured with Two-way Mirror and Thin provisioning](screenshots/Screenshot%20(21).png)
 
-### Step 7 — Create and format the volume
+### Step 7 — 📁 Create and format the volume
 
 1. After the virtual disk is created, continue to the **New Volume Wizard**.
 2. Select the newly created `VHD-1` virtual disk.
@@ -97,22 +109,28 @@ list disk
 5. Select **NTFS** as the file system.
 6. Complete the wizard and allow the volume to be formatted.
 
+**📸 Screenshot — New volume configuration for VHD-1**
+
 ![New volume configuration for VHD-1](screenshots/Screenshot%20(29).png)
 
-### Step 8 — Verify the virtual disk and volume
+### Step 8 — 🔍 Verify the virtual disk and volume
 
 1. Open **Disk Management**.
 2. Locate the virtual disk created from `POOL1`.
 3. Confirm that the virtual disk is initialized and its volume is allocated.
 4. Verify that the volume is formatted as NTFS and assigned drive letter `F:\`.
 
+**📸 Screenshot — Allocated NTFS volume on the Storage Spaces virtual disk**
+
 ![Allocated NTFS volume on the Storage Spaces virtual disk](screenshots/Screenshot%20(31).png)
 
-### Step 9 — Verify the drive in This PC
+### Step 9 — ✅ Verify the drive in This PC
 
 1. Open **File Explorer → This PC**.
 2. Confirm that the new `F:\` drive is visible.
 3. Verify that the drive is available for storing files.
+
+**📸 Screenshot — F drive visible in This PC**
 
 ![F drive visible in This PC](screenshots/Screenshot%20(32).png)
 
