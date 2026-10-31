@@ -4,33 +4,35 @@
 
 Compare the Master Boot Record (MBR) and GUID Partition Table (GPT) partition styles on separate virtual disks in Windows Server 2022.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Operating System:** Windows Server 2022
-- **Existing Disk 1:** 10 GB virtual disk using MBR, retained from Lab 18
-- **New Disk 2:** 10 GB virtual disk initialized using GPT
-- **Tools:** Disk Management and Windows PowerShell
+- 🖥️ **Hypervisor:** VMware Workstation
+- 💿 **Operating System:** Windows Server 2022
+- 💽 **Existing Disk 1:** 10 GB virtual disk using MBR, retained from Lab 18
+- 💽 **New Disk 2:** 10 GB virtual disk initialized using GPT
+- 🛠️ **Tools:** Disk Management and Windows PowerShell
 
 > **Safety note:** Confirm the disk number, capacity, and partition style before initializing, formatting, or modifying a disk. Do not run destructive commands against the operating-system disk or a disk containing data you need.
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
-### Step 1 — Add a separate virtual disk
+### Step 1 — 💽 Add a separate virtual disk
 
 In VMware Workstation, add a new 10 GB virtual hard disk to the Windows Server 2022 VM. Keep the existing MBR Disk 1 from Lab 18 attached so both partition styles can be compared without modifying the earlier lab disk.
 
-### Step 2 — Initialize Disk 2 as GPT
+### Step 2 — ⚙️ Initialize Disk 2 as GPT
 
 Open Disk Management (\`diskmgmt.msc\`). Initialize the new 10 GB Disk 2 using **GPT (GUID Partition Table)**.
 
+**📸 Screenshot — Disk 2 initialized using GPT**
+
 ![Initializing Disk 2 with GPT](screenshots/Screenshot%20(1).png)
 
-### Step 3 — Create and format a volume on Disk 2
+### Step 3 — 📁 Create and format a volume on Disk 2
 
 Right-click the unallocated space on Disk 2 and select **New Simple Volume**. Use the default maximum size, assign an available drive letter, and format the volume as NTFS.
 
-### Step 4 — Verify both partition styles
+### Step 4 — 🔍 Verify both partition styles
 
 Open PowerShell as Administrator and run:
 
@@ -40,11 +42,15 @@ Get-Disk | Format-Table Number, PartitionStyle, Size
 
 Confirm that Disk 1 reports **MBR** and Disk 2 reports **GPT**. Disk numbers can vary if the VM configuration changes, so verify the displayed number and size rather than relying on the number alone.
 
+**📸 Screenshot — PowerShell verification of MBR and GPT partition styles**
+
 ![PowerShell verification of MBR and GPT](screenshots/Screenshot%20(10).png)
 
-### Step 5 — Compare the disks in Disk Management
+### Step 5 — 📊 Compare the disks in Disk Management
 
 Inspect Disk Management to compare the existing MBR disk with the new GPT disk and verify that the GPT disk has a healthy formatted volume.
+
+**📸 Screenshot — Disk Management comparison of MBR and GPT disks**
 
 ![Disk Management comparison of the MBR and GPT disks](screenshots/Screenshot%20(11).png)
 
