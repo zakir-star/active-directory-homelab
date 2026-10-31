@@ -4,33 +4,35 @@
 
 Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Windows 10 client as an iSCSI initiator. Initialize and format the remote disk, then verify read/write access from the client.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Target Server:** Windows Server 2022 — `DC-01`
-- **Initiator Client:** Windows 10, joined to the domain
-- **Network:** Both machines are on the same network
-- **Target Server IP:** `10.0.0.1`
-- **Virtual Disk Name:** `iSCSI-Disk01`
-- **Virtual Disk Location:** Server-side `F:\` volume
-- **Virtual Disk Capacity:** 5 GB
-- **Provisioning Type:** Dynamically expanding
-- **iSCSI Target Name:** `WIN10-Target`
-- **Initiator Identification:** Windows 10 initiator IQN
-- **CHAP Authentication:** Disabled for this introductory lab
-- **Client Volume:** `F:\`, labeled `iSCSI-Storage`
-- **Partition Style:** GPT
-- **File System:** NTFS
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Target Server:** Windows Server 2022 — `DC-01`
+- 💻 **Initiator Client:** Windows 10, joined to the domain
+- 🌐 **Network:** Both machines are on the same network
+- 🔢 **Target Server IP:** `10.0.0.1`
+- 💽 **Virtual Disk Name:** `iSCSI-Disk01`
+- 📁 **Virtual Disk Location:** Server-side `F:\` volume
+- 📏 **Virtual Disk Capacity:** 5 GB
+- ⚙️ **Provisioning Type:** Dynamically expanding
+- 🎯 **iSCSI Target Name:** `WIN10-Target`
+- 🔐 **Initiator Identification:** Windows 10 initiator IQN
+- 🔒 **CHAP Authentication:** Disabled for this introductory lab
+- 💾 **Client Volume:** `F:\`, labeled `iSCSI-Storage`
+- 🗂️ **Partition Style:** GPT
+- 📁 **File System:** NTFS
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
-### Step 1 — Install the iSCSI Target Server role service
+### Step 1 — 🛠️ Install the iSCSI Target Server role service
 
 On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under **File and Storage Services → File and iSCSI Services**, install **iSCSI Target Server**.
 
+**📸 Screenshot — iSCSI Target Server role service installed on DC-01**
+
 ![iSCSI Target Server role service installed on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(1).png?raw=true)
 
-### Step 2 — Create the iSCSI virtual disk
+### Step 2 — 💽 Create the iSCSI virtual disk
 
 1. In Server Manager, open **File and Storage Services → iSCSI**.
 2. Start the **New iSCSI Virtual Disk Wizard**.
@@ -39,7 +41,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 5. Set its size to **5 GB**.
 6. Select **Dynamically expanding**.
 
-### Step 3 — Create the iSCSI target and authorize the initiator
+### Step 3 — 🎯 Create the iSCSI target and authorize the initiator
 
 1. Select **New iSCSI target**.
 2. Name the target `WIN10-Target`.
@@ -48,9 +50,11 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 5. Leave CHAP disabled for this introductory lab.
 6. Review the configuration and create the virtual disk and target.
 
+**📸 Screenshot — iSCSI virtual disk and target configuration confirmation**
+
 ![iSCSI virtual disk and target configuration confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(10).png?raw=true)
 
-### Step 4 — Discover the target from Windows 10
+### Step 4 — 🔍 Discover the target from Windows 10
 
 1. On Windows 10, open **iSCSI Initiator**.
 2. Select the **Discovery** tab and click **Discover Portal**.
@@ -58,18 +62,22 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 4. Open the **Targets** tab and refresh the list.
 5. Confirm that `WIN10-Target` appears with an **Inactive** status before connecting.
 
+**📸 Screenshot — iSCSI target portal discovered on the Windows 10 client**
+
 ![iSCSI target portal discovered on the Windows 10 client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(20).png?raw=true)
 
-### Step 5 — Connect to the iSCSI target
+### Step 5 — 🔗 Connect to the iSCSI target
 
 1. On the **Targets** tab, select `WIN10-Target`.
 2. Click **Connect**.
 3. Keep the appropriate default connection options. Select **Add this connection to the list of Favorite Targets** if the connection should persist after restarts.
 4. Click **OK** and verify that the target status becomes **Connected**.
 
+**📸 Screenshot — WIN10-Target showing Connected status**
+
 ![WIN10-Target showing Connected status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(22).png?raw=true)
 
-### Step 6 — Initialize and format the remote disk
+### Step 6 — ⚙️ Initialize and format the remote disk
 
 1. Open **Disk Management** on Windows 10.
 2. Identify the newly detected disk of approximately 5 GB. Do not select the operating-system disk.
@@ -80,24 +88,32 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 7. Set the volume label to `iSCSI-Storage`.
 8. Finish the wizard and confirm that the volume status is **Healthy**.
 
+**📸 Screenshot — iSCSI disk initialized using GPT**
+
 ![iSCSI disk initialized using GPT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(23).png?raw=true)
+
+**📸 Screenshot — Healthy NTFS iSCSI volume in Disk Management**
 
 ![Healthy NTFS iSCSI volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(25).png?raw=true)
 
-### Step 7 — Verify read/write access
+### Step 7 — 🧪 Verify read/write access
 
 1. On the Windows 10 client, open **File Explorer → This PC** and open the client-side `F:\` volume labeled `iSCSI-Storage`.
 2. Create a folder named `iSCSI-Test`.
 3. Inside it, create `Verification.txt`.
 4. Enter a test message, save the file, close it, and reopen it to verify the saved content.
 
+**📸 Screenshot — iSCSI test folder and verification file on the client**
+
 ![iSCSI test folder and verification file on the client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(28).png?raw=true)
 
-### Step 8 — Final verification
+### Step 8 — ✅ Final verification
 
 1. On DC-01, confirm that `WIN10-Target` and `iSCSI-Disk01` are listed in Server Manager under **File and Storage Services → iSCSI**.
 2. On Windows 10, verify that the target remains connected.
 3. Confirm that `F:\\iSCSI-Test\\Verification.txt` exists and opens successfully.
+
+**📸 Screenshot — Final iSCSI target verification on DC-01**
 
 ![Final iSCSI target verification on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(30).png?raw=true)
 
