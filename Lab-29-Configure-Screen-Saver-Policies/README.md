@@ -2,23 +2,23 @@
 
 ## 🎯 Objective
 
-Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using Group Policy. The screen saver file is hosted in a shared folder on `DC-01`, and the share is accessible only to members of the `IT_Users_Group` security group.
+Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using Group Policy. The screen saver file is hosted in a shared folder on `DC-01`, and the share is accessible only to members of the `IT_Users_Group` security group. Configure the screen saver timeout to **10 seconds**.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Domain Controller:** Windows Server 2022 — `DC-01`
-- **Client Machine:** Windows 10
-- **Domain:** `example.com`
-- **Organizational Unit:** `IT`
-- **Security Group:** `IT_Users_Group`
-- **Screen Saver Folder:** `E:\screensaver`
-- **Share Name:** `screensaver`
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Domain Controller:** Windows Server 2022 — `DC-01`
+- 💻 **Client Machine:** Windows client
+- 🌐 **Domain Name:** `example.com`
+- 🗂️ **Organizational Unit:** `IT`
+- 👥 **Security Group:** `IT_Users_Group`
+- 📁 **Screen Saver Folder:** `E:\screensaver`
+- 🔗 **Share Name:** `screensaver`
 - 🌐 **UNC Path:** `\\DC-01\screensaver`
-- **Screen Saver File:** `Bubbles.scr`
-- **GPO Name:** `deploy_screen_saver`
+- 🖼️ **Screen Saver File:** `Bubbles.scr`
+- ⚙️ **GPO Name:** `deploy_screen_saver`
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
 ### Step 1 — Create the screen saver folder
 
@@ -28,20 +28,17 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 4. Copy `Bubbles.scr` from the System32 folder.
 5. Paste the file into `E:\screensaver`.
 
-**📸 Screenshot — Screen saver folder containing Bubbles.scr**
-
-![Screen saver folder containing Bubbles.scr](screenshots/Screenshot%20(1).png)
-
 ### Step 2 — Share the screen saver folder
 
-Share the `E:\screensaver` folder as `screensaver`. Configure the share permissions to grant **Read** access to `IT_Users_Group` only, and remove `Everyone`.
+1. Share the `E:\screensaver` folder with the share name `screensaver`.
+2. In the share permissions, grant **Read** permission to `IT_Users_Group` only.
+3. Remove `Everyone` from the share permissions.
 
-The shared folder is accessed through this UNC path:
+The shared folder can be accessed using:
 
 ```text
 \\DC-01\screensaver
 ```
-
 
 ### Step 3 — Create and link the Group Policy Object
 
@@ -51,11 +48,7 @@ The shared folder is accessed through this UNC path:
 4. Create a new GPO and link it to the `IT` OU.
 5. Name the GPO `deploy_screen_saver`.
 
-**📸 Screenshot — GPO linked to the IT OU**
-
-![GPO linked to the IT OU](screenshots/Screenshot%20(4).png)
-
-### Step 4 — Configure the screen saver policy
+### Step 4 — Configure the screen saver settings
 
 1. Right-click the `deploy_screen_saver` GPO and select **Edit**.
 2. Navigate to:
@@ -64,7 +57,7 @@ The shared folder is accessed through this UNC path:
 
 3. Open **Force specific screen saver**.
 4. Set the policy to **Enabled**.
-5. Enter the screen saver file's UNC path:
+5. Enter the screen saver file path:
 
    ```text
    \\DC-01\screensaver\Bubbles.scr
@@ -72,67 +65,57 @@ The shared folder is accessed through this UNC path:
 
 6. Open **Screen saver timeout** in the same **Personalization** policy folder.
 7. Set the policy to **Enabled**.
-8. Set **Screen saver timeout** to **10 seconds**.
+8. Set the timeout value to **10 seconds**.
 9. Apply the settings and close the Group Policy editor.
-
-**📸 Screenshot — Force specific screen saver policy configured with the UNC path**
-
-![Force specific screen saver policy configured with the UNC path](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Apply and verify the policy
 
-1. On the Windows client, sign in with a domain user who is in the `IT_Users_Group` and whose account is located in the `IT` OU.
-2. Update Group Policy from an elevated Command Prompt:
+1. On the Windows client, sign in with a domain user who belongs to `IT_Users_Group` and whose account is located in the `IT` OU.
+2. Open an elevated Command Prompt.
+3. Run the following command to update Group Policy:
 
    ```cmd
    gpupdate /force
    ```
 
-3. Allow the policy update to finish.
-4. Verify that the configured Bubbles screen saver is applied to the user session.
-
-**📸 Screenshot — Group Policy update completed on the client**
-
-![Group Policy update completed on the client](screenshots/Screenshot%20(6).png)
-**📸 Screenshot — Bubbles screen saver applied in the user session**
-
-![Bubbles screen saver applied in the user session](screenshots/Screenshot%20(7).png)
+4. Allow the policy update to complete.
+5. Verify that the Bubbles screen saver is applied to the user session and that the timeout is set to **10 seconds**.
 
 ## 🔎 Verification
 
 - Confirm that `E:\screensaver` contains `Bubbles.scr`.
 - Confirm that the folder is shared as `screensaver`.
-- Confirm that `IT_Users_Group` has **Read** permission on the share.
+- Confirm that `IT_Users_Group` has **Read** share permission.
 - Confirm that `Everyone` has been removed from the share permissions.
-- Confirm that the GPO is linked to the `IT` OU.
+- Confirm that the `deploy_screen_saver` GPO is linked to the `IT` OU.
 - Confirm that **Force specific screen saver** is enabled and points to `\\DC-01\screensaver\Bubbles.scr`.
 - Confirm that **Screen saver timeout** is enabled and set to **10 seconds**.
-- Verify the screen saver policy on a targeted domain user session.
+- Verify the screen saver on a targeted domain user session.
 
 ## ⚠️ Important Notes
 
-- The screen saver setting is configured under **User Configuration**.
-- The GPO is linked to the `IT` OU so that it applies to users in that OU.
-- The screen saver file is stored on `DC-01` and referenced through a UNC path.
-- The share grants **Read** permission to `IT_Users_Group`; the default `Everyone` entry was removed.
-- The user must be able to read the shared screen saver file for the policy to use it.
+- The screen saver policies are configured under **User Configuration**.
+- The GPO is linked to the `IT` OU to target users in that OU.
+- The screen saver file is hosted on `DC-01` and referenced through its UNC path.
+- The share permission grants **Read** access to `IT_Users_Group` only; `Everyone` is removed.
+- Users targeted by the GPO must be able to access the shared screen saver file.
 
 ## 🎯 Expected Result
 
-- The `E:\screensaver` folder contains `Bubbles.scr`.
-- The folder is shared as `screensaver`, with **Read** share permission granted to `IT_Users_Group` only.
+- The `E:\screensaver` folder contains the `Bubbles.scr` file.
+- The `screensaver` share grants **Read** permission to `IT_Users_Group` only.
 - The `deploy_screen_saver` GPO is linked to the `IT` OU.
-- The **Force specific screen saver** policy points to `\\DC-01\screensaver\Bubbles.scr`.
-- The **Screen saver timeout** policy is enabled and set to **10 seconds**.
-- The targeted domain user receives the Bubbles screen saver policy with a 10-second timeout.
+- The Bubbles screen saver is configured through the UNC path `\\DC-01\screensaver\Bubbles.scr`.
+- The screen saver timeout is configured for **10 seconds**.
+- Targeted users receive the screen saver settings through Group Policy.
 
 ## 🌍 Real-World Use Case
 
-Organizations can use Group Policy to centrally configure screen saver settings for users in specific departments or Organizational Units. Hosting the screen saver file on a network share allows administrators to manage the file centrally while controlling which users can read it.
+Organizations can use Group Policy to centrally configure screen saver settings for users in specific departments or Organizational Units. Hosting the screen saver file on a network share allows administrators to manage the file centrally while limiting share access to the intended security group.
 
 ## 📌 Outcome
 
-Created the `E:\screensaver` folder on `DC-01`, copied `Bubbles.scr` into it, and shared the folder with **Read** access for `IT_Users_Group` only. Configured a user-based screen saver policy through a GPO linked to the `IT` OU, using the UNC path `\\DC-01\screensaver\Bubbles.scr` and a **10-second screen saver timeout**.
+Created the `E:\screensaver` folder on `DC-01`, copied `Bubbles.scr` into it, and shared the folder with **Read** permission for `IT_Users_Group` only. Created and linked the `deploy_screen_saver` GPO to the `IT` OU, configured the Bubbles screen saver using its UNC path, and set the screen saver timeout to **10 seconds**.
 
 ## 🙏 Acknowledgment
 
@@ -144,4 +127,4 @@ This lab demonstrates how to deploy a screen saver through a user-based Group Po
 
 ## ✅ Closing
 
-The Bubbles screen saver policy is configured through Group Policy for the `IT` Organizational Unit, with the screen saver file hosted in a restricted network share on `DC-01`.
+The Bubbles screen saver is deployed through Group Policy to users in the `IT` Organizational Unit, with a 10-second timeout and the screen saver file hosted on a restricted network share on `DC-01`.
