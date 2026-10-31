@@ -14,7 +14,7 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 - **Security Group:** `IT_Users_Group`
 - **Screen Saver Folder:** `E:\screensaver`
 - **Share Name:** `screensaver`
-- **UNC Path:** `\\DC-01\\screensaver`
+- 🌐 **UNC Path:** `\\DC-01\screensaver`
 - **Screen Saver File:** `Bubbles.scr`
 - **GPO Name:** `deploy_screen_saver`
 
@@ -27,6 +27,8 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 3. Navigate to `C:\Windows\System32`.
 4. Copy `Bubbles.scr` from the System32 folder.
 5. Paste the file into `E:\screensaver`.
+
+**📸 Screenshot — Screen saver folder containing Bubbles.scr**
 
 ![Screen saver folder containing Bubbles.scr](screenshots/Screenshot%20(1).png)
 
@@ -49,6 +51,8 @@ The shared folder is accessed through this UNC path:
 4. Create a new GPO and link it to the `IT` OU.
 5. Name the GPO `deploy_screen_saver`.
 
+**📸 Screenshot — GPO linked to the IT OU**
+
 ![GPO linked to the IT OU](screenshots/Screenshot%20(4).png)
 
 ### Step 4 — Configure the screen saver policy
@@ -68,6 +72,8 @@ The shared folder is accessed through this UNC path:
 
 6. Apply the setting and close the Group Policy editor.
 
+**📸 Screenshot — Force specific screen saver policy configured with the UNC path**
+
 ![Force specific screen saver policy configured with the UNC path](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Apply and verify the policy
@@ -82,7 +88,11 @@ The shared folder is accessed through this UNC path:
 3. Allow the policy update to finish.
 4. Verify that the configured Bubbles screen saver is applied to the user session.
 
+**📸 Screenshot — Group Policy update completed on the client**
+
 ![Group Policy update completed on the client](screenshots/Screenshot%20(6).png)
+**📸 Screenshot — Bubbles screen saver applied in the user session**
+
 ![Bubbles screen saver applied in the user session](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
