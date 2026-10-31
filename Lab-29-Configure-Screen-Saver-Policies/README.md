@@ -15,7 +15,7 @@ Deploy the Bubbles screen saver to users in the IT Organizational Unit using Gro
 - **Domain User:** `user01`
 - **Screen Saver Folder:** `E:\screensaver`
 - **Shared Folder:** `screensaver`
-- **Screen Saver File:** `Bubbles.scr`
+- **Screen Saver File:** `Bubble.scr`
 - **GPO Name:** `deploy_screen_saver`
 - **Screen Saver Timeout:** 10 seconds
 
@@ -26,7 +26,7 @@ Deploy the Bubbles screen saver to users in the IT Organizational Unit using Gro
 1. Sign in to `DC-01`.
 2. Open File Explorer and create a folder named `screensaver` on the `E:\` drive.
 3. Open `C:\Windows\System32`.
-4. Copy `Bubbles.scr` and paste it into `E:\screensaver`.
+4. Copy the Bubbles screen saver file from `C:\Windows\System32` into `E:\screensaver`.
 
 ### Step 2 — Share the screen saver folder
 
@@ -64,7 +64,7 @@ The shared folder can be accessed using this UNC path:
 5. Enter the full UNC path to the screen saver file:
 
    ```text
-   \\\\DC-01\\screensaver\\Bubbles.scr
+   \\\\DC-01\\screensaver\\Bubble.scr
    ```
 
 6. Apply the setting.
@@ -104,11 +104,11 @@ The shared folder can be accessed using this UNC path:
 
 ## 🔎 Verification
 
-- Confirm that `E:\screensaver` contains `Bubbles.scr`.
+- Confirm that `E:\screensaver` contains `Bubble.scr`.
 - Confirm that the folder is shared as `screensaver`.
 - Confirm that `IT_Users_Group` has **Read** permission on the share and that `Everyone` has been removed.
 - Confirm that the GPO named `deploy_screen_saver` is linked to the `IT` OU.
-- Confirm that **Force specific screen saver** is enabled and points to `\\DC-01\screensaver\Bubbles.scr`.
+- Confirm that **Force specific screen saver** is enabled and points to `\\DC-01\screensaver\Bubble.scr`.
 - Confirm that **Screen saver timeout** is enabled and set to 10 seconds.
 - Sign in as `user01` on the Windows client and verify that the Bubbles screen saver appears after the configured timeout.
 
@@ -122,10 +122,10 @@ The shared folder can be accessed using this UNC path:
 
 ## 🎯 Expected Result
 
-- The `E:\screensaver` folder on `DC-01` contains `Bubbles.scr` and is shared as `screensaver`.
+- The `E:\screensaver` folder on `DC-01` contains `Bubble.scr` and is shared as `screensaver`.
 - `IT_Users_Group` has **Read** permission on the shared folder.
 - The `deploy_screen_saver` GPO is linked to the `IT` OU.
-- The specific screen saver policy points to `\\DC-01\screensaver\Bubbles.scr`.
+- The specific screen saver policy points to `\\DC-01\screensaver\Bubble.scr`.
 - The screen saver timeout is configured for 10 seconds.
 - The Bubbles screen saver appears on the Windows client after `user01` signs out and signs back in.
 
