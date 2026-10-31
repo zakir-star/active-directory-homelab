@@ -28,9 +28,9 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 4. Copy `Bubbles.scr` from the System32 folder.
 5. Paste the file into `E:\screensaver`.
 
-**📸 Screenshot — Screen saver folder containing Bubbles.scr**
+**📸 Screenshot — C:\windows\system32\Bubbles.scr**
 
-[Insert screenshot here]
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2 — Share the screen saver folder
 
@@ -54,7 +54,8 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — GPO linked to the IT OU**
 
-[Insert screenshot here]
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(3).png?raw=true)
+
 
 ### Step 4 — Configure the screen saver settings
 
@@ -70,17 +71,22 @@ The shared folder can be accessed using:
    ```text
    \\DC-01\screensaver\Bubbles.scr
    ```
+**📸 Screenshot — Enable screen saver setting**
 
-6. Open **Screen saver timeout** in the same **Personalization** policy folder.
-7. Set the policy to **Enabled**.
-8. Set the timeout value to **10 seconds**.
-9. Apply the settings and close the Group Policy editor.
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(5).png?raw=true)
 
-**📸 Screenshot — Screen saver policies configured, including the UNC path and 10-second timeout**
+### Step 5 — Configure the screen saver timeout
 
-[Insert screenshot here]
+1. Open **Screen saver timeout** in the same **Personalization** policy folder.
+2. Set the policy to **Enabled**.
+3. Set the timeout value to **10 seconds**.
+4. Apply the settings and close the Group Policy editor.
 
-### Step 5 — Apply and verify the policy
+**📸 Screenshot — Screen saver policies configured with 10-seconds timeout**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(7).png?raw=true)
+
+### Step 6 — Apply and verify the policy
 
 1. On the Windows client, sign in with a domain user who belongs to `IT_Users_Group` and whose account is located in the `IT` OU.
 2. Open an elevated Command Prompt.
@@ -95,11 +101,11 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — Group Policy update completed on the client**
 
-[Insert screenshot here]
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(8).png?raw=true)
 
 **📸 Screenshot — Bubbles screen saver applied in the user session**
 
-[Insert screenshot here]
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(9).png?raw=true)
 
 ## 🔎 Verification
 
