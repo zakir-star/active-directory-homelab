@@ -82,7 +82,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **27** | [Deploy Wallpaper to Specific OUs or Groups](Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/README.md) | ✅ Completed | Deploy a shared desktop wallpaper through a user-based GPO linked to the IT OU and verify it with domain users |
-| **28** | Remove the Computer Icon from the Desktop | 📋 Planned | Apply a targeted desktop policy |
+| **28** | [Remove the Computer Icon from the Desktop](Lab-28-Remove-the-Computer-Icon-from-the-Desktop/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to disable the Computer desktop icon setting and verify it on a Windows client |
 | **29** | [Configure Screen Saver Policies](Lab-29-Configure-Screen-Saver-Policies/README.md) | ✅ Completed | Deploy the Bubbles screen saver through a user-based GPO linked to the IT OU, using a restricted network share for the screen saver file |
 | **30** | Restrict Notepad | 📋 Planned | Explore supported policy-based application restriction methods |
 | **31** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
