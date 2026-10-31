@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–16 and 17–25 completed  
+> **Status:** Labs 1–16 and 17–26 completed  
 > **Last updated:** October 31, 2026
 
 ---
@@ -73,7 +73,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **23** | [Practical RAID 1 Configuration](Lab-23-Practical-RAID-1-Configuration/README.md) | ✅ Completed | Configure a two-disk mirrored volume and verify continued data access while one member disk is offline |
 | **24** | [Practical RAID 5 Configuration](Lab-24-Practical-RAID-5-Configuration/README.md) | ✅ Completed | Configure a three-disk parity volume and verify continued data access while one member disk is offline |
 | **25** | [Practical iSCSI Configuration](Lab-25-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
-| **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | 📋 Planned | Configure storage pools and virtual disks and explore storage resiliency options |
+| **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | ✅ Completed | Create a storage pool from three physical disks and provision a thin two-way mirror virtual disk with an NTFS volume |
 
 ### Phase 7 — Group Policy Administration
 
@@ -275,6 +275,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - MBR and GPT partition styles, disk partition limits, and volume formatting verification
 - RAID 0 striping, RAID 1 mirroring, and RAID 5 parity configuration, including single-member offline availability tests
 - iSCSI target creation, initiator IQN authorization, remote disk initialization, NTFS formatting, and client read/write verification
+- Storage Spaces pool creation, thin-provisioned virtual disk configuration, two-way mirroring, and volume allocation verification
 - Mapping shared folders as network drives using File Explorer
 - Configuring Access-Based Enumeration and verifying folder visibility against permissions
 - Troubleshooting effective network access by comparing NTFS and share permissions, then verifying successful shared-file modification
