@@ -28,6 +28,10 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 4. Copy `Bubbles.scr` from the System32 folder.
 5. Paste the file into `E:\screensaver`.
 
+**📸 Screenshot — Screen saver folder containing Bubbles.scr**
+
+[Insert screenshot here]
+
 ### Step 2 — Share the screen saver folder
 
 1. Share the `E:\screensaver` folder with the share name `screensaver`.
@@ -47,6 +51,10 @@ The shared folder can be accessed using:
 3. Right-click the `IT` Organizational Unit.
 4. Create a new GPO and link it to the `IT` OU.
 5. Name the GPO `deploy_screen_saver`.
+
+**📸 Screenshot — GPO linked to the IT OU**
+
+[Insert screenshot here]
 
 ### Step 4 — Configure the screen saver settings
 
@@ -68,6 +76,10 @@ The shared folder can be accessed using:
 8. Set the timeout value to **10 seconds**.
 9. Apply the settings and close the Group Policy editor.
 
+**📸 Screenshot — Screen saver policies configured, including the UNC path and 10-second timeout**
+
+[Insert screenshot here]
+
 ### Step 5 — Apply and verify the policy
 
 1. On the Windows client, sign in with a domain user who belongs to `IT_Users_Group` and whose account is located in the `IT` OU.
@@ -80,6 +92,14 @@ The shared folder can be accessed using:
 
 4. Allow the policy update to complete.
 5. Verify that the Bubbles screen saver is applied to the user session and that the timeout is set to **10 seconds**.
+
+**📸 Screenshot — Group Policy update completed on the client**
+
+[Insert screenshot here]
+
+**📸 Screenshot — Bubbles screen saver applied in the user session**
+
+[Insert screenshot here]
 
 ## 🔎 Verification
 
