@@ -35,7 +35,7 @@ Deploy a custom desktop wallpaper to users in the IT Organizational Unit using G
 6. Add `IT_Users_Group` and allow **Read** permission.
 7. Apply the changes.
 
-![Wallpaper share permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/screenshots/Screenshot%20(2).png?raw=true)
+![Wallpaper share permissions](screenshots/Screenshot%20%282%29.png)
 
 The shared folder can be accessed using the UNC path:
 
@@ -52,7 +52,7 @@ The shared folder can be accessed using the UNC path:
 5. Name the GPO `IT Group Desktop Wallpaper`.
 6. Confirm that the GPO is linked to the `IT` OU.
 
-![GPO linked to the IT OU](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/screenshots/Screenshot%20(6).png?raw=true)
+![GPO linked to the IT OU](screenshots/Screenshot%20%286%29.png)
 
 ### Step 4 — Configure the desktop wallpaper policy
 
@@ -74,7 +74,7 @@ The shared folder can be accessed using the UNC path:
 6. Set **Wallpaper Style** to **Fill**.
 7. Apply the settings and close the Group Policy editor.
 
-![Desktop Wallpaper policy configuration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/screenshots/Screenshot%20(8).png?raw=true)
+![Desktop Wallpaper policy configuration](screenshots/Screenshot%20%288%29.png)
 
 ### Step 5 — Update Group Policy
 
@@ -94,7 +94,7 @@ The shared folder can be accessed using the UNC path:
 3. Allow the user policy to apply.
 4. Verify that the desktop displays the configured wallpaper.
 
-![Wallpaper applied for user01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/screenshots/Screenshot%20(11).png?raw=true)
+![Wallpaper applied for user01](screenshots/Screenshot%20%2811%29.png)
 
 ### Step 7 — Verify the wallpaper with user02
 
@@ -102,7 +102,7 @@ The shared folder can be accessed using the UNC path:
 2. Sign in using the domain account `user02`.
 3. Verify that the same wallpaper appears on the desktop.
 
-![Wallpaper applied for user02](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-27-Deploy-Wallpaper-to-Specific-OUs-or-Groups/screenshots/Screenshot%20(13).png?raw=true)
+![Wallpaper applied for user02](screenshots/Screenshot%20%2813%29.png)
 
 ## 🔎 Verification
 
