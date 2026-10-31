@@ -27,7 +27,7 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 4. Copy `Bubbles.scr` from the System32 folder.
 5. Paste the file into `E:\screensaver`.
 
-<!-- Screenshot Slot 1: E:\screensaver folder containing Bubbles.scr -->
+![Screen saver folder containing Bubbles.scr](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Share the screen saver folder
 
@@ -45,8 +45,8 @@ The shared folder is accessed through this UNC path:
 \\DC-01\screensaver
 ```
 
-<!-- Screenshot Slot 2: Advanced Sharing configuration -->
-<!-- Screenshot Slot 3: Share permissions showing IT_Users_Group with Read permission -->
+![Advanced Sharing configuration](screenshots/Screenshot%20(2).png)
+![Share permissions for IT_Users_Group](screenshots/Screenshot%20(3).png)
 
 ### Step 3 — Create and link the Group Policy Object
 
@@ -56,7 +56,7 @@ The shared folder is accessed through this UNC path:
 4. Create a new GPO and link it to the `IT` OU.
 5. Name the GPO `deploy_screen_saver`.
 
-<!-- Screenshot Slot 4: GPO created and linked to the IT OU -->
+![GPO linked to the IT OU](screenshots/Screenshot%20(4).png)
 
 ### Step 4 — Configure the screen saver policy
 
@@ -75,7 +75,7 @@ The shared folder is accessed through this UNC path:
 
 6. Apply the setting and close the Group Policy editor.
 
-<!-- Screenshot Slot 5: Force specific screen saver policy enabled with the UNC path -->
+![Force specific screen saver policy configured with the UNC path](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Apply and verify the policy
 
@@ -89,8 +89,8 @@ The shared folder is accessed through this UNC path:
 3. Allow the policy update to finish.
 4. Verify that the configured Bubbles screen saver is applied to the user session.
 
-<!-- Screenshot Slot 6: Group Policy update completed on the client -->
-<!-- Screenshot Slot 7: Bubbles screen saver applied in the user session -->
+![Group Policy update completed on the client](screenshots/Screenshot%20(6).png)
+![Bubbles screen saver applied in the user session](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
