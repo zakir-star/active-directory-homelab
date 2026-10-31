@@ -2,41 +2,40 @@
 
 ## 🎯 Objective
 
-Deploy a custom desktop wallpaper to domain users in the **IT Organizational Unit** by configuring a user-based Group Policy Object (GPO). Share the wallpaper from the Domain Controller and verify that the policy is applied on the Windows client.
+Deploy a custom desktop wallpaper to users in the IT Organizational Unit using Group Policy. The wallpaper is stored in a shared folder on the Domain Controller, and access to the image is provided to members of the `IT_Users_Group` security group.
 
 ## 🧪 Lab Environment
 
 - **Hypervisor:** VMware Workstation
-- **Domain Controller:** Windows Server 2022 (`DC-01`)
+- **Domain Controller:** Windows Server 2022 — `DC-01`
 - **Client Machine:** Windows 10
 - **Domain:** `example.com`
 - **Organizational Unit:** `IT`
 - **Security Group:** `IT_Users_Group`
-- **Test Users:** `user01` and `user02`
-- **Wallpaper Folder:** `E:\Wallpaper`
-- **Wallpaper Format:** PNG
+- **Domain Users:** `user01` and `user02`
+- **Wallpaper Folder:** `E:\\Wallpaper`
+- **Share Name:** `Wallpaper`
 - **GPO Name:** `IT Group Desktop Wallpaper`
-- **Tools:** Server Manager, File Explorer, Group Policy Management, and Command Prompt
 
 ## 🛠️ Lab Procedure
 
-### Step 1 — Prepare the wallpaper folder
+### Step 1 — Create the wallpaper folder
 
-1. On `DC-01`, create the folder `E:\Wallpaper`.
-2. Place the IT Group wallpaper PNG image inside the folder.
-3. Confirm that the image is available in the folder.
+1. Sign in to `DC-01`.
+2. Open File Explorer and create a folder named `Wallpaper` on the `E:\\` drive.
+3. Place the PNG wallpaper image inside the folder.
 
 ### Step 2 — Share the wallpaper folder
 
-1. Right-click `E:\Wallpaper` and select **Properties**.
+1. Right-click `E:\\Wallpaper` and select **Properties**.
 2. Open the **Sharing** tab and select **Advanced Sharing**.
-3. Enable **Share this folder** and use `Wallpaper` as the share name.
+3. Select **Share this folder** and set the share name to `Wallpaper`.
 4. Open **Permissions**.
 5. Remove the default `Everyone` entry.
-6. Add `IT_Users_Group` and allow **Read**.
+6. Add `IT_Users_Group` and allow **Read** permission.
 7. Apply the changes.
 
-The shared folder is accessed over the network using the UNC path:
+The shared folder can be accessed using the UNC path:
 
 ```text
 \\DC-01\Wallpaper
@@ -45,18 +44,18 @@ The shared folder is accessed over the network using the UNC path:
 ### Step 3 — Configure NTFS permissions
 
 1. Open the **Security** tab in the folder's Properties window.
-2. Add `IT_Users_Group` if it is not already listed.
-3. Allow **Read & Execute**, **List folder contents**, and **Read**.
-4. Apply the permission changes.
+2. Add `IT_Users_Group`.
+3. Allow **Read & Execute**, **List folder contents**, and **Read** permissions.
+4. Apply the changes.
 
-The share permission and NTFS permission are separate permission layers. For network access, the effective permission is limited by the more restrictive combination of the two.
+The group now has read access through both the share permissions and NTFS permissions.
 
-### Step 4 — Create and link the GPO
+### Step 4 — Create and link the Group Policy Object
 
 1. On `DC-01`, open **Server Manager → Tools → Group Policy Management**.
-2. Expand the domain `example.com`.
-3. Locate the `IT` Organizational Unit.
-4. Right-click the `IT` OU and select **Create a GPO in this domain, and Link it here**.
+2. Expand the `example.com` domain.
+3. Right-click the `IT` Organizational Unit.
+4. Select **Create a GPO in this domain, and Link it here**.
 5. Name the GPO `IT Group Desktop Wallpaper`.
 6. Confirm that the GPO is linked to the `IT` OU.
 
@@ -69,26 +68,27 @@ The share permission and NTFS permission are separate permission layers. For net
 
 3. Open **Desktop Wallpaper**.
 4. Select **Enabled**.
-5. Enter the full UNC path to the PNG image, including its filename and `.png` extension. For example:
+5. Enter the full UNC path to the PNG wallpaper image, including its filename. For example:
 
    ```text
    \\DC-01\Wallpaper\IT-Group.png
    ```
 
-   Use the actual filename of the wallpaper stored in the shared folder.
+   Use the actual filename of the image stored in the shared folder.
 
 6. Set **Wallpaper Style** to **Fill**.
 7. Apply the settings and close the Group Policy editor.
 
 ### Step 6 — Verify the GPO scope
 
-1. Select the GPO in Group Policy Management and open the **Scope** tab.
-2. Keep the default **Authenticated Users** entry under **Security Filtering**.
-3. Confirm that the GPO is linked to the `IT` OU.
+1. Select the GPO in Group Policy Management.
+2. Open the **Scope** tab.
+3. Keep the default **Authenticated Users** entry under **Security Filtering**.
+4. Confirm that the GPO link is under the `IT` Organizational Unit.
 
-This lab uses OU-level GPO scope. The wallpaper folder itself is shared with `IT_Users_Group`; therefore, users who need to retrieve the image must also have access through that group.
+This lab demonstrates OU-level GPO deployment. The security filtering remains at its default setting; group-based GPO security filtering is not part of this exercise.
 
-### Step 7 — Update Group Policy on the Domain Controller
+### Step 7 — Update Group Policy
 
 1. Open Command Prompt on `DC-01`.
 2. Run:
@@ -101,52 +101,52 @@ This lab uses OU-level GPO scope. The wallpaper folder itself is shared with `IT
 
 ### Step 8 — Verify the wallpaper with user01
 
-1. On the Windows client, sign in as `user01`.
-2. Allow the user policy to refresh. If necessary, run `gpupdate /force` from Command Prompt.
-3. Verify that the desktop displays the configured IT Group wallpaper.
+1. Switch to the Windows client.
+2. Sign in using the domain account `user01`.
+3. Allow the user policy to apply.
+4. Verify that the desktop displays the configured wallpaper.
 
 ### Step 9 — Verify the wallpaper with user02
 
 1. Sign out from `user01`.
-2. Sign in to the Windows client as `user02`.
-3. Verify that the same IT Group wallpaper appears on the desktop.
+2. Sign in using the domain account `user02`.
+3. Verify that the same wallpaper appears on the desktop.
 
 ## ⚠️ Important Notes
 
 - The Desktop Wallpaper setting is a **User Configuration** policy.
-- The GPO is linked to the `IT` OU, so its user settings are scoped through that OU.
-- Security Filtering remains at its default value, **Authenticated Users**. This lab's final configuration does not demonstrate group-based GPO security filtering.
-- The wallpaper is stored on `DC-01` and referenced by its UNC path. A local drive path such as `E:\Wallpaper\...` must not be entered in the client-side wallpaper policy.
-- `IT_Users_Group` has **Read** share permission and **Read & Execute** NTFS permission. Both permission layers must allow access to the image.
-- The test accounts `user01` and `user02` are members of `IT_Users_Group`, allowing them to read the shared wallpaper.
-- If a user receives the GPO but cannot access the wallpaper file, check the UNC path and the user's share and NTFS access.
-- A user policy normally applies to users in the linked OU. Linking this GPO to a computer OU is not equivalent to linking it to the OU containing the user accounts.
+- The GPO is linked to the `IT` OU, where the target user accounts are located.
+- **Authenticated Users** remains in the GPO's default Security Filtering configuration.
+- The wallpaper policy uses a UNC path so domain clients can retrieve the image from the shared folder.
+- `IT_Users_Group` has **Read** share permission and **Read & Execute** NTFS permission.
+- Both `user01` and `user02` are members of `IT_Users_Group` and can read the shared wallpaper.
+- The share permission and NTFS permission work together to determine the effective network access.
 
 ## ✅ Expected Result
 
-- The wallpaper folder is shared from `DC-01` as `\\DC-01\Wallpaper`.
-- `IT_Users_Group` has Read share permission and Read & Execute NTFS permission.
-- The GPO `IT Group Desktop Wallpaper` is linked to the `IT` OU.
-- The Desktop Wallpaper policy is enabled and points to the PNG image through its UNC path.
+- The `E:\\Wallpaper` folder is shared as `Wallpaper` on `DC-01`.
+- `IT_Users_Group` has read access to the shared wallpaper.
+- The `IT Group Desktop Wallpaper` GPO is linked to the `IT` OU.
+- The Desktop Wallpaper policy is enabled and configured with the wallpaper's UNC path.
 - The wallpaper style is set to **Fill**.
-- Both `user01` and `user02` see the IT Group wallpaper when signing in to the Windows client.
+- Both `user01` and `user02` see the configured wallpaper after signing in to the Windows client.
 
 ## 🌍 Real-World Use Case
 
-Organizations can use Group Policy to provide a consistent desktop appearance for users in a department or Organizational Unit. A centrally shared wallpaper also allows administrators to manage the image from one network location rather than configuring each workstation individually.
+Organizations can use Group Policy to maintain a consistent desktop appearance across departments or Organizational Units. Storing the wallpaper in a shared network location allows administrators to manage the image centrally instead of configuring each workstation separately.
 
 ## 📌 Outcome
 
-Created and shared a wallpaper folder on `DC-01`, configured read-only access for `IT_Users_Group`, and deployed the IT Group PNG wallpaper through the `IT Group Desktop Wallpaper` GPO linked to the `IT` OU. Verified the wallpaper successfully with both `user01` and `user02` on the Windows client.
+Created a shared wallpaper folder on `DC-01`, configured read access for `IT_Users_Group`, and deployed the PNG wallpaper using a GPO linked to the `IT` OU. Verified that both `user01` and `user02` received the wallpaper on the Windows client.
 
 ## 🙏 Acknowledgment
 
-This lab builds on the Group Policy fundamentals introduced in the password and account lockout policy labs and applies them to a desktop configuration setting.
+This lab is part of my Active Directory homelab learning journey. Thanks for taking the time to review my documentation.
 
 ## ✍️ Author's Note
 
-This lab demonstrates a user-based desktop wallpaper policy using a shared PNG image and an OU-linked GPO. The final configuration retains the default **Authenticated Users** security filtering and uses `IT_Users_Group` to control access to the shared wallpaper file.
+This lab focuses on deploying a desktop wallpaper through an OU-linked user policy. The GPO retained the default **Authenticated Users** security filtering, while access to the shared wallpaper file was controlled through `IT_Users_Group`.
 
 ## ✅ Closing
 
-The IT Group desktop wallpaper was deployed successfully through Group Policy and verified with both domain test accounts, `user01` and `user02`.
+The desktop wallpaper was deployed successfully through Group Policy and verified with both domain user accounts.
