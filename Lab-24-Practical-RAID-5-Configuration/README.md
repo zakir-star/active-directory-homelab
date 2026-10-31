@@ -4,28 +4,30 @@
 
 Create a three-disk RAID 5 volume in Windows Server 2022, save a test file, and verify that the volume and its existing data remain accessible while one member disk is taken offline.
 
-## 🧪 Lab Environment
+## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Operating System:** Windows Server 2022
-- **Server:** `DC-01`
-- **Tool:** Disk Management and File Explorer
-- **Operating-system disk:** Disk 0 — left unchanged
-- **Data disks:** Three 10 GB virtual disks
-- **Volume label:** `RAID5_PARITY`
-- **File system:** NTFS
+- 🖥️ **Hypervisor:** VMware Workstation
+- 💿 **Operating System:** Windows Server 2022
+- 🏢 **Server:** `DC-01`
+- 🛠️ **Tools:** Disk Management and File Explorer
+- 💽 **Operating-system disk:** Disk 0 — left unchanged
+- 💽 **Data disks:** Three 10 GB virtual disks
+- 🏷️ **Volume label:** `RAID5_PARITY`
+- 📁 **File system:** NTFS
 
-## 🛠️ Lab Procedure
+## ⚙️ Lab Configuration
 
-### Step 1 — Prepare the data disks
+### Step 1 — 💽 Prepare the data disks
 
 Attach three 10 GB virtual disks to the `DC-01` virtual machine. Open **Disk Management**, bring all three disks online, and initialize them. Confirm that the three new data disks are available for creating the RAID 5 volume.
 
 Do not modify Disk 0, which contains the operating system.
 
+**📸 Screenshot — Three 10 GB data disks initialized and online**
+
 ![Three 10 GB data disks initialized and online](screenshots/Screenshot%20(2).png)
 
-### Step 2 — Create the RAID 5 volume
+### Step 2 — ⚙️ Create the RAID 5 volume
 
 1. In Disk Management, right-click the unallocated space on **Disk 1**.
 2. Select **New RAID-5 Volume**.
@@ -37,15 +39,19 @@ Do not modify Disk 0, which contains the operating system.
 
 Confirm that the `RAID5_PARITY` volume is created successfully.
 
+**📸 Screenshot — RAID 5 volume created in Disk Management**
+
 ![RAID 5 volume created in Disk Management](screenshots/Screenshot%20(12).png)
 
-### Step 3 — Verify the drive in This PC
+### Step 3 — 🔍 Verify the drive in This PC
 
 Open **File Explorer → This PC** and confirm that the `RAID5_PARITY` drive is visible.
 
+**📸 Screenshot — RAID5_PARITY drive visible in This PC**
+
 ![RAID5_PARITY drive visible in This PC](screenshots/Screenshot%20(13).png)
 
-### Step 4 — Create the test folder and file
+### Step 4 — 📁 Create the test folder and file
 
 Open the `RAID5_PARITY` drive and create a folder named `RAID5_PARITY`.
 
@@ -63,9 +69,11 @@ RAID5_PARITY (drive)
     └── RAID5_PARITY_DATA.txt
 ```
 
+**📸 Screenshot — RAID 5 test folder and text file**
+
 ![RAID 5 test folder and text file](screenshots/Screenshot%20(16).png)
 
-### Step 5 — Take Disk 1 offline
+### Step 5 — ⏻ Take Disk 1 offline
 
 1. Return to **Disk Management**.
 2. Right-click the **Disk 1 label**.
@@ -73,13 +81,17 @@ RAID5_PARITY (drive)
 
 Observe the state of the RAID 5 volume after Disk 1 is taken offline.
 
+**📸 Screenshot — Disk 1 offline during the RAID 5 availability test**
+
 ![Disk 1 offline during the RAID 5 availability test](screenshots/Screenshot%20(15).png)
 
-### Step 6 — Verify access to the existing data
+### Step 6 — 🔍 Verify access to the existing data
 
 Open **File Explorer → This PC** again. Confirm that the `RAID5_PARITY` drive is still present. Open the drive and verify that the `RAID5_PARITY` folder and `RAID5_PARITY_DATA.txt` remain accessible.
 
 **Observed result:** The `RAID5_PARITY` drive remained visible in This PC after Disk 1 was taken offline, and the existing folder and text file remained accessible.
+
+**📸 Screenshot — RAID5_PARITY drive and test data accessible while Disk 1 is offline**
 
 ![RAID5_PARITY drive and test data accessible while Disk 1 is offline](screenshots/Screenshot%20(14).png)
 
