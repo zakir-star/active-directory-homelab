@@ -24,7 +24,7 @@ Configure the domain account lockout policy, apply the changes, and verify the l
 
 **📸 Screenshot — Open Default Domain Policy**
 
-![Screenshot 1 - Open Default Domain Policy](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%281%29.png?raw=true)
+![Screenshot 1 - Open Default Domain Policy](screenshots/Screenshot%20%281%29.png)
 
 ### Step 2: Open Account Lockout Policy
 
@@ -36,7 +36,7 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Initial account lockout policy settings**
 
-![Screenshot 3 - Initial account lockout policy settings](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%283%29.png?raw=true)
+![Screenshot 3 - Initial account lockout policy settings](screenshots/Screenshot%20%283%29.png)
 
 ### Step 3: Configure Account Lockout Threshold
 
@@ -47,7 +47,7 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Configure account lockout threshold**
 
-![Screenshot 4 - Set account lockout threshold to 5 attempts](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%284%29.png?raw=true)
+![Screenshot 4 - Set account lockout threshold to 5 attempts](screenshots/Screenshot%20%284%29.png)
 
 ### Step 4: Configure Account Lockout Duration
 
@@ -58,7 +58,7 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Account lockout duration set to 15 minutes**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%288%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%288%29.png)
 
 ### Step 5: Configure Reset Account Lockout Counter After
 
@@ -69,7 +69,7 @@ Review the current values before changing them. In this lab, the initial thresho
 
 **📸 Screenshot — Reset account lockout counter set to 15 minutes**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%289%29.png)
 
 ### Step 6: Review the Three Account Lockout Settings
 
@@ -83,7 +83,7 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — All three account lockout settings confirmed**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2810%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2810%29.png)
 
 ### Step 7: Apply the Group Policy
 
@@ -99,7 +99,7 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — Successful `gpupdate /force` result**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2811%29.png)
 
 ### Step 8: Create the Dedicated Test Account
 
@@ -110,7 +110,7 @@ Confirm that the policy displays all three configured values:
 
 **📸 Screenshot — Create the `lockout.test` domain account**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2816%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2816%29.png)
 
 ### Step 9: Confirm the Test Account Is Enabled
 
@@ -118,7 +118,7 @@ Open `lockout.test` **Properties → Account**. Confirm the account is enabled a
 
 **📸 Screenshot — Confirm `lockout.test` is enabled and unlocked**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2818%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2818%29.png)
 
 ### Step 10: Enter the Domain Account on the Windows Client
 
@@ -130,7 +130,7 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Enter `EXAMPLE\\lockout.test` on the Windows client**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2819%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2819%29.png)
 
 ### Step 11: Trigger the Account Lockout
 
@@ -140,9 +140,9 @@ Do not include the password in the screenshot.
 
 **📸 Screenshot — Windows account-lockout message displayed**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2820%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2820%29.png)
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2821%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2821%29.png)
 
 ### Step 12: Verify the Lockout in ADUC
 
@@ -150,7 +150,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Verify `lockout.test` is locked in ADUC**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2822%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2822%29.png)
 
 ### Step 13: Unlock the Test Account
 
@@ -160,7 +160,7 @@ On DC-01, open **ADUC → IT → lockout.test → Properties → Account** and v
 
 **📸 Screenshot — Unlock `lockout.test` in ADUC**
 
-![imag alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2823%29.png?raw=true)
+![imag alt](screenshots/Screenshot%20%2823%29.png)
 
 ### Step 14: Verify Domain Sign-In
 
@@ -168,7 +168,7 @@ On the Windows 10 client, sign in as `EXAMPLE\\lockout.test` using the correct l
 
 **📸 Screenshot — Successful sign-in as `EXAMPLE\\lockout.test`**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-8-Account-Lockout-Policy-Management-Using-Group-Policy/screenshots/Screenshot%20%2824%29.png?raw=true)
+![image alt](screenshots/Screenshot%20%2824%29.png)
 
 ## ✅ Expected Result
 
