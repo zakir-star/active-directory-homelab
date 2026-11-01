@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–32 completed  
+> **Status:** Labs 1–33 completed  
 > **Last updated:** November 1, 2026
 
 ---
@@ -87,7 +87,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **30** | [Restrict Notepad](Lab-30-Restrict-Notepad/README.md) | ✅ Completed | Restrict Notepad for users in the IT OU and exclude a specific user through GPO security permissions |
 | **31** | [Restrict the Run Command](Lab-31-Restrict-Run-Command/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the Run command and verify the restriction on a Windows client |
 | **32** | [Restrict Command Prompt](Lab-32-Restrict-Command-Prompt/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Command Prompt access and verify the restriction on a Windows client |
-| **33** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
+| **33** | [Restrict Control Panel and Settings](Lab-33-Restrict-Control-Panel-and-Settings/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Control Panel and PC settings and verify the restriction on a Windows client |
 | **34** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
@@ -268,7 +268,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Domain user account administration, including password resets and account unlocks
 - Group Policy password policy configuration and verification
 - Account lockout policy configuration and testing
-- User-based Group Policy restrictions for applications and Windows interface features, including Notepad and the Run command
+- User-based Group Policy restrictions for applications and Windows interface features, including Notepad, the Run command, Command Prompt, Control Panel, and PC settings
 - Individual GPO security-permission exclusions
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
 - MBR and GPT partition styles, disk partition limits, and volume formatting verification
