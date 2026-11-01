@@ -14,10 +14,6 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 👤 **Domain Accounts:** `user01` (read/write), `user02` (read-only), `administrator@example.com` (Full Control)
 - 🛠️ **Management Tool:** File Explorer — Folder Properties — Security — Advanced
 
-## 📸 Lab Screenshots
-
-[View all Lab 10 screenshots](./screenshots/)
-
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create a Data Drive
@@ -28,6 +24,8 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 4. Assign the drive letter **E:**.
 
 **📸 Screenshot — Disk Management showing the new E: drive**
+
+![image alt](screenshots/Screenshot%20(2).png)
 
 
 ### Step 2: Create the Data Folder and Test Files
@@ -45,6 +43,8 @@ Hi! there this is for testing purpose
 
 **📸 Screenshot — E:\IT_DATA containing Test1.txt and Test2.rtf**
 
+![image alt](screenshots/Screenshot%20(4).png)
+
 
 ### Step 3: Open Advanced Security Settings
 
@@ -54,6 +54,8 @@ Hi! there this is for testing purpose
 4. Disable inheritance and apply the inheritance choice you used in the lab.
 
 **📸 Screenshot — Advanced Security Settings for the IT_DATA folder**
+
+![image alt](screenshots/Screenshot%20(10).png)
 
 
 ### Step 4: Configure Permissions for the Domain Accounts
@@ -73,6 +75,8 @@ Configure the following intended permissions on the **IT_DATA** folder:
 
 **📸 Screenshot — Permission entries for user01, user02, and the administrator**
 
+![image alt](screenshots/Screenshot%20(23).png)
+
 
 ### Step 5: Verify Read and Write Access as user01
 
@@ -88,6 +92,8 @@ I am user01 with read and write permission
 5. Save the file and confirm the change is retained.
 
 **📸 Screenshot — user01's modified file saved successfully**
+
+![image alt](screenshots/Screenshot%20(31).png)
 
 
 ### Step 6: Verify Read-Only Access as user02
@@ -105,6 +111,8 @@ I am user02 with only read permission
 6. Confirm that Windows denies the save operation.
 
 **📸 Screenshot — Save operation denied for user02**
+
+![image alt](screenshots/Screenshot%20(30).png)
 
 
 ## ✅ Expected Result
