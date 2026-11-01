@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Use Group Policy to remove the Run command from the Start Menu for users in the `IT` Organizational Unit and verify that the restriction prevents the IT OU user from opening the Run dialog with **Windows + R**.
+Use Group Policy to remove the Run command from the Start Menu for users in the `IT` Organizational Unit and verify that the restriction prevents the IT OU users from opening the Run dialog with **Windows + R**.
 
 ## 🖥️ Lab Environment
 
