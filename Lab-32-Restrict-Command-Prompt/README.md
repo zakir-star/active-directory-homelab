@@ -28,8 +28,9 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 
 6. Confirm that the GPO is linked to the `IT` OU.
 
-**📸 Screenshot — Restrict CMD GPO linked to the IT OU**  
-[Open screenshot folder](screenshots/)
+**📸 Screenshot — Restrict CMD GPO linked to the IT OU**
+
+![Restrict CMD GPO linked to the IT OU](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Configure the Command Prompt restriction
 
@@ -43,8 +44,9 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 5. Leave **Disable the command prompt script processing also?** set to its default value, **No**.
 6. Click **Apply**, then **OK** to save the policy.
 
-**📸 Screenshot — Prevent access to the command prompt enabled, with script processing left at No**  
-[Open screenshot folder](screenshots/)
+**📸 Screenshot — Prevent access to the command prompt enabled, with script processing left at No**
+
+![Prevent access to the command prompt enabled](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Update Group Policy
 
@@ -63,8 +65,9 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 2. Attempt to open Command Prompt.
 3. Verify that Windows displays a message stating that the command prompt has been disabled by the administrator.
 
-**📸 Screenshot — Command Prompt blocked on the Windows client**  
-[Open screenshot folder](screenshots/)
+**📸 Screenshot — Command Prompt blocked on the Windows client**
+
+![Command Prompt blocked on the Windows client](screenshots/Screenshot%20(3).png)
 
 ## 🔎 Verification
 
