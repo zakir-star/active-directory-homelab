@@ -14,6 +14,10 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 👤 **Domain Accounts:** `user01` (read/write), `user02` (read-only), `administrator@example.com` (Full Control)
 - 🛠️ **Management Tool:** File Explorer — Folder Properties — Security — Advanced
 
+## 📸 Lab Screenshots
+
+[View all Lab 10 screenshots](./screenshots/)
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create a Data Drive
