@@ -30,7 +30,7 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 **📸 Screenshot — Block Mouse Right Click GPO linked to the IT OU**
 
-![Block Mouse Right Click GPO linked to the IT OU](screenshots/Screenshot_01.png)
+![Block Mouse Right Click GPO linked to the IT OU](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-34-Block-Mouse-Right-Click/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2 — Configure the right-click restriction
 
@@ -45,7 +45,7 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 **📸 Screenshot — Remove File Explorer's default context menu policy enabled**
 
-![Remove File Explorer's default context menu policy enabled](screenshots/Screenshot_02.png)
+![Remove File Explorer's default context menu policy enabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-34-Block-Mouse-Right-Click/screenshots/Screenshot%20(4).png?raw=true)
 
 ### Step 3 — Update Group Policy
 
@@ -67,7 +67,7 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 **📸 Screenshot — Right-click context menu blocked on the Windows desktop**
 
-![Right-click context menu blocked on the Windows desktop](screenshots/Screenshot_04.png)
+![Right-click context menu blocked on the Windows desktop](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-34-Block-Mouse-Right-Click/screenshots/Screenshot%20(5).png?raw=true)
 
 
 **Verification note:** The desktop right-click test was performed successfully. Right-click behavior inside File Explorer has not yet been tested.
