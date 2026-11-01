@@ -30,7 +30,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — iSCSI Target Server role service installed on DC-01**
 
-![iSCSI Target Server role service installed on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(1).png?raw=true)
+![iSCSI Target Server role service installed on DC-01](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — 💽 Create the iSCSI virtual disk
 
@@ -52,7 +52,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — iSCSI virtual disk and target configuration confirmation**
 
-![iSCSI virtual disk and target configuration confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(10).png?raw=true)
+![iSCSI virtual disk and target configuration confirmation](screenshots/Screenshot%20(10).png)
 
 ### Step 4 — 🔍 Discover the target from Windows 10
 
@@ -64,7 +64,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — iSCSI target portal discovered on the Windows 10 client**
 
-![iSCSI target portal discovered on the Windows 10 client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(20).png?raw=true)
+![iSCSI target portal discovered on the Windows 10 client](screenshots/Screenshot%20(20).png)
 
 ### Step 5 — 🔗 Connect to the iSCSI target
 
@@ -75,7 +75,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — WIN10-Target showing Connected status**
 
-![WIN10-Target showing Connected status](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(22).png?raw=true)
+![WIN10-Target showing Connected status](screenshots/Screenshot%20(22).png)
 
 ### Step 6 — ⚙️ Initialize and format the remote disk
 
@@ -90,11 +90,11 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — iSCSI disk initialized using GPT**
 
-![iSCSI disk initialized using GPT](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(23).png?raw=true)
+![iSCSI disk initialized using GPT](screenshots/Screenshot%20(23).png)
 
 **📸 Screenshot — Healthy NTFS iSCSI volume in Disk Management**
 
-![Healthy NTFS iSCSI volume in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(25).png?raw=true)
+![Healthy NTFS iSCSI volume in Disk Management](screenshots/Screenshot%20(25).png)
 
 ### Step 7 — 🧪 Verify read/write access
 
@@ -105,7 +105,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — iSCSI test folder and verification file on the client**
 
-![iSCSI test folder and verification file on the client](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(28).png?raw=true)
+![iSCSI test folder and verification file on the client](screenshots/Screenshot%20(28).png)
 
 ### Step 8 — ✅ Final verification
 
@@ -115,7 +115,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 **📸 Screenshot — Final iSCSI target verification on DC-01**
 
-![Final iSCSI target verification on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-25-Practical-iSCSI-Configuration/screenshots/Screenshot%20(30).png?raw=true)
+![Final iSCSI target verification on DC-01](screenshots/Screenshot%20(30).png)
 
 ## ⚠️ Important Notes
 
