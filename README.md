@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–16 and 17–30 completed  
+> **Status:** Labs 1–16 and 17–31 completed  
 > **Last updated:** November 1, 2026
 
 ---
@@ -85,7 +85,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **28** | [Remove the Computer Icon from the Desktop](Lab-28-Remove-the-Computer-Icon-from-the-Desktop/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to disable the Computer desktop icon setting and verify it on a Windows client |
 | **29** | [Configure Screen Saver Policies](Lab-29-Configure-Screen-Saver-Policies/README.md) | ✅ Completed | Deploy the Bubbles screen saver through a user-based GPO linked to the IT OU, using a restricted network share for the screen saver file |
 | **30** | [Restrict Notepad](Lab-30-Restrict-Notepad/README.md) | ✅ Completed | Restrict Notepad for users in the IT OU and exclude a specific user through GPO security permissions |
-| **31** | Restrict the Run Command | 📋 Planned | Configure and verify the relevant user policy |
+| **31** | [Restrict the Run Command](Lab-31-Restrict-Run-Command/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the Run command and verify the restriction on a Windows client |
 | **32** | Restrict Command Prompt | 📋 Planned | Apply and test the Command Prompt policy |
 | **33** | Restrict Control Panel and Settings | 📋 Planned | Limit access using targeted Group Policy settings |
 | **34** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
@@ -271,7 +271,8 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Domain user account administration, including password resets and account unlocks
 - Group Policy password policy configuration and verification
 - Account lockout policy configuration and testing
-- User-based application restriction through Group Policy and individual GPO security-permission exclusions
+- User-based Group Policy restrictions for applications and Windows interface features, including Notepad and the Run command
+- Individual GPO security-permission exclusions
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
 - MBR and GPT partition styles, disk partition limits, and volume formatting verification
 - RAID 0 striping, RAID 1 mirroring, and RAID 5 parity configuration, including single-member offline availability tests
