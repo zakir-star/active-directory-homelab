@@ -30,7 +30,7 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 
 **📸 Screenshot — C:\windows\system32\Bubbles.scr**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(1).png?raw=true)
+![image alt](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Share the screen saver folder
 
@@ -54,7 +54,7 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — GPO linked to the IT OU**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(3).png?raw=true)
+![image alt](screenshots/Screenshot%20(3).png)
 
 
 ### Step 4 — Configure the screen saver settings
@@ -73,7 +73,7 @@ The shared folder can be accessed using:
    ```
 **📸 Screenshot — Enable screen saver setting**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(5).png?raw=true)
+![image alt](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Configure the screen saver timeout
 
@@ -84,7 +84,7 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — Screen saver policies configured with 10-seconds timeout**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(7).png?raw=true)
+![image alt](screenshots/Screenshot%20(7).png)
 
 ### Step 6 — Apply and verify the policy
 
@@ -101,7 +101,7 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — Group Policy update completed on the client**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(8).png?raw=true)
+![image alt](screenshots/Screenshot%20(8).png)
 
 ### Step 7 — verify the policy
 
@@ -111,7 +111,7 @@ The shared folder can be accessed using:
 
 **📸 Screenshot — Bubbles screen saver applied in the user session**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-29-Configure-Screen-Saver-Policies/screenshots/Screenshot%20(9).png?raw=true)
+![image alt](screenshots/Screenshot%20(9).png)
 
 ## 🔎 Verification
 
