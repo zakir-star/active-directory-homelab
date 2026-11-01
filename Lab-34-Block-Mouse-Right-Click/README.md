@@ -68,9 +68,6 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 2. Right-click on the Windows desktop.
 3. Verify that the default context menu does not appear.
 
-**📸 Screenshot — Right-click context menu blocked on the Windows desktop**
-
-![Right-click context menu blocked on the Windows desktop](screenshots/Screenshot_04.png)
 
 **Verification note:** The desktop right-click test was performed successfully. Right-click behavior inside File Explorer has not yet been tested.
 
