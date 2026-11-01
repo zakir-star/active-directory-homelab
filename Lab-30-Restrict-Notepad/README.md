@@ -81,9 +81,10 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 Initially, both `user01` and `user02` were affected because their accounts are in the `IT` OU. To allow `user02` to open Notepad while keeping the restriction for `user01`, change the GPO security permissions:
 
 1. On `DC-01`, open **Group Policy Management**.
-2. Select the `block notepad` GPO.
-3. Open the GPO's **Properties** and select the **Security** tab.
-4. Click **Add** and enter:
+2. In the left pane, expand the `example.com` domain and select the `block notepad` GPO linked to the `IT` OU.
+3. From the menu bar at the top of the Group Policy Management console, click **Action → Properties**.
+4. In the GPO Properties window, open the **Security** tab.
+5. Click **Add** and enter:
 
    `user02`
 
