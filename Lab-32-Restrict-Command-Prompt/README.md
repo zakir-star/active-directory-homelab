@@ -46,7 +46,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 
 **📸 Screenshot — Prevent access to the command prompt enabled, with script processing left at No**
 
-![Prevent access to the command prompt enabled](screenshots/Screenshot%20(2).png)
+![Prevent access to the command prompt enabled](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Update Group Policy
 
@@ -67,7 +67,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 
 **📸 Screenshot — Command Prompt blocked on the Windows client**
 
-![Command Prompt blocked on the Windows client](screenshots/Screenshot%20(3).png)
+![Command Prompt blocked on the Windows client](screenshots/Screenshot%20(5).png)
 
 ## 🔎 Verification
 
