@@ -28,6 +28,10 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 6. Confirm that the GPO is linked to the `IT` OU.
 
+**📸 Screenshot — Block Mouse Right Click GPO linked to the IT OU**
+
+![Block Mouse Right Click GPO linked to the IT OU](screenshots/Screenshot_01.png)
+
 ### Step 2 — Configure the right-click restriction
 
 1. Right-click the `Block Mouse Right Click` GPO and select **Edit**.
@@ -38,6 +42,10 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 3. In the right-hand pane, double-click **Remove File Explorer's default context menu**.
 4. Select **Enabled**.
 5. Click **Apply** and **OK**.
+
+**📸 Screenshot — Remove File Explorer's default context menu policy enabled**
+
+![Remove File Explorer's default context menu policy enabled](screenshots/Screenshot_02.png)
 
 ### Step 3 — Update Group Policy
 
@@ -50,11 +58,19 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 3. Allow the Group Policy update to complete.
 
+**📸 Screenshot — Group Policy update using gpupdate /force**
+
+![Group Policy update using gpupdate /force](screenshots/Screenshot_03.png)
+
 ### Step 4 — Verify the restriction on the Windows client
 
 1. Sign in to the domain-joined Windows client using a user account in the `IT` OU.
 2. Right-click on the Windows desktop.
 3. Verify that the default context menu does not appear.
+
+**📸 Screenshot — Right-click context menu blocked on the Windows desktop**
+
+![Right-click context menu blocked on the Windows desktop](screenshots/Screenshot_04.png)
 
 **Verification note:** The desktop right-click test was performed successfully. Right-click behavior inside File Explorer has not yet been tested.
 
