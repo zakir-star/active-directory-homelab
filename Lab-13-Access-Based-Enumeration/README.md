@@ -27,7 +27,7 @@ Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share an
 
 **📸 Screenshot 1 — Existing IT_DATA share and its normal UNC path**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(0).png?raw=true)
+![image alt](screenshots/Screenshot%20(0).png)
 
 ### Step 2: Create the IT_Confidential Folder
 
@@ -48,7 +48,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 2 — Security permissions showing user01 and administrator access, with user02 not granted access**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(6).png?raw=true)
+![image alt](screenshots/Screenshot%20(6).png)
 
 ### Step 4: Test Visibility Before Enabling ABE
 
@@ -75,7 +75,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 3 — IT_DATA share settings with Enable access-based enumeration selected**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(8).png?raw=true)
+![image alt](screenshots/Screenshot%20(8).png)
 
 ### Step 7: Verify ABE as user01
 
@@ -86,7 +86,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 4 — user01 can see and open IT_Confidential**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(9).png?raw=true)
+![image alt](screenshots/Screenshot%20(9).png)
 
 ### Step 8: Verify ABE as user02
 
@@ -97,7 +97,7 @@ Do not remove required system or administrator permissions. Review inherited ent
 
 **📸 Screenshot 5 — user02 browsing IT_DATA with IT_Confidential hidden**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-13-Access-Based-Enumeration/screenshots/Screenshot%20(10).png?raw=true)
+![image alt](screenshots/Screenshot%20(10).png)
 
 ### Step 9: Confirm Existing Share Access Remains Available
 
