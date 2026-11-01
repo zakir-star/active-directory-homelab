@@ -31,7 +31,6 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — block notepad GPO linked to the IT OU**
 
-![GPO linked to the IT OU](screenshots/Screenshot_01.png)
 
 ### Step 2 — Configure the Notepad restriction
 
@@ -51,7 +50,6 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — Don't run specified Windows applications policy enabled**
 
-![Notepad restriction policy](screenshots/Screenshot_02.png)
 
 ### Step 3 — Update Group Policy
 
@@ -66,7 +64,6 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — Group Policy update completed**
 
-![Group Policy update](screenshots/Screenshot_03.png)
 
 ### Step 4 — Verify the restriction for user01
 
@@ -76,7 +73,6 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — Notepad restricted for user01**
 
-![Notepad blocked for user01](screenshots/Screenshot_04.png)
 
 ### Step 5 — Exclude user02 from the GPO
 
@@ -110,7 +106,6 @@ This denies `user02` permission to apply this GPO while retaining Read permissio
 
 **📸 Screenshot — Notepad opens successfully for user02**
 
-![Notepad available for user02](screenshots/Screenshot_05.png)
 
 ## 🔎 Verification
 
