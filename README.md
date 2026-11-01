@@ -211,7 +211,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 | Task | Topic | Status | What it covers |
 |------|-------|--------|----------------|
 | **1** | Delete an OU Protected from Accidental Deletion | 🔜 Next | Enable Advanced Features in ADUC, remove the protection setting, and safely delete a test OU |
-| **2** | Grant Administrative Privileges to a Domain User | 📋 Planned | Understand administrator groups and select appropriate privileges using least privilege |
+| **2** | Check How Many Group Policies Are Applied to a User | 📋 Planned | Use `gpresult` to identify and review the Group Policy Objects applied to a domain user |
 | **3** | Delegate Control of an OU | 📋 Planned | Delegate specific tasks without granting full Domain Admin privileges |
 | **4** | Unlock a Domain User Account | 📋 Planned | Unlock a user account and verify its status |
 | **5** | Reset a Domain User Password | 📋 Planned | Reset a password and understand next sign-in requirements |
