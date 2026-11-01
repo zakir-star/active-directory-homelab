@@ -31,6 +31,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — block notepad GPO linked to the IT OU**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-30-Restrict-Notepad/screenshots/Screenshot%20(1).png?raw=true)
 
 ### Step 2 — Configure the Notepad restriction
 
@@ -50,6 +51,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — Don't run specified Windows applications policy enabled**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-30-Restrict-Notepad/screenshots/Screenshot%20(4.5).png?raw=true)
 
 ### Step 3 — Update Group Policy
 
