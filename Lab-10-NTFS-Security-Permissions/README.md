@@ -25,7 +25,6 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 
 **📸 Screenshot — Disk Management showing the new E: drive**
 
-![Screenshot 1 - Disk Management showing the E drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(2).png?raw=true)
 
 ### Step 2: Create the Data Folder and Test Files
 
@@ -42,7 +41,6 @@ Hi! there this is for testing purpose
 
 **📸 Screenshot — E:\IT_DATA containing Test1.txt and Test2.rtf**
 
-![Screenshot 2 - IT_DATA folder with both test files](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(4).png?raw=true)
 
 ### Step 3: Open Advanced Security Settings
 
@@ -53,7 +51,6 @@ Hi! there this is for testing purpose
 
 **📸 Screenshot — Advanced Security Settings for the IT_DATA folder**
 
-![Screenshot 3 - Advanced Security Settings for IT_DATA](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(10).png?raw=true)
 
 ### Step 4: Configure Permissions for the Domain Accounts
 
@@ -72,7 +69,6 @@ Configure the following intended permissions on the **IT_DATA** folder:
 
 **📸 Screenshot — Permission entries for user01, user02, and the administrator**
 
-![Screenshot 4 - NTFS permission entries](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(23).png?raw=true)
 
 ### Step 5: Verify Read and Write Access as user01
 
@@ -89,7 +85,6 @@ I am user01 with read and write permission
 
 **📸 Screenshot — user01's modified file saved successfully**
 
-![Screenshot 5 - user01 successfully saves a modified file](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(31).png?raw=true)
 
 ### Step 6: Verify Read-Only Access as user02
 
@@ -107,7 +102,6 @@ I am user02 with only read permission
 
 **📸 Screenshot — Save operation denied for user02**
 
-![Screenshot 6 - user02 receives a save denied message](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-10-NTFS-Security-Permissions/screenshots/Screenshot%20(30).png?raw=true)
 
 ## ✅ Expected Result
 
