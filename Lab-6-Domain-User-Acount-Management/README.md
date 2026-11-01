@@ -31,7 +31,7 @@
  
 **📸Screenshot**
 
-![Screenshot 01 - Locate user01 in ADUC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(00).png?raw=true)
+![Screenshot 01 - Locate user01 in ADUC](screenshots/Screenshot%20(00).png)
 
 ### Step 2: Disable the Domain User
 
@@ -41,7 +41,7 @@
  
 **📸Screenshot**
 
-![Screenshot 02 - User account disabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(3).png?raw=true)
+![Screenshot 02 - User account disabled](screenshots/Screenshot%20(3).png)
 
 ### Step 3: Enable the Domain User
 
@@ -51,7 +51,7 @@
  
 **📸Screenshot**
 
-![Screenshot 03 - User account enabled](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(6).png?raw=true)
+![Screenshot 03 - User account enabled](screenshots/Screenshot%20(6).png)
 
 ### Step 4: Reset the Domain User Password
 
@@ -64,7 +64,7 @@
  
 **📸Screenshot**
 
-![Screenshot 04 - Password reset confirmation](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(8).png?raw=true)
+![Screenshot 04 - Password reset confirmation](screenshots/Screenshot%20(8).png)
 
 **Note:** Never include passwords in screenshots or GitHub documentation.
 
@@ -77,7 +77,7 @@
  
 **📸Screenshot**
 
-![Screenshot 05 - Unlock user account](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(10).png?raw=true)
+![Screenshot 05 - Unlock user account](screenshots/Screenshot%20(10).png)
 
 ### Step 6: Configure Logon Hours
 
@@ -91,7 +91,7 @@
  
 **📸Screenshot**
 
-![Screenshot 06 - Logon hours configuration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(12).png?raw=true)
+![Screenshot 06 - Logon hours configuration](screenshots/Screenshot%20(12).png)
 
 ### Step 7: Verify Domain User Login
 
@@ -104,7 +104,7 @@
  
 **📸Screenshot**
 
-![Screenshot 07 - Successful domain user login](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-6-Domain-User-Acount-Management/screenshots/Screenshot%20(15).png?raw=true)
+![Screenshot 07 - Successful domain user login](screenshots/Screenshot%20(15).png)
 
 ## ✅ Expected Result
 
