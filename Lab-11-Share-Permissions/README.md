@@ -27,7 +27,7 @@ Configure share permissions on the existing `E:\IT_DATA` folder and test how Sha
 
 **📸 Screenshot — Advanced Sharing window for IT_DATA**
 
-![Screenshot 1 - Advanced Sharing window](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(1).png?raw=true)
+![Screenshot 1 - Advanced Sharing window](screenshots/Screenshot%20(1).png)
 
 ### Step 2: Enable Folder Sharing and Open Permissions
 
@@ -39,7 +39,7 @@ The default configuration showed `Everyone` with **Allow — Read**.
 
 **📸 Screenshot — Default Everyone Read permission**
 
-![Screenshot 2 - Default share permission](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(3).png?raw=true)
+![Screenshot 2 - Default share permission](screenshots/Screenshot%20(3).png)
 
 ### Step 3: Add the Security Group
 
@@ -50,7 +50,7 @@ The default configuration showed `Everyone` with **Allow — Read**.
 
 **📸 Screenshot — Everyone and IT_Users_Group listed**
 
-![Screenshot 3 - Share permission entries](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(6).png?raw=true)
+![Screenshot 3 - Share permission entries](screenshots/Screenshot%20(6).png)
 
 ### Step 4: Configure Share Permissions for IT_Users_Group
 
@@ -69,7 +69,7 @@ The resulting share permission configuration was:
 
 **📸 Screenshot — IT_Users_Group with Read and Change allowed**
 
-![Screenshot 4 - IT_Users_Group Read and Change permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(7).png?raw=true)
+![Screenshot 4 - IT_Users_Group Read and Change permissions](screenshots/Screenshot%20(7).png)
 
 ### Step 5: Access the Shared Folder from Windows 10
 
@@ -80,7 +80,7 @@ The resulting share permission configuration was:
 
 **📸 Screenshot — Shared folder opened from the Windows client**
 
-![Screenshot 5 - Shared folder opened](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(13).png?raw=true)
+![Screenshot 5 - Shared folder opened](screenshots/Screenshot%20(13).png)
 
 ### Step 6: Verify Write Access as user01
 
@@ -95,7 +95,7 @@ Share permission test successful
 
 **📸 Screenshot — Test2.rtf showing the added text**
 
-![Screenshot 6 - user01 modifies Test2.rtf](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(15).png?raw=true)
+![Screenshot 6 - user01 modifies Test2.rtf](screenshots/Screenshot%20(15).png)
 
 ### Step 7: Test Read and Write Access as user02
 
@@ -108,7 +108,7 @@ Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has 
 
 **📸 Screenshot — user02 receives an access-denied message when saving**
 
-![Screenshot - user02 save denied](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-11-Share-Permissions/screenshots/Screenshot%20(18).png?raw=true)
+![Screenshot - user02 save denied](screenshots/Screenshot%20(18).png)
 
 ### Step 9: Verify the Files on DC-01
 
