@@ -64,7 +64,6 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 3. Allow the Group Policy update to complete.
 
-**📸 Screenshot — Group Policy update completed**
 
 
 ### Step 4 — Verify the restriction for user01
