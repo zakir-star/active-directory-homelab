@@ -28,7 +28,7 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 
 **📸 Screenshot — IT_DATA shared folder visible under DC-01**
 
-![Screenshot 1 - IT_DATA shared folder under DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(2).png?raw=true)
+![Screenshot 1 - IT_DATA shared folder under DC-01](screenshots/Screenshot%20(2).png)
 
 #### Step 2: Map the Shared Folder as Z:
 
@@ -39,7 +39,7 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 
 **📸 Screenshot — Map Network Drive wizard with Z: selected**
 
-![Screenshot 2 - Map IT_DATA as Z drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(4).png?raw=true)
+![Screenshot 2 - Map IT_DATA as Z drive](screenshots/Screenshot%20(4).png)
 
 #### Step 3: Verify the Mapped Drive
 
@@ -48,7 +48,7 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 
 **📸 Screenshot — IT_DATA mapped as Z: under This PC**
 
-![Screenshot 3 - IT_DATA mapped as Z drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(5).png?raw=true)
+![Screenshot 3 - IT_DATA mapped as Z drive](screenshots/Screenshot%20(5).png)
 
 After verifying Method 1, right-click the mapped `Z:` drive and select **Disconnect**. Confirm it is no longer listed under **This PC**. This is done so Method 2 can be demonstrated separately.
 
@@ -62,7 +62,7 @@ After verifying Method 1, right-click the mapped `Z:` drive and select **Disconn
 
 **📸 Screenshot — This PC showing the Map network drive icon under the Computer tab**
 
-![Screenshot 4 - Map network drive icon under the Computer tab](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(7).png?raw=true)
+![Screenshot 4 - Map network drive icon under the Computer tab](screenshots/Screenshot%20(7).png)
 
 4. In the Map Network Drive wizard, select `Z:` as the drive letter.
 5. Under the **Folder** field, click the dropdown to select `\\DC-01\IT_DATA`.
@@ -74,7 +74,7 @@ Return to **This PC** and confirm that the `IT_DATA` network drive appears as `Z
 
 **📸 Screenshot — IT_DATA mapped as Z: using Method 2**
 
-![Screenshot 5 - IT_DATA mapped as Z drive using Method 2](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-12-Map-Network-Drive/screenshots/Screenshot%20(10).png?raw=true)
+![Screenshot 5 - IT_DATA mapped as Z drive using Method 2](screenshots/Screenshot%20(10).png)
 
 ## ✅ Verification
 
