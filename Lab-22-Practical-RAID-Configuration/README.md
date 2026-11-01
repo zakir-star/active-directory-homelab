@@ -23,7 +23,7 @@ Do not modify Disk 0, which contains the operating system.
 
 **📸 Screenshot — Two 10 GB data disks initialized and online**
 
-![Two 10 GB data disks initialized and online](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(2).png?raw=true)
+![Two 10 GB data disks initialized and online](screenshots/Screenshot%20(2).png)
 
 ### Step 2 — ⚙️ Create the RAID 0 striped volume
 
@@ -39,7 +39,7 @@ Confirm that Disk Management shows the new striped volume.
 
 **📸 Screenshot — RAID 0 striped volume created in Disk Management**
 
-![RAID 0 striped volume created in Disk Management](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(11).png?raw=true)
+![RAID 0 striped volume created in Disk Management](screenshots/Screenshot%20(11).png)
 
 ### Step 3 — 🔍 Verify the volume in This PC
 
@@ -47,7 +47,7 @@ Open **File Explorer → This PC** and confirm that the `RAID0_STRIPED` drive is
 
 **📸 Screenshot — RAID0_STRIPED drive visible in This PC**
 
-![RAID0_STRIPED drive visible in This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(12).png?raw=true)
+![RAID0_STRIPED drive visible in This PC](screenshots/Screenshot%20(12).png)
 
 ### Step 4 — 📁 Create the test file
 
@@ -69,7 +69,7 @@ RAID0_STRIPED (drive)
 
 **📸 Screenshot — RAID 0 test folder and text file**
 
-![RAID 0 test folder and text file](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(13).png?raw=true)
+![RAID 0 test folder and text file](screenshots/Screenshot%20(13).png)
 
 ### Step 5 — ⏻ Take Disk 1 offline
 
@@ -81,7 +81,7 @@ Observe the resulting status of the striped volume.
 
 **📸 Screenshot — Disk 1 taken offline during the RAID 0 test**
 
-![Disk 1 offline during the RAID 0 test](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(15).png?raw=true)
+![Disk 1 offline during the RAID 0 test](screenshots/Screenshot%20(15).png)
 
 ### Step 6 — 🔍 Verify the failure behavior
 
@@ -91,7 +91,7 @@ Open **File Explorer → This PC** again.
 
 **📸 Screenshot — RAID0_STRIPED drive unavailable in This PC**
 
-![RAID0_STRIPED drive missing from This PC](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-22-Practical-RAID-Configuration/screenshots/Screenshot%20(16).png?raw=true)
+![RAID0_STRIPED drive missing from This PC](screenshots/Screenshot%20(16).png)
 
 ## ⚠️ Important Notes
 
