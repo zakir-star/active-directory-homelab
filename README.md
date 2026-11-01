@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–33 completed  
+> **Status:** Labs 1–34 completed  
 > **Last updated:** November 1, 2026
 
 ---
@@ -88,7 +88,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **31** | [Restrict the Run Command](Lab-31-Restrict-Run-Command/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the Run command and verify the restriction on a Windows client |
 | **32** | [Restrict Command Prompt](Lab-32-Restrict-Command-Prompt/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Command Prompt access and verify the restriction on a Windows client |
 | **33** | [Restrict Control Panel and Settings](Lab-33-Restrict-Control-Panel-and-Settings/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Control Panel and PC settings and verify the restriction on a Windows client |
-| **34** | Block Mouse Right-Click | 🔜 Next | Use a user-based GPO to disable the right-click context menu and verify the restriction on a Windows client |
+| **34** | [Block Mouse Right-Click](Lab-34-Block-Mouse-Right-Click/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the default context menu and verify the restriction on the Windows desktop |
 | **35** | Deploy Software Using Group Policy | 📋 Planned | Learn software deployment options and prerequisites |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
