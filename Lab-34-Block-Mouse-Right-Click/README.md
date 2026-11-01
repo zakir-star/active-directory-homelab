@@ -67,7 +67,7 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 
 **📸 Screenshot — Right-click context menu blocked on the Windows desktop**
 
-![Right-click context menu blocked on the Windows desktop](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-34-Block-Mouse-Right-Click/screenshots/Screenshot%20(5).png?raw=true)
+![Right-click context menu blocked on the Windows desktop](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-34-Block-Mouse-Right-Click/screenshots/Screenshot%20%285%29.png?raw=true)
 
 
 **Verification note:** The desktop right-click test was performed successfully. Right-click behavior inside File Explorer has not yet been tested.
