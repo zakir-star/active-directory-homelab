@@ -45,7 +45,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 
 **📸 Screenshot — Prohibit access to Control Panel and PC settings enabled**
 
-![Prohibit access to Control Panel and PC settings enabled](screenshots/Screenshot%20(2).png)
+![Prohibit access to Control Panel and PC settings enabled](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Update Group Policy
 
@@ -68,11 +68,11 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 
 **📸 Screenshot — Control Panel access blocked on the Windows client**
 
-![Control Panel access blocked on the Windows client](screenshots/Screenshot%20(3).png)
+![Control Panel access blocked on the Windows client](screenshots/Screenshot%20(5).png)
 
 **📸 Screenshot — Desktop Icon Settings blocked on the Windows client**
 
-![Desktop Icon Settings blocked on the Windows client](screenshots/Screenshot%20(4).png)
+![Desktop Icon Settings blocked on the Windows client](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
