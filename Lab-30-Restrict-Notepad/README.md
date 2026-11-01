@@ -74,6 +74,7 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 
 **📸 Screenshot — Notepad restricted for user01**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-30-Restrict-Notepad/screenshots/Screenshot%20(4.7).png?raw=true)
 
 ### Step 5 — Exclude user02 from the GPO
 
@@ -107,7 +108,7 @@ This denies `user02` permission to apply this GPO while retaining Read permissio
 
 **📸 Screenshot — Notepad opens successfully for user02**
 
-
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-30-Restrict-Notepad/screenshots/Screenshot%20(10).png?raw=true)
 ## 🔎 Verification
 
 - Confirm that the `block notepad` GPO is linked to the `IT` OU.
