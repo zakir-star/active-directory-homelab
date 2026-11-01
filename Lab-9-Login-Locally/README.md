@@ -22,7 +22,7 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 
 **📸 Screenshot — Local account sign-in restriction on DC-01**
 
-![Screenshot 1 - Local account sign-in restriction on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%281%29.png?raw=true)
+![Screenshot 1 - Local account sign-in restriction on DC-01](screenshots/Screenshot%20%281%29.png)
 
 > **Note:** The sign-in error indicates that the sign-in method is blocked.
 
@@ -50,7 +50,7 @@ Navigate to:
 
 **📸Screenshot**
 
-![Screenshot 10 - Allow log on locally policy configuration](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2810%29.png?raw=true)
+![Screenshot 10 - Allow log on locally policy configuration](screenshots/Screenshot%20%2810%29.png)
 
 ### Step 5: Check Deny Log on Locally
 
@@ -77,7 +77,7 @@ Wait for the policy refresh to complete.
    
 **📸Screenshot**
 
-![Screenshot 17 - Domain user sign-in verification](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-9-Login-Locally/screenshots/Screenshot%20%2817%29.png?raw=true)
+![Screenshot 17 - Domain user sign-in verification](screenshots/Screenshot%20%2817%29.png)
 
 
 ## ✅ Expected Result
