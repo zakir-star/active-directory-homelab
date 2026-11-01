@@ -23,7 +23,7 @@ Install and use File Server Resource Manager (FSRM) on Windows Server 2022 to ma
 
 **📸 Screenshot 1 — Server Manager showing File Server Resource Manager installed**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(2).png?raw=true)
+![image alt](screenshots/Screenshot%20(2).png)
 
 ### Step 2: Create the Test Folders
 
@@ -39,7 +39,7 @@ On `DC-01`, create the following separate folders on the `E:\` volume:
 
 **📸 Screenshot 2 — File Explorer showing the dedicated FSRM test folders**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(0).png?raw=true)
+![image alt](screenshots/Screenshot%20(0).png)
 
 ### Step 3: Create and Apply a Hard Quota
 
@@ -53,11 +53,11 @@ A hard quota prevents additional data from being written once the configured lim
 
 **📸 Screenshot 3 — Hard quota template showing the 100 MB limit and notification thresholds**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(4).png?raw=true)
+![image alt](screenshots/Screenshot%20(4).png)
 
 **📸 Screenshot 4 — Quota entry applied to E:\FSRM_Test**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(10).png?raw=true)
+![image alt](screenshots/Screenshot%20(10).png)
 
 ### Step 4: Test Hard Quota Enforcement
 
@@ -68,7 +68,7 @@ A hard quota prevents additional data from being written once the configured lim
 
 **📸 Screenshot 5 — Hard quota usage at approximately 80% and the fifth file copy being blocked**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(15).png?raw=true)
+![image alt](screenshots/Screenshot%20(15).png)
 
 ### Step 5: Create and Apply a Soft Quota
 
@@ -81,7 +81,7 @@ A soft quota monitors usage against the configured limit but does not prevent us
 
 **📸 Screenshot 6 — Soft quota template showing the 100 MB limit**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(12).png?raw=true)
+![image alt](screenshots/Screenshot%20(12).png)
 
 ### Step 6: Test Soft Quota Behavior
 
@@ -92,7 +92,7 @@ A soft quota monitors usage against the configured limit but does not prevent us
 
 **📸 Screenshot 7 — Soft quota usage at 120% with all six test files present**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(18).png?raw=true)
+![image alt](screenshots/Screenshot%20(18).png)
 
 ### Step 7: Configure Active File Screening
 
@@ -107,7 +107,7 @@ The predefined template uses the **Image Files** file group to prevent matching 
 
 **📸 Screenshot 8 — Active file screen applied to E:\FSRM_Active_Screen using Block Image File**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(22).png?raw=true)
+![image alt](screenshots/Screenshot%20(22).png)
 
 ### Step 8: Test Active File Screening
 
@@ -118,7 +118,7 @@ The predefined template uses the **Image Files** file group to prevent matching 
 
 **📸 Screenshot 9 — Image file blocked when copied into the active screening folder**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-16-File-Server-Resource-Manager/screenshots/Screenshot%20(23).png?raw=true)
+![image alt](screenshots/Screenshot%20(23).png)
 
 ## 🔎 Verification
 
