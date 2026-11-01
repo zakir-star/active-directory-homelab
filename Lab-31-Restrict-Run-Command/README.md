@@ -30,6 +30,7 @@ Use Group Policy to remove the Run command from the Start Menu for users in the 
 
 **📸 Screenshot — block the run GPO linked to the IT OU**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-31-Restrict-Run-Command/screenshots/Screenshot%20(1).png?raw=true)
 ### Step 2 — Configure the Run command restriction
 
 1. Right-click the `block the run` GPO and select **Edit**.
@@ -43,6 +44,8 @@ Use Group Policy to remove the Run command from the Start Menu for users in the 
 
 **📸 Screenshot — Remove Run menu from Start Menu policy enabled**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-31-Restrict-Run-Command/screenshots/Screenshot%20(4).png?raw=true)
+
 ### Step 3 — Update Group Policy
 
 1. On `DC-01`, open Command Prompt.
@@ -54,7 +57,6 @@ Use Group Policy to remove the Run command from the Start Menu for users in the 
 
 3. Allow the Group Policy update to complete.
 
-**📸 Screenshot — Group Policy update completed**
 
 ### Step 4 — Verify the Run command restriction
 
@@ -64,6 +66,8 @@ Use Group Policy to remove the Run command from the Start Menu for users in the 
 4. Confirm that Windows displays a restriction message.
 
 **📸 Screenshot — Run command blocked with the restriction message**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-31-Restrict-Run-Command/screenshots/Screenshot%20(5).png?raw=true)
 
 ## 🔎 Verification
 
