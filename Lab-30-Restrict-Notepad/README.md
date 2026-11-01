@@ -135,7 +135,7 @@ Organizations can use Group Policy to restrict access to selected Windows applic
 
 ## 📌 Outcome
 
-Created and linked the `block notepad` GPO to the `IT` OU and enabled **Don't run specified Windows applications** with `notepad.exe) in its application list. Verified that both users were initially restricted. Then added `user02` to the GPO security permissions, retained **Read → Allow**, and set **Apply Group Policy → Deny**. After updating Group Policy, `user01` remained restricted while `user02` could open Notepad.
+Created and linked the `block notepad` GPO to the `IT` OU and enabled **Don't run specified Windows applications** with `notepad.exe` in its application list. Verified that both users were initially restricted. Then added `user02` to the GPO security permissions, retained **Read → Allow**, and set **Apply Group Policy → Deny**. After updating Group Policy, `user01` remained restricted while `user02` could open Notepad.
 
 ## 🙏 Acknowledgment
 
