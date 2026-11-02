@@ -44,7 +44,7 @@ The shared root folder is available at:
 
 **📸 Screenshot — Redirected root share and its configured permissions**
 
-![Redirected root share and its configured permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(18).png?raw=true)
+![Redirected root share and its configured permissions](screenshots/Screenshot%20%2818%29.png)
 
 ### Step 2 — Create and configure the Folder Redirection GPO
 
@@ -64,7 +64,7 @@ The shared root folder is available at:
 
 **📸 Screenshot — GPO Scope, Security Filtering, and Delegation permissions**
 
-![GPO Scope, Security Filtering, and Delegation permissions](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(28).png?raw=true)
+![GPO Scope, Security Filtering, and Delegation permissions](screenshots/Screenshot%20%2828%29.png)
 
 ### Step 3 — Configure Documents Folder Redirection
 
@@ -91,11 +91,11 @@ The shared root folder is available at:
 
 **📸 Screenshot — Folder Redirection Settings tab with policy removal option selected**
 
-![Folder Redirection Settings tab with policy removal option selected](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(39).png?raw=true)
+![Folder Redirection Settings tab with policy removal option selected](screenshots/Screenshot%20%2839%29.png)
 
 **📸 Screenshot — Documents Folder Redirection target and root path**
 
-![Documents Folder Redirection target and root path](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(38).png?raw=true)
+![Documents Folder Redirection target and root path](screenshots/Screenshot%20%2838%29.png)
 
 ### Step 4 — Update Group Policy on the domain controller
 
@@ -129,7 +129,7 @@ The shared root folder is available at:
 
 **📸 Screenshot — Documents folder showing the redirected network location**
 
-![Documents folder showing the redirected network location](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(42).png?raw=true)
+![Documents folder showing the redirected network location](screenshots/Screenshot%20%2842%29.png)
 
 ## 🔎 Verification
 
@@ -144,7 +144,7 @@ The shared root folder is available at:
 
 **📸 Screenshot — user01 redirected Documents folder stored on DC-01**
 
-![user01 redirected Documents folder stored on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(43).png?raw=true)
+![user01 redirected Documents folder stored on DC-01](screenshots/Screenshot%20%2843%29.png)
 
 - Confirm that the `Redirected_Root_Folder` share is hosted on `DC-01`.
 - Confirm that `IT_Users_Group` is listed in the share folder's customized permissions.
