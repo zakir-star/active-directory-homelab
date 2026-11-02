@@ -144,7 +144,7 @@ The shared root folder is available at:
 
 **📸 Screenshot — user01 redirected Documents folder stored on DC-01**
 
-![user01 redirected Documents folder stored on DC-01](screenshots/Screenshot_06.png)
+![user01 redirected Documents folder stored on DC-01](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-35-Folder-Redirection/screenshots/Screenshot%20(43).png?raw=true)
 
 - Confirm that the `Redirected_Root_Folder` share is hosted on `DC-01`.
 - Confirm that `IT_Users_Group` is listed in the share folder's customized permissions.
