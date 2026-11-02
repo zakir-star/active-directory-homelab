@@ -133,6 +133,19 @@ The shared root folder is available at:
 
 ## 🔎 Verification
 
+### Additional Verification — Confirm the redirected Documents folder on DC-01
+
+1. Sign in to the domain controller, `DC-01`.
+2. Open File Explorer and navigate to:
+
+   `E:\Redirected_Root_Folder\user01`
+
+3. Confirm that the redirected `Documents` folder is present inside the `user01` folder.
+
+**📸 Screenshot — user01 redirected Documents folder stored on DC-01**
+
+![user01 redirected Documents folder stored on DC-01](screenshots/Screenshot_06.png)
+
 - Confirm that the `Redirected_Root_Folder` share is hosted on `DC-01`.
 - Confirm that `IT_Users_Group` is listed in the share folder's customized permissions.
 - Confirm that `Folder_Redirection_GPO` is linked to the `IT` OU.
