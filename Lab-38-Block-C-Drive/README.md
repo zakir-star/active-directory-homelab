@@ -48,7 +48,7 @@ Use Group Policy to prevent targeted domain users from accessing the C: drive th
 
 **📸 Screenshot — GPO policy enabled with Restrict C drive only selected**
 
-![GPO policy enabled with Restrict C drive only selected](screenshots/Screenshot%20%281%29.png)
+![GPO policy enabled with Restrict C drive only selected](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-38-Block-C-Drive/screenshots/Screenshot%20(3).png?raw=true)
 
 ### Step 3 — Update Group Policy on the client
 
@@ -61,10 +61,6 @@ Use Group Policy to prevent targeted domain users from accessing the C: drive th
 
 3. Wait for the Group Policy update to complete.
 
-**📸 Screenshot — Group Policy update using gpupdate /force on the client**
-
-![Group Policy update using gpupdate /force on the client](screenshots/Screenshot%20%282%29.png)
-
 ### Step 4 — Verify the C: drive restriction
 
 1. On the client, open **File Explorer**.
@@ -74,7 +70,7 @@ Use Group Policy to prevent targeted domain users from accessing the C: drive th
 
 **📸 Screenshot — Windows restriction message when attempting to open the C: drive**
 
-![Windows restriction message when attempting to open the C: drive](screenshots/Screenshot%20%283%29.png)
+![Windows restriction message when attempting to open the C: drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-38-Block-C-Drive/screenshots/Screenshot%20(5).png?raw=true)
 
 ## 🔎 Verification
 
