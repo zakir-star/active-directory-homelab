@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–35 completed  
-> **Last updated:** November 2, 2026
+> **Status:** Labs 1–37 completed  
+> **Last updated:** November 3, 2026
 
 ---
 
@@ -91,7 +91,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **34** | [Block Mouse Right-Click](Lab-34-Block-Mouse-Right-Click/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the default context menu and verify the restriction on the Windows desktop |
 | **35** | [Folder Redirection](Lab-35-Folder-Redirection/README.md) | ✅ Completed | Configure Documents Folder Redirection through Group Policy and verify the redirected UNC location on a domain-joined client |
 | **36** | [Software Deployment Using Group Policy](Lab-36-Software-Deployment-Using-Group-Policy/README.md) | ✅ Completed | Deploy an MSI-based application through Group Policy Software Installation and verify deployment on a domain-joined client |
-| **37** | [Software Deployment Using Group Policy (Assigned Method)](Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/README.md) | 📋 Planned | Automatically install an MSI-based application for targeted domain users through Group Policy Software Installation |
+| **37** | [Software Deployment Using Group Policy (Assigned Method)](Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/README.md) | ✅ Completed | Assign an MSI-based application to targeted domain users and configure installation at user logon through Group Policy Software Installation |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
 
@@ -274,6 +274,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - User-based Group Policy restrictions for applications and Windows interface features, including Notepad, the Run command, Command Prompt, Control Panel, PC settings, and mouse right-click
 - Individual GPO security-permission exclusions
 - User Rights Assignment through Default Domain Controllers Policy, including local logon rights
+- Group Policy Software Installation using Published and Assigned deployment methods
 - MBR and GPT partition styles, disk partition limits, and volume formatting verification
 - RAID 0 striping, RAID 1 mirroring, and RAID 5 parity configuration, including single-member offline availability tests
 - iSCSI target creation, initiator IQN authorization, remote disk initialization, NTFS formatting, and client read/write verification
