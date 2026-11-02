@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–34 completed  
+> **Status:** Labs 1–35 completed  
 > **Last updated:** November 2, 2026
 
 ---
@@ -89,7 +89,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **32** | [Restrict Command Prompt](Lab-32-Restrict-Command-Prompt/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Command Prompt access and verify the restriction on a Windows client |
 | **33** | [Restrict Control Panel and Settings](Lab-33-Restrict-Control-Panel-and-Settings/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to block Control Panel and PC settings and verify the restriction on a Windows client |
 | **34** | [Block Mouse Right-Click](Lab-34-Block-Mouse-Right-Click/README.md) | ✅ Completed | Use a user-based GPO linked to the IT OU to remove the default context menu and verify the restriction on the Windows desktop |
-| **35** | [Folder Redirection](Lab-35-Folder-Redirection/README.md) | 🔜 Next | Configure Folder Redirection through Group Policy and verify that a domain user's redirected folder is stored on the server |
+| **35** | [Folder Redirection](Lab-35-Folder-Redirection/README.md) | ✅ Completed | Configure Documents Folder Redirection through Group Policy and verify the redirected UNC location on a domain-joined client |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
 
