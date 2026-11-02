@@ -62,6 +62,10 @@ The shared root folder is available at:
 6. Click **Add**, enter **Authenticated Users**, and grant the **Read** permission.
 7. Right-click the GPO and select **Edit**.
 
+**📸 Screenshot — GPO Scope, Security Filtering, and Delegation permissions**
+
+![GPO Scope, Security Filtering, and Delegation permissions](screenshots/Screenshot_04.png)
+
 ### Step 3 — Configure Documents Folder Redirection
 
 1. In the Group Policy Management Editor, navigate to:
@@ -84,6 +88,10 @@ The shared root folder is available at:
 6. Open the **Settings** tab.
 7. Select **Redirect the folder back to the local userprofile location when policy is removed**.
 8. Click **Apply**, then **OK**.
+
+**📸 Screenshot — Folder Redirection Settings tab with policy removal option selected**
+
+![Folder Redirection Settings tab with policy removal option selected](screenshots/Screenshot_05.png)
 
 **📸 Screenshot — Documents Folder Redirection target and root path**
 
