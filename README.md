@@ -92,7 +92,6 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **35** | [Folder Redirection](Lab-35-Folder-Redirection/README.md) | ✅ Completed | Configure Documents Folder Redirection through Group Policy and verify the redirected UNC location on a domain-joined client |
 | **36** | [Software Deployment Using Group Policy](Lab-36-Software-Deployment-Using-Group-Policy/README.md) | ✅ Completed | Deploy an MSI-based application through Group Policy Software Installation and verify deployment on a domain-joined client |
 | **37** | [Software Deployment Using Group Policy (Assigned Method)](Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/README.md) | ✅ Completed | Assign an MSI-based application to targeted domain users and configure installation at user logon through Group Policy Software Installation |
-
 | **38** | Block C Drive | 🔜 Next | Use Group Policy to block access to the C: drive for targeted domain users and verify the restriction on a Windows client |
 
 ### Phase 8 — Advanced Active Directory Infrastructure
