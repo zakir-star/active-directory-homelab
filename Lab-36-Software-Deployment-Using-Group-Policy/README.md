@@ -38,8 +38,6 @@ Deploy VLC Media Player to a domain user through Group Policy Software Installat
 
    `E:\Software\vlc-3.0.23-win64.msi`
 
-**📸 Screenshot — VLC MSI package stored in E:\Software**
-
 ### Step 2 — Share the Software folder
 
 1. Right-click the `E:\Software` folder and open **Properties**.
@@ -68,6 +66,8 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Software folder sharing and permissions**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20(1).png?raw=true)
+
 ### Step 3 — Configure Published Software Installation in Group Policy
 
 1. On `DC-01`, open **Server Manager → Tools → Group Policy Management**.
@@ -92,6 +92,8 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Published VLC package listed in Software Installation**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20(7).png?raw=true)
+
 ### Step 4 — Update Group Policy before client verification
 
 1. After configuring the software deployment policy, open Command Prompt on `DC-01`.
@@ -115,7 +117,11 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — VLC Media Player listed under Install a program from the network**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20(9).png?raw=true)
+
 **📸 Screenshot — VLC Media Player successfully installed on the Windows client**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20(11).png?raw=true)
 
 ## 🔎 Verification
 
