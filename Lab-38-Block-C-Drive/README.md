@@ -48,7 +48,7 @@ Use Group Policy to prevent targeted domain users from accessing the C: drive th
 
 **📸 Screenshot — GPO policy enabled with Restrict C drive only selected**
 
-![GPO policy enabled with Restrict C drive only selected](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-38-Block-C-Drive/screenshots/Screenshot%20(3).png?raw=true)
+![GPO policy enabled with Restrict C drive only selected](screenshots/Screenshot%20%283%29.png)
 
 ### Step 3 — Update Group Policy on the client
 
@@ -70,7 +70,7 @@ Use Group Policy to prevent targeted domain users from accessing the C: drive th
 
 **📸 Screenshot — Windows restriction message when attempting to open the C: drive**
 
-![Windows restriction message when attempting to open the C: drive](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-38-Block-C-Drive/screenshots/Screenshot%20(5).png?raw=true)
+![Windows restriction message when attempting to open the C: drive](screenshots/Screenshot%20%285%29.png)
 
 ## 🔎 Verification
 
