@@ -66,7 +66,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Software folder sharing and permissions**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20%281%29.png?raw=true)
+![Software folder sharing and permissions](screenshots/Screenshot%20%281%29.png)
 
 ### Step 3 — Configure Published Software Installation in Group Policy
 
@@ -92,7 +92,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Published VLC package listed in Software Installation**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20%287%29.png?raw=true)
+![Published VLC package listed in Software Installation](screenshots/Screenshot%20%287%29.png)
 
 ### Step 4 — Update Group Policy before client verification
 
@@ -117,11 +117,11 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — VLC Media Player listed under Install a program from the network**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20%289%29.png?raw=true)
+![VLC Media Player listed under Install a program from the network](screenshots/Screenshot%20%289%29.png)
 
 **📸 Screenshot — VLC Media Player successfully installed on the Windows client**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-36-Software-Deployment-Using-Group-Policy/screenshots/Screenshot%20%2811%29.png?raw=true)
+![VLC Media Player successfully installed on the Windows client](screenshots/Screenshot%20%2811%29.png)
 
 ## 🔎 Verification
 
