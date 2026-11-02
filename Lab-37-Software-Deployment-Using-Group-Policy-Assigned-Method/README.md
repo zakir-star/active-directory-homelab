@@ -60,7 +60,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Deploy_Software_Notepad++ GPO linked directly under the IT OU**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(1).png?raw=true)
+![Deploy_Software_Notepad++ GPO linked directly under the IT OU](screenshots/Screenshot%20%281%29.png)
 
 ### Step 3 — Add Notepad++ as an Assigned package
 
@@ -84,7 +84,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Notepad++ package added using the Assigned deployment method**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(2).png?raw=true)
+![Notepad++ package added using the Assigned deployment method](screenshots/Screenshot%20%282%29.png)
 
 ### Step 4 — Configure the package to install at user logon
 
@@ -99,7 +99,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Deployment option set to Install this application at logon**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(4).png?raw=true)
+![Deployment option set to Install this application at logon](screenshots/Screenshot%20%284%29.png)
 
 ### Step 5 — Update Group Policy on the domain controller
 
@@ -126,7 +126,7 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Notepad++ found in Windows Search on the client**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(5).png?raw=true)
+![Notepad++ found in Windows Search on the client](screenshots/Screenshot%20%285%29.png)
 
 ## 🔎 Verification
 
