@@ -23,19 +23,14 @@ Deploy Notepad++ to domain users through Group Policy Software Installation usin
 
 ### Step 1 — Download and store the Notepad++ MSI package
 
-1. On `DC-01`, open the Notepad++ download page:
-
    https://downloadnotepad-plus-plus.org/downloads/
+   
 
-2. Download the 64-bit MSI installer for Notepad++ version 8.9.6.2:
-
-   `npp.8.9.6.2.Installer.x64.msi`
-
-3. On `DC-01`, open File Explorer and navigate to:
+1. On `DC-01`, open File Explorer and navigate to:
 
    `E:\Software`
 
-4. Place the downloaded MSI package inside the existing `Software` folder.
+2. Place the downloaded MSI package inside the existing `Software` folder.
 
 The MSI package's local path is:
 
@@ -65,6 +60,8 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Deploy_Software_Notepad++ GPO linked directly under the IT OU**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(1).png?raw=true)
+
 ### Step 3 — Add Notepad++ as an Assigned package
 
 1. In Group Policy Management Editor, navigate to:
@@ -87,6 +84,8 @@ The full UNC path to the MSI package is:
 
 **📸 Screenshot — Notepad++ package added using the Assigned deployment method**
 
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(2).png?raw=true)
+
 ### Step 4 — Configure the package to install at user logon
 
 1. In the Software Installation list, right-click the Notepad++ package.
@@ -99,6 +98,8 @@ The full UNC path to the MSI package is:
 5. Click **Apply**, then **OK**.
 
 **📸 Screenshot — Deployment option set to Install this application at logon**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(4).png?raw=true)
 
 ### Step 5 — Update Group Policy on the domain controller
 
@@ -123,7 +124,9 @@ The full UNC path to the MSI package is:
 5. Confirm that Notepad++ appears in the search results.
 6. Open Notepad++ and verify that the application launches successfully.
 
-**📸 Screenshot — Notepad++ found in Windows Search and opened successfully on the client**
+**📸 Screenshot — Notepad++ found in Windows Search on the client**
+
+![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/screenshots/Screenshot%20(5).png?raw=true)
 
 ## 🔎 Verification
 
