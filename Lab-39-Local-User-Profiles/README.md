@@ -39,11 +39,11 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — Desktop folder created by user_profile1**
 
-`screenshots/Screenshot_01.png`
+![image alt]()
 
 **📸 Screenshot — My personal Document folder created directly under C:\\**
 
-`screenshots/Screenshot_02.png`
+![image alt]()
 
 ### Step 3 — Sign in as user_profile2
 
@@ -62,11 +62,11 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — user_profile2 Desktop showing no My personal folder**
 
-`screenshots/Screenshot_03.png`
+![image alt]()
 
 **📸 Screenshot — Text file created by user_profile2 inside My personal Document**
 
-`screenshots/Screenshot_04.png`
+![image alt]()
 
 ### Step 4 — Sign in again as user_profile1
 
@@ -77,7 +77,7 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — user_profile1 viewing the text file created by user_profile2**
 
-`screenshots/Screenshot_05.png`
+![image alt]()
 
 ## 🔎 Verification
 
