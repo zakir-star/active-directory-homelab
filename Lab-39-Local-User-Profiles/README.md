@@ -39,11 +39,11 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — Desktop folder created by user_profile1**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-39-Local-User-Profiles/screenshots/Screenshot%20(2).png?raw=true)
+![image alt](screenshots/Screenshot%20(2).png)
 
 **📸 Screenshot — My personal Document folder created directly under C:\**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-39-Local-User-Profiles/screenshots/Screenshot%20(3).png?raw=true)
+![image alt](screenshots/Screenshot%20(3).png)
 
 ### Step 3 — Sign in as user_profile2
 
@@ -62,11 +62,11 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — user_profile2 Desktop showing no My personal folder**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-39-Local-User-Profiles/screenshots/Screenshot%20(4).png?raw=true)
+![image alt](screenshots/Screenshot%20(4).png)
 
 **📸 Screenshot — Text file created by user_profile2 inside My personal Document**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-39-Local-User-Profiles/screenshots/Screenshot%20(5).png?raw=true)
+![image alt](screenshots/Screenshot%20(5).png)
 
 ### Step 4 — Sign in again as user_profile1
 
@@ -77,7 +77,7 @@ Understand how Windows creates and maintains separate local user profiles for do
 
 **📸 Screenshot — user_profile1 viewing the text file created by user_profile2**
 
-![image alt](https://github.com/zakir-star/active-directory-homelab/blob/main/Lab-39-Local-User-Profiles/screenshots/Screenshot%20(6).png?raw=true)
+![image alt](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
