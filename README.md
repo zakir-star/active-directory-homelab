@@ -98,9 +98,9 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **42** | Local User Profiles | 📋 Planned | Understand how Windows creates and stores a local user profile and verify the profile on a domain-joined client |
-| **43** | Roaming User Profiles | 📋 Planned | Configure a roaming profile path and understand how a user's profile follows them between domain-joined computers |
-| **44** | Home Folders | 📋 Planned | Configure a domain user's home folder on a shared network location and verify access from a domain-joined client |
+| **39** | Local User Profiles | 📋 Planned | Understand how Windows creates and stores a local user profile and verify the profile on a domain-joined client |
+| **40** | Roaming User Profiles | 📋 Planned | Configure a roaming profile path and understand how a user's profile follows them between domain-joined computers |
+| **41** | Home Folders | 📋 Planned | Configure a domain user's home folder on a shared network location and verify access from a domain-joined client |
 
 ### Phase 9 — Advanced Active Directory Infrastructure
 
