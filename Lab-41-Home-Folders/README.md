@@ -84,7 +84,7 @@ The `%username%` variable creates a separate Home Folder path for each user.
 
 7. Confirm that the `user01 File` folder is present.
 
-**📸 Screenshot — user01 mapped H: drive and created folder**
+**📸 Screenshot — user01 mapped H: drive**
 
 ![user01 Home Folder drive](screenshots/Screenshot%20(4).png)
 
@@ -106,7 +106,7 @@ The `%username%` variable creates a separate Home Folder path for each user.
 
 **📸 Screenshot — user02 mapped H: drive and created folder**
 
-![user02 Home Folder drive](screenshots/Screenshot%20(5).png)
+![user02 Home Folder drive](screenshots/Screenshot%20(8).png)
 
 ## 🔎 Verification
 
@@ -147,6 +147,3 @@ The Home Folder configuration was completed successfully. Both domain users rece
 
 ---
 
-## 📸 Screenshots
-
-The `screenshots` folder is included with five selected screenshot slots for the key configuration and verification stages of this lab. Add the matching image files using the filenames linked above.
