@@ -29,6 +29,10 @@ Configure Roaming User Profiles for two domain users by assigning a central prof
 
    `\\DC-01\Roaming_Profile`
 
+**📸 Screenshot — Roaming_Profile folder shared on DC-01**
+
+![Roaming_Profile shared folder](screenshots/Screenshot%20(1).png)
+
 ### Step 2 — Configure the profile path for both domain users
 
 1. On `DC-01`, open **Active Directory Users and Computers (ADUC)**.
@@ -44,6 +48,10 @@ Configure Roaming User Profiles for two domain users by assigning a central prof
 
 The `%username%` variable provides a separate folder name for each user.
 
+**📸 Screenshot — Profile path configured for the domain users**
+
+![ADUC roaming profile path](screenshots/Screenshot%20(2).png)
+
 ### Step 3 — Verify the roaming profile for user_profile1
 
 1. On the Windows 10 domain-joined client, sign in as `user_profile1`.
@@ -54,6 +62,10 @@ The `%username%` variable provides a separate folder name for each user.
 6. Verify that both the **Type** and **Status** columns show **Roaming**.
 7. Sign out of the client.
 
+**📸 Screenshot — user_profile1 profile Type and Status showing Roaming**
+
+![user_profile1 roaming profile verification](screenshots/Screenshot%20(3).png)
+
 ### Step 4 — Verify the roaming profile for user_profile2
 
 1. Sign in to the same Windows 10 client as `user_profile2`.
@@ -62,6 +74,10 @@ The `%username%` variable provides a separate folder name for each user.
 4. Locate `user_profile2`.
 5. Verify that both the **Type** and **Status** columns show **Roaming**.
 6. Sign out of the client.
+
+**📸 Screenshot — user_profile2 profile Type and Status showing Roaming**
+
+![user_profile2 roaming profile verification](screenshots/Screenshot%20(4).png)
 
 ### Step 5 — Verify the centrally created profile folders
 
@@ -73,6 +89,10 @@ The `%username%` variable provides a separate folder name for each user.
 3. Confirm that Windows has created separate folders for both domain users:
    - `user_profile1`
    - `user_profile2`
+
+**📸 Screenshot — Separate user profile folders created on DC-01**
+
+![Roaming profile folders on DC-01](screenshots/Screenshot%20(5).png)
 
 ## 🔎 Verification
 
@@ -96,7 +116,7 @@ In an organization where employees sign in to different domain-joined computers,
 
 ## 📌 Outcome
 
-Created and shared the `E:\Roaming_Profile` folder on `DC-01), configured the roaming profile path for `user_profile1` and `user_profile2` in ADUC, and verified that both profiles were identified as **Roaming** on the Windows 10 client. Confirmed that separate folders for both users were created on the Domain Controller.
+Created and shared the `E:\Roaming_Profile` folder on `DC-01`, configured the roaming profile path for `user_profile1` and `user_profile2` in ADUC, and verified that both profiles were identified as **Roaming** on the Windows 10 client. Confirmed that separate folders for both users were created on the Domain Controller.
 
 ## 🙏 Acknowledgment
 
@@ -114,4 +134,4 @@ The Roaming User Profiles configuration was completed successfully. Both domain 
 
 ## 📸 Screenshots
 
-The `screenshots` folder is included for the selected lab evidence. Add the captured screenshots for the shared profile folder, ADUC profile-path configuration, client-side roaming profile verification, and the two user folders on `DC-01`.
+The `screenshots` folder contains five selected screenshot slots for the key configuration and verification stages of this lab. Add the matching image files using the filenames linked above.
