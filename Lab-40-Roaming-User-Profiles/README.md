@@ -132,6 +132,3 @@ The Roaming User Profiles configuration was completed successfully. Both domain 
 
 ---
 
-## 📸 Screenshots
-
-The `screenshots` folder contains five selected screenshot slots for the key configuration and verification stages of this lab. Add the matching image files using the filenames linked above.
