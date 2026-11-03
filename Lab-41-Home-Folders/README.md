@@ -131,7 +131,7 @@ Organizations can assign users individual network-based Home Folders to provide 
 
 ## 📌 Outcome
 
-Created and shared `E:\Home_Folder` on `DC-01), configured Home Folder mappings for `user01` and `user02` in the IT OU using drive letter `H:`, and verified that each user could create a folder in their mapped drive. Confirmed on the Domain Controller that each created folder was stored in the matching user's subfolder.
+Created and shared `E:\Home_Folder` on `DC-01`, configured Home Folder mappings for `user01` and `user02` in the IT OU using drive letter `H:`, and verified that each user could create a folder in their mapped drive. Confirmed on the Domain Controller that each created folder was stored in the matching user's subfolder.
 
 ## 🙏 Acknowledgment
 
