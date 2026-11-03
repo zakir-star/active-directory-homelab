@@ -31,7 +31,7 @@ Configure Roaming User Profiles for two domain users by assigning a central prof
 
 **📸 Screenshot — Roaming_Profile folder shared on DC-01**
 
-![Roaming_Profile shared folder](screenshots/Screenshot%20(1).png)
+![Roaming_Profile shared folder](screenshots/Screenshot%20(0).png)
 
 ### Step 2 — Configure the profile path for both domain users
 
@@ -50,7 +50,7 @@ The `%username%` variable provides a separate folder name for each user.
 
 **📸 Screenshot — Profile path configured for the domain users**
 
-![ADUC roaming profile path](screenshots/Screenshot%20(2).png)
+![ADUC roaming profile path](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Verify the roaming profile for user_profile1
 
@@ -64,7 +64,7 @@ The `%username%` variable provides a separate folder name for each user.
 
 **📸 Screenshot — user_profile1 profile Type and Status showing Roaming**
 
-![user_profile1 roaming profile verification](screenshots/Screenshot%20(3).png)
+![user_profile1 roaming profile verification](screenshots/Screenshot%20(6).png)
 
 ### Step 4 — Verify the roaming profile for user_profile2
 
@@ -77,7 +77,7 @@ The `%username%` variable provides a separate folder name for each user.
 
 **📸 Screenshot — user_profile2 profile Type and Status showing Roaming**
 
-![user_profile2 roaming profile verification](screenshots/Screenshot%20(4).png)
+![user_profile2 roaming profile verification](screenshots/Screenshot%20(7).png)
 
 ### Step 5 — Verify the centrally created profile folders
 
@@ -92,7 +92,7 @@ The `%username%` variable provides a separate folder name for each user.
 
 **📸 Screenshot — Separate user profile folders created on DC-01**
 
-![Roaming profile folders on DC-01](screenshots/Screenshot%20(5).png)
+![Roaming profile folders on DC-01](screenshots/Screenshot%20(9).png)
 
 ## 🔎 Verification
 
