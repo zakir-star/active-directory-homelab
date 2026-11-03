@@ -74,7 +74,7 @@ Install and promote a second Windows Server 2022 machine as an additional domain
 
 **📸 Screenshot — net accounts showing the BACKUP computer role**
 
-![ADC computer role verification](screenshots/Screenshot%20(4).png)
+![ADC computer role verification](screenshots/Screenshot%20(3).png)
 
 ### Step 5 — Verify ADC from DC-01
 
@@ -86,7 +86,7 @@ Install and promote a second Windows Server 2022 machine as an additional domain
 
 **📸 Screenshot — ADC listed in the Domain Controllers container**
 
-![ADC in Domain Controllers container](screenshots/Screenshot%20(3).png)
+![ADC in Domain Controllers container](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Verify Active Directory objects from ADC
 
