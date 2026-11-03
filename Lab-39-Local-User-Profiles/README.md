@@ -52,7 +52,7 @@ Understand how Windows creates and maintains separate local user profiles for do
 3. Open the C: drive.
 4. Locate and open:
 
-   `C:\\My personal Document`
+   `C:\My personal Document`
 
 5. Inside this folder, create a text file and enter the following message:
 
