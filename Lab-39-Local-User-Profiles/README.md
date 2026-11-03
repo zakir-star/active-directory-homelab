@@ -12,7 +12,7 @@ Understand how Windows creates and maintains separate local user profiles for do
 - 🌐 **Domain Name:** `example.com`
 - 👤 **Domain Users:** `user_profile1` and `user_profile2`
 - 📁 **Desktop Folder:** `My personal`
-- 📂 **C: Drive Folder:** `C:\\My personal Document`
+- 📂 **C: Drive Folder:** `C:\My personal Document`
 
 ## ⚙️ Lab Configuration
 
