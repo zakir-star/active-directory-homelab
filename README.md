@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–38 completed  
+> **Status:** Labs 1–39 completed  
 > **Last updated:** November 3, 2026
 
 ---
@@ -98,7 +98,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **39** | Local User Profiles | 📋 Planned | Understand how Windows creates and stores a local user profile and verify the profile on a domain-joined client |
+| **39** | [Local User Profiles](Lab-39-Local-User-Profiles/README.md) | ✅ Completed | Compare separate Desktop environments for two domain users and verify access to a folder created directly under the C: drive |
 | **40** | Roaming User Profiles | 📋 Planned | Configure a roaming profile path and understand how a user's profile follows them between domain-joined computers |
 | **41** | Home Folders | 📋 Planned | Configure a domain user's home folder on a shared network location and verify access from a domain-joined client |
 
@@ -293,6 +293,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Troubleshooting effective network access by comparing NTFS and share permissions, then verifying successful shared-file modification
 - File Server Resource Manager (FSRM) quota management using hard and soft quotas
 - Active file screening to block image files using predefined FSRM templates
+- Local user profile behavior and separate Desktop environments for domain users
 - Screenshot-supported technical documentation
 
 ---
