@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–41 completed  
-> **Last updated:** November 3, 2026
+> **Status:** Labs 1–42 completed  
+> **Last updated:** November 4, 2026
 
 ---
 
@@ -106,7 +106,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **42** | Additional Domain Controller | 📋 Planned | Add a Domain Controller to the existing domain and verify replication |
+| **42** | [Additional Domain Controller](Lab-42-Additional-Domain-Controller/README.md) | ✅ Completed | Install AD DS on ADC, promote it to an additional domain controller for the existing domain, and verify the domain controller and existing directory objects |
 | **43** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
 | **44** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
 | **45** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
@@ -236,7 +236,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 | Component | Details |
 |-----------|---------|
 | Hypervisor | VMware Workstation |
-| Domain Controller | Windows Server 2022 (`DC-01`) |
+| Domain Controllers | Windows Server 2022 (`DC-01`, `ADC`) |
 | Client Machine | Windows 10 |
 | Domain | `example.com` |
 | Domain Controller FQDN | `DC-01.example.com` |
@@ -274,7 +274,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 ## 🧠 Skills Demonstrated
 
 - Windows Server 2022 installation and initial configuration
-- Active Directory Domain Services installation, forest creation, and Domain Controller promotion
+- Active Directory Domain Services installation, forest creation, and promotion of an additional domain controller
 - Organizational Unit, domain user, and security group administration
 - Domain joining and domain authentication from a Windows client
 - Domain user account administration, including password resets and account unlocks
