@@ -50,7 +50,7 @@ The resulting child domain is `guwahati.example.com`.
 
 **📸 Screenshot — Child domain visible in ADUC**
 
-![Child domain in ADUC](screenshots/Screenshot%20(2).png)
+![Child domain in ADUC](screenshots/Screenshot%20(5).png)
 
 ### Step 4 — Verify the parent-child trust relationship
 
@@ -62,11 +62,11 @@ The resulting child domain is `guwahati.example.com`.
 
 **📸 Screenshot — Parent domain showing the child trust**
 
-![Parent domain trust](screenshots/Screenshot%20(3).png)
+![Parent domain trust](screenshots/Screenshot%20(6).png)
 
 **📸 Screenshot — Child domain showing the parent trust**
 
-![Child domain trust](screenshots/Screenshot%20(4).png)
+![Child domain trust](screenshots/Screenshot%20(7).png)
 
 ### Step 5 — Review replication connections from CHILD_DOMAIN
 
@@ -78,7 +78,7 @@ The resulting child domain is `guwahati.example.com`.
 
 **📸 Screenshot — CHILD_DOMAIN NTDS Settings Connections tab**
 
-![Child domain replication connection](screenshots/Screenshot%20(5).png)
+![Child domain replication connection](screenshots/Screenshot%20(8).png)
 
 ### Step 6 — Review replication connections from DC-01
 
@@ -90,7 +90,7 @@ The resulting child domain is `guwahati.example.com`.
 
 **📸 Screenshot — DC-01 NTDS Settings Connections tab**
 
-![Parent domain replication connection](screenshots/Screenshot%20(6).png)
+![Parent domain replication connection](screenshots/Screenshot%20(9).png)
 
 ### Step 7 — Verify the child domain DNS suffix
 
@@ -105,7 +105,7 @@ ipconfig /all
 
 **📸 Screenshot — Child domain DNS suffix**
 
-![Child domain DNS suffix](screenshots/Screenshot%20(7).png)
+![Child domain DNS suffix](screenshots/Screenshot%20(10).png)
 
 ## 🌐 Namespace Design
 
