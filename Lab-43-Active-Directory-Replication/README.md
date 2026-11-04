@@ -45,7 +45,7 @@ Configure DNS settings on the two domain controllers, examine the automatically 
 
 **📸 Screenshot — ADC NTDS Settings and generated DC-01 connection**
 
-![ADC replication connection](screenshots/Screenshot%20(2).png)
+![ADC replication connection](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Check the replication topology from DC-01
 
@@ -59,7 +59,7 @@ Configure DNS settings on the two domain controllers, examine the automatically 
 
 **📸 Screenshot — DC-01 NTDS Settings and generated ADC connection**
 
-![DC-01 replication connection](screenshots/Screenshot%20(3).png)
+![DC-01 replication connection](screenshots/Screenshot%20(9).png)
 
 ### Step 4 — Review the replication connections
 
@@ -70,7 +70,7 @@ Configure DNS settings on the two domain controllers, examine the automatically 
 
 **📸 Screenshot — NTDS Settings Connections tab**
 
-![Replication connections](screenshots/Screenshot%20(4).png)
+![Replication connections](screenshots/Screenshot%20(7).png)
 
 ### Step 5 — Verify replication health
 
@@ -84,7 +84,7 @@ Review the replication summary for both domain controllers and check the failure
 
 **📸 Screenshot — Replication summary**
 
-![Replication summary](screenshots/Screenshot%20(5).png)
+![Replication summary](screenshots/Screenshot%20(13).png)
 
 ### Step 6 — Verify directory object replication using an HR OU
 
@@ -96,11 +96,11 @@ Review the replication summary for both domain controllers and check the failure
 
 **📸 Screenshot — HR OU created on ADC**
 
-![HR OU created on ADC](screenshots/Screenshot%20(6).png)
+![HR OU created on ADC](screenshots/Screenshot%20(15).png)
 
 **📸 Screenshot — HR OU replicated and visible on DC-01**
 
-![HR OU visible on DC-01](screenshots/Screenshot%20(7).png)
+![HR OU visible on DC-01](screenshots/Screenshot%20(16).png)
 
 ## 🔎 Verification
 
