@@ -86,6 +86,22 @@ Review the replication summary for both domain controllers and check the failure
 
 ![Replication summary](screenshots/Screenshot%20(5).png)
 
+### Step 6 — Verify directory object replication using an HR OU
+
+1. On `ADC`, open **Active Directory Users and Computers (ADUC)**.
+2. Create a new Organizational Unit named `HR` in the `example.com` domain.
+3. Switch to `DC-01`.
+4. Open **Active Directory Users and Computers (ADUC)**.
+5. Refresh the domain view and confirm that the `HR` OU created on ADC is visible on DC-01.
+
+**📸 Screenshot — HR OU created on ADC**
+
+![HR OU created on ADC](screenshots/Screenshot%20(6).png)
+
+**📸 Screenshot — HR OU replicated and visible on DC-01**
+
+![HR OU visible on DC-01](screenshots/Screenshot%20(7).png)
+
 ## 🔎 Verification
 
 - Confirm that ADC uses `10.0.0.3` as its preferred DNS server and `10.0.0.1` as its alternate DNS server.
@@ -93,11 +109,11 @@ Review the replication summary for both domain controllers and check the failure
 - Run **Check Replication Topology** under NTDS Settings on both ADC and DC-01.
 - Use **Replicate Now** on the automatically generated connection to the partner domain controller from each server.
 - Review the **Connections** tab in NTDS Settings Properties on both domain controllers.
-- Run `repadmin /replsummary` and review the failure counts. The reported summary showed zero replication failures.
+- Run `repadmin /replsummary` and review the failure counts. The reported summary showed zero replication failures.\n- Create the `HR` OU on ADC and confirm that it appears in ADUC on DC-01.
 
 ## 🎯 Expected Result
 
-Both domain controllers have replication connections to their partner server. The replication topology can be checked from ADC and DC-01, replication can be initiated from either side, and `repadmin /replsummary` reports zero replication failures.
+Both domain controllers have replication connections to their partner server. The replication topology can be checked from ADC and DC-01, replication can be initiated from either side, and `repadmin /replsummary` reports zero replication failures. An `HR` OU created on ADC is also visible in ADUC on DC-01, demonstrating that the directory change replicated.
 
 ## 🌍 Real-World Use Case
 
@@ -105,7 +121,7 @@ Organizations use multiple domain controllers so directory changes can be shared
 
 ## 📌 Outcome
 
-Configured the DNS settings on ADC and DC-01, checked the replication topology from both domain controllers, and used **Replicate Now** on each automatically generated partner connection. Reviewed the NTDS Settings **Connections** tabs on both servers and verified replication health with `repadmin /replsummary`, which reported zero failures.
+Configured the DNS settings on ADC and DC-01, checked the replication topology from both domain controllers, and used **Replicate Now** on each automatically generated partner connection. Reviewed the NTDS Settings **Connections** tabs on both servers and verified replication health with `repadmin /replsummary`, which reported zero failures. Created an `HR` OU on ADC and confirmed that it appeared on DC-01.
 
 ## 🙏 Acknowledgment
 
@@ -113,10 +129,10 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 ## ✍️ Author's Note
 
-This lab builds on the additional domain controller deployed in Lab 42. It demonstrates how to inspect the replication topology, initiate replication between the two domain controllers, and review replication health.
+This lab builds on the additional domain controller deployed in Lab 42. It demonstrates how to inspect the replication topology, initiate replication between the two domain controllers, review replication health, and verify directory object replication by creating an `HR` OU on ADC and confirming it appears on DC-01.
 
 ## ✅ Closing
 
-Active Directory replication between `DC-01` and `ADC` was checked from both sides, and the replication summary reported zero failures.
+Active Directory replication between `DC-01` and `ADC` was checked from both sides, the replication summary reported zero failures, and the `HR` OU created on ADC was confirmed visible on DC-01.
 
 ---
