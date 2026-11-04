@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–42 completed  
+> **Status:** Labs 1–43 completed  
 > **Last updated:** November 4, 2026
 
 ---
@@ -107,7 +107,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **42** | [Additional Domain Controller](Lab-42-Additional-Domain-Controller/README.md) | ✅ Completed | Install AD DS on ADC, promote it to an additional domain controller for the existing domain, and verify the domain controller and existing directory objects |
-| **43** | Active Directory Replication | 🔜 Next | Examine replication partners and health, then verify directory changes replicate between DC-01 and ADC |
+| **43** | [Active Directory Replication](Lab-43-Active-Directory-Replication/README.md) | ✅ Completed | Configure DNS settings, check replication topology from both domain controllers, initiate replication in both directions, and verify replication health |
 | **44** | Child Domains and Namespace Design | 📋 Planned | Create a child domain and understand contiguous vs. discontiguous namespaces |
 | **45** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
 | **46** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
@@ -275,7 +275,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 ## 🧠 Skills Demonstrated
 
 - Windows Server 2022 installation and initial configuration
-- Active Directory Domain Services installation, forest creation, and promotion of an additional domain controller
+- Active Directory Domain Services installation, forest creation, promotion of an additional domain controller, and replication verification between domain controllers
 - Organizational Unit, domain user, and security group administration
 - Domain joining and domain authentication from a Windows client
 - Domain user account administration, including password resets and account unlocks
@@ -295,7 +295,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - File Server Resource Manager (FSRM) quota management using hard and soft quotas
 - Active file screening to block image files using predefined FSRM templates
 - Local and roaming user profile configuration and verification for domain users
-- Screenshot-supported technical documentation
+- Active Directory replication topology checks, partner connection review, and replication health verification using repadmin\n- Screenshot-supported technical documentation
 
 ---
 
