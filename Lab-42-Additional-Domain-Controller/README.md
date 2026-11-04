@@ -56,7 +56,8 @@ Install and promote a second Windows Server 2022 machine as an additional domain
 3. Choose **Add a domain controller to an existing domain**.
 4. Specify the existing domain: `example.com`.
 5. Provide the required domain administrator credentials.
-6. Complete the domain controller configuration and prerequisite checks.
+6. On the **Additional Options** page, select `DC-01.example.com` from the **Replicate from** drop-down menu.
+7. Complete the domain controller configuration and prerequisite checks.
 7. Start the promotion process.
 8. Allow the server to restart after promotion.
 
