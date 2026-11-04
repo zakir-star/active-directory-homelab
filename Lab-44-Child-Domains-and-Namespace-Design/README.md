@@ -6,17 +6,17 @@ Install a child domain in the existing `example.com` forest, establish `guwahati
 
 ## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Parent Domain Controller:** Windows Server 2022 — `DC-01`
-- **Parent Domain:** `example.com`
-- **Parent DC IP:** `10.0.0.1`
-- **Child Domain Controller:** Windows Server 2022 — `CHILD_DOMAIN`
-- **Child DC IP:** `10.0.0.4`
-- **Default Gateway:** `10.0.0.1`
-- **Child DC Preferred DNS:** `10.0.0.4`
-- **Child DC Alternate DNS:** `10.0.0.1`
-- **Child Domain:** `guwahati.example.com`
-- **Tools:** Server Manager, Active Directory Users and Computers, Active Directory Domains and Trusts, Active Directory Sites and Services, Command Prompt
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Parent Domain Controller:** Windows Server 2022 — `DC-01`
+- 🌐 **Parent Domain:** `example.com`
+- 🌐 **Parent DC IP:** `10.0.0.1`
+- 🏢 **Child Domain Controller:** Windows Server 2022 — `CHILD_DOMAIN`
+- 🌐 **Child DC IP:** `10.0.0.4`
+- 🌐 **Default Gateway:** `10.0.0.1`
+- 🔎 **Child DC Preferred DNS:** `10.0.0.4`
+- 🔎 **Child DC Alternate DNS:** `10.0.0.1`
+- 🌐 **Child Domain:** `guwahati.example.com`
+- 🧰 **Tools:** Server Manager, Active Directory Users and Computers, Active Directory Domains and Trusts, Active Directory Sites and Services, Command Prompt
 
 ## ⚙️ Lab Configuration
 
