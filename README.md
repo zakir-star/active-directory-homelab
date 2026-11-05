@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–44 completed
+> **Status:** Labs 1–45 completed
 > **Last updated:** November 5, 2026
 
 ---
@@ -109,7 +109,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **42** | [Additional Domain Controller](Lab-42-Additional-Domain-Controller/README.md) | ✅ Completed | Install AD DS on ADC, promote it to an additional domain controller for the existing domain, and verify the domain controller and existing directory objects |
 | **43** | [Active Directory Replication](Lab-43-Active-Directory-Replication/README.md) | ✅ Completed | Configure DNS settings, check replication topology from both domain controllers, initiate replication in both directions, verify replication health, and confirm an HR OU created on ADC appears on DC-01 |
 | **44** | [Child Domains and Namespace Design](Lab-44-Child-Domains-and-Namespace-Design/README.md) | ✅ Completed | Deploy `guwahati.example.com` as a child domain of `example.com`, verify the parent-child trust relationship, review replication connections, and understand contiguous vs. discontiguous namespaces |
-| **45** | Read-Only Domain Controller (RODC) | 📋 Planned | Explore RODC purpose, deployment requirements, and credential caching |
+| **45** | [Read-Only Domain Controller (RODC)](Lab-45-Read-Only-Domain-Controller/README.md) | ✅ Completed | Pre-create and promote an RODC, delegate administration to a selected domain user, and verify read-only directory behavior |
 | **46** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
 | **47** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
 | **48** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
