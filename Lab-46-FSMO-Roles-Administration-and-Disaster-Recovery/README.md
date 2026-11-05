@@ -125,7 +125,7 @@ Confirm that the Schema Master, Domain Naming Master, PDC Emulator, RID Master, 
 
 **📸 Screenshot — All five FSMO roles seized by ADC**
 
-![All five FSMO roles seized by ADC](screenshots/Screenshot%20(3).png)
+![All five FSMO roles seized by ADC](screenshots/Screenshot%20(7).png)
 
 ### Step 5 — Remove the failed DC-01 and prepare a fresh Windows Server 2022 installation
 
@@ -143,9 +143,6 @@ Confirm that the Schema Master, Domain Naming Master, PDC Emulator, RID Master, 
 
 5. Verify that the server has the intended computer name and network configuration before installing AD DS.
 
-**📸 Screenshot — Fresh Windows Server 2022 configured as DC-01**
-
-![Fresh Windows Server 2022 configured as DC-01](screenshots/Screenshot%20(5).png)
 
 ### Step 6 — Install AD DS and promote DC-01 as an additional domain controller
 
@@ -166,9 +163,10 @@ netdom query fsmo
 
 Confirm that all five FSMO roles are still held by `ADC`. Promoting the replacement domain controller does not automatically move the FSMO roles back to it.
 
-**📸 Screenshot — Fresh DC-01 promoted as an additional domain controller**
+**📸 Screenshot — FSMO roles on DC-01**
 
-![DC-01 promoted as an additional domain controller](screenshots/Screenshot%20(6).png)
+![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(8).png)
+
 
 ### Step 7 — Connect to DC-01 and transfer all five FSMO roles
 
@@ -203,7 +201,7 @@ These are planned transfers because both domain controllers are now available an
 
 **📸 Screenshot — FSMO role transfers from ADC to DC-01**
 
-![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(7).png)
+![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(9).png)
 
 ### Step 8 — Perform final FSMO and domain-role verification
 
@@ -217,7 +215,7 @@ Confirm that all five FSMO roles now point to `DC-01.example.com`.
 
 **📸 Screenshot — Final FSMO role ownership on DC-01**
 
-![Final FSMO role ownership on DC-01](screenshots/Screenshot%20(8).png)
+![Final FSMO role ownership on DC-01](screenshots/Screenshot%20(14).png)
 
 Next, on `DC-01`, open an elevated Command Prompt and run:
 
@@ -250,11 +248,9 @@ Finally, verify domain-controller health and replication from an elevated PowerS
 ```cmd
 repadmin /replsummary
 repadmin /showrepl
-dcdiag /test:dns
-dcdiag /test:advertising /test:sysvolcheck
+
 ```
 
-Also confirm that the SYSVOL and NETLOGON shares are available on both domain controllers by checking `\\DC-01\\SYSVOL`, `\\DC-01\\NETLOGON`, `\\ADC\\SYSVOL`, and `\\ADC\\NETLOGON`. These checks validate the recovered domain-controller services in addition to FSMO ownership.
 
 ## 🔎 Verification
 
