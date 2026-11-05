@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–45 completed
+> **Status:** Labs 1–46 completed
 > **Last updated:** November 5, 2026
 
 ---
@@ -110,7 +110,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **43** | [Active Directory Replication](Lab-43-Active-Directory-Replication/README.md) | ✅ Completed | Configure DNS settings, check replication topology from both domain controllers, initiate replication in both directions, verify replication health, and confirm an HR OU created on ADC appears on DC-01 |
 | **44** | [Child Domains and Namespace Design](Lab-44-Child-Domains-and-Namespace-Design/README.md) | ✅ Completed | Deploy `guwahati.example.com` as a child domain of `example.com`, verify the parent-child trust relationship, review replication connections, and understand contiguous vs. discontiguous namespaces |
 | **45** | [Read-Only Domain Controller (RODC)](Lab-45-Read-Only-Domain-Controller/README.md) | ✅ Completed | Pre-create and promote an RODC, delegate administration to a selected domain user, and verify read-only directory behavior |
-| **46** | FSMO Roles and Role Transfer | 📋 Planned | Identify the five FSMO roles and practice supported role transfers |
+| **46** | [FSMO Roles Administration and Disaster Recovery](Lab-46-FSMO-Roles-Administration-and-Disaster-Recovery/README.md) | ✅ Completed | Demonstrate FSMO role seizure to the surviving ADC after DC-01 failure, rebuild DC-01 with a fresh Windows Server 2022 installation, promote it as an additional domain controller, transfer all five FSMO roles back, and verify the final domain controller state |
 | **47** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
 | **48** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
 | **49** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
@@ -295,7 +295,9 @@ Short, focused guides for common Active Directory tasks that complement the main
 - File Server Resource Manager (FSRM) quota management using hard and soft quotas
 - Active file screening to block image files using predefined FSRM templates
 - Local and roaming user profile configuration and verification for domain users
-- Active Directory replication topology checks, partner connection review, and replication health verification using repadmin\n- Screenshot-supported technical documentation
+- Active Directory replication topology checks, partner connection review, and replication health verification using repadmin
+- FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
+- Screenshot-supported technical documentation
 
 ---
 
