@@ -51,7 +51,7 @@ On `DC-01`:
 
 **📸 Screenshot — Pre-created RODC computer account**
 
-![Pre-created RODC computer account](screenshots/Screenshot%20(1).png)
+![Pre-created RODC computer account](screenshots/Screenshot%20(7).png)
 
 ### Step 4 — Promote the server as an RODC
 
@@ -66,7 +66,7 @@ On the `RODC` server:
 
 **📸 Screenshot — RODC promotion selection**
 
-![RODC promotion selection](screenshots/Screenshot%20(2).png)
+![RODC promotion selection](screenshots/Screenshot%20(8).png)
 
 ### Step 5 — Sign in and inspect Active Directory
 
@@ -92,7 +92,7 @@ These checks demonstrate that directory information is available for viewing whi
 
 **📸 Screenshot — Read-only directory modification restrictions**
 
-![Read-only directory modification restrictions](screenshots/Screenshot%20(3).png)
+![Read-only directory modification restrictions](screenshots/Screenshot%20(12).png)
 
 ### Step 7 — Verify the RODC from DC-01
 
@@ -105,7 +105,7 @@ Return to the writable domain controller `DC-01`:
 
 **📸 Screenshot — RODC online with Read-only and GC status**
 
-![RODC online with Read-only and GC status](screenshots/Screenshot%20(4).png)
+![RODC online with Read-only and GC status](screenshots/Screenshot%20(13).png)
 
 ## 🔎 Verification
 
