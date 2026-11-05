@@ -146,7 +146,7 @@ Confirm that the Schema Master, Domain Naming Master, PDC Emulator, RID Master, 
 ping example.com
 ```
 
-5. The ping test completed successfully in this lab.
+5. The ping test completed successfully in this lab. This confirms that the name resolved and the ping test received a response; it does not verify AD DS replication. For a new additional domain controller, the existing healthy DNS server (ADC at `10.0.0.3`) should normally be configured as the preferred DNS server during domain join and promotion. The DNS settings used in this exercise are recorded above.
 
 The original failed VM was removed before the fresh server reused the `DC-01` hostname and `10.0.0.1` address.
 
@@ -169,13 +169,9 @@ netdom query fsmo
 
 Confirm that all five roles are still held by `ADC`. Promoting the replacement domain controller does not automatically move the FSMO roles back to it.
 
-**📸 Screenshot — Fresh DC-01 promoted as an additional domain controller**
-
-<!-- Screenshot slot 4: Capture the successful AD DS promotion or Server Manager confirmation on the replacement DC-01. -->
-
 **📸 Screenshot — FSMO roles remain on ADC after DC-01 promotion**
 
-<!-- Screenshot slot 5: Capture netdom query fsmo on the replacement DC-01 after promotion, showing ADC as the holder of all five roles. -->
+<!-- Screenshot slot 4: Capture netdom query fsmo on the replacement DC-01 after promotion, showing ADC as the holder of all five roles. -->
 
 ### Step 7 — Connect to DC-01 and transfer all five FSMO roles
 
@@ -210,7 +206,7 @@ These are planned transfers because both domain controllers are now available an
 
 **📸 Screenshot — FSMO role transfers from ADC to DC-01**
 
-<!-- Screenshot slot 6: Capture the successful transfer confirmations for all five FSMO roles in the NTDSUTIL session on ADC. -->
+<!-- Screenshot slot 5: Capture the successful transfer confirmations for all five FSMO roles in the NTDSUTIL session on ADC. -->
 
 ### Step 8 — Perform final FSMO and domain-role verification
 
@@ -224,7 +220,7 @@ Confirm that all five FSMO roles now point to `DC-01.example.com`.
 
 **📸 Screenshot — Final FSMO role ownership on DC-01**
 
-<!-- Screenshot slot 7: Capture netdom query fsmo on DC-01, showing all five roles assigned to DC-01. -->
+<!-- Screenshot slot 6: Capture netdom query fsmo on DC-01, showing all five roles assigned to DC-01. -->
 
 Next, on `DC-01`, open an elevated Command Prompt and run:
 
@@ -251,10 +247,6 @@ BACKUP
 ```
 
 These results provide an additional check of the PDC Emulator designation: DC-01 reports PRIMARY and ADC reports BACKUP. The `net accounts` output does not independently verify all five FSMO roles; use `netdom query fsmo` for that verification.
-
-**📸 Screenshot — Primary and Backup domain controller role results**
-
-<!-- Screenshot slot 8: Capture the net accounts Computer role results, showing PRIMARY on DC-01 and BACKUP on ADC. -->
 
 ## 🔎 Verification
 
