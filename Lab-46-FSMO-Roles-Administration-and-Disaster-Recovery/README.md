@@ -170,54 +170,7 @@ Confirm that all five FSMO roles are still held by `ADC`. Promoting the replacem
 
 ![DC-01 promoted as an additional domain controller](screenshots/Screenshot%20(6).png)
 
-### Step 6 — Deploy a fresh replacement for DC-01
-
-1. Deploy a fresh Windows Server 2022 virtual machine. Do not reuse or reconnect the original failed domain controller installation.
-2. Rename the fresh server to `DC-01`.
-3. Configure the replacement server with static IPv4 address `10.0.0.1` and subnet mask `255.255.255.0`.
-4. **Before joining the domain and promoting the server**, configure ADC (`10.0.0.3`) as the preferred DNS server. Do not point the fresh member server to itself for DNS before AD DS and DNS are installed.
-5. Verify DNS discovery of the existing domain controller:
-
-```cmd
-nslookup -type=SRV _ldap._tcp.dc._msdcs.example.com
-nltest /dsgetdc:example.com
-```
-
-6. Confirm that the returned domain-controller information identifies the surviving `ADC`.
-7. After the fresh server has been promoted successfully and DNS is available locally, change its DNS settings to:
-
-| Setting | Value |
-|---|---|
-| Preferred DNS | `10.0.0.1` (DC-01 itself) |
-| Alternate DNS | `10.0.0.3` (ADC) |
-
-The fresh installation uses the same hostname and IP address as the removed server. The original VM and its old Windows Server installation are not reused.
-
-### Step 7 — Install AD DS and promote the fresh DC-01
-
-1. On the fresh `DC-01`, open **Server Manager → Add Roles and Features**.
-2. Install **Active Directory Domain Services (AD DS)** and the required management tools.
-3. Select **Promote this server to a domain controller**.
-4. Select the option to add a domain controller to the existing domain `example.com`.
-5. Use the existing domain administrator credentials when prompted.
-6. In **Replication**, select `ADC.example.com` as the replication source.
-7. Continue through the wizard, review the configuration, and complete the promotion.
-8. Allow the server to restart.
-9. After promotion and restart, configure the replacement DC-01 to use `10.0.0.1` as preferred DNS and `10.0.0.3` as alternate DNS.
-
-After the restart, open **Windows PowerShell as Administrator** on the replacement `DC-01` and run:
-
-```powershell
-netdom query fsmo
-```
-
-Confirm that all five roles are still held by `ADC`. Promoting the replacement domain controller does not automatically move the FSMO roles back to it.
-
-**📸 Screenshot — FSMO roles remain on ADC after DC-01 promotion**
-
-![FSMO roles remain on ADC after replacement DC-01 promotion](screenshots/Screenshot%20(5).png)
-
-### Step 8 — Connect to DC-01 and transfer all five FSMO roles
+### Step 7 — Connect to DC-01 and transfer all five FSMO roles
 
 After the replacement `DC-01` has been promoted and is available, return to `ADC`.
 
@@ -252,7 +205,7 @@ These are planned transfers because both domain controllers are now available an
 
 ![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(7).png)
 
-### Step 9 — Perform final FSMO and domain-role verification
+### Step 8 — Perform final FSMO and domain-role verification
 
 On the replacement `DC-01`, open **Windows PowerShell as Administrator** and run:
 
@@ -306,7 +259,7 @@ Also confirm that the SYSVOL and NETLOGON shares are available on both domain co
 ## 🔎 Verification
 
 - Before the failure simulation, confirm that `netdom query fsmo` lists all five roles under the original `DC-01`.
-- Keep the original `DC-01` VM permanently powered off and retired; never boot it with its old AD database.
+- Confirm that the original `DC-01` virtual machine has been completely removed from the physical laptop and that its old installation is not reused.
 - On ADC, use `ntdsutil` to seize Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master.
 - Confirm with `netdom query fsmo` that ADC holds all five roles after seizure.
 - Before AD DS installation, confirm that the fresh server is named `DC-01`, uses IP address `10.0.0.1/24`, preferred DNS `10.0.0.1`, and alternate DNS `10.0.0.3`.
@@ -319,7 +272,7 @@ Also confirm that the SYSVOL and NETLOGON shares are available on both domain co
 
 ## 🎯 Expected Result
 
-The original `DC-01` virtual machine is permanently powered off and retired to simulate a catastrophic domain controller failure. The surviving `ADC` successfully seizes all five FSMO roles and becomes the holder of the Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master roles. The failed original `DC-01` virtual machine is completely removed from the physical laptop. A fresh Windows Server 2022 installation is deployed with the `DC-01` hostname and `10.0.0.1` IP address, preferred DNS `10.0.0.1`, and alternate DNS `10.0.0.3`. AD DS is installed and the fresh server is promoted as an additional domain controller in the existing `example.com` domain with ADC as the surviving domain controller. Finally, all five FSMO roles are transferred from ADC back to the replacement `DC-01`. The final `netdom query fsmo` output lists DC-01 as the holder of all five roles, while `net accounts` reports PRIMARY on DC-01 and BACKUP on ADC.
+The original `DC-01` virtual machine was completely removed from the physical laptop to simulate a catastrophic domain controller failure. The surviving `ADC` successfully seizes all five FSMO roles and becomes the holder of the Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master roles. The failed original `DC-01` virtual machine is completely removed from the physical laptop. A fresh Windows Server 2022 installation is deployed with the `DC-01` hostname and `10.0.0.1` IP address, preferred DNS `10.0.0.1`, and alternate DNS `10.0.0.3`. AD DS is installed and the fresh server is promoted as an additional domain controller in the existing `example.com` domain with ADC as the surviving domain controller. Finally, all five FSMO roles are transferred from ADC back to the replacement `DC-01`. The final `netdom query fsmo` output lists DC-01 as the holder of all five roles, while `net accounts` reports PRIMARY on DC-01 and BACKUP on ADC.
 
 ## 🌍 Real-World Use Case
 
