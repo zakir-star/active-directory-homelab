@@ -50,7 +50,7 @@ Each domain has one holder for each of these roles.
 - **Transfer:** A planned operation used when the current role holder and the destination domain controller are available and communicating. The role is moved in a controlled manner.
 - **Seizure:** An emergency operation used when the current role holder is unavailable and cannot perform a normal transfer. The surviving domain controller forcibly assumes the role.
 
-After a role has been seized, the failed domain controller must not be brought back online with its previous Active Directory database. The original `DC-01` VM remains permanently powered off and retired. Its metadata and stale DNS/domain-controller references are cleaned up on `ADC` before a fresh Windows Server installation reuses the `DC-01` name and IP address.
+After the roles have been seized, the original `DC-01` virtual machine is completely removed from the physical laptop and is not brought back online. A fresh Windows Server 2022 installation is then created and configured with the previous `DC-01` hostname and IP address.
 
 ## ⚙️ Lab Configuration
 
@@ -127,51 +127,48 @@ Confirm that the Schema Master, Domain Naming Master, PDC Emulator, RID Master, 
 
 ![All five FSMO roles seized by ADC](screenshots/Screenshot%20(3).png)
 
-### Step 5 — Clean up the failed DC-01 metadata and DNS records
+### Step 5 — Remove the failed DC-01 and prepare a fresh Windows Server 2022 installation
 
-The original `DC-01` VM must remain permanently powered off. Do not boot it, reconnect its old virtual disks, or attempt to demote it using its previous Active Directory database.
+1. Completely remove the failed original `DC-01` virtual machine from the physical laptop. Do not reuse its old virtual disks or old Windows Server installation.
+2. Create a new virtual machine and install a fresh copy of Windows Server 2022.
+3. Rename the fresh server to `DC-01`.
+4. Configure the previous static IPv4 settings:
 
-1. On `ADC`, open **Command Prompt as Administrator**.
-2. Start `ntdsutil` and enter the metadata-cleanup context:
+   | Setting | Value |
+   |---|---|
+   | IP address | `10.0.0.1` |
+   | Subnet mask | `255.255.255.0` |
+   | Preferred DNS | `10.0.0.1` |
+   | Alternate DNS | `10.0.0.3` |
 
-```cmd
-ntdsutil
-metadata cleanup
-connections
-connect to server ADC
-quit
+5. Verify that the server has the intended computer name and network configuration before installing AD DS.
+
+**📸 Screenshot — Fresh Windows Server 2022 configured as DC-01**
+
+![Fresh Windows Server 2022 configured as DC-01](screenshots/Screenshot%20(5).png)
+
+### Step 6 — Install AD DS and promote DC-01 as an additional domain controller
+
+1. On the fresh `DC-01`, open **Server Manager → Add Roles and Features**.
+2. Install **Active Directory Domain Services (AD DS)** and the required management tools.
+3. Select **Promote this server to a domain controller**.
+4. Select the option to add a domain controller to the existing domain `example.com`.
+5. Use the existing domain administrator credentials when prompted.
+6. Complete the configuration wizard and promote the fresh server as an additional domain controller in the existing domain, with `ADC` as the surviving domain controller.
+7. Allow the server to restart after promotion.
+8. Verify that the replacement `DC-01` is present as a domain controller in the existing domain.
+
+After promotion, run the following command on `DC-01`:
+
+```powershell
+netdom query fsmo
 ```
 
-3. Select the existing domain and site, then identify the failed server:
+Confirm that all five FSMO roles are still held by `ADC`. Promoting the replacement domain controller does not automatically move the FSMO roles back to it.
 
-```text
-select operation target
-list domains
-select domain <domain-number>
-list sites
-select site <site-number>
-list servers in site
-select server <server-number-for-DC-01>
-quit
-```
+**📸 Screenshot — Fresh DC-01 promoted as an additional domain controller**
 
-4. Carefully confirm that the selected server is the failed original `DC-01`, not `ADC`. Then run:
-
-```text
-remove selected server
-```
-
-5. Confirm the removal when prompted, then exit `ntdsutil`.
-6. Open **Active Directory Sites and Services** on ADC. Verify that the old `DC-01` server object and its **NTDS Settings** connection object are no longer present.
-7. Open **Active Directory Users and Computers → Domain Controllers**. Verify that the failed `DC-01` computer account has been removed. If a stale object remains, confirm its identity and remove only that obsolete object.
-8. Open **DNS Manager** on ADC and review the `example.com` and `_msdcs.example.com` zones, along with the relevant reverse lookup zone if one exists. Remove only stale records that specifically reference the retired `DC-01`, including its obsolete host, name-server, SRV, or GUID-based CNAME records. Do not remove records belonging to ADC or healthy domain controllers.
-9. Confirm that the old `DC-01` references have been cleaned up before reusing `10.0.0.1` and the `DC-01` hostname.
-
-This cleanup removes the retired controller's directory metadata and stale name-service references. It does not mean the old VM can safely be brought back online.
-
-**📸 Screenshot — Failed DC-01 metadata cleanup**
-
-![Metadata cleanup of the failed DC-01 on ADC](screenshots/Screenshot%20(4).png)
+![DC-01 promoted as an additional domain controller](screenshots/Screenshot%20(6).png)
 
 ### Step 6 — Deploy a fresh replacement for DC-01
 
@@ -194,7 +191,7 @@ nltest /dsgetdc:example.com
 | Preferred DNS | `10.0.0.1` (DC-01 itself) |
 | Alternate DNS | `10.0.0.3` (ADC) |
 
-The old `DC-01` metadata and stale DNS references must be cleaned up before this replacement reuses the hostname and IP address. The original VM remains retired.
+The fresh installation uses the same hostname and IP address as the removed server. The original VM and its old Windows Server installation are not reused.
 
 ### Step 7 — Install AD DS and promote the fresh DC-01
 
@@ -253,7 +250,7 @@ These are planned transfers because both domain controllers are now available an
 
 **📸 Screenshot — FSMO role transfers from ADC to DC-01**
 
-![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(6).png)
+![Transfer of all five FSMO roles from ADC to DC-01](screenshots/Screenshot%20(7).png)
 
 ### Step 9 — Perform final FSMO and domain-role verification
 
@@ -267,7 +264,7 @@ Confirm that all five FSMO roles now point to `DC-01.example.com`.
 
 **📸 Screenshot — Final FSMO role ownership on DC-01**
 
-![Final FSMO role ownership on DC-01](screenshots/Screenshot%20(7).png)
+![Final FSMO role ownership on DC-01](screenshots/Screenshot%20(8).png)
 
 Next, on `DC-01`, open an elevated Command Prompt and run:
 
@@ -310,13 +307,10 @@ Also confirm that the SYSVOL and NETLOGON shares are available on both domain co
 
 - Before the failure simulation, confirm that `netdom query fsmo` lists all five roles under the original `DC-01`.
 - Keep the original `DC-01` VM permanently powered off and retired; never boot it with its old AD database.
-- Perform metadata cleanup for the failed `DC-01` on ADC using `ntdsutil`, and verify the obsolete server/NTDS Settings objects are gone.
-- Review the `example.com`, `_msdcs.example.com`, and applicable reverse lookup zones; remove only stale DNS records for the retired DC-01.
 - On ADC, use `ntdsutil` to seize Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master.
 - Confirm with `netdom query fsmo` that ADC holds all five roles after seizure.
-- Before promotion, confirm that the fresh server uses hostname `DC-01`, IP address `10.0.0.1/24`, and ADC (`10.0.0.3`) as its preferred DNS server.
-- After promotion, configure preferred DNS `10.0.0.1` and alternate DNS `10.0.0.3` on the replacement DC-01.
-- Confirm that the fresh server was promoted as an additional domain controller in the existing `example.com` domain using `ADC.example.com` as the selected replication source.
+- Before AD DS installation, confirm that the fresh server is named `DC-01`, uses IP address `10.0.0.1/24`, preferred DNS `10.0.0.1`, and alternate DNS `10.0.0.3`.
+- Confirm that AD DS was installed and the fresh `DC-01` was promoted as an additional domain controller in the existing `example.com` domain, with ADC as the surviving domain controller.
 - After promotion, confirm that all five FSMO roles still belong to ADC.
 - From ADC, connect to the replacement DC-01 in `ntdsutil` and transfer all five FSMO roles.
 - On both servers, run `netdom query fsmo` and confirm that all five roles belong to `DC-01.example.com`.
@@ -325,7 +319,7 @@ Also confirm that the SYSVOL and NETLOGON shares are available on both domain co
 
 ## 🎯 Expected Result
 
-The original `DC-01` virtual machine is permanently powered off and retired to simulate a catastrophic domain controller failure. The surviving `ADC` successfully seizes all five FSMO roles and becomes the holder of the Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master roles. After the failed DC-01 metadata is cleaned up on ADC and stale DNS/DC references are reviewed and removed, a fresh Windows Server 2022 installation is deployed with the `DC-01` hostname and `10.0.0.1` IP address. ADC is used as the DNS server before promotion and as the selected replication source. Finally, all five FSMO roles are transferred from ADC back to the replacement `DC-01`. The final `netdom query fsmo` output lists DC-01 as the holder of all five roles, while `net accounts` reports PRIMARY on DC-01 and BACKUP on ADC.
+The original `DC-01` virtual machine is permanently powered off and retired to simulate a catastrophic domain controller failure. The surviving `ADC` successfully seizes all five FSMO roles and becomes the holder of the Schema Master, Domain Naming Master, PDC Emulator, RID Master, and Infrastructure Master roles. The failed original `DC-01` virtual machine is completely removed from the physical laptop. A fresh Windows Server 2022 installation is deployed with the `DC-01` hostname and `10.0.0.1` IP address, preferred DNS `10.0.0.1`, and alternate DNS `10.0.0.3`. AD DS is installed and the fresh server is promoted as an additional domain controller in the existing `example.com` domain with ADC as the surviving domain controller. Finally, all five FSMO roles are transferred from ADC back to the replacement `DC-01`. The final `netdom query fsmo` output lists DC-01 as the holder of all five roles, while `net accounts` reports PRIMARY on DC-01 and BACKUP on ADC.
 
 ## 🌍 Real-World Use Case
 
@@ -333,7 +327,7 @@ In an organization, a domain controller can become permanently unavailable becau
 
 ## 📌 Outcome
 
-Reviewed the responsibilities of all five FSMO roles and distinguished forest-wide roles from domain-wide roles. Simulated the catastrophic failure of the original `DC-01`, seized all five FSMO roles on ADC using `ntdsutil`, and verified the seizure with `netdom query fsmo`. Cleaned up the failed DC-01 metadata and stale DNS/DC references on ADC, deployed a fresh Windows Server 2022 replacement using the `DC-01` hostname and IP address, promoted it as an additional domain controller in `example.com` with ADC selected as the replication source, and transferred all five FSMO roles back to DC-01. Final checks showed all five roles on DC-01, with `net accounts` reporting PRIMARY on DC-01 and BACKUP on ADC.
+Reviewed the responsibilities of all five FSMO roles and distinguished forest-wide roles from domain-wide roles. Simulated the catastrophic failure of the original `DC-01`, seized all five FSMO roles on ADC using `ntdsutil`, and verified the seizure with `netdom query fsmo`. Completely removed the failed original `DC-01` virtual machine from the physical laptop, deployed a fresh Windows Server 2022 installation using the `DC-01` hostname and IP address, configured preferred DNS `10.0.0.1` and alternate DNS `10.0.0.3`, promoted it as an additional domain controller in `example.com`, and transferred all five FSMO roles back to DC-01. Final checks showed all five roles on DC-01, with `net accounts` reporting PRIMARY on DC-01 and BACKUP on ADC.
 
 ## 🙏 Acknowledgment
 
@@ -341,14 +335,12 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 ## ✍️ Author's Note
 
-This lab demonstrates both emergency FSMO seizure and planned FSMO transfer. The original `DC-01` virtual machine was removed, and a fresh Windows Server installation was deployed as its replacement. The previous installation was not brought back online with its old Active Directory database after the roles were seized.
-
-**Recovery decision:** The original failed `DC-01` remains permanently powered off and retired. After seizing its FSMO roles, metadata cleanup is performed on ADC and stale DNS/domain-controller references are reviewed and removed before the `DC-01` hostname and IP address are reused. The old VM is never brought back online with its previous Active Directory database.
+This lab demonstrates both emergency FSMO seizure and planned FSMO transfer. The original `DC-01` virtual machine was completely removed from the physical laptop. A fresh Windows Server 2022 installation was then created, configured with the previous `DC-01` hostname and IP address, and promoted as an additional domain controller of the surviving ADC. The old virtual machine and its previous Windows Server installation were not reused.
 
 The `ping example.com` test was used as a basic name-resolution/connectivity check before AD DS installation. It is not, by itself, proof of successful Active Directory replication. The role ownership checks are shown separately using `netdom query fsmo`.
 
 ## ✅ Closing
 
-The catastrophic failure of the original `DC-01` was simulated, all five FSMO roles were seized by ADC, the failed controller's metadata and stale DNS/DC references were cleaned up, and a fresh `DC-01` was promoted into the existing domain. All five roles were then transferred back to DC-01 and verified with `netdom query fsmo`. The final `net accounts` checks reported PRIMARY on DC-01 and BACKUP on ADC, completing the FSMO seizure and recovery demonstration.
+The catastrophic failure of the original `DC-01` was simulated, all five FSMO roles were seized by ADC, the original VM was completely removed from the physical laptop, and a fresh `DC-01` was promoted into the existing domain. All five roles were then transferred back to DC-01 and verified with `netdom query fsmo`. The final `net accounts` checks reported PRIMARY on DC-01 and BACKUP on ADC, completing the FSMO seizure and recovery demonstration.
 
 ---
