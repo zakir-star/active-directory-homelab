@@ -57,7 +57,7 @@ After a role has been seized, the failed domain controller must not be brought b
 ### Step 1 — Verify the original FSMO role holders
 
 1. The original `DC-01` was configured as the domain controller holding all five FSMO roles.
-2. Completely remove the original `DC-01` virtual machine from the physical laptop to simulate a catastrophic server failure.
+2. Power off the original `DC-01` virtual machine and permanently retire it to simulate a catastrophic server failure. Do not reconnect its virtual disks or boot it again.
 3. Start only the surviving domain controller, `ADC`.
 4. Open **Windows PowerShell as Administrator** on ADC.
 5. Run:
