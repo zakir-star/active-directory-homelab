@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–46 completed
-> **Last updated:** November 5, 2026
+> **Status:** Labs 1–46 completed; Lab 47 theory and Lab 48 practical documentation planned
+> **Last updated:** November 6, 2026
 
 ---
 
@@ -111,30 +111,31 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **44** | [Child Domains and Namespace Design](Lab-44-Child-Domains-and-Namespace-Design/README.md) | ✅ Completed | Deploy `guwahati.example.com` as a child domain of `example.com`, verify the parent-child trust relationship, review replication connections, and understand contiguous vs. discontiguous namespaces |
 | **45** | [Read-Only Domain Controller (RODC)](Lab-45-Read-Only-Domain-Controller/README.md) | ✅ Completed | Pre-create and promote an RODC, delegate administration to a selected domain user, and verify read-only directory behavior |
 | **46** | [FSMO Roles Administration and Disaster Recovery](Lab-46-FSMO-Roles-Administration-and-Disaster-Recovery/README.md) | ✅ Completed | Demonstrate FSMO role seizure to the surviving ADC after DC-01 failure, rebuild DC-01 with a fresh Windows Server 2022 installation, promote it as an additional domain controller, transfer all five FSMO roles back, and verify the final domain controller state |
-| **47** | Active Directory Trust Relationships | 📋 Planned | Understand and test domain/forest trust scenarios |
-| **48** | Active Directory Sites and Subnets | 📋 Planned | Map IP subnets to sites and understand replication topology |
-| **49** | Active Directory Partitions | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
+| **47** | [Active Directory Trust Relationships – Theory](Lab-47-Active-Directory-Trust-Relationships-Theory/README.md) | 📋 Planned | Understand trust direction, transitivity, parent-child, tree-root, external, forest, shortcut, and realm trusts, plus authentication scopes and DNS requirements |
+| **48** | [Practical Active Directory Forest Trust](Lab-48-Practical-Active-Directory-Forest-Trust/README.md) | 📋 Planned | Configure DNS Stub Zones and establish a two-way forest trust between the independent `example.com` and `corp.local` forests; verify cross-forest user authentication from an `example.com`-joined client |
+| **49** | [Active Directory Sites and Subnets](Lab-49-Active-Directory-Sites-and-Subnets/README.md) | 📋 Planned | Map IP subnets to sites and understand replication topology |
+| **50** | [Active Directory Partitions](Lab-50-Active-Directory-Partitions/README.md) | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
 
 ### Phase 10 — DNS and DHCP Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **50** | DNS Fundamentals and Forward Lookup Zones | 📋 Planned | Review DNS records and forward name resolution |
-| **51** | Reverse Lookup Zones | 📋 Planned | Configure reverse lookup and PTR records |
-| **52** | Primary and Secondary DNS Zones | 📋 Planned | Understand zone replication and secondary-zone configuration |
-| **53** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
-| **54** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
-| **55** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
+| **51** | DNS Fundamentals and Forward Lookup Zones | 📋 Planned | Review DNS records and forward name resolution |
+| **52** | Reverse Lookup Zones | 📋 Planned | Configure reverse lookup and PTR records |
+| **53** | Primary and Secondary DNS Zones | 📋 Planned | Understand zone replication and secondary-zone configuration |
+| **54** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
+| **55** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
+| **56** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
 
 ### Phase 11 — Web, Deployment, and Remote Access
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **56** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
-| **57** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
-| **58** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
-| **59** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
-| **60** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
+| **57** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
+| **58** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
+| **59** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
+| **60** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
+| **61** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
 
 ### Phase 12 — Backup and Disaster Recovery
 
@@ -144,18 +145,18 @@ These labs cover distributed file access, replication, caching, and storage effi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **65** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
-| **66** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
-| **67** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
-| **68** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
-| **69** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
+| **66** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
+| **67** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
+| **68** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
+| **69** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
+| **70** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **61** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
-| **62** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
-| **63** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
-| **64** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+| **62** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
+| **63** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
+| **64** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **65** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
 ### Phase 14 — Hyper-V and Virtualization
 
