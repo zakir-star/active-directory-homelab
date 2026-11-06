@@ -31,9 +31,10 @@ Configure the following network settings:
 
 The two servers are root domain controllers in separate, independent Active Directory forests.
 
-**Screenshot placeholder — Static IP and DNS configuration**
 
 ### Step 2 — Create a Stub Zone for corp.local on DC-01
+
+**Screenshot placeholder — DNS Stub Zone for corp.local on DC-01**
 
 1. Sign in to `DC-01`.
 2. Open **Server Manager → Tools → DNS**.
@@ -43,9 +44,10 @@ The two servers are root domain controllers in separate, independent Active Dire
 6. Configure the master DNS server information for the `corp.local` zone.
 7. Complete the wizard and allow the zone information to refresh.
 
-**Screenshot placeholder — corp.local Stub Zone on DC-01**
 
 ### Step 3 — Create a Stub Zone for example.com on DC-02
+
+**Screenshot placeholder — DNS Stub Zone for example.com on DC-02**
 
 1. Sign in to `DC-02`.
 2. Open **Server Manager → Tools → DNS**.
@@ -55,9 +57,10 @@ The two servers are root domain controllers in separate, independent Active Dire
 6. Configure the master DNS server information for the `example.com` zone.
 7. Complete the wizard, refresh **Forward Lookup Zones**, and verify that `example.com` appears.
 
-**Screenshot placeholder — example.com Stub Zone on DC-02**
 
 ### Step 4 — Configure the trust from DC-02
+
+**Screenshot placeholder — Forest trust entry for example.com on DC-02**
 
 1. On `DC-02`, open **Server Manager → Tools → Active Directory Domains and Trusts**.
 2. Right-click `corp.local`, select **Properties**, and open the **Trusts** tab.
@@ -71,9 +74,10 @@ The two servers are root domain controllers in separate, independent Active Dire
 10. At **Confirm Incoming Trust**, select **Yes, confirm the incoming trust**.
 11. Complete the wizard and verify that `example.com` appears in the Trusts tab.
 
-**Screenshot placeholder — Trust wizard and trust entry on DC-02**
 
 ### Step 5 — Configure the other side from DC-01
+
+**Screenshot placeholder — Forest trust entry for corp.local on DC-01**
 
 1. On `DC-01`, open **Active Directory Domains and Trusts**.
 2. Right-click `example.com`, select **Properties**, and open the **Trusts** tab.
@@ -86,7 +90,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 9. At **Confirm Incoming Trust**, select **No, do not confirm the incoming trust**, as chosen during this lab.
 10. Complete the wizard and verify that `corp.local` appears in the Trusts tab.
 
-**Screenshot placeholder — Trust entry on DC-01**
 
 ### Step 6 — Create a test user in corp.local
 
@@ -96,7 +99,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 4. Configure the account password and complete the wizard.
 5. Verify that the account exists in the `corp.local` domain.
 
-**Screenshot placeholder — corpuser1 account in Active Directory Users and Computers**
 
 ### Step 7 — Sign in to the example.com-joined client
 
@@ -120,7 +122,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 The sign-in succeeds while the client remains joined to the `example.com` domain.
 
-**Screenshot placeholder — corpuser1 signed in on the example.com-joined client**
 
 ### Step 8 — Verify the authenticated user and DNS suffix
 
@@ -147,9 +148,11 @@ The sign-in succeeds while the client remains joined to the `example.com` domain
 
 The `whoami` result identifies the authenticated account from `corp.local`. The Primary DNS Suffix remains `example.com` because the computer itself is still joined to that domain. Signing in with an account from another trusted forest does not change the computer's domain membership.
 
-**Screenshot placeholder — whoami and ipconfig verification**
 
 ## 🔎 Verification
+
+**Screenshot placeholder — Cross-forest sign-in and command verification (`whoami` and `ipconfig`)**
+
 
 - Confirm the IP address and DNS settings on both domain controllers.
 - Confirm that the `corp.local` Stub Zone exists on `DC-01`.
