@@ -41,7 +41,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 6. Configure the master DNS server information for the `corp.local` zone.
 7. Complete the wizard and allow the zone information to refresh.
 
-**📸 Screenshot — DNS Stub Zone for corp.local on DC-01**
+![DNS Stub Zone for corp.local on DC-01](screenshots/Screenshot%20(1).png)
 
 ### Step 3 — Create a Stub Zone for example.com on DC-02
 
@@ -53,7 +53,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 6. Configure the master DNS server information for the `example.com` zone.
 7. Complete the wizard, refresh **Forward Lookup Zones**, and verify that `example.com` appears.
 
-**📸 Screenshot — DNS Stub Zone for example.com on DC-02**
+![DNS Stub Zone for example.com on DC-02](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Configure the trust from DC-02
 
@@ -69,7 +69,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 10. At **Confirm Incoming Trust**, select **Yes, confirm the incoming trust**.
 11. Complete the wizard and verify that `example.com` appears in the Trusts tab.
 
-**📸 Screenshot — Forest trust entry for example.com on DC-02**
+![Forest trust entry for example.com on DC-02](screenshots/Screenshot%20(3).png)
 
 ### Step 5 — Configure the other side from DC-01
 
@@ -84,7 +84,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 9. At **Confirm Incoming Trust**, select **No, do not confirm the incoming trust**, as chosen during this lab.
 10. Complete the wizard and verify that `corp.local` appears in the Trusts tab.
 
-**📸 Screenshot — Forest trust entry for corp.local on DC-01**
+![Forest trust entry for corp.local on DC-01](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Create a test user in corp.local
 
@@ -141,7 +141,7 @@ The sign-in succeeds while the client remains joined to the `example.com` domain
 
 The `whoami` result identifies the authenticated account from `corp.local`. The Primary DNS Suffix remains `example.com` because the computer itself is still joined to that domain. Signing in with an account from another trusted forest does not change the computer's domain membership.
 
-**📸 Screenshot — Cross-forest sign-in and command verification (`whoami` and `ipconfig`)**
+![Cross-forest sign-in and command verification using whoami and ipconfig](screenshots/Screenshot%20(5).png)
 
 ## 🔎 Verification
 
