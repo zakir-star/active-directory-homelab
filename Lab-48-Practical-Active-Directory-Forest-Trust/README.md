@@ -167,6 +167,7 @@ The `whoami` result identifies the authenticated account from `corp.local`. The 
 
 ## ⚠️ Important Notes
 
+- **Time synchronization:** The clocks on `DC-01` and `DC-02` must be synchronized. Configure both domain controllers to use a reliable time source and ensure their time difference stays within the Kerberos clock-skew tolerance (5 minutes by default). Correct time synchronization is essential for successful Kerberos authentication across the forest trust.
 - A forest trust connects two separate Active Directory forests; it does not merge their directory databases.
 - DNS name resolution between forests is essential for domain controllers to locate services in the other forest.
 - A Stub Zone contains the SOA and NS information needed to locate the authoritative DNS servers for another zone; it is not a complete copy of the remote zone.
