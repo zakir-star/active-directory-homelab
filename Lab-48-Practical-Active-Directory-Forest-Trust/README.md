@@ -31,11 +31,8 @@ Configure the following network settings:
 
 The two servers are root domain controllers in separate, independent Active Directory forests.
 
-
 ### Step 2 — Create a Stub Zone for corp.local on DC-01
 
-
-**Screenshot placeholder — DNS Stub Zone for corp.local on DC-01**
 1. Sign in to `DC-01`.
 2. Open **Server Manager → Tools → DNS**.
 3. Expand the server and right-click **Forward Lookup Zones**.
@@ -46,11 +43,8 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **Screenshot placeholder — DNS Stub Zone for corp.local on DC-01**
 
-
 ### Step 3 — Create a Stub Zone for example.com on DC-02
 
-
-**Screenshot placeholder — DNS Stub Zone for example.com on DC-02**
 1. Sign in to `DC-02`.
 2. Open **Server Manager → Tools → DNS**.
 3. Expand the server and right-click **Forward Lookup Zones**.
@@ -61,11 +55,8 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **Screenshot placeholder — DNS Stub Zone for example.com on DC-02**
 
-
 ### Step 4 — Configure the trust from DC-02
 
-
-**Screenshot placeholder — Forest trust entry for example.com on DC-02**
 1. On `DC-02`, open **Server Manager → Tools → Active Directory Domains and Trusts**.
 2. Right-click `corp.local`, select **Properties**, and open the **Trusts** tab.
 3. Click **New Trust** and enter `example.com` as the trust name.
@@ -80,11 +71,8 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **Screenshot placeholder — Forest trust entry for example.com on DC-02**
 
-
 ### Step 5 — Configure the other side from DC-01
 
-
-**Screenshot placeholder — Forest trust entry for corp.local on DC-01**
 1. On `DC-01`, open **Active Directory Domains and Trusts**.
 2. Right-click `example.com`, select **Properties**, and open the **Trusts** tab.
 3. Click **New Trust** and enter `corp.local` as the trust name.
@@ -98,7 +86,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **Screenshot placeholder — Forest trust entry for corp.local on DC-01**
 
-
 ### Step 6 — Create a test user in corp.local
 
 1. On `DC-02`, open **Active Directory Users and Computers**.
@@ -106,7 +93,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 3. Create a domain user named `corpuser1`.
 4. Configure the account password and complete the wizard.
 5. Verify that the account exists in the `corp.local` domain.
-
 
 ### Step 7 — Sign in to the example.com-joined client
 
@@ -129,7 +115,6 @@ The two servers are root domain controllers in separate, independent Active Dire
 7. Enter the account password.
 
 The sign-in succeeds while the client remains joined to the `example.com` domain.
-
 
 ### Step 8 — Verify the authenticated user and DNS suffix
 
@@ -158,11 +143,7 @@ The `whoami` result identifies the authenticated account from `corp.local`. The 
 
 **Screenshot placeholder — Cross-forest sign-in and command verification (`whoami` and `ipconfig`)**
 
-
 ## 🔎 Verification
-
-
-**Screenshot placeholder — Cross-forest sign-in and command verification (`whoami` and `ipconfig`)**
 
 - Confirm the IP address and DNS settings on both domain controllers.
 - Confirm that the `corp.local` Stub Zone exists on `DC-01`.
