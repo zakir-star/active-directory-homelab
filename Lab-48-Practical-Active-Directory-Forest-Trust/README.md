@@ -43,7 +43,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **📸 Screenshot — DNS Stub Zone for corp.local on DC-01**
 
-![DNS Stub Zone for corp.local on DC-01](screenshots/Screenshot%20(1).png)
+![DNS Stub Zone for corp.local on DC-01](screenshots/Screenshot%20(6).png)
 
 ### Step 3 — Create a Stub Zone for example.com on DC-02
 
@@ -57,7 +57,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **📸 Screenshot — DNS Stub Zone for example.com on DC-02**
 
-![DNS Stub Zone for example.com on DC-02](screenshots/Screenshot%20(2).png)
+![DNS Stub Zone for example.com on DC-02](screenshots/Screenshot%20(9).png)
 
 ### Step 4 — Configure the trust from DC-02
 
@@ -75,7 +75,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **📸 Screenshot — Forest trust entry for example.com on DC-02**
 
-![Forest trust entry for example.com on DC-02](screenshots/Screenshot%20(3).png)
+![Forest trust entry for example.com on DC-02](screenshots/Screenshot%20(22).png)
 
 ### Step 5 — Configure the other side from DC-01
 
@@ -92,7 +92,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 **📸 Screenshot — Forest trust entry for corp.local on DC-01**
 
-![Forest trust entry for corp.local on DC-01](screenshots/Screenshot%20(4).png)
+![Forest trust entry for corp.local on DC-01](screenshots/Screenshot%20(31).png)
 
 ### Step 6 — Create a test user in corp.local
 
@@ -113,7 +113,7 @@ The two servers are root domain controllers in separate, independent Active Dire
 
 3. In **System Properties → Computer Name**, confirm that the client is joined to `example.com`.
 4. Sign out from the local Administrator session.
-5. At the sign-in screen, select **Other user** if required.
+5. At the sign-in screen, select **Other user**.
 6. Sign in using the account:
 
    ```text
@@ -151,7 +151,7 @@ The `whoami` result identifies the authenticated account from `corp.local`. The 
 
 **📸 Screenshot — Cross-forest sign-in and command verification using whoami and ipconfig**
 
-![Cross-forest sign-in and command verification using whoami and ipconfig](screenshots/Screenshot%20(5).png)
+![Cross-forest sign-in and command verification using whoami and ipconfig](screenshots/Screenshot%20(35).png)
 
 ## 🔎 Verification
 
