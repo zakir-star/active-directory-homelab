@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–46 completed; Lab 47 theory and Lab 48 practical documentation planned
+> **Status:** Labs 1–48 completed
 > **Last updated:** November 6, 2026
 
 ---
@@ -111,8 +111,8 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **44** | [Child Domains and Namespace Design](Lab-44-Child-Domains-and-Namespace-Design/README.md) | ✅ Completed | Deploy `guwahati.example.com` as a child domain of `example.com`, verify the parent-child trust relationship, review replication connections, and understand contiguous vs. discontiguous namespaces |
 | **45** | [Read-Only Domain Controller (RODC)](Lab-45-Read-Only-Domain-Controller/README.md) | ✅ Completed | Pre-create and promote an RODC, delegate administration to a selected domain user, and verify read-only directory behavior |
 | **46** | [FSMO Roles Administration and Disaster Recovery](Lab-46-FSMO-Roles-Administration-and-Disaster-Recovery/README.md) | ✅ Completed | Demonstrate FSMO role seizure to the surviving ADC after DC-01 failure, rebuild DC-01 with a fresh Windows Server 2022 installation, promote it as an additional domain controller, transfer all five FSMO roles back, and verify the final domain controller state |
-| **47** | [Active Directory Trust Relationships – Theory](Lab-47-Active-Directory-Trust-Relationships-Theory/README.md) | 📋 Planned | Understand trust direction, transitivity, parent-child, tree-root, external, forest, shortcut, and realm trusts, plus authentication scopes and DNS requirements |
-| **48** | [Practical Active Directory Forest Trust](Lab-48-Practical-Active-Directory-Forest-Trust/README.md) | 📋 Planned | Configure DNS Stub Zones and establish a two-way forest trust between the independent `example.com` and `corp.local` forests; verify cross-forest user authentication from an `example.com`-joined client |
+| **47** | [Active Directory Trust Relationships – Theory](Lab-47-Active-Directory-Trust-Relationships-Theory/README.md) | ✅ Completed | Understand trust direction, transitivity, parent-child, tree-root, external, forest, shortcut, and realm trusts, plus authentication scopes and DNS requirements |
+| **48** | [Practical Active Directory Forest Trust](Lab-48-Practical-Active-Directory-Forest-Trust/README.md) | ✅ Completed | Configure DNS Stub Zones and establish a two-way forest trust between the independent `example.com` and `corp.local` forests; verify cross-forest user authentication from an `example.com`-joined client |
 | **49** | [Active Directory Sites and Subnets](Lab-49-Active-Directory-Sites-and-Subnets/README.md) | 📋 Planned | Map IP subnets to sites and understand replication topology |
 | **50** | [Active Directory Partitions](Lab-50-Active-Directory-Partitions/README.md) | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
 
