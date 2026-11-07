@@ -38,7 +38,7 @@ Install and start Routing and Remote Access Service (RRAS) on a dedicated Window
 
 **📸 Screenshot — DC-Router network adapter configuration**
 
-<!-- Screenshot slot: ![DC-Router network adapter configuration](screenshots/Screenshot%20(1).png) -->
+![DC-Router network adapter configuration](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Install and start RRAS
 
@@ -50,7 +50,7 @@ Install and start Routing and Remote Access Service (RRAS) on a dedicated Window
 
 **📸 Screenshot — RRAS installed and started on DC-Router**
 
-<!-- Screenshot slot: ![RRAS installed and started on DC-Router](screenshots/Screenshot%20(2).png) -->
+![RRAS installed and started on DC-Router](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Configure DC-01 IPv4 settings
 
@@ -66,7 +66,7 @@ Configure the network adapter on `DC-01` with the following static settings:
 
 **📸 Screenshot — DC-01 IPv4 configuration**
 
-<!-- Screenshot slot: ![DC-01 IPv4 configuration](screenshots/Screenshot%20(3).png) -->
+![DC-01 IPv4 configuration](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Configure DC-02 IPv4 settings
 
@@ -82,7 +82,7 @@ Configure the network adapter on `DC-02` with the following static settings:
 
 **📸 Screenshot — DC-02 IPv4 configuration**
 
-<!-- Screenshot slot: ![DC-02 IPv4 configuration](screenshots/Screenshot%20(4).png) -->
+![DC-02 IPv4 configuration](screenshots/Screenshot%20(4).png)
 
 ### Step 5 — Turn off Windows Firewall on the lab servers
 
@@ -92,7 +92,7 @@ Configure the network adapter on `DC-02` with the following static settings:
 
 **📸 Screenshot — Windows Defender Firewall disabled on the lab servers**
 
-<!-- Screenshot slot: ![Windows Defender Firewall disabled on the lab servers](screenshots/Screenshot%20(5).png) -->
+![Windows Defender Firewall disabled on the lab servers](screenshots/Screenshot%20(5).png)
 
 ### Step 6 — Verify gateway and inter-subnet connectivity
 
@@ -118,7 +118,7 @@ Configure the network adapter on `DC-02` with the following static settings:
 
 **📸 Screenshot — Successful gateway and inter-subnet ping tests**
 
-<!-- Screenshot slot: ![Successful gateway and inter-subnet ping tests](screenshots/Screenshot%20(6).png) -->
+![Successful gateway and inter-subnet ping tests](screenshots/Screenshot%20(6).png)
 
 ### Step 7 — Verify DNS resolution
 
@@ -128,7 +128,7 @@ Configure the network adapter on `DC-02` with the following static settings:
 
 **📸 Screenshot — DNS resolution using nslookup on both domain controllers**
 
-<!-- Screenshot slot: ![DNS resolution using nslookup on both domain controllers](screenshots/Screenshot%20(7).png) -->
+![DNS resolution using nslookup on both domain controllers](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
