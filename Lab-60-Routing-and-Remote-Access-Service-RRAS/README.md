@@ -2,69 +2,57 @@
 
 ## 🎯 Objective
 
-Install and configure the Routing and Remote Access Service (RRAS) role on a dedicated Windows Server 2022 router and use LAN routing to provide communication between two different IPv4 subnets. Verify gateway reachability, bidirectional connectivity between the domain controllers, and DNS name resolution across the routed networks.
+Install and start Routing and Remote Access Service (RRAS) on a dedicated Windows Server named `DC-Router`. Use two network adapters to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, then verify gateway connectivity, communication between `DC-01` and `DC-02`, and DNS resolution.
 
 ## 🖥️ Lab Environment
 
 - 🖥️ **Hypervisor:** VMware Workstation
 - 🏢 **Operating System:** Windows Server 2022
-- 🌐 **Domain:** `example.com`
+- 🛣️ **Routing Server:** `DC-Router`
 - 🖥️ **Domain Controller 1:** `DC-01` — `10.0.0.1/24`
 - 🖥️ **Domain Controller 2:** `DC-02` — `192.168.1.2/24`
-- 🛣️ **RRAS Server:** `DC-Router`
-- 🌐 **HQ Network:** `10.0.0.0/24`
-- 🌐 **Branch Office 1 Network:** `192.168.1.0/24`
-- 🧰 **Tools:** Server Manager, Routing and Remote Access, Command Prompt, PowerShell, `ping`, and `nslookup`
+- 🌐 **Subnet 1:** `10.0.0.0/24`
+- 🌐 **Subnet 2:** `192.168.1.0/24`
+- 🧰 **Tools:** Server Manager, Routing and Remote Access, Command Prompt, `ping`, and `nslookup`
 
 ## ⚙️ Lab Configuration
 
-### Step 1 — Configure the network interfaces on DC-Router
+### Step 1 — Configure the network adapters on DC-Router
 
-1. Sign in to the Windows Server 2022 machine named `DC-Router`.
-2. Configure its first network adapter with the static IPv4 address `10.0.0.2/24`.
-3. Configure its second network adapter with the static IPv4 address `192.168.1.1/24`.
-4. Confirm that each adapter is connected to the intended VMware virtual network.
-5. Verify both addresses using:
+1. Create or use a separate Windows Server 2022 virtual machine and name it `DC-Router`.
+2. Add two network adapters to the virtual machine.
+3. Connect both adapters to the intended internal-host networks in VMware Workstation.
+4. Configure Adapter 1 with the following static IPv4 settings:
 
-   ```cmd
-   ipconfig /all
-   ```
+   | Setting | Value |
+   |---|---|
+   | IP address | `10.0.0.2` |
+   | Subnet mask | `255.255.255.0` |
 
-The two interfaces connect the router to the HQ and Branch Office 1 subnets. Do not configure multiple default gateways on the router's internal interfaces. A default route is only needed if the router must reach an additional network, such as an Internet-facing network.
+5. Configure Adapter 2 with the following static IPv4 settings:
+
+   | Setting | Value |
+   |---|---|
+   | IP address | `192.168.1.1` |
+   | Subnet mask | `255.255.255.0` |
 
 **📸 Screenshot — DC-Router network adapter configuration**
 
-<!-- Screenshot slot 1: ![DC-Router network adapter configuration](screenshots/Screenshot%20(1).png) -->
+<!-- Screenshot slot: ![DC-Router network adapter configuration](screenshots/Screenshot%20(1).png) -->
 
-### Step 2 — Install the Remote Access role and RRAS
+### Step 2 — Install and start RRAS
 
-1. Open **Server Manager** on `DC-Router`.
-2. Select **Manage → Add Roles and Features**.
-3. Choose **Role-based or feature-based installation**.
-4. Select the local server, `DC-Router`.
-5. Select **Remote Access** under Server Roles.
-6. Continue through the wizard and select the required role services for Routing and Remote Access.
-7. Complete the installation.
-8. Open **Tools → Routing and Remote Access** from Server Manager.
+1. Sign in to `DC-Router`.
+2. Open **Server Manager → Add Roles and Features**.
+3. Install the **Remote Access** role and the required management tools for RRAS.
+4. Open **Server Manager → Tools → Routing and Remote Access**.
+5. Start the RRAS service on `DC-Router`.
 
-**📸 Screenshot — Remote Access role installation**
+**📸 Screenshot — RRAS installed and started on DC-Router**
 
-<!-- Screenshot slot 2: ![Remote Access role installation](screenshots/Screenshot%20(2).png) -->
+<!-- Screenshot slot: ![RRAS installed and started on DC-Router](screenshots/Screenshot%20(2).png) -->
 
-### Step 3 — Start and configure RRAS for LAN routing
-
-1. In the **Routing and Remote Access** console, locate `DC-Router`.
-2. Start the RRAS service and configure the server for the LAN routing scenario used in this lab.
-3. Confirm that the RRAS server is running.
-4. Verify that both network interfaces are available to the routing service.
-
-The purpose of this configuration is to route IPv4 traffic between the directly connected `10.0.0.0/24` and `192.168.1.0/24` networks.
-
-**📸 Screenshot — RRAS running on DC-Router**
-
-<!-- Screenshot slot 3: ![RRAS running on DC-Router](screenshots/Screenshot%20(3).png) -->
-
-### Step 4 — Configure the IPv4 settings on DC-01
+### Step 3 — Configure DC-01 IPv4 settings
 
 Configure the network adapter on `DC-01` with the following static settings:
 
@@ -76,13 +64,11 @@ Configure the network adapter on `DC-01` with the following static settings:
 | Preferred DNS | `10.0.0.1` |
 | Alternate DNS | `192.168.1.2` |
 
-The default gateway points to the RRAS interface on the HQ subnet. DNS remains directed to the domain DNS servers.
-
 **📸 Screenshot — DC-01 IPv4 configuration**
 
-<!-- Screenshot slot 4: ![DC-01 IPv4 configuration](screenshots/Screenshot%20(4).png) -->
+<!-- Screenshot slot: ![DC-01 IPv4 configuration](screenshots/Screenshot%20(3).png) -->
 
-### Step 5 — Configure the IPv4 settings on DC-02
+### Step 4 — Configure DC-02 IPv4 settings
 
 Configure the network adapter on `DC-02` with the following static settings:
 
@@ -94,15 +80,23 @@ Configure the network adapter on `DC-02` with the following static settings:
 | Preferred DNS | `10.0.0.1` |
 | Alternate DNS | `192.168.1.2` |
 
-The default gateway points to the RRAS interface on the Branch Office 1 subnet.
-
 **📸 Screenshot — DC-02 IPv4 configuration**
 
-<!-- Screenshot slot 5: ![DC-02 IPv4 configuration](screenshots/Screenshot%20(5).png) -->
+<!-- Screenshot slot: ![DC-02 IPv4 configuration](screenshots/Screenshot%20(4).png) -->
+
+### Step 5 — Turn off Windows Firewall on the lab servers
+
+1. On `DC-01`, `DC-Router`, and `DC-02`, turn off Windows Defender Firewall.
+2. Initially, the ping from `DC-02` to its gateway, `192.168.1.1`, did not succeed.
+3. After turning off the firewall on all three servers, the gateway ping succeeded.
+
+**📸 Screenshot — Windows Defender Firewall disabled on the lab servers**
+
+<!-- Screenshot slot: ![Windows Defender Firewall disabled on the lab servers](screenshots/Screenshot%20(5).png) -->
 
 ### Step 6 — Verify gateway and inter-subnet connectivity
 
-1. From `DC-02`, ping its local default gateway:
+1. On `DC-02`, open Command Prompt and ping its default gateway:
 
    ```cmd
    ping 192.168.1.1
@@ -114,85 +108,71 @@ The default gateway points to the RRAS interface on the Branch Office 1 subnet.
    ping 10.0.0.1
    ```
 
-3. From `DC-01`, ping `DC-02`:
+3. Sign in to `DC-01` and ping `DC-02`:
 
    ```cmd
    ping 192.168.1.2
    ```
 
-4. Confirm that the tests succeed in both directions.
+4. Confirm that the gateway and both inter-subnet ping tests succeed.
 
-During the initial tests, Windows Firewall blocked the ping requests. The firewall was temporarily turned off on `DC-01`, `DC-Router`, and `DC-02`; after that change, the gateway and inter-subnet ping tests succeeded.
+**📸 Screenshot — Successful gateway and inter-subnet ping tests**
 
-**📸 Screenshot — Successful ping tests between DC-01 and DC-02**
+<!-- Screenshot slot: ![Successful gateway and inter-subnet ping tests](screenshots/Screenshot%20(6).png) -->
 
-<!-- Screenshot slot 6: ![Successful ping tests between DC-01 and DC-02](screenshots/Screenshot%20(6).png) -->
+### Step 7 — Verify DNS resolution
 
-### Step 7 — Verify DNS name resolution
+1. On `DC-01`, open Command Prompt and run `nslookup` to verify DNS resolution.
+2. Repeat the DNS lookup test on `DC-02`.
+3. Confirm that DNS resolution succeeds on both domain controllers.
 
-1. On `DC-01`, open Command Prompt and use `nslookup` to resolve the domain controller hostnames.
-2. Repeat the DNS lookup tests on `DC-02`.
-3. Confirm that DNS queries return the expected records and addresses for the domain controllers.
+**📸 Screenshot — DNS resolution using nslookup on both domain controllers**
 
-Example commands:
-
-```cmd
-nslookup DC-01.example.com
-nslookup DC-02.example.com
-```
-
-DNS resolution was tested from both `DC-01` and `DC-02`.
-
-**📸 Screenshot — DNS resolution from the domain controllers**
-
-<!-- Screenshot slot 7: ![DNS resolution from the domain controllers](screenshots/Screenshot%20(7).png) -->
+<!-- Screenshot slot: ![DNS resolution using nslookup on both domain controllers](screenshots/Screenshot%20(7).png) -->
 
 ## 🔎 Verification
 
-- Confirm that `DC-Router` has the two configured interfaces: `10.0.0.2/24` and `192.168.1.1/24`.
-- Confirm that the RRAS service is running on `DC-Router`.
-- Confirm that `DC-01` uses `10.0.0.2` as its default gateway.
-- Confirm that `DC-02` uses `192.168.1.1` as its default gateway.
-- From `DC-02`, verify reachability to its gateway `192.168.1.1`.
-- From `DC-02`, verify reachability to `DC-01` at `10.0.0.1`.
-- From `DC-01`, verify reachability to `DC-02` at `192.168.1.2`.
-- Run `nslookup` on both domain controllers and verify DNS name resolution.
+- Confirm that `DC-Router` has two network adapters configured with `10.0.0.2/24` and `192.168.1.1/24`.
+- Confirm that RRAS is installed and started on `DC-Router`.
+- Confirm the static IP address, default gateway, and DNS settings on `DC-01` and `DC-02`.
+- From `DC-02`, successfully ping the gateway `192.168.1.1`.
+- From `DC-02`, successfully ping `DC-01` at `10.0.0.1`.
+- From `DC-01`, successfully ping `DC-02` at `192.168.1.2`.
+- Run `nslookup` on both domain controllers and verify DNS resolution.
 
 ## ⚠️ Important Notes
 
-- This lab demonstrates **LAN routing between two IPv4 subnets** using RRAS. It does not configure a VPN or remote-access connection.
-- `DC-Router` is a dedicated routing server in this lab; it is not configured as a domain controller.
-- The router's two internal interfaces use addresses in different subnets. Do not assign multiple default gateways to these internal interfaces.
-- The domain controllers use their domain DNS servers for name resolution. The RRAS server is acting as a router, not as a replacement DNS server.
-- Windows Firewall was temporarily disabled on the three servers during initial ICMP troubleshooting. This allowed the ping tests to succeed, but disabling the firewall should not be treated as the permanent solution.
-- Before using the environment beyond this isolated test, re-enable Windows Firewall and allow only the required traffic, including the appropriate ICMP Echo Request rules for connectivity testing. Keep the required DNS and Active Directory traffic available between the domain controllers.
-- Successful ping tests confirm IP reachability for the tested paths. Successful `nslookup` tests confirm DNS name resolution; neither test alone proves Active Directory replication health.
+- `DC-Router` is a dedicated Windows Server with two network adapters connecting the two lab subnets.
+- The default gateway on `DC-01` points to `10.0.0.2`, while the default gateway on `DC-02` points to `192.168.1.1`.
+- Windows Defender Firewall was turned off on `DC-01`, `DC-Router`, and `DC-02` during this lab after the initial gateway ping failed.
+- DNS resolution was verified independently on both domain controllers using `nslookup`.
+- This lab focuses on RRAS and routing between the two IP subnets. Active Directory Sites and Subnets are covered separately in Lab 49.
 
 ## 🎯 Expected Result
 
-- The Remote Access role and RRAS are installed and running on `DC-Router`.
-- `DC-Router` has one interface in `10.0.0.0/24` and another in `192.168.1.0/24`.
-- `DC-01` and `DC-02` use the appropriate RRAS interfaces as their default gateways.
-- `DC-02` can reach its gateway and `DC-01`.
-- `DC-01` can reach `DC-02`.
-- DNS name resolution is verified from both domain controllers using `nslookup`.
+- RRAS is installed and started on the dedicated `DC-Router` server.
+- `DC-Router` has two network adapters configured for `10.0.0.0/24` and `192.168.1.0/24`.
+- `DC-01` and `DC-02` have the configured static IP addresses, default gateways, and DNS settings.
+- `DC-02` can successfully ping its gateway and `DC-01`.
+- `DC-01` can successfully ping `DC-02`.
+- DNS resolution succeeds on both domain controllers using `nslookup`.
 
 ## 🌍 Real-World Use Case
 
-Organizations often operate multiple IP networks across headquarters, branch offices, server rooms, and other locations. Routing allows systems on different subnets to communicate without placing every device in one large broadcast network. Windows Server RRAS can provide routing capabilities in supported Windows Server environments, while dedicated routers or other network platforms may be used in production depending on the organization's design.
+Organizations often maintain multiple IP subnets for different departments, offices, or server networks. A router forwards traffic between these networks so devices on separate subnets can communicate. Windows Server RRAS can provide routing capabilities in supported Windows Server environments.
 
 ## 📌 Outcome
 
-Installed and started the Remote Access and Routing and Remote Access services on the dedicated `DC-Router` server. Configured its two network interfaces with `10.0.0.2/24` for the HQ network and `192.168.1.1/24` for the Branch Office 1 network. Configured `DC-01` and `DC-02` with their respective static IP addresses, default gateways, and DNS settings. After temporarily turning off Windows Firewall on the three servers to troubleshoot blocked ping requests, verified successful gateway reachability and bidirectional connectivity between the domain controllers. Also verified DNS name resolution using `nslookup` on both domain controllers.
+Installed and started Routing and Remote Access Service on the dedicated `DC-Router` server. Configured its two network adapters with `10.0.0.2/24` and `192.168.1.1/24` to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets. Configured the IP address, default gateway, and DNS settings on `DC-01` and `DC-02`. After turning off Windows Defender Firewall on all three servers, verified successful gateway connectivity, bidirectional communication between the domain controllers, and DNS resolution using `nslookup` on both servers.
 
 ## 🙏 Acknowledgment
 
-This lab is part of my Windows Server and Active Directory homelab learning journey. Thanks for taking the time to review my documentation.
+This practical lab is part of my Windows Server and Active Directory homelab learning journey. It documents the hands-on RRAS routing exercise performed in VMware Workstation.
 
 ## ✍️ Author's Note
 
-This practical exercise focuses on using Windows Server RRAS for LAN routing between two separate IPv4 subnets. The routing server is kept separate from the domain controllers so that routing responsibilities are not placed on a domain controller. The successful ping and DNS tests establish basic network and name-resolution connectivity between the two lab networks.
+This lab uses a dedicated server named `DC-Router` with two network adapters. The focus is on establishing communication between `DC-01` and `DC-02`, which are configured on different IP subnets. The firewall was turned off on all three servers during the connectivity tests, and DNS resolution was verified independently on both domain controllers.
 
 ## ✅ Closing
 
-Configured Windows Server RRAS on a dedicated router and verified communication between the `10.0.0.0/24` and `192.168.1.0/24` networks. Both domain controllers successfully reached each other across the routed networks, and DNS name resolution was verified from both servers.
+Successfully installed and started RRAS on the dedicated `DC-Router` server and connected the two lab subnets. Verified gateway connectivity, successful communication between `DC-01` and `DC-02` in both directions, and DNS resolution using `nslookup`. This completes the practical RRAS routing exercise in the Windows Server homelab.
