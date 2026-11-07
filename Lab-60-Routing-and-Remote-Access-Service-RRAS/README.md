@@ -90,9 +90,6 @@ Configure the network adapter on `DC-02` with the following static settings:
 2. Initially, the ping from `DC-02` to its gateway, `192.168.1.1`, did not succeed.
 3. After turning off the firewall on all three servers, the gateway ping succeeded.
 
-**📸 Screenshot — Windows Defender Firewall disabled on the lab servers**
-
-![Windows Defender Firewall disabled on the lab servers](screenshots/Screenshot%20(5).png)
 
 ### Step 6 — Verify gateway and inter-subnet connectivity
 
