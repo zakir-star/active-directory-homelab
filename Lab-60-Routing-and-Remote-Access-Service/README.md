@@ -27,7 +27,7 @@ Install and configure the Routing and Remote Access Service (RRAS) on a Windows 
 
 **📸 Screenshot — Static IP configuration on the servers**
 
-![Static IP configuration](screenshots/Screenshot%20(1).png)
+![Static IP configuration](screenshots/Screenshot%20(2).png)
 
 ## ⚙️ Lab Configuration
 
@@ -56,7 +56,7 @@ The two network adapters on `DC-Router` connect it to the `10.0.0.0/24` and `192
 
 **📸 Screenshot — Remote Access role installation on DC-Router**
 
-![Remote Access role installation](screenshots/Screenshot%20(2).png)
+![Remote Access role installation](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Configure and enable RRAS LAN Routing
 
@@ -71,7 +71,7 @@ The two network adapters on `DC-Router` connect it to the `10.0.0.0/24` and `192
 
 **📸 Screenshot — Custom configuration with LAN Routing selected**
 
-![RRAS LAN Routing configuration](screenshots/Screenshot%20(3).png)
+![RRAS LAN Routing configuration](screenshots/Screenshot%20(9).png)
 
 ### Step 4 — Restart and verify the RRAS service
 
@@ -82,7 +82,7 @@ The two network adapters on `DC-Router` connect it to the `10.0.0.0/24` and `192
 
 **📸 Screenshot — RRAS service running on DC-Router**
 
-![RRAS service running](screenshots/Screenshot%20(4).png)
+![RRAS service running](screenshots/Screenshot%20(13).png)
 
 ### Step 5 — Verify connectivity between the subnets
 
@@ -112,11 +112,11 @@ The ping test was successful, confirming connectivity in the reverse direction a
 
 **📸 Screenshot — Ping verification from DC-02**
 
-![Ping verification from DC-02](screenshots/Screenshot%20(5).png)
+![Ping verification from DC-02](screenshots/Screenshot%20(14).png)
 
 **📸 Screenshot — Ping verification from DC-01**
 
-![Ping verification from DC-01](screenshots/Screenshot%20(6).png)
+![Ping verification from DC-01](screenshots/Screenshot%20(15).png)
 
 ### Step 6 — Promote DC-02 as an Additional Domain Controller
 
