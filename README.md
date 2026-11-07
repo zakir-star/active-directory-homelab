@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–48 completed
-> **Last updated:** November 6, 2026
+> **Status:** Labs 1–48 and 60 completed
+> **Last updated:** November 7, 2026
 
 ---
 
@@ -134,7 +134,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **57** | Internet Information Services (IIS) | 📋 Planned | Install IIS and host a test website |
 | **58** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment and prerequisites |
 | **59** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable lab scenario |
-| **60** | Routing and Remote Access Service (RRAS) | 📋 Planned | Explore RRAS installation, routing capabilities, and supported remote-access scenarios |
+| **60** | [Routing and Remote Access Service (RRAS) – LAN Routing](Lab-60-Routing-and-Remote-Access-Service/README.md) | ✅ Completed | Configure RRAS LAN Routing on a dual-homed Windows Server to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, verify bidirectional connectivity, and promote `DC-02` as an additional domain controller |
 | **61** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
 
 ### Phase 12 — Backup and Disaster Recovery
@@ -297,6 +297,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Active file screening to block image files using predefined FSRM templates
 - Local and roaming user profile configuration and verification for domain users
 - Active Directory replication topology checks, partner connection review, and replication health verification using repadmin
+- Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
 
