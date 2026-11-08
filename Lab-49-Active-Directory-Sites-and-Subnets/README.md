@@ -35,7 +35,7 @@ Configure multiple Active Directory sites and associate each site with its corre
 
 **📸 Screenshot — Head Office and branch office sites**
 
-![Active Directory sites](screenshots/Screenshot%20(1).png)
+![Active Directory sites](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Create and associate the IP subnets
 
@@ -53,7 +53,7 @@ Configure multiple Active Directory sites and associate each site with its corre
 
 **📸 Screenshot — Subnets associated with their respective sites**
 
-![Active Directory subnet configuration](screenshots/Screenshot%20(2).png)
+![Active Directory subnet configuration](screenshots/Screenshot%20(8).png)
 
 ### Step 4 — Move domain controllers into their respective sites
 
@@ -64,9 +64,9 @@ Configure multiple Active Directory sites and associate each site with its corre
 5. Repeat the process for `DC-03`, moving it into `Branch_Office-2`.
 6. Expand each site and verify the domain controller placement.
 
-**📸 Screenshot — Domain controllers placed in their respective sites**
+**📸 Screenshot — Domain controllers placing in their respective sites**
 
-![Domain controllers in Active Directory sites](screenshots/Screenshot%20(3).png)
+![Domain controllers in Active Directory sites](screenshots/Screenshot%20(10).png)
 
 ### Step 5 — Configure the inter-site links
 
@@ -81,9 +81,7 @@ Configure multiple Active Directory sites and associate each site with its corre
 9. Create another site link named `Branch_Office-1 To Branch_Office-2` and add `Branch_Office-1` and `Branch_Office-2`.
 10. Confirm that all three site links appear under **Inter-Site Transports → IP**.
 
-**📸 Screenshot — Three configured inter-site links**
 
-![Active Directory inter-site links](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Configure site-link cost, replication interval, and schedule
 
@@ -96,6 +94,11 @@ Configure multiple Active Directory sites and associate each site with its corre
 7. Set its **Cost** to `60`, its replication interval to `30` minutes, and its schedule to **6:00 AM to 7:00 PM**.
 8. Leave `Branch_Office-1 To Branch_Office-2` with its default site-link settings.
 
+**📸 Screenshot — Three configured inter-site links**
+
+![Active Directory inter-site links](screenshots/Screenshot%20(18).png)
+
+
 ### Step 7 — Designate DC-01 as the bridgehead server
 
 1. Under **Sites → Head_Office → Servers**, select `DC-01`.
@@ -104,7 +107,7 @@ Configure multiple Active Directory sites and associate each site with its corre
 
 **📸 Screenshot — DC-01 configured as the bridgehead server**
 
-![DC-01 bridgehead server configuration](screenshots/Screenshot%20(5).png)
+![DC-01 bridgehead server configuration](screenshots/Screenshot%20(20).png)
 
 ### Step 8 — Generate and initiate replication topology for Branch Office 1
 
@@ -136,7 +139,7 @@ Configure multiple Active Directory sites and associate each site with its corre
 
 **📸 Screenshot — Automatically generated replication connections**
 
-![Generated replication connections in Active Directory Sites and Services](screenshots/Screenshot%20(6).png)
+![Generated replication connections in Active Directory Sites and Services](screenshots/Screenshot%20(23).png)
 
 ### Step 11 — Verify replicated site configuration on DC-02 and DC-03
 
@@ -149,8 +152,8 @@ Configure multiple Active Directory sites and associate each site with its corre
 
 **📸 Screenshot — Replicated sites, subnets, and site links on DC-02 and DC-03**
 
-![Replicated Active Directory site configuration on DC-02 and DC-03](screenshots/Screenshot%20(7).png)
-
+![Replicated Active Directory site configuration on DC-02 and DC-03](screenshots/Screenshot%20(24).png)
+![Replicated Active Directory site configuration on DC-02 and DC-03](screenshots/Screenshot%20(25).png)
 ## 🔎 Verification
 
 - Confirm that `Default-First-Site-Name` was renamed to `Head_Office`.
