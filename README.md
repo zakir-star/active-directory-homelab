@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–49 and 60 completed
+> **Status:** Labs 1–50 and 60 completed
 > **Last updated:** November 9, 2026
 
 ---
@@ -114,7 +114,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **47** | [Active Directory Trust Relationships – Theory](Lab-47-Active-Directory-Trust-Relationships-Theory/README.md) | ✅ Completed | Understand trust direction, transitivity, parent-child, tree-root, external, forest, shortcut, and realm trusts, plus authentication scopes and DNS requirements |
 | **48** | [Practical Active Directory Forest Trust](Lab-48-Practical-Active-Directory-Forest-Trust/README.md) | ✅ Completed | Configure DNS Stub Zones and establish a two-way forest trust between the independent `example.com` and `corp.local` forests; verify cross-forest user authentication from an `example.com`-joined client |
 | **49** | [Active Directory Sites and Subnets](Lab-49-Active-Directory-Sites-and-Subnets/README.md) | ✅ Completed | Rename the default site to `Head_Office`, create `Branch_Office-1` and `Branch_Office-2`, map the three IP subnets to their respective sites, place domain controllers in the appropriate sites, configure site links, designate DC-01 as the bridgehead server, and verify Active Directory replication |
-| **50** | [Active Directory Partitions](Lab-50-Active-Directory-Partitions/README.md) | 📋 Planned | Explore schema, configuration, domain, and application directory partitions |
+| **50** | [Active Directory Partitions](Lab-50-Active-Directory-Partitions/README.md) | ✅ Completed | Inspect the Default, Configuration, Schema, ForestDnsZones, and DomainDnsZones naming contexts using ADSI Edit, and cross-check DNS application partition data in DNS Manager |
 
 ### Phase 10 — DNS and DHCP Services
 
@@ -298,6 +298,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Local and roaming user profile configuration and verification for domain users
 - Active Directory replication topology checks, partner connection review, and replication health verification using repadmin
 - Active Directory Sites and Services administration, including site creation, subnet mapping, domain controller placement, site links, bridgehead server configuration, and replication verification
+- Active Directory naming contexts and directory partitions, including the domain, configuration, schema, and DNS application partitions, inspected using ADSI Edit
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
