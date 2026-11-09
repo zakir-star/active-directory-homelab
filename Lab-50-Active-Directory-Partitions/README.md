@@ -250,3 +250,9 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 ## ✍️ Author's Note
 
 This lab focuses on understanding the internal organization of Active Directory rather than making configuration changes. ADSI Edit provided a direct view of the naming contexts and directory objects, while DNS Manager provided a familiar administrative view for cross-checking the domain DNS records.
+
+## ✅ Closing
+
+This lab successfully explored the Active Directory naming contexts using ADSI Edit. The Default, Configuration, Schema, ForestDnsZones, and DomainDnsZones partitions were inspected, providing a practical understanding of how Active Directory organizes directory information across the domain, forest, and application partitions. All inspections were read-only, and no directory objects or configurations were modified.
+
+---
