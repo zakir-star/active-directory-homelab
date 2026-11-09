@@ -91,9 +91,6 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 2. Open **Server Manager → Tools → ADSI Edit**.
 3. In the ADSI Edit console, right-click **ADSI Edit** and select **Connect to**.
 
-**📸 Screenshot — Opening ADSI Edit on DC-01**
-
-[View Screenshot](screenshots/Screenshot%20(0).png)
 
 ### Step 2 — Connect to the Default Naming Context
 
@@ -109,9 +106,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The domain naming context displayed the IT OU and its existing user and group objects, along with the test user in the Users container.
 
-**📸 Screenshot — Default Naming Context and domain objects**
-
-[View Screenshot](screenshots/Screenshot%20(1).png)
+[Screenshot 1](screenshots/Screenshot%20(1).png)
 
 ### Step 3 — Connect to the Configuration Naming Context
 
@@ -138,9 +133,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** ADSI Edit displayed the site and server structure, NTDS Settings objects, IP inter-site transports and site links, and configured subnet objects. These are configuration data associated with the Active Directory site topology.
 
-**📸 Screenshot — Configuration Naming Context and site structure**
-
-[View Screenshot](screenshots/Screenshot%20(2).png)
+[Screenshot 2](screenshots/Screenshot%20(2).png)
 
 
 
@@ -154,9 +147,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The Partitions container displayed references to both DNS application directory partitions. Together with the previous view of IP site links and subnet objects, this screenshot captures the key Configuration partition structures inspected in this lab.
 
-**📸 Screenshot — DNS application partition references**
-
-[View Screenshot](screenshots/Screenshot%20(3).png)
+[Screenshot 3](screenshots/Screenshot%20(3).png)
 
 ### Step 6 — Connect to ForestDnsZones
 
@@ -172,9 +163,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The ForestDnsZones application partition contained the MicrosoftDNS structure and the `msdcs.example.com` DNS zone data inspected in this lab.
 
-**📸 Screenshot — ForestDnsZones application partition**
-
-[View Screenshot](screenshots/Screenshot%20(4).png)
+[Screenshot 4](screenshots/Screenshot%20(4).png)
 
 ### Step 7 — Connect to DomainDnsZones and Verify DNS Records
 
@@ -193,9 +182,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The domain DNS zone entries for DC-01, DC-02, and DC-03 were inspected in the DomainDnsZones partition and compared with the `example.com` Forward Lookup Zone in DNS Manager.
 
-**📸 Screenshot — DomainDnsZones and domain DNS records**
-
-[View Screenshot](screenshots/Screenshot%20(5).png)
+[Screenshot 5](screenshots/Screenshot%20(5).png)
 
 
 
@@ -210,9 +197,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The Schema Naming Context was opened on DC-01 and its schema information was inspected. The classSchema and attributeSchema categories described in the theory section explain the two principal types of schema definitions.
 
-**📸 Screenshot — Schema Naming Context**
-
-[View Screenshot](screenshots/Screenshot%20(6).png)
+[Screenshot 6](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
