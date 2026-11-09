@@ -106,6 +106,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The domain naming context displayed the IT OU and its existing user and group objects, along with the test user in the Users container.
 
+**📸 Screenshot 1 — Default Naming Context showing the IT OU, user accounts, group, and test_user**
+
 [Screenshot 1](screenshots/Screenshot%20(1).png)
 
 ### Step 3 — Connect to the Configuration Naming Context
@@ -133,6 +135,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** ADSI Edit displayed the site and server structure, NTDS Settings objects, IP inter-site transports and site links, and configured subnet objects. These are configuration data associated with the Active Directory site topology.
 
+**📸 Screenshot 2 — Configuration Naming Context showing Active Directory sites, servers, and topology containers**
+
 [Screenshot 2](screenshots/Screenshot%20(2).png)
 
 
@@ -146,6 +150,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
    - `DC=ForestDnsZones,DC=example,DC=com`
 
 **Observation:** The Partitions container displayed references to both DNS application directory partitions. Together with the previous view of IP site links and subnet objects, this screenshot captures the key Configuration partition structures inspected in this lab.
+
+**📸 Screenshot 3 — Partition references for ForestDnsZones and DomainDnsZones**
 
 [Screenshot 3](screenshots/Screenshot%20(3).png)
 
@@ -162,6 +168,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 6. Select `DC=msdcs.example.com` and inspect the DNS-related directory objects and their displayed properties, including names, object classes, and distinguished names.
 
 **Observation:** The ForestDnsZones application partition contained the MicrosoftDNS structure and the `msdcs.example.com` DNS zone data inspected in this lab.
+
+**📸 Screenshot 4 — ForestDnsZones application partition and msdcs.example.com DNS zone**
 
 [Screenshot 4](screenshots/Screenshot%20(4).png)
 
@@ -182,6 +190,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **Observation:** The domain DNS zone entries for DC-01, DC-02, and DC-03 were inspected in the DomainDnsZones partition and compared with the `example.com` Forward Lookup Zone in DNS Manager.
 
+**📸 Screenshot 5 — DomainDnsZones application partition and example.com DNS records**
+
 [Screenshot 5](screenshots/Screenshot%20(5).png)
 
 
@@ -196,6 +206,8 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 6. Inspect the schema information and the properties displayed in ADSI Edit, including the available name, class, attribute, and distinguished-name information.
 
 **Observation:** The Schema Naming Context was opened on DC-01 and its schema information was inspected. The classSchema and attributeSchema categories described in the theory section explain the two principal types of schema definitions.
+
+**📸 Screenshot 6 — Schema Naming Context opened in ADSI Edit**
 
 [Screenshot 6](screenshots/Screenshot%20(6).png)
 
