@@ -108,7 +108,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 1 — Default Naming Context showing the IT OU, user accounts, group, and test_user**
 
-![Screenshot 1](screenshots/Screenshot%20(1).png)
+![Screenshot 1](screenshots/Screenshot%20(5).png)
 
 ### Step 3 — Connect to the Configuration Naming Context
 
@@ -137,7 +137,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 2 — Configuration Naming Context showing Active Directory sites, servers, and topology containers**
 
-![Screenshot 2](screenshots/Screenshot%20(2).png)
+![Screenshot 2](screenshots/Screenshot%20(9).png)
 
 
 
@@ -153,7 +153,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 3 — Partition references for ForestDnsZones and DomainDnsZones**
 
-![Screenshot 3](screenshots/Screenshot%20(3).png)
+![Screenshot 3](screenshots/Screenshot%20(11).png)
 
 ### Step 6 — Connect to ForestDnsZones
 
@@ -171,7 +171,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 4 — ForestDnsZones application partition and msdcs.example.com DNS zone**
 
-![Screenshot 4](screenshots/Screenshot%20(4).png)
+![Screenshot 4](screenshots/Screenshot%20(13).png)
 
 ### Step 7 — Connect to DomainDnsZones and Verify DNS Records
 
@@ -192,7 +192,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 5 — DomainDnsZones application partition and example.com DNS records**
 
-![Screenshot 5](screenshots/Screenshot%20(5).png)
+![Screenshot 5](screenshots/Screenshot%20(15).png)
 
 
 
@@ -209,7 +209,7 @@ These partitions allow DNS data to be replicated to the appropriate DNS-enabled 
 
 **📸 Screenshot 6 — Schema Naming Context opened in ADSI Edit**
 
-![Screenshot 6](screenshots/Screenshot%20(6).png)
+![Screenshot 6](screenshots/Screenshot%20(17).png)
 
 ## 🔎 Verification
 
