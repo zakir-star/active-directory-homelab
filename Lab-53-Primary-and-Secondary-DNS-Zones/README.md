@@ -162,7 +162,7 @@ The new Standard Primary Forward Lookup Zone named `company.local` appears under
 
 **📸 Screenshot 1 — Standard Primary Zone wizard showing the zone name and file-based configuration**
 
-![Standard Primary Zone configuration](screenshots/Screenshot%20(1).png)
+<!-- Screenshot link slot 1 — Add the selected screenshot link here. -->
 
 ### Step 2 — Inspect the Default SOA and NS Records
 
@@ -222,7 +222,7 @@ The CNAME record creates the alias `files.company.local`, which points to `www.c
 
 **📸 Screenshot 2 — www Host (A) and files Alias (CNAME) records in the company.local Primary Zone**
 
-![A and CNAME records in the Primary Zone](screenshots/Screenshot%20(2).png)
+<!-- Screenshot link slot 2 — Add the selected screenshot link here. -->
 
 ### Step 5 — Create a Secondary Forward Lookup Zone on DC-02
 
@@ -253,7 +253,7 @@ The `company.local` Secondary Zone appears under Forward Lookup Zones on `DC-02`
 
 **📸 Screenshot 3 — Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server**
 
-![Secondary Zone master server configuration](screenshots/Screenshot%20(3).png)
+<!-- Screenshot link slot 3 — Add the selected screenshot link here. -->
 
 ### Step 6 — Configure Zone Transfers on DC-01
 
@@ -277,7 +277,7 @@ This restricts zone transfers for `company.local` to the specified secondary DNS
 
 **📸 Screenshot 4 — Zone Transfers enabled for DC-02 (10.0.0.3) only**
 
-![Zone transfer restriction for DC-02](screenshots/Screenshot%20(4).png)
+<!-- Screenshot link slot 4 — Add the selected screenshot link here. -->
 
 ### Step 7 — Configure DNS Notify on DC-01
 
@@ -296,7 +296,7 @@ The Notify configuration identifies `DC-02` as a secondary DNS server to be noti
 
 **📸 Screenshot 5 — Notify configuration for DC-02 (10.0.0.3)**
 
-![DNS Notify configuration](screenshots/Screenshot%20(5).png)
+<!-- Screenshot link slot 5 — Add the selected screenshot link here. -->
 
 ### Step 8 — Refresh and Verify the Secondary Zone on DC-02
 
@@ -316,7 +316,7 @@ The records created on the Primary Zone on `DC-01` are now available in the Seco
 
 **📸 Screenshot 6 — Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02**
 
-![Transferred records in the Secondary Zone](screenshots/Screenshot%20(6).png)
+<!-- Screenshot link slot 6 — Add the selected screenshot link here. -->
 
 ## 🔎 Verification
 
