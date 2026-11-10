@@ -139,6 +139,13 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 ### Phase 11 — Backup and Disaster Recovery
 
+| Lab | Title | Status | What it covers |
+|-----|-------|--------|----------------|
+| **62** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
+| **63** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
+| **64** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **65** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+
 ### Phase 12 — Advanced File Services and Caching
 
 These labs cover distributed file access, replication, caching, and storage efficiency, extending the file-server fundamentals introduced in Phase 4.
@@ -151,12 +158,7 @@ These labs cover distributed file access, replication, caching, and storage effi
 | **69** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
 | **70** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
-| Lab | Title | Status | What it covers |
-|-----|-------|--------|----------------|
-| **62** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
-| **63** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
-| **64** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
-| **65** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+
 
 ### Phase 13 — Hyper-V and Virtualization
 
