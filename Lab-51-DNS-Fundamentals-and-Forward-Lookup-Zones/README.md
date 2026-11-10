@@ -27,7 +27,7 @@ DNS is not a single central database. Its information is distributed across DNS 
 
 DNS is a core service dependency for Active Directory. Domain-joined Windows computers use DNS to locate domain controllers and the services those domain controllers provide.
 
-When a Windows client joins `example.com), it needs to discover a suitable domain controller. Active Directory publishes service-location records, known as **SRV records**, in DNS. These records help clients locate services such as LDAP and Kerberos.
+When a Windows client joins `example.com`, it needs to discover a suitable domain controller. Active Directory publishes service-location records, known as **SRV records**, in DNS. These records help clients locate services such as LDAP and Kerberos.
 
 DNS supports Active Directory operations including:
 
@@ -117,7 +117,19 @@ When a client queries for `DC-01.example.com`, the DNS server can look in the `e
 
 A Forward Lookup Zone can also contain records that provide service-location, mail-routing, alias, and zone-authority information.
 
-![DNS namespace and Forward Lookup Zone relationship](images/dns-hierarchy-zone.png)
+```text
+DNS hierarchy (from right to left)
+
+.                         Root
+└── com                   Top-Level Domain
+    └── example           Second-Level Domain
+        └── DC-01         Host name
+
+FQDN: DC-01.example.com
+
+The example.com Forward Lookup Zone can contain the
+A record that maps DC-01 to 10.0.0.1.
+```
 
 ### 7. DNS Resource Records
 
