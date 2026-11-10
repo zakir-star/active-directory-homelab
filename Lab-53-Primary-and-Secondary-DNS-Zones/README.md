@@ -162,7 +162,7 @@ The new Standard Primary Forward Lookup Zone named `company.local` appears under
 
 **📸 Screenshot — Standard Primary Zone wizard showing the zone name and file-based configuration**
 
-![Standard Primary Zone wizard showing the zone name and file-based configuration](screenshots/Standard-Primary-Zone-wizard-showing-the-zone-name-and-file-based-configuration.png)
+<!-- Screenshot link slot: ![Standard Primary Zone wizard showing the zone name and file-based configuration](screenshots/actual-screenshot-filename.png) -->
 
 ### Step 2 — Inspect the Default SOA and NS Records
 
@@ -222,7 +222,7 @@ The CNAME record creates the alias `files.company.local`, which points to `www.c
 
 **📸 Screenshot — www Host (A) and files Alias (CNAME) records in the company.local Primary Zone**
 
-![www Host (A) and files Alias (CNAME) records in the company.local Primary Zone](screenshots/www-Host-A-and-files-Alias-CNAME-records-in-the-company-local-Primary-Zone.png)
+<!-- Screenshot link slot: ![www Host (A) and files Alias (CNAME) records in the company.local Primary Zone](screenshots/actual-screenshot-filename.png) -->
 
 ### Step 5 — Create a Secondary Forward Lookup Zone on DC-02
 
@@ -253,7 +253,7 @@ The `company.local` Secondary Zone appears under Forward Lookup Zones on `DC-02`
 
 **📸 Screenshot — Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server**
 
-![Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server](screenshots/Secondary-Zone-wizard-with-DC-01-10-0-0-1-configured-as-the-master-DNS-server.png)
+<!-- Screenshot link slot: ![Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server](screenshots/actual-screenshot-filename.png) -->
 
 ### Step 6 — Configure Zone Transfers on DC-01
 
@@ -277,7 +277,7 @@ This restricts zone transfers for `company.local` to the specified secondary DNS
 
 **📸 Screenshot — Zone Transfers enabled for DC-02 (10.0.0.3) only**
 
-![Zone Transfers enabled for DC-02 (10.0.0.3) only](screenshots/Zone-Transfers-enabled-for-DC-02-10-0-0-3-only.png)
+<!-- Screenshot link slot: ![Zone Transfers enabled for DC-02 (10.0.0.3) only](screenshots/actual-screenshot-filename.png) -->
 
 ### Step 7 — Configure DNS Notify on DC-01
 
@@ -296,7 +296,7 @@ The Notify configuration identifies `DC-02` as a secondary DNS server to be noti
 
 **📸 Screenshot — Notify configuration for DC-02 (10.0.0.3)**
 
-![Notify configuration for DC-02 (10.0.0.3)](screenshots/Notify-configuration-for-DC-02-10-0-0-3.png)
+<!-- Screenshot link slot: ![Notify configuration for DC-02 (10.0.0.3)](screenshots/actual-screenshot-filename.png) -->
 
 ### Step 8 — Refresh and Verify the Secondary Zone on DC-02
 
@@ -316,7 +316,7 @@ The records created on the Primary Zone on `DC-01` are now available in the Seco
 
 **📸 Screenshot — Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02**
 
-![Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02](screenshots/Transferred-A-and-CNAME-records-displayed-in-the-read-only-Secondary-Zone-on-DC-02.png)
+<!-- Screenshot link slot: ![Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02](screenshots/actual-screenshot-filename.png) -->
 
 ## 🔎 Verification
 
