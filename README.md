@@ -60,7 +60,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 
 
 
-### Phase 6 — Disk Management and Storage Fundamentals
+### Phase 5 — Disk Management and Storage Fundamentals
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -75,7 +75,7 @@ The roadmap is organized into phases. Labs marked **Completed** reflect work alr
 | **25** | [Practical iSCSI Configuration](Lab-25-Practical-iSCSI-Configuration/README.md) | ✅ Completed | Configure a Windows Server 2022 iSCSI target, connect a domain-joined Windows 10 initiator, and verify remote block-storage read/write access |
 | **26** | [Storage Spaces](Lab-26-Storage-Spaces/README.md) | ✅ Completed | Create a storage pool from three physical disks and provision a thin two-way mirror virtual disk with an NTFS volume |
 
-### Phase 7 — Group Policy Administration
+### Phase 6 — Group Policy Administration
 
 These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group Policy troubleshooting remains a future topic.
 
@@ -94,7 +94,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **37** | [Software Deployment Using Group Policy (Assigned Method)](Lab-37-Software-Deployment-Using-Group-Policy-Assigned-Method/README.md) | ✅ Completed | Assign an MSI-based application to targeted domain users and configure installation at user logon through Group Policy Software Installation |
 | **38** | [Block C Drive](Lab-38-Block-C-Drive/README.md) | ✅ Completed | Use Group Policy to block access to the C: drive for targeted domain users and verify the restriction on a Windows client |
 
-### Phase 8 — Windows User Profiles and Home Folders
+### Phase 7 — Windows User Profiles and Home Folders
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -102,7 +102,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **40** | [Roaming User Profiles](Lab-40-Roaming-User-Profiles/README.md) | ✅ Completed | Configure a central roaming profile path for two domain users and verify their profile types and individual profile folders |
 | **41** | [Home Folders](Lab-41-Home-Folders/README.md) | ✅ Completed | Configure individual Home Folders for two IT OU users, map them as drive H:, and verify user-specific folders on the Domain Controller |
 
-### Phase 9 — Advanced Active Directory Infrastructure
+### Phase 8 — Advanced Active Directory Infrastructure
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -116,7 +116,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **49** | [Active Directory Sites and Subnets](Lab-49-Active-Directory-Sites-and-Subnets/README.md) | ✅ Completed | Rename the default site to `Head_Office`, create `Branch_Office-1` and `Branch_Office-2`, map the three IP subnets to their respective sites, place domain controllers in the appropriate sites, configure site links, designate DC-01 as the bridgehead server, and verify Active Directory replication |
 | **50** | [Active Directory Partitions](Lab-50-Active-Directory-Partitions/README.md) | ✅ Completed | Inspect the Default, Configuration, Schema, ForestDnsZones, and DomainDnsZones naming contexts using ADSI Edit, and cross-check DNS application partition data in DNS Manager |
 
-### Phase 10 — DNS and DHCP Services
+### Phase 9 — DNS and DHCP Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -127,7 +127,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **55** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
 | **56** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
 
-### Phase 11 — Web, Deployment, and Remote Access
+### Phase 10 — Web, Deployment, and Remote Access
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -137,9 +137,9 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **60** | [Routing and Remote Access Service (RRAS) – LAN Routing](Lab-60-Routing-and-Remote-Access-Service/README.md) | ✅ Completed | Configure RRAS LAN Routing on a dual-homed Windows Server to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, verify bidirectional connectivity, and promote `DC-02` as an additional domain controller |
 | **61** | VPN Server Configuration | 📋 Planned | Configure and test a suitable remote-access VPN scenario, where supported |
 
-### Phase 12 — Backup and Disaster Recovery
+### Phase 11 — Backup and Disaster Recovery
 
-### Phase 13 — Advanced File Services and Caching
+### Phase 12 — Advanced File Services and Caching
 
 These labs cover distributed file access, replication, caching, and storage efficiency, extending the file-server fundamentals introduced in Phase 4.
 
@@ -158,7 +158,7 @@ These labs cover distributed file access, replication, caching, and storage effi
 | **64** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
 | **65** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
-### Phase 14 — Hyper-V and Virtualization
+### Phase 13 — Hyper-V and Virtualization
 
 Hyper-V labs will be performed only where the host hardware and nested-virtualization setup support them. VMware Workstation remains the current lab hypervisor.
 
@@ -169,7 +169,7 @@ Hyper-V labs will be performed only where the host hardware and nested-virtualiz
 | **72** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
 | **73** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
 
-### Phase 15 — High Availability and Resilience
+### Phase 14 — High Availability and Resilience
 
 Some exercises require multiple Windows Server VMs, compatible storage, and additional host resources; practical implementation will depend on lab support.
 
@@ -180,7 +180,7 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 | **76** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
 | **77** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
 
-### Phase 16 — Advanced Identity and Certificate Services
+### Phase 15 — Advanced Identity and Certificate Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -191,7 +191,7 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 | **82** | Active Directory Rights Management Services (AD RMS) | 📋 Planned | Understand information-protection concepts and the role's prerequisites |
 | **83** | Active Directory Auditing and Certificate-Based Authentication | 📋 Planned | Configure selected audit policies and explore certificate-based identity scenarios where supported |
 
-### Phase 17 — Server Operations and Maintenance
+### Phase 16 — Server Operations and Maintenance
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
@@ -201,7 +201,7 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 | **87** | Event Viewer and Performance Monitoring | 📋 Planned | Use event logs, Performance Monitor, and Resource Monitor to investigate issues |
 | **88** | Server Role Maintenance, Migration, and Troubleshooting | 📋 Planned | Review role servicing, migration planning, and structured troubleshooting |
 
-### Phase 18 — Additional Windows Server Infrastructure Services
+### Phase 17 — Additional Windows Server Infrastructure Services
 
 These topics focus on Windows Server roles and infrastructure features rather than general networking labs.
 
