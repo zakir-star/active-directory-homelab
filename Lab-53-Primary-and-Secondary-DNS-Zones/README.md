@@ -160,9 +160,9 @@ The CNAME record points to the canonical name `www.company.local`, not directly 
 
 The new Standard Primary Forward Lookup Zone named `company.local` appears under Forward Lookup Zones.
 
-**📸 Screenshot 1 — Standard Primary Zone wizard showing the zone name and file-based configuration**
+**📸 Screenshot — Standard Primary Zone wizard showing the zone name and file-based configuration**
 
-**Screenshot Link:** [Add Screenshot 1 link here]
+[Insert screenshot here]
 
 ### Step 2 — Inspect the Default SOA and NS Records
 
@@ -220,9 +220,9 @@ The Host (A) record maps `www.company.local` to the IPv4 address `10.0.0.1`.
 
 The CNAME record creates the alias `files.company.local`, which points to `www.company.local`.
 
-**📸 Screenshot 2 — www Host (A) and files Alias (CNAME) records in the company.local Primary Zone**
+**📸 Screenshot — www Host (A) and files Alias (CNAME) records in the company.local Primary Zone**
 
-**Screenshot Link:** [Add Screenshot 2 link here]
+[Insert screenshot here]
 
 ### Step 5 — Create a Secondary Forward Lookup Zone on DC-02
 
@@ -251,9 +251,9 @@ The CNAME record creates the alias `files.company.local`, which points to `www.c
 
 The `company.local` Secondary Zone appears under Forward Lookup Zones on `DC-02`. At this stage, selecting the zone displays a failure message because zone transfers have not yet been permitted on the Primary DNS server.
 
-**📸 Screenshot 3 — Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server**
+**📸 Screenshot — Secondary Zone wizard with DC-01 (10.0.0.1) configured as the master DNS server**
 
-**Screenshot Link:** [Add Screenshot 3 link here]
+[Insert screenshot here]
 
 ### Step 6 — Configure Zone Transfers on DC-01
 
@@ -275,9 +275,9 @@ The `company.local` Secondary Zone appears under Forward Lookup Zones on `DC-02`
 
 This restricts zone transfers for `company.local` to the specified secondary DNS server, `DC-02`.
 
-**📸 Screenshot 4 — Zone Transfers enabled for DC-02 (10.0.0.3) only**
+**📸 Screenshot — Zone Transfers enabled for DC-02 (10.0.0.3) only**
 
-**Screenshot Link:** [Add Screenshot 4 link here]
+[Insert screenshot here]
 
 ### Step 7 — Configure DNS Notify on DC-01
 
@@ -294,9 +294,9 @@ This restricts zone transfers for `company.local` to the specified secondary DNS
 
 The Notify configuration identifies `DC-02` as a secondary DNS server to be notified when the zone changes.
 
-**📸 Screenshot 5 — Notify configuration for DC-02 (10.0.0.3)**
+**📸 Screenshot — Notify configuration for DC-02 (10.0.0.3)**
 
-**Screenshot Link:** [Add Screenshot 5 link here]
+[Insert screenshot here]
 
 ### Step 8 — Refresh and Verify the Secondary Zone on DC-02
 
@@ -314,9 +314,9 @@ The Notify configuration identifies `DC-02` as a secondary DNS server to be noti
 
 The records created on the Primary Zone on `DC-01` are now available in the Secondary Zone on `DC-02`.
 
-**📸 Screenshot 6 — Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02**
+**📸 Screenshot — Transferred A and CNAME records displayed in the read-only Secondary Zone on DC-02**
 
-**Screenshot Link:** [Add Screenshot 6 link here]
+[Insert screenshot here]
 
 ## 🔎 Verification
 
