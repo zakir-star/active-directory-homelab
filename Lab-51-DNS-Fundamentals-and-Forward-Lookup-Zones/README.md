@@ -249,12 +249,9 @@ In this exercise, a Host (A) record is created in the existing `example.com` For
 
 The new record should appear in the `example.com` zone with the hostname `CLIENT-01` and address `10.0.0.10`.
 
-**📸 Screenshot — New Host (A) record configuration for CLIENT-01**
-
-![New Host A record configuration for CLIENT-01](screenshots/Screenshot%20(2).png)
 **📸 Screenshot — CLIENT-01 A record created in the example.com zone**
 
-![CLIENT-01 A record created in the example.com zone](screenshots/Screenshot%20(3).png)
+![CLIENT-01 A record created in the example.com zone](screenshots/Screenshot%20(5).png)
 
 ### 3. Verify DNS Resolution from Windows 11
 
@@ -288,7 +285,7 @@ The ping completed successfully. This confirms that the hostname resolved to the
 
 **📸 Screenshot — DNS resolution and successful ping from Windows 11**
 
-![nslookup and successful ping for CLIENT-01.example.com from Windows 11](screenshots/Screenshot%20(4).png)
+![nslookup and successful ping for CLIENT-01.example.com from Windows 11](screenshots/Screenshot%20(6).png)
 
 ## 🎯 Expected Result
 
