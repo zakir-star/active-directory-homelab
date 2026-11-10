@@ -216,9 +216,75 @@ These mechanisms help DNS servers resolve both internal names and names outside 
 - Dynamic DNS allows eligible systems to register and update records.
 - Active Directory-integrated zones store DNS data in AD DS and replicate according to the selected application partition scope.
 
+## 🛠️ Practical — Creating and Verifying a DNS Host (A) Record
+
+In this exercise, a Host (A) record is created in the existing `example.com` Forward Lookup Zone for the Windows 11 client. The record maps the client hostname to its IPv4 address.
+
+### 1. Open DNS Manager on DC-01
+
+1. Sign in to `DC-01`.
+2. Open **Server Manager → Tools → DNS**.
+3. Expand the `DC-01` DNS server.
+4. Expand **Forward Lookup Zones**.
+5. Select the `example.com` zone.
+
+<!-- Screenshot slot: screenshots/01-dns-manager-example-com-zone.png -->
+
+### 2. Create the Host (A) Record
+
+1. Right-click the `example.com` Forward Lookup Zone.
+2. Select **New Host (A or AAAA)**.
+3. Enter the following details:
+
+| Field | Value |
+|---|---|
+| Host name | `CLIENT-01` |
+| IP address | `10.0.0.10` |
+| Record type | A (IPv4) |
+
+4. Click **Add Host**.
+5. After the record is added, click **OK** to close the confirmation message.
+
+The new record should appear in the `example.com` zone with the hostname `CLIENT-01` and address `10.0.0.10`.
+
+<!-- Screenshot slot: screenshots/02-new-host-a-record.png -->
+<!-- Screenshot slot: screenshots/03-client-01-a-record-created.png -->
+
+### 3. Verify DNS Resolution from Windows 11
+
+On the Windows 11 client (`CLIENT-01`), open Command Prompt and run:
+
+```cmd
+nslookup CLIENT-01.example.com
+```
+
+The lookup returned the following information:
+
+```text
+Server:  10.0.0.1
+Name:    CLIENT-01.example.com
+Address: 10.0.0.10
+```
+
+This result confirms that the Windows 11 client queried the DNS server at `10.0.0.1` and that the fully qualified domain name `CLIENT-01.example.com` resolved to `10.0.0.10`.
+
+### 4. Verify Name Resolution and Connectivity
+
+From the same Windows 11 Command Prompt, run:
+
+```cmd
+ping CLIENT-01.example.com
+```
+
+The ping completed successfully. This confirms that the hostname resolved to the target address and that the target responded to ICMP echo requests.
+
+**Verification note:** `nslookup` verifies DNS resolution. A successful ping additionally demonstrates that the resolved destination responds to ICMP; ping success is not, by itself, a complete test of every network service.
+
+<!-- Screenshot slot: screenshots/04-windows-11-dns-verification.png -->
+
 ## 🎯 Expected Result
 
-After studying this theory section, the reader should be able to:
+After completing this lab, the reader should be able to:
 
 - Explain DNS and its importance to Active Directory.
 - Describe the basic DNS name-resolution process.
@@ -239,7 +305,7 @@ Administrators maintain DNS zones and records so that servers, applications, and
 
 ## 📌 Outcome
 
-Studied DNS fundamentals, the DNS namespace hierarchy, name resolution, caching, DNS domains and zones, Forward Lookup Zones, common resource records, Dynamic DNS, and Active Directory-integrated DNS. This theory provides the foundation for the practical inspection and verification of the `example.com` Forward Lookup Zone.
+Studied DNS fundamentals and configured a Host (A) record in the `example.com` Forward Lookup Zone for `CLIENT-01`, mapping it to `10.0.0.10`. Verified the fully qualified domain name from Windows 11 using `nslookup` and confirmed successful ICMP connectivity using `ping`.
 
 ## 🙏 Acknowledgment
 
@@ -247,10 +313,10 @@ This theory section is part of my Active Directory homelab learning journey. Tha
 
 ## ✍️ Author's Note
 
-I prepared this theory section before beginning the practical configuration so that the purpose of DNS and its relationship with Active Directory are clear. The practical portion will be added after inspecting the existing DNS configuration and verifying name resolution from the Windows 11 client.
+I completed the theory first and then applied the concepts by creating an A record for the Windows 11 client. The practical verification demonstrates how a DNS server resolves a fully qualified domain name to its associated IPv4 address.
 
 ## ✅ Closing
 
-This theory section established the fundamentals of DNS and explained why it is essential to Active Directory. It covered name resolution, the DNS hierarchy, zones, resource records, Dynamic DNS, and Active Directory-integrated DNS. The practical portion of Lab 51 will build on these concepts by examining the existing Forward Lookup Zone and verifying DNS resolution in the lab environment.
+This lab combined DNS theory with a practical configuration exercise. After reviewing DNS name resolution, zones, resource records, Dynamic DNS, and Active Directory-integrated DNS, a Host (A) record was created for the Windows 11 client and successfully verified using `nslookup` and `ping`.
 
 ---
