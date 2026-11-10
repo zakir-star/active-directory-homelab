@@ -155,7 +155,7 @@ The new Reverse Lookup Zone is created with the zone name:
 
 **📸 Screenshot 2 — Newly created 0.0.10.in-addr.arpa Reverse Lookup Zone**
 
-![New Reverse Lookup Zone](screenshots/Screenshot%20(2).png)
+![New Reverse Lookup Zone](screenshots/Screenshot%20(10).png)
 
 ### Step 3 — Inspect the Default Zone Records
 
@@ -183,7 +183,7 @@ The PTR record is displayed for `10.0.0.10` with its host name set to `CLIENT-01
 
 **📸 Screenshot 3 — PTR record for 10.0.0.10 pointing to CLIENT-01**
 
-![CLIENT-01 PTR record](screenshots/Screenshot%20(3).png)
+![CLIENT-01 PTR record](screenshots/Screenshot%20(13).png)
 
 ### Step 5 — Verify Reverse DNS Resolution from DC-01
 
@@ -205,7 +205,7 @@ This confirms that the reverse DNS query for `10.0.0.10` returned the host name 
 
 **📸 Screenshot 4 — nslookup reverse lookup verification from DC-01**
 
-![Reverse DNS verification from DC-01](screenshots/Screenshot%20(4).png)
+![Reverse DNS verification from DC-01](screenshots/Screenshot%20(14).png)
 
 ### Step 6 — Verify Reverse DNS Resolution from Windows 11
 
@@ -227,7 +227,7 @@ This confirms that the Windows 11 client also resolved the IP address `10.0.0.10
 
 **📸 Screenshot 5 — nslookup reverse lookup verification from Windows 11**
 
-![Reverse DNS verification from Windows 11](screenshots/Screenshot%20(5).png)
+![Reverse DNS verification from Windows 11](screenshots/Screenshot%20(15).png)
 
 ### Step 7 — Additional Verification Using PowerShell
 
@@ -252,7 +252,7 @@ The `PTR` record type identifies the reverse DNS record, and the `NameHost` valu
 
 **📸 Screenshot 6 — Resolve-DnsName output showing the PTR record and CLIENT-01 NameHost**
 
-![Resolve-DnsName PTR verification](screenshots/Screenshot%20(6).png)
+![Resolve-DnsName PTR verification](screenshots/Screenshot%20(16).png)
 
 ## 🔎 Verification
 
