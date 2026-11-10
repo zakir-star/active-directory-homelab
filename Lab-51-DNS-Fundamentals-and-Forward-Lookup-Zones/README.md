@@ -228,7 +228,9 @@ In this exercise, a Host (A) record is created in the existing `example.com` For
 4. Expand **Forward Lookup Zones**.
 5. Select the `example.com` zone.
 
-<!-- Screenshot slot: screenshots/01-dns-manager-example-com-zone.png -->
+**📸 Screenshot — example.com Forward Lookup Zone in DNS Manager**
+
+![example.com Forward Lookup Zone in DNS Manager](screenshots/Screenshot%20(1).png)
 
 ### 2. Create the Host (A) Record
 
@@ -247,8 +249,12 @@ In this exercise, a Host (A) record is created in the existing `example.com` For
 
 The new record should appear in the `example.com` zone with the hostname `CLIENT-01` and address `10.0.0.10`.
 
-<!-- Screenshot slot: screenshots/02-new-host-a-record.png -->
-<!-- Screenshot slot: screenshots/03-client-01-a-record-created.png -->
+**📸 Screenshot — New Host (A) record configuration for CLIENT-01**
+
+![New Host A record configuration for CLIENT-01](screenshots/Screenshot%20(2).png)
+**📸 Screenshot — CLIENT-01 A record created in the example.com zone**
+
+![CLIENT-01 A record created in the example.com zone](screenshots/Screenshot%20(3).png)
 
 ### 3. Verify DNS Resolution from Windows 11
 
@@ -280,7 +286,9 @@ The ping completed successfully. This confirms that the hostname resolved to the
 
 **Verification note:** `nslookup` verifies DNS resolution. A successful ping additionally demonstrates that the resolved destination responds to ICMP; ping success is not, by itself, a complete test of every network service.
 
-<!-- Screenshot slot: screenshots/04-windows-11-dns-verification.png -->
+**📸 Screenshot — DNS resolution and successful ping from Windows 11**
+
+![nslookup and successful ping for CLIENT-01.example.com from Windows 11](screenshots/Screenshot%20(4).png)
 
 ## 🎯 Expected Result
 
