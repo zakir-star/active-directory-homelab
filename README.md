@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–51 and 60 completed
+> **Status:** Labs 1–52 and 60 completed
 > **Last updated:** November 10, 2026
 
 ---
@@ -121,7 +121,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **51** | [DNS Fundamentals and Forward Lookup Zones](Lab-51-DNS-Fundamentals-and-Forward-Lookup-Zones/README.md) | ✅ Completed | Study DNS fundamentals, name resolution, zones, resource records, Dynamic DNS, and Active Directory-integrated DNS; create a `CLIENT-01` Host (A) record and verify FQDN resolution and connectivity from Windows 11 |
-| **52** | Reverse Lookup Zones | 📋 Planned | Configure reverse lookup and PTR records |
+| **52** | [Reverse Lookup Zones](Lab-52-Reverse-Lookup-Zones/README.md) | ✅ Completed | Create an AD-integrated IPv4 Reverse Lookup Zone for `10.0.0.0/24`, configure a PTR record for `CLIENT-01`, and verify reverse DNS resolution from DC-01 and Windows 11 using `nslookup` and `Resolve-DnsName` |
 | **53** | Primary and Secondary DNS Zones | 📋 Planned | Understand zone replication and secondary-zone configuration |
 | **54** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
 | **55** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
@@ -300,7 +300,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Active Directory replication topology checks, partner connection review, and replication health verification using repadmin
 - Active Directory Sites and Services administration, including site creation, subnet mapping, domain controller placement, site links, bridgehead server configuration, and replication verification
 - Active Directory naming contexts and directory partitions, including the domain, configuration, schema, and DNS application partitions, inspected using ADSI Edit
-- DNS fundamentals, forward lookup zones, Host (A) record creation, FQDN resolution with `nslookup`, and hostname connectivity verification from a Windows 11 client
+- DNS fundamentals, forward and reverse lookup zones, Host (A) and PTR record creation, FQDN and reverse DNS resolution with `nslookup`, `Resolve-DnsName` verification, and hostname connectivity testing from Windows 11
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
