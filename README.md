@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–54 and 60 completed
-> **Last updated:** November 11, 2026
+> **Status:** Labs 1–55 and 60 completed
+> **Last updated:** November 12, 2026
 
 ---
 
@@ -124,7 +124,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **52** | [Reverse Lookup Zones](Lab-52-Reverse-Lookup-Zones/README.md) | ✅ Completed | Create an AD-integrated IPv4 Reverse Lookup Zone for `10.0.0.0/24`, configure a PTR record for `CLIENT-01`, and verify reverse DNS resolution from DC-01 and Windows 11 using `nslookup` and `Resolve-DnsName` |
 | **53** | [Primary and Secondary DNS Zones](Lab-53-Primary-and-Secondary-DNS-Zones/README.md) | ✅ Completed | Create a Standard Primary Zone on DC-01, configure A and CNAME records, establish a read-only Secondary Zone on DC-02, restrict DNS zone transfers, configure DNS Notify, and verify transferred records |
 | **54** | [Stub DNS Zones](Lab-54-Stub-DNS-Zone/README.md) | ✅ Completed | Create an Active Directory-integrated Stub Zone on DC-02, configure DC-01 as the Master DNS Server, transfer the required SOA, NS, and name-server address records, and verify DNS resolution from DC-02 |
-| **55** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
+| **55** | [DHCP Server Installation and Configuration](Lab-55-DHCP-Server-Installation-and-Configuration/README.md) | ✅ Completed | Install and configure Windows DHCP, create and activate an IPv4 scope with exclusions and DHCP options, verify DORA and dynamic leases in Wireshark, configure a client reservation, and enable MAC address Allow filtering |
 | **56** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
 
 ### Phase 10 — Web, Deployment, and Remote Access
@@ -301,6 +301,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Active Directory Sites and Services administration, including site creation, subnet mapping, domain controller placement, site links, bridgehead server configuration, and replication verification
 - Active Directory naming contexts and directory partitions, including the domain, configuration, schema, and DNS application partitions, inspected using ADSI Edit
 - DNS fundamentals, forward and reverse lookup zones, standard Primary and Secondary DNS zones, Active Directory-integrated Stub Zones, Host (A), CNAME, and PTR record handling, DNS zone transfers, FQDN and reverse DNS resolution with `nslookup` and `Resolve-DnsName`, and hostname connectivity testing
+- Windows Server DHCP scope creation and activation, exclusions, lease duration and DHCP options, DORA packet inspection with Wireshark, DHCP reservations, and MAC address Allow filtering
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
