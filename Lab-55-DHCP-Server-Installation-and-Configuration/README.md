@@ -145,7 +145,7 @@ MAC address filtering is an administrative access-control feature, not strong au
 5. Complete the installation.
 6. After installation, open **Server Manager → Tools → DHCP**.
 
-**📸 Screenshot — DHCP Server role installed on DC-01**
+**📸 Screenshot — DHCP Server role install on DC-01**
 
 ![DHCP Server role installed on DC-01](screenshots/Screenshot%20(1).png)
 
@@ -178,7 +178,7 @@ MAC address filtering is an administrative access-control feature, not strong au
 
 **📸 Screenshot — Scope1 IP address range configured**
 
-![Scope1 IP address range configured](screenshots/Screenshot%20(2).png)
+![Scope1 IP address range configured](screenshots/Screenshot%20(6).png)
 
 ### Step 4 — Configure the Exclusion Range
 
@@ -193,7 +193,7 @@ MAC address filtering is an administrative access-control feature, not strong au
 
 **📸 Screenshot — Scope1 address pool showing the configured range and exclusion**
 
-![Scope1 address pool and exclusion range](screenshots/Screenshot%20(3).png)
+![Scope1 address pool and exclusion range](screenshots/Screenshot%20(7).png)
 
 ### Step 5 — Configure the Lease Duration
 
@@ -247,7 +247,7 @@ MAC address filtering is an administrative access-control feature, not strong au
 
 **📸 Screenshot — Scope1 activated with its configured DHCP options**
 
-![Scope1 activated with DHCP options](screenshots/Screenshot%20(4).png)
+![Scope1 activated with DHCP options](screenshots/Screenshot%20(15).png)
 
 ### Step 8 — Configure CLIENT-01 to Obtain an IP Address Automatically
 
@@ -279,7 +279,7 @@ MAC address filtering is an administrative access-control feature, not strong au
 
 **📸 Screenshot — Wireshark capture showing DHCP Discover, Offer, Request, and ACK**
 
-![DHCP DORA messages in Wireshark](screenshots/Screenshot%20(5).png)
+![DHCP DORA messages in Wireshark](screenshots/Screenshot%20(18).png)
 
 ### Step 10 — Verify the Initial DHCP Lease on CLIENT-01
 
@@ -308,7 +308,7 @@ The output also displays the lease obtained and lease expiration information.
 
 **📸 Screenshot — CLIENT-01 ipconfig /all showing the initial DHCP lease**
 
-![CLIENT-01 initial DHCP lease](screenshots/Screenshot%20(6).png)
+![CLIENT-01 initial DHCP lease](screenshots/Screenshot%20(19).png)
 
 ### Step 11 — Create a DHCP Reservation for CLIENT-01
 
@@ -329,9 +329,9 @@ The output also displays the lease obtained and lease expiration information.
 7. Confirm that the `CLIENT-01` reservation appears under **Reservations**.
 8. Inspect the reservation entry and its associated Router, DNS Servers, and DNS Domain Name options.
 
-**📸 Screenshot — CLIENT-01 DHCP reservation configured with 10.0.0.23**
+**📸 Screenshot — CLIENT-01 DHCP reservation configure with 10.0.0.23**
 
-![CLIENT-01 DHCP reservation](screenshots/Screenshot%20(7).png)
+![CLIENT-01 DHCP reservation](screenshots/Screenshot%20(22).png)
 
 ### Step 12 — Renew CLIENT-01 and Verify the Reserved Address
 
@@ -372,7 +372,7 @@ The output also displays the lease obtained and lease expiration information.
 
 **📸 Screenshot — DHCP Allow filter enabled with the CLIENT-01 MAC address**
 
-![CLIENT-01 MAC address in the enabled DHCP Allow filter](screenshots/Screenshot%20(8).png)
+![CLIENT-01 MAC address in the enabled DHCP Allow filter](screenshots/Screenshot%20(29).png)
 
 ## 🔎 Verification
 
