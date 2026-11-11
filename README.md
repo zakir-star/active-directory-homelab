@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–53 and 60 completed
+> **Status:** Labs 1–54 and 60 completed
 > **Last updated:** November 11, 2026
 
 ---
@@ -123,7 +123,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **51** | [DNS Fundamentals and Forward Lookup Zones](Lab-51-DNS-Fundamentals-and-Forward-Lookup-Zones/README.md) | ✅ Completed | Study DNS fundamentals, name resolution, zones, resource records, Dynamic DNS, and Active Directory-integrated DNS; create a `CLIENT-01` Host (A) record and verify FQDN resolution and connectivity from Windows 11 |
 | **52** | [Reverse Lookup Zones](Lab-52-Reverse-Lookup-Zones/README.md) | ✅ Completed | Create an AD-integrated IPv4 Reverse Lookup Zone for `10.0.0.0/24`, configure a PTR record for `CLIENT-01`, and verify reverse DNS resolution from DC-01 and Windows 11 using `nslookup` and `Resolve-DnsName` |
 | **53** | [Primary and Secondary DNS Zones](Lab-53-Primary-and-Secondary-DNS-Zones/README.md) | ✅ Completed | Create a Standard Primary Zone on DC-01, configure A and CNAME records, establish a read-only Secondary Zone on DC-02, restrict DNS zone transfers, configure DNS Notify, and verify transferred records |
-| **54** | Stub DNS Zones | 📋 Planned | Configure and test stub-zone behavior |
+| **54** | [Stub DNS Zones](Lab-54-Stub-DNS-Zone/README.md) | ✅ Completed | Create an Active Directory-integrated Stub Zone on DC-02, configure DC-01 as the Master DNS Server, transfer the required SOA, NS, and name-server address records, and verify DNS resolution from DC-02 |
 | **55** | DHCP Server Installation and Configuration | 📋 Planned | Configure scopes, address options, and client leases |
 | **56** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
 
@@ -300,7 +300,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Active Directory replication topology checks, partner connection review, and replication health verification using repadmin
 - Active Directory Sites and Services administration, including site creation, subnet mapping, domain controller placement, site links, bridgehead server configuration, and replication verification
 - Active Directory naming contexts and directory partitions, including the domain, configuration, schema, and DNS application partitions, inspected using ADSI Edit
-- DNS fundamentals, forward and reverse lookup zones, Host (A) and PTR record creation, FQDN and reverse DNS resolution with `nslookup`, `Resolve-DnsName` verification, and hostname connectivity testing from Windows 11
+- DNS fundamentals, forward and reverse lookup zones, standard Primary and Secondary DNS zones, Active Directory-integrated Stub Zones, Host (A), CNAME, and PTR record handling, DNS zone transfers, FQDN and reverse DNS resolution with `nslookup` and `Resolve-DnsName`, and hostname connectivity testing
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
