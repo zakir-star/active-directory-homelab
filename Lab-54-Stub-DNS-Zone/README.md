@@ -161,21 +161,9 @@ The Stub Zone uses the same DNS namespace as the authoritative zone hosted on `D
 
 The Stub Zone named `example.com` is now created on `DC-02`, with `DC-01` configured as its Master DNS Server.
 
-**📸 Screenshot (2) — Stub Zone selected and Active Directory storage enabled**
+**📸 Screenshot  — Stub Zone selected and Active Directory storage enabled**
 
-![Stub Zone type and Active Directory storage option](screenshots/Screenshot%20(2).png)
-
-**📸 Screenshot (3) — Active Directory zone replication scope selected**
-
-![Active Directory zone replication scope](screenshots/Screenshot%20(3).png)
-
-**📸 Screenshot (4) — Stub Zone name configured as example.com**
-
-![Stub Zone name configuration](screenshots/Screenshot%20(4).png)
-
-**📸 Screenshot (5) — Master DNS server 10.0.0.1 validated**
-
-![Master DNS server validation](screenshots/Screenshot%20(5).png)
+![Stub Zone type and Active Directory storage option](screenshots/Screenshot%20(3).png)
 
 ### Step 7 — Transfer the Stub Zone Information from the Master
 
@@ -191,7 +179,7 @@ After the transfer, the Stub Zone displays the required SOA, NS, and Host (A) re
 
 **📸 Screenshot — Stub Zone after Transfer from Master, displaying SOA, NS, and DC-01 name-server address records**
 
-![Transferred Stub Zone records on DC-02](screenshots/Screenshot%20(6).png)
+![Transferred Stub Zone records on DC-02](screenshots/Screenshot%20(10).png)
 
 ### Step 8 — Verify Name Resolution from DC-02
 
@@ -199,7 +187,7 @@ After the transfer, the Stub Zone displays the required SOA, NS, and Host (A) re
 2. Run the following command to test the existing `file.example.com` record:
 
    ```cmd
-   ping file.example.com
+   ping files.example.com
    ```
 
 3. Confirm that the hostname resolves and the ping is successful.
@@ -222,9 +210,9 @@ The successful result demonstrates that `DC-02` can resolve a record that exists
 
 The response confirms that `www.example.com` resolves as an alias of `dc-01.example.com`, whose IPv4 address is `10.0.0.1`.
 
-**📸 Screenshot — Successful ping of file.example.com and nslookup result for www.example.com from DC-02**
+**📸 Screenshot — Successful ping of files.example.com from DC-02**
 
-![Stub Zone DNS resolution verification from DC-02](screenshots/Screenshot%20(7).png)
+![Stub Zone DNS resolution verification from DC-02](screenshots/Screenshot%20(11).png)
 
 ## 🔎 Verification
 
