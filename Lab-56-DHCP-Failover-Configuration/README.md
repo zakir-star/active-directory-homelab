@@ -70,7 +70,7 @@ DHCP Failover synchronizes the relevant scope and lease information for the fail
 4. Install the **DHCP Server** role.
 5. Complete the installation.
 
-**📸 Screenshot — DHCP Server role installed on DC-02**
+**📸 Screenshot — DHCP Server role install on DC-02**
 
 ![DHCP Server role installed on DC-02](screenshots/Screenshot%20(1).png)
 
@@ -86,7 +86,7 @@ DHCP Failover synchronizes the relevant scope and lease information for the fail
 
 **📸 Screenshot — Configure Failover wizard showing the selected 10.0.0.0 scope**
 
-![Configure Failover wizard with the 10.0.0.0 scope selected](screenshots/Screenshot%20(2).png)
+![Configure Failover wizard with the 10.0.0.0 scope selected](screenshots/Screenshot%20(4).png)
 
 ### Step 3 — Select DC-02 as the Partner Server
 
@@ -118,7 +118,7 @@ Use the following settings:
 
 **📸 Screenshot — Failover relationship configured with Load Balance Mode and 65:35 distribution**
 
-![DHCP failover relationship configured for Load Balance Mode](screenshots/Screenshot%20(3).png)
+![DHCP failover relationship configured for Load Balance Mode](screenshots/Screenshot%20(10).png)
 
 ### Step 5 — Complete the DHCP Failover Configuration
 
@@ -128,7 +128,7 @@ Use the following settings:
 
 **📸 Screenshot — DHCP Failover wizard completed successfully**
 
-![DHCP Failover configuration completed](screenshots/Screenshot%20(4).png)
+![DHCP Failover configuration completed](screenshots/Screenshot%20(12).png)
 
 ### Step 6 — Verify Scope Replication on DC-02
 
@@ -137,9 +137,6 @@ Use the following settings:
 3. Right-click **IPv4** and select **Refresh**.
 4. Verify that the `10.0.0.0` scope appears under DC-02.
 
-**📸 Screenshot — Replicated 10.0.0.0 scope visible under IPv4 on DC-02**
-
-![DHCP scope visible on DC-02](screenshots/Screenshot%20(5).png)
 
 ### Step 7 — Verify the DHCP Server on CLIENT-01
 
@@ -155,7 +152,7 @@ Use the following settings:
 
 **📸 Screenshot — CLIENT-01 showing DC-01 (10.0.0.1) as the DHCP Server**
 
-![CLIENT-01 receiving DHCP service from DC-01](screenshots/Screenshot%20(6).png)
+![CLIENT-01 receiving DHCP service from DC-01](screenshots/Screenshot%20(14).png)
 
 ### Step 8 — Simulate DC-01 DHCP Service Failure
 
@@ -189,7 +186,7 @@ Use the following settings:
 
 **📸 Screenshot — CLIENT-01 showing DC-02 (10.0.0.3) as the DHCP Server after failover**
 
-![CLIENT-01 receiving DHCP service from DC-02 after DC-01 service failure](screenshots/Screenshot%20(7).png)
+![CLIENT-01 receiving DHCP service from DC-02 after DC-01 service failure](screenshots/Screenshot%20(17).png)
 
 ## 🔎 Verification
 
@@ -237,4 +234,3 @@ The practical exercise focuses on Load Balance Mode and verifies failover by sto
 
 DHCP Failover was successfully configured between DC-01 and DC-02 using Load Balance Mode. The 65:35 workload distribution was configured, the DHCP scope was verified on the partner server, and CLIENT-01 successfully obtained DHCP service from DC-02 after the DHCP Server service on DC-01 was stopped.
 
-**Mission accomplished!**
