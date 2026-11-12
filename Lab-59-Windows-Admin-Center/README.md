@@ -251,7 +251,6 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 This lab demonstrates how Windows Admin Center can be used as a centralized interface for remote Windows Server administration. The practical work focuses on connecting to a domain controller, exploring selected management sections, creating a folder remotely, and removing a server role.
 
-The additional WAC tools are documented separately as theory so that the README clearly distinguishes the operations performed in the lab from capabilities studied for future practice.
 
 ## ✅ Closing
 
