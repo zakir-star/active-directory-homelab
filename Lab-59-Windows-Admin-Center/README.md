@@ -168,7 +168,7 @@ This step documents exploration of the listed sections. It does not imply that s
 
 **📸 Screenshot 4 — WAC navigation showing the explored server-management sections**
 
-![WAC navigation showing the explored server-management sections](screenshots/Screenshot%20(4).png)
+![WAC navigation showing the explored server-management sections](screenshots/Screenshot%20(8).png)
 
 ### Step 5 — Create a Folder on DC-01
 
@@ -184,7 +184,7 @@ This step documents exploration of the listed sections. It does not imply that s
 
 **📸 Screenshot 5 — WAC_Folder created on DC-01**
 
-![WAC_Folder created on DC-01](screenshots/Screenshot%20(5).png)
+![WAC_Folder created on DC-01](screenshots/Screenshot%20(11).png)
 
 ### Step 6 — Remove the DHCP Server Role from DC-01
 
@@ -196,7 +196,7 @@ This step documents exploration of the listed sections. It does not imply that s
 
 **📸 Screenshot 6 — DHCP Server role removal through WAC**
 
-![DHCP Server role removal through WAC](screenshots/Screenshot%20(6).png)
+![DHCP Server role removal through WAC](screenshots/Screenshot%20(12).png)
 
 ### Step 7 — Verify the Role Removal
 
@@ -206,7 +206,7 @@ This step documents exploration of the listed sections. It does not imply that s
 
 **📸 Screenshot 7 — DHCP Server role removal verified after restart**
 
-![DHCP Server role removal verified after restart](screenshots/Screenshot%20(7).png)
+![DHCP Server role removal verified after restart](screenshots/Screenshot%20(13).png)
 
 ## 🔎 Verification
 
