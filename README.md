@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–55 and 60 completed
+> **Status:** Labs 1–56 and 60 completed
 > **Last updated:** November 12, 2026
 
 ---
@@ -125,7 +125,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **53** | [Primary and Secondary DNS Zones](Lab-53-Primary-and-Secondary-DNS-Zones/README.md) | ✅ Completed | Create a Standard Primary Zone on DC-01, configure A and CNAME records, establish a read-only Secondary Zone on DC-02, restrict DNS zone transfers, configure DNS Notify, and verify transferred records |
 | **54** | [Stub DNS Zones](Lab-54-Stub-DNS-Zone/README.md) | ✅ Completed | Create an Active Directory-integrated Stub Zone on DC-02, configure DC-01 as the Master DNS Server, transfer the required SOA, NS, and name-server address records, and verify DNS resolution from DC-02 |
 | **55** | [DHCP Server Installation and Configuration](Lab-55-DHCP-Server-Installation-and-Configuration/README.md) | ✅ Completed | Install and configure Windows DHCP, create and activate an IPv4 scope with exclusions and DHCP options, verify DORA and dynamic leases in Wireshark, configure a client reservation, and enable MAC address Allow filtering |
-| **56** | DHCP Failover | 📋 Planned | Explore supported DHCP failover modes and test service continuity |
+| **56** | [DHCP Failover Configuration (Load Balance Mode)](Lab-56-DHCP-Failover-Configuration/README.md) | ✅ Completed | Configure DHCP Failover between DC-01 and DC-02 using Load Balance Mode with a 65:35 distribution, verify scope replication, and test DHCP service continuity from DC-02 after stopping the DHCP Server service on DC-01 |
 
 ### Phase 10 — Web, Deployment, and Remote Access
 
