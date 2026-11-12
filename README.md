@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–56 and 60 completed
+> **Status:** Labs 1–60 completed
 > **Last updated:** November 12, 2026
 
 ---
@@ -133,7 +133,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 |-----|-------|--------|----------------|
 | **57** | IIS – Installation and Website Configuration | 📋 Planned | Install IIS, host a test website, create a virtual directory, change the default HTTP port, and configure website redirection |
 | **58** | IIS – Advanced Configuration and HTTPS | 📋 Planned | Configure IP-based website bindings and HTTPS using an SSL/TLS certificate |
-| **59** | Windows Admin Center (WAC) | 🚧 In Progress | Manage DC-01 remotely from CLIENT-01; explore server overview, services, processes, storage, networking, Remote Desktop, files and sharing, and roles and features |
+| **59** | [Windows Admin Center (WAC)](Lab-59-Windows-Admin-Center/README.md) | ✅ Completed | Install and access WAC from CLIENT-01, connect to DC-01 using its FQDN, explore server-management sections, create a remote folder, and remove and verify removal of the DHCP Server role; document additional WAC tools in theory |
 | **60** | [Routing and Remote Access Service (RRAS) – LAN Routing](Lab-60-Routing-and-Remote-Access-Service/README.md) | ✅ Completed | Configure RRAS LAN Routing on a dual-homed Windows Server to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, verify bidirectional connectivity, and promote `DC-02` as an additional domain controller |
 | **61** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment, PXE boot, deployment services, and prerequisites |
 | **62** | Remote Desktop Services (RDS) | 📋 Planned | Learn RDS roles and configure a suitable session-based lab scenario |
@@ -305,6 +305,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - DNS fundamentals, forward and reverse lookup zones, standard Primary and Secondary DNS zones, Active Directory-integrated Stub Zones, Host (A), CNAME, and PTR record handling, DNS zone transfers, FQDN and reverse DNS resolution with `nslookup` and `Resolve-DnsName`, and hostname connectivity testing
 - Windows Server DHCP scope creation and activation, exclusions, lease duration and DHCP options, DORA packet inspection with Wireshark, DHCP reservations, and MAC address Allow filtering
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
+- Windows Admin Center installation and remote server management from a domain-joined client, including server overview, services, processes, storage, networks, Remote Desktop, files and sharing, roles and features, remote folder creation, and server-role removal
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
 
