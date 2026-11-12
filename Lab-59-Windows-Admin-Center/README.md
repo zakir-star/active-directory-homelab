@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Install Windows Admin Center (WAC), access its web-based interface from a domain-joined management client, connect to the domain controller using its Fully Qualified Domain Name (FQDN), explore common server-management tools, and perform selected remote administration tasks.
+Install Windows Admin Center (WAC), access its web-based interface from a domain-joined management client, connect to a domain controller using its Fully Qualified Domain Name (FQDN), explore selected server-management tools, and perform remote administration tasks.
 
 ## 🖥️ Lab Environment
 
@@ -21,13 +21,13 @@ Install Windows Admin Center (WAC), access its web-based interface from a domain
 
 **Windows Admin Center (WAC)** is a browser-based management platform from Microsoft for administering Windows Server and supported Windows systems. It provides a centralized interface for common server-management tasks without requiring an administrator to open a traditional Remote Desktop session for every operation.
 
-WAC connects to managed machines and uses Windows management technologies and configured credentials to perform administrative operations. It is designed to complement, not replace, tools such as Server Manager, PowerShell, and Remote Server Administration Tools (RSAT).
+WAC complements tools such as Server Manager, PowerShell, and Remote Server Administration Tools (RSAT). The available capabilities depend on the managed operating system, WAC version, permissions, and installed extensions.
 
 ### 2. How Windows Admin Center Works
 
-WAC is accessed through a web browser. An administrator opens the WAC gateway address from a management workstation, adds a supported server or computer, and then selects that connection to access its available management tools.
+WAC is accessed through a web browser. An administrator opens the WAC gateway from a management workstation, adds a supported server or computer, and selects that connection to access its available management tools.
 
-In this lab, WAC was accessed from `CLIENT-01` and `DC-01.example.com` was added as the managed server.
+In this lab, WAC was accessed from `CLIENT-01`, and `DC-01.example.com` was added as the managed server.
 
 A successful connection depends on correct name resolution, network connectivity, suitable permissions, and the required remote-management configuration.
 
@@ -43,7 +43,7 @@ The PowerShell tool provides a browser-based terminal for running PowerShell com
 
 **Real-world application:** Administrators can perform command-line management on remote servers from a centralized workstation without opening a separate interactive desktop session.
 
-**Lab scope:** Covered for theoretical understanding; no PowerShell operation was performed through WAC in this lab.
+**Lab scope:** Theory only. No PowerShell operation was performed through WAC in this lab.
 
 ### 4. Registry
 
@@ -58,7 +58,7 @@ The Registry tool provides access to Windows Registry keys and values on a manag
 
 **Important:** Incorrect registry changes can cause application failures or affect Windows stability. Changes should be made only when their purpose and impact are understood.
 
-**Lab scope:** Covered for theoretical understanding; no registry modification was performed through WAC in this lab.
+**Lab scope:** Theory only. No registry modification was performed through WAC in this lab.
 
 ### 5. Event Viewer
 
@@ -72,7 +72,7 @@ The Event Viewer tool provides access to Windows event logs, including:
 
 **Real-world application:** Administrators use event logs to investigate service failures, authentication issues, application errors, and unexpected system behavior.
 
-**Lab scope:** Covered for theoretical understanding; no event-log investigation was performed through WAC in this lab.
+**Lab scope:** Theory only. No event-log investigation was performed through WAC in this lab.
 
 ### 6. Windows Updates
 
@@ -85,7 +85,7 @@ The Windows Updates tool provides update-management capabilities for supported m
 
 **Real-world application:** Regular patching helps organizations address security vulnerabilities, reliability issues, and software defects.
 
-**Lab scope:** Covered for theoretical understanding; no Windows update was installed through WAC in this lab.
+**Lab scope:** Theory only. No Windows update was installed through WAC in this lab.
 
 ### 7. Certificates
 
@@ -98,18 +98,18 @@ The Certificates tool provides access to certificate stores on supported managed
 
 **Real-world application:** Certificates support encrypted communications, server identity verification, and certificate-based authentication.
 
-**Lab scope:** Covered for theoretical understanding; no certificate was created, imported, or modified through WAC in this lab.
+**Lab scope:** Theory only. No certificate was created, imported, or modified through WAC in this lab.
 
-### 8. Additional WAC Management Tools
+### 8. Other WAC Management Tools
 
-Depending on the managed operating system, WAC version, permissions, and installed extensions, additional tools may be available. Examples include:
+Depending on the managed system and installed extensions, other tools may also be available. Examples include:
 
 - **Firewall:** Review and manage Windows Defender Firewall settings.
 - **Local Users & Groups:** Manage local accounts and groups on supported systems.
 - **Scheduled Tasks:** Inspect and manage scheduled tasks.
 - **Device Management:** Review supported device information.
 - **Performance Monitor:** Inspect performance counters and resource usage.
-- **Updates and Extensions:** Manage supported WAC extensions and update-related capabilities.
+- **Extensions:** Add supported management capabilities to WAC.
 
 These tools are included for theoretical understanding only. They were not performed as practical exercises in this lab.
 
@@ -121,8 +121,9 @@ These tools are included for theoretical understanding only. They were not perfo
 2. Open the Windows Admin Center web interface from `CLIENT-01`.
 3. Sign in using an account with the required administrative permissions.
 
-**📸 Screenshot — Windows Admin Center opened from CLIENT-01**
-![image alt](screenshots/Screenshot%20(1).png)
+**📸 Screenshot 1 — Windows Admin Center opened from CLIENT-01**
+
+<!-- Screenshot placeholder 1 — Add the selected screenshot here later. -->
 
 ### Step 2 — Add DC-01 to Windows Admin Center
 
@@ -137,19 +138,21 @@ These tools are included for theoretical understanding only. They were not perfo
 4. Submit the server details.
 5. Verify that `DC-01` is successfully added to the WAC connections list.
 
-**📸 Screenshot — DC-01 successfully added using its FQDN**
-![image alt](screenshots/Screenshot%20(2).png)
+**📸 Screenshot 2 — DC-01 successfully added using its FQDN**
 
-### Step 3 — Explore the Server Overview
+<!-- Screenshot placeholder 2 — Add the selected screenshot here later. -->
+
+### Step 3 — Open the Server Overview
 
 1. Select `DC-01` from the WAC connections list.
 2. Open the **Overview** page.
 3. Explore the general system information and server status displayed by WAC.
 
-**📸 Screenshot — DC-01 Overview in Windows Admin Center**
-![image alt](screenshots/Screenshot%20(3).png)
+**📸 Screenshot 3 — DC-01 Overview in Windows Admin Center**
 
-### Step 4 — Explore Common Server Management Sections
+<!-- Screenshot placeholder 3 — Add the selected screenshot here later. -->
+
+### Step 4 — Explore the Server Management Sections
 
 Open the following sections for `DC-01` and explore the information and management options available:
 
@@ -163,8 +166,9 @@ Open the following sections for `DC-01` and explore the information and manageme
 
 This step documents exploration of the listed sections. It does not imply that settings were changed in each section.
 
-**📸 Screenshot — WAC server management tools**
-![image alt](screenshots/Screenshot%20(4).png)
+**📸 Screenshot 4 — Selected WAC server-management sections**
+
+<!-- Screenshot placeholder 4 — Add the selected screenshot here later. -->
 
 ### Step 5 — Create a Folder on DC-01
 
@@ -178,8 +182,9 @@ This step documents exploration of the listed sections. It does not imply that s
 
 4. Verify that `WAC_Folder` appears in the directory listing.
 
-**📸 Screenshot — WAC_Folder created on DC-01**
-![image alt](screenshots/Screenshot%20(5).png)
+**📸 Screenshot 5 — WAC_Folder created on DC-01**
+
+<!-- Screenshot placeholder 5 — Add the selected screenshot here later. -->
 
 ### Step 6 — Remove the DHCP Server Role from DC-01
 
@@ -187,20 +192,21 @@ This step documents exploration of the listed sections. It does not imply that s
 2. Locate the **DHCP Server** role.
 3. Select the option to remove or uninstall the role.
 4. Complete the removal process.
-5. Restart `DC-01` when prompted or when required to complete the operation.
+5. Restart `DC-01` to complete the operation.
 
-**📸 Screenshot — DHCP Server role removal through WAC**
-![image alt](screenshots/Screenshot%20(6).png)
+**📸 Screenshot 6 — DHCP Server role removal through WAC**
+
+<!-- Screenshot placeholder 6 — Add the selected screenshot here later. -->
 
 ### Step 7 — Verify the Role Removal
 
 1. After the restart, reconnect to `DC-01` in Windows Admin Center.
-2. Review **Roles and Features** and confirm that the DHCP Server role is no longer installed.
-3. Open Server Manager on `DC-01` and inspect **Tools**.
-4. Confirm that the DHCP management option is no longer available after the role removal.
+2. Open **Roles and Features**.
+3. Confirm that the **DHCP Server** role is no longer installed on `DC-01`.
 
-**📸 Screenshot — DHCP Server role removal verified after restart**
-![image alt](screenshots/Screenshot%20(7).png)
+**📸 Screenshot 7 — DHCP Server role removal verified after restart**
+
+<!-- Screenshot placeholder 7 — Add the selected screenshot here later. -->
 
 ## 🔎 Verification
 
@@ -211,7 +217,7 @@ This step documents exploration of the listed sections. It does not imply that s
 - Confirm that `WAC_Folder` exists on the C: drive of DC-01.
 - Confirm that the DHCP Server role was removed from DC-01.
 - Confirm that DC-01 was restarted after the role removal.
-- Confirm that the DHCP Server role is no longer listed in Roles and Features and that its DHCP management option is no longer available in Server Manager.
+- Confirm through **Roles and Features** that the DHCP Server role is no longer installed.
 
 ## 🎯 Expected Result
 
@@ -233,7 +239,7 @@ For example, an administrator can connect to a domain controller from a manageme
 
 Successfully installed and accessed Windows Admin Center from `CLIENT-01`, added `DC-01.example.com` as a managed server, and explored its Overview, Services, Processes, Storage, Networks, Remote Desktop, Files and Sharing, and Roles and Features sections.
 
-Created `WAC_Folder` on the C: drive of DC-01. Removed the DHCP Server role through WAC, restarted DC-01, and verified that the role and its DHCP management option were no longer available.
+Created `WAC_Folder` on the C: drive of DC-01. Removed the DHCP Server role through WAC, restarted DC-01, and verified that the role was no longer installed.
 
 Also studied the purpose of PowerShell, Registry, Event Viewer, Windows Updates, Certificates, and other WAC management tools in the theory section.
 
@@ -243,11 +249,10 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 ## ✍️ Author's Note
 
-This lab demonstrates how Windows Admin Center can be used as a centralized interface for remote Windows Server administration. The practical work focuses on connecting to a domain controller, exploring common management sections, creating a folder remotely, and removing a server role.
+This lab demonstrates how Windows Admin Center can be used as a centralized interface for remote Windows Server administration. The practical work focuses on connecting to a domain controller, exploring selected management sections, creating a folder remotely, and removing a server role.
 
 The additional WAC tools are documented separately as theory so that the README clearly distinguishes the operations performed in the lab from capabilities studied for future practice.
 
 ## ✅ Closing
 
 Windows Admin Center was successfully installed and accessed from CLIENT-01. DC-01 was added using its FQDN, the selected management sections were explored, and `WAC_Folder` was created on the server. The DHCP Server role was removed, DC-01 was restarted, and the removal was verified.
-
