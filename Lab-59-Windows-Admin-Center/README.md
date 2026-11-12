@@ -121,7 +121,8 @@ These tools are included for theoretical understanding only. They were not perfo
 2. Open the Windows Admin Center web interface from `CLIENT-01`.
 3. Sign in using an account with the required administrative permissions.
 
-**📸 Screenshot Placeholder — Windows Admin Center opened from CLIENT-01**
+**📸 Screenshot — Windows Admin Center opened from CLIENT-01**
+![image alt](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Add DC-01 to Windows Admin Center
 
@@ -136,7 +137,8 @@ These tools are included for theoretical understanding only. They were not perfo
 4. Submit the server details.
 5. Verify that `DC-01` is successfully added to the WAC connections list.
 
-**📸 Screenshot Placeholder — DC-01 successfully added using its FQDN**
+**📸 Screenshot — DC-01 successfully added using its FQDN**
+![image alt](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Explore the Server Overview
 
@@ -144,7 +146,8 @@ These tools are included for theoretical understanding only. They were not perfo
 2. Open the **Overview** page.
 3. Explore the general system information and server status displayed by WAC.
 
-**📸 Screenshot Placeholder — DC-01 Overview in Windows Admin Center**
+**📸 Screenshot — DC-01 Overview in Windows Admin Center**
+![image alt](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Explore Common Server Management Sections
 
@@ -160,7 +163,8 @@ Open the following sections for `DC-01` and explore the information and manageme
 
 This step documents exploration of the listed sections. It does not imply that settings were changed in each section.
 
-**📸 Screenshot Placeholder — WAC server management tools**
+**📸 Screenshot — WAC server management tools**
+![image alt](screenshots/Screenshot%20(4).png)
 
 ### Step 5 — Create a Folder on DC-01
 
@@ -174,7 +178,8 @@ This step documents exploration of the listed sections. It does not imply that s
 
 4. Verify that `WAC_Folder` appears in the directory listing.
 
-**📸 Screenshot Placeholder — WAC_Folder created on DC-01**
+**📸 Screenshot — WAC_Folder created on DC-01**
+![image alt](screenshots/Screenshot%20(5).png)
 
 ### Step 6 — Remove the DHCP Server Role from DC-01
 
@@ -184,7 +189,8 @@ This step documents exploration of the listed sections. It does not imply that s
 4. Complete the removal process.
 5. Restart `DC-01` when prompted or when required to complete the operation.
 
-**📸 Screenshot Placeholder — DHCP Server role removal through WAC**
+**📸 Screenshot — DHCP Server role removal through WAC**
+![image alt](screenshots/Screenshot%20(6).png)
 
 ### Step 7 — Verify the Role Removal
 
@@ -193,7 +199,8 @@ This step documents exploration of the listed sections. It does not imply that s
 3. Open Server Manager on `DC-01` and inspect **Tools**.
 4. Confirm that the DHCP management option is no longer available after the role removal.
 
-**📸 Screenshot Placeholder — DHCP Server role removal verified after restart**
+**📸 Screenshot — DHCP Server role removal verified after restart**
+![image alt](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
