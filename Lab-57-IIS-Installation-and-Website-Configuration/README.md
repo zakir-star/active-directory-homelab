@@ -98,10 +98,10 @@ DNS resolves the hostname to an IP address; it does not assign the HTTP port. Th
 C:\
 └── Dummy website\
     ├── Infozak\
-    │   └── Infozak
+    │   └── Infozak.html
     │
     └── Infozak_Sales\
-        └── Infozak_Sales
+        └── Infozak_Sales.html
 ```
 
 **📸 Screenshot 1 — Dummy website folder in C: drive**
@@ -186,14 +186,14 @@ www.infozak.com
 8. Right-click the new website and select **Explore**.
 9. Confirm that the main HTML file is named:
 
-   `Infozak`
+   `Infozak.html`
 
 ### Step 5 — Configure the Website Default Document
 
 1. Select the `infozak.com` website in IIS Manager.
 2. Double-click **Default Document**.
 3. Right-click the white space and select **Add**.
-4. Enter the exact filename with .html:
+4. Enter the exact filename with .html extension:
 
    `Infozak.html`
 
@@ -243,7 +243,7 @@ This verifies website access from both the web server and a domain-joined client
 7. Right-click `sales` and select **Explore**.
 8. Confirm that the HTML file inside the folder is named:
 
-   `Infozak_Sales`
+   `Infozak_Sales.html`
 
 ### Step 8 — Configure the Virtual Directory Default Document
 
