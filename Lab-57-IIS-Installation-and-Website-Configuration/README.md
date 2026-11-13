@@ -121,9 +121,9 @@ C:\
 7. Complete the wizard and install the selected role services.
 8. Confirm that the IIS installation completes successfully.
 
-**📸 Screenshot 2 — IIS installation with HTTP Redirection and Centralized SSL Certificate Support selected**
+**📸 Screenshot 2 — IIS installation Web Server (IIS)**
 
-![IIS installation with HTTP Redirection and Centralized SSL Certificate Support selected](screenshots/Screenshot%20(3).png)
+![IIS installation with HTTP Redirection and Centralized SSL Certificate Support selected](screenshots/Screenshot%20(2).png)
 
 > **Scope note:** HTTP Redirection and Centralized SSL Certificate Support were installed as IIS role services. Their configuration is not part of the practical work documented in this lab.
 
