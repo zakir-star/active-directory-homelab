@@ -98,10 +98,10 @@ DNS resolves the hostname to an IP address; it does not assign the HTTP port. Th
 C:\
 └── Dummy website\
     ├── Infozak\
-    │   └── Infozak.html
+    │   └── Infozak
     │
     └── Infozak_Sales\
-        └── Infozak_Sales.html
+        └── Infozak_Sales
 ```
 
 **📸 Screenshot 1 — Dummy website folder in C: drive**
