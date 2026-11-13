@@ -104,9 +104,9 @@ C:\
         └── Infozak_Sales.html
 ```
 
-**📸 Screenshot 1 — Dummy website folder containing the Infozak and Infozak_Sales website directories**
+**📸 Screenshot 1 — Dummy website folder in C: drive**
 
-![Dummy website folder containing the Infozak and Infozak_Sales website directories](screenshots/Screenshot%20(1).png)
+![Dummy website folder in C: drive](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Install IIS and Additional Role Services
 
@@ -121,9 +121,9 @@ C:\
 7. Complete the wizard and install the selected role services.
 8. Confirm that the IIS installation completes successfully.
 
-**📸 Screenshot 2 — Web Server (IIS) installation with HTTP Redirection and Centralized SSL Certificate Support selected**
+**📸 Screenshot 2 — IIS installation with HTTP Redirection and Centralized SSL Certificate Support selected**
 
-![Web Server (IIS) installation with HTTP Redirection and Centralized SSL Certificate Support selected](screenshots/Screenshot%20(2).png)
+![IIS installation with HTTP Redirection and Centralized SSL Certificate Support selected](screenshots/Screenshot%20(3).png)
 
 > **Scope note:** HTTP Redirection and Centralized SSL Certificate Support were installed as IIS role services. Their configuration is not part of the practical work documented in this lab.
 
@@ -163,7 +163,7 @@ www.infozak.com
 
 **📸 Screenshot 3 — infozak.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records**
 
-![infozak.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records](screenshots/Screenshot%20(3).png)
+![infozak.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records](screenshots/Screenshot%20(4).png)
 
 ### Step 4 — Create the Infozak Website in IIS
 
@@ -186,14 +186,14 @@ www.infozak.com
 8. Right-click the new website and select **Explore**.
 9. Confirm that the main HTML file is named:
 
-   `Infozak.html`
+   `Infozak`
 
 ### Step 5 — Configure the Website Default Document
 
 1. Select the `infozak.com` website in IIS Manager.
 2. Double-click **Default Document**.
 3. Right-click the white space and select **Add**.
-4. Enter the exact HTML filename confirmed in the website folder:
+4. Enter the exact filename with .html:
 
    `Infozak.html`
 
@@ -202,7 +202,7 @@ www.infozak.com
 
 **📸 Screenshot 4 — infozak.com website in IIS Manager with Infozak.html configured as its Default Document**
 
-![infozak.com website in IIS Manager with Infozak.html configured as its Default Document](screenshots/Screenshot%20(4).png)
+![infozak.com website in IIS Manager with Infozak.html configured as its Default Document](screenshots/Screenshot%20(17).png)
 
 ### Step 6 — Verify Website Hosting from DC-01 and CLIENT-01
 
@@ -222,9 +222,9 @@ www.infozak.com
 
 This verifies website access from both the web server and a domain-joined client.
 
-**📸 Screenshot 5 — Infozak website successfully opened from DC-01 and the domain-joined CLIENT-01**
+**📸 Screenshot 5 — Infozak website successfully opened from the domain-joined CLIENT-01**
 
-![Infozak website successfully opened from DC-01 and the domain-joined CLIENT-01](screenshots/Screenshot%20(5).png)
+![Infozak website successfully opened from DC-01 and the domain-joined CLIENT-01](screenshots/Screenshot%20(19).png)
 
 ### Step 7 — Create the Sales Virtual Directory
 
@@ -243,14 +243,14 @@ This verifies website access from both the web server and a domain-joined client
 7. Right-click `sales` and select **Explore**.
 8. Confirm that the HTML file inside the folder is named:
 
-   `Infozak_Sales.html`
+   `Infozak_Sales`
 
 ### Step 8 — Configure the Virtual Directory Default Document
 
 1. Select the `sales` virtual directory in IIS Manager.
 2. Double-click **Default Document**.
 3. Right-click the white space and select **Add**.
-4. Enter the exact filename:
+4. Enter the exact filename with .html extension:
 
    `Infozak_Sales.html`
 
@@ -270,9 +270,9 @@ This verifies website access from both the web server and a domain-joined client
 
 This verifies that the virtual directory is accessible from both computers.
 
-**📸 Screenshot 6 — Sales virtual directory and its successful webpage access from DC-01 and CLIENT-01**
+**📸 Screenshot 6 — Sales virtual directory and its successful webpage access from CLIENT-01**
 
-![Sales virtual directory and its successful webpage access from DC-01 and CLIENT-01](screenshots/Screenshot%20(6).png)
+![Sales virtual directory and its successful webpage access from CLIENT-01](screenshots/Screenshot%20(31).png)
 
 ### Step 10 — Change the Website HTTP Binding from Port 80 to 8080
 
@@ -299,9 +299,13 @@ This verifies that the virtual directory is accessible from both computers.
 
 5. Observe that the website does not open through port `80`, as verified during the lab.
 
-**📸 Screenshot 7 — infozak.com HTTP binding changed to port 8080, with successful access on 8080 and unsuccessful access on port 80**
+**📸 Screenshot 7 — infozak.com HTTP binding changed to port 8080, with successful access on 8080**
 
-![infozak.com HTTP binding changed to port 8080, with successful access on 8080 and unsuccessful access on port 80](screenshots/Screenshot%20(7).png)
+![infozak.com HTTP binding changed to port 8080, with successful access on 8080 and unsuccessful access on port 80](screenshots/Screenshot%20(37).png)
+
+**📸 Screenshot 7 — infozak.com HTTP binding changed to port 8080, with unsuccessful access on 80**
+
+![infozak.com HTTP binding changed to port 8080, with unsuccessful access on port 80](screenshots/Screenshot%20(38).png)
 
 > **Port verification:** The IIS binding for this website was changed from port 80 to port 8080. The successful test on port 8080 and unsuccessful test on port 80 were observed during this exercise. The DNS records were not changed when the website port was modified; the port is specified separately in the browser URL.
 
