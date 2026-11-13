@@ -131,7 +131,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **57** | IIS – Installation and Website Configuration | 📋 Planned | Install IIS, host a test website, create a virtual directory, change the default HTTP port, and configure website redirection |
+| **57** | [IIS – Installation and Website Configuration](Lab-57-IIS-Installation-and-Website-Configuration/README.md) | ✅ Completed | Install IIS with selected additional role services, configure DNS records for `infozak.com`, host and verify the Infozak website, create and verify a `sales` virtual directory, and change the HTTP binding from port 80 to 8080 |
 | **58** | IIS – Advanced Configuration and HTTPS | 📋 Planned | Configure IP-based website bindings and HTTPS using an SSL/TLS certificate |
 | **59** | [Windows Admin Center (WAC)](Lab-59-Windows-Admin-Center/README.md) | ✅ Completed | Install and access WAC from CLIENT-01, connect to DC-01 using its FQDN, explore server-management sections, create a remote folder, and remove and verify removal of the DHCP Server role; document additional WAC tools in theory |
 | **60** | [Routing and Remote Access Service (RRAS) – LAN Routing](Lab-60-Routing-and-Remote-Access-Service/README.md) | ✅ Completed | Configure RRAS LAN Routing on a dual-homed Windows Server to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, verify bidirectional connectivity, and promote `DC-02` as an additional domain controller |
