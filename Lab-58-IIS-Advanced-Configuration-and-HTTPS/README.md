@@ -148,10 +148,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 6. In the right-hand **Actions** pane, click **Apply**.
 7. Confirm that the redirection configuration is applied to the `infozak.com` website.
 
-**📸 Screenshot 1 — infozak.com HTTP Redirection configured with the exact www.travel.com destination**
+**📸 Screenshot 1 — infozak.com HTTP Redirection configured with the exact destination**
 
 
-![infozak.com HTTP Redirection configured with the exact www.travel.com destination](screenshots/Screenshot%20(1).png)
+![infozak.com HTTP Redirection configured with the destination](screenshots/Screenshot%20(5).png)
 
 ### Step 6 — Verify the HTTP Redirection
 
@@ -169,7 +169,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 2 — Successful redirection from www.infozak.com to www.travel.com**
 
 
-![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(2).png)
+![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(6).png)
 
 ### Step 7 — Create a Self-Signed SSL Certificate
 
@@ -193,7 +193,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 **📸 Screenshot 3 — example-cert self-signed certificate displayed in the IIS Server Certificates list**
 
-![example-cert self-signed certificate displayed in the IIS Server Certificates list](screenshots/Screenshot%20(3).png)
+![example-cert self-signed certificate displayed in the IIS Server Certificates list](screenshots/Screenshot%20(10).png)
 
 ### Step 8 — Add an HTTPS Binding to the travel.com Website
 
@@ -218,7 +218,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 4 — travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected**
 
 
-![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(4).png)
+![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(12).png)
 
 ### Step 9 — Verify HTTPS Website Access
 
@@ -233,7 +233,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 5 — Travel webpage successfully opened using https://www.travel.com**
 
 
-![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(5).png)
+![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(14).png)
 
 ### Step 10 — Modify the infozak.com HTTP Binding
 
@@ -251,7 +251,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 **📸 Screenshot 6 — infozak.com HTTP binding with the host name removed while retaining IP address 10.0.0.1 and port 80**
 
-![infozak.com HTTP binding with the host name removed while retaining IP address 10.0.0.1 and port 80](screenshots/Screenshot%20(6).png)
+![infozak.com HTTP binding with the host name removed while retaining IP address 10.0.0.1 and port 80](screenshots/Screenshot%20(15).png)
 
 ### Step 11 — Verify Website Access Using the Server IP Address
 
@@ -266,7 +266,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 7 — Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1**
 
 
-![Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1](screenshots/Screenshot%20(7).png)
+![Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1](screenshots/Screenshot%20(16).png)
 
 ## 🔎 Verification
 
