@@ -107,7 +107,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 1 — travel.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![travel.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records](screenshots/Screenshot%20(1).png)
+-->
 
 ### Step 3 — Create the travel.com Website in IIS
 
@@ -143,12 +145,16 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 2 — travel.com website configured in IIS with its HTTP binding and www.travel.com host name**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![travel.com website configured in IIS with its HTTP binding and www.travel.com host name](screenshots/Screenshot%20(2).png)
+-->
 
 **📸 Screenshot 3 — travel.html added to the travel.com Default Document list**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![travel.html added to the travel.com Default Document list](screenshots/Screenshot%20(3).png)
+-->
 
 ### Step 5 — Configure HTTP Redirection on infozak.com
 
@@ -166,7 +172,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 4 — infozak.com HTTP Redirection configured with the exact www.travel.com destination**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![infozak.com HTTP Redirection configured with the exact www.travel.com destination](screenshots/Screenshot%20(4).png)
+-->
 
 ### Step 6 — Verify the HTTP Redirection
 
@@ -184,7 +192,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 5 — Successful redirection from www.infozak.com to www.travel.com**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(5).png)
+-->
 
 ### Step 7 — Create a Self-Signed SSL Certificate
 
@@ -229,7 +239,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 6 — travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(6).png)
+-->
 
 ### Step 9 — Verify HTTPS Website Access
 
@@ -244,7 +256,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 7 — Travel webpage successfully opened using https://www.travel.com**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(7).png)
+-->
 
 ### Step 10 — Modify the infozak.com HTTP Binding
 
@@ -273,7 +287,9 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 **📸 Screenshot 8 — Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1**
 
 
-<!-- Screenshot placeholder: add the selected screenshot here. -->
+<!-- Screenshot image-link slot — when your actual image is ready, replace this comment with:
+![Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1](screenshots/Screenshot%20(8).png)
+-->
 
 ## 🔎 Verification
 
