@@ -166,7 +166,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 4. Confirm that the Travel webpage opens successfully after redirection.
 
-**📸 Screenshot 2 — Successful redirection from www.infozak.com to www.travel.com**
+**📸 Screenshot 2 — Successful redirection from www .infozak.com to www .travel.com**
 
 
 ![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(6).png)
@@ -215,7 +215,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 6. Click **OK** to add the binding.
 7. Close the Site Bindings window.
 
-**📸 Screenshot 4 — travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected**
+**📸 Screenshot 4 — travel.com HTTPS binding configured for www .travel.com with SNI enabled and example-cert selected**
 
 
 ![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(12).png)
@@ -230,7 +230,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 3. Confirm that the Travel webpage opens over HTTPS.
 4. If the browser displays a certificate trust warning, recognize that the certificate is self-signed and is not automatically trusted by every client.
 
-**📸 Screenshot 5 — Travel webpage successfully opened using https://www.travel.com**
+**📸 Screenshot 5 — Travel webpage successfully opened using https ://www .travel.com**
 
 
 ![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(14).png)
