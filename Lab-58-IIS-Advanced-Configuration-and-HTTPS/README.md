@@ -189,7 +189,7 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 6. Click **OK**.
 7. Confirm that `example-cert` appears in the Server Certificates list.
-8. Double-click the certificate to inspect its details and certificate hashes.
+8. Double-click the certificate to inspect its details and certificate.
 
 **📸 Screenshot 3 — example-cert self-signed certificate displayed in the IIS Server Certificates list**
 
