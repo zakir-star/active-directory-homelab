@@ -104,11 +104,6 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 7. Click **OK**.
 8. Confirm that the zone contains the `DC-01` Host (A) record and the `www` Alias (CNAME) record.
 
-**📸 Screenshot 1 — travel.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records**
-
-
-![travel.com Forward Lookup Zone showing the DC-01 Host (A) and www Alias (CNAME) records](screenshots/Screenshot%20(1).png)
-
 ### Step 3 — Create the travel.com Website in IIS
 
 1. Open **Server Manager → Tools → Internet Information Services (IIS) Manager**.
@@ -140,16 +135,6 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 5. Click **OK**.
 6. Confirm that `travel.html` appears in the Default Document list.
 
-**📸 Screenshot 2 — travel.com website configured in IIS with its HTTP binding and www.travel.com host name**
-
-
-![travel.com website configured in IIS with its HTTP binding and www.travel.com host name](screenshots/Screenshot%20(2).png)
-
-**📸 Screenshot 3 — travel.html added to the travel.com Default Document list**
-
-
-![travel.html added to the travel.com Default Document list](screenshots/Screenshot%20(3).png)
-
 ### Step 5 — Configure HTTP Redirection on infozak.com
 
 1. In IIS Manager, select the existing `infozak.com` website.
@@ -163,10 +148,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 6. In the right-hand **Actions** pane, click **Apply**.
 7. Confirm that the redirection configuration is applied to the `infozak.com` website.
 
-**📸 Screenshot 4 — infozak.com HTTP Redirection configured with the exact www.travel.com destination**
+**📸 Screenshot 1 — infozak.com HTTP Redirection configured with the exact www.travel.com destination**
 
 
-![infozak.com HTTP Redirection configured with the exact www.travel.com destination](screenshots/Screenshot%20(4).png)
+![infozak.com HTTP Redirection configured with the exact www.travel.com destination](screenshots/Screenshot%20(1).png)
 
 ### Step 6 — Verify the HTTP Redirection
 
@@ -181,10 +166,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 4. Confirm that the Travel webpage opens successfully after redirection.
 
-**📸 Screenshot 5 — Successful redirection from www.infozak.com to www.travel.com**
+**📸 Screenshot 2 — Successful redirection from www.infozak.com to www.travel.com**
 
 
-![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(5).png)
+![Successful redirection from www.infozak.com to www.travel.com](screenshots/Screenshot%20(2).png)
 
 ### Step 7 — Create a Self-Signed SSL Certificate
 
@@ -206,6 +191,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 7. Confirm that `example-cert` appears in the Server Certificates list.
 8. Double-click the certificate to inspect its details and certificate hashes.
 
+**📸 Screenshot 3 — example-cert self-signed certificate displayed in the IIS Server Certificates list**
+
+![example-cert self-signed certificate displayed in the IIS Server Certificates list](screenshots/Screenshot%20(3).png)
+
 ### Step 8 — Add an HTTPS Binding to the travel.com Website
 
 1. In IIS Manager, select the `travel.com` website.
@@ -226,10 +215,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 6. Click **OK** to add the binding.
 7. Close the Site Bindings window.
 
-**📸 Screenshot 6 — travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected**
+**📸 Screenshot 4 — travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected**
 
 
-![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(6).png)
+![travel.com HTTPS binding configured for www.travel.com with SNI enabled and example-cert selected](screenshots/Screenshot%20(4).png)
 
 ### Step 9 — Verify HTTPS Website Access
 
@@ -241,10 +230,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 3. Confirm that the Travel webpage opens over HTTPS.
 4. If the browser displays a certificate trust warning, recognize that the certificate is self-signed and is not automatically trusted by every client.
 
-**📸 Screenshot 7 — Travel webpage successfully opened using https://www.travel.com**
+**📸 Screenshot 5 — Travel webpage successfully opened using https://www.travel.com**
 
 
-![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(7).png)
+![Travel webpage successfully opened using https://www.travel.com](screenshots/Screenshot%20(5).png)
 
 ### Step 10 — Modify the infozak.com HTTP Binding
 
@@ -260,6 +249,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 6. Leave the IP address as `10.0.0.1` and the port as `80`.
 7. Click **OK** and close the Site Bindings window.
 
+**📸 Screenshot 6 — infozak.com HTTP binding with the host name removed while retaining IP address 10.0.0.1 and port 80**
+
+![infozak.com HTTP binding with the host name removed while retaining IP address 10.0.0.1 and port 80](screenshots/Screenshot%20(6).png)
+
 ### Step 11 — Verify Website Access Using the Server IP Address
 
 1. Move to `CLIENT-01`.
@@ -270,10 +263,10 @@ In the final exercise, the host name is removed from the existing `infozak.com` 
 
 4. Confirm that a webpage opens successfully.
 
-**📸 Screenshot 8 — Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1**
+**📸 Screenshot 7 — Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1**
 
 
-![Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1](screenshots/Screenshot%20(8).png)
+![Webpage successfully accessed from CLIENT-01 using the DC-01 IP address 10.0.0.1](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
