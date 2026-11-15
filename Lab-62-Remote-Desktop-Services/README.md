@@ -112,9 +112,9 @@ Quick Start is used to create the basic session-based RDS deployment for this la
 
 This deployment scenario provides session-based desktops and RemoteApp capabilities through an RD Session Host.
 
-**📸 Screenshot 1 — Remote Desktop Services Installation wizard showing Quick Start and Session-based desktop deployment selections**
+**📸 Screenshot 1 — Remote Desktop Services Installation wizard showing Quick Start desktop deployment selections**
 
-![Remote Desktop Services Installation wizard showing Quick Start and Session-based desktop deployment selections](screenshots/Screenshot%20(1).png)
+![Remote Desktop Services Installation wizard showing Quick Start and Session-based desktop deployment selections](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Select the Deployment Server and Confirm the Roles
 
@@ -130,9 +130,9 @@ This deployment scenario provides session-based desktops and RemoteApp capabilit
 
 The deployment process installs the selected RDS roles and automatically restarts `DC-02` when required. Wait for the deployment to complete before closing the wizard.
 
-**📸 Screenshot 2 — Successful RDS deployment on DC-02 showing the installed RDS roles**
+**📸 Screenshot 2 — Successful RDS deployment on DC-02 showing the RDS roles**
 
-![Successful RDS deployment on DC-02 showing RD Connection Broker, RD Web Access, and RD Session Host](screenshots/Screenshot%20(2).png)
+![Successful RDS deployment on DC-02 showing RD Connection Broker, RD Web Access, and RD Session Host](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Verify the RDS Deployment
 
@@ -146,9 +146,6 @@ The deployment process installs the selected RDS roles and automatically restart
 5. Verify that the server FQDN is `DC-02.example.com`.
 6. Confirm that RD Connection Broker, RD Web Access, and RD Session Host are listed in the deployment.
 
-**📸 Screenshot 3 — QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs**
-
-![QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs](screenshots/Screenshot%20(3).png)
 
 ### Step 6 — Verify QuickSessionConnections and Default RemoteApp Programs
 
@@ -159,6 +156,11 @@ The deployment process installs the selected RDS roles and automatically restart
    - Calculator
    - Paint
    - WordPad
+
+**📸 Screenshot 3 — QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs**
+
+![QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs](screenshots/Screenshot%20(8).png)
+
 
 ### Step 7 — Add DC-01 to Server Manager
 
@@ -192,7 +194,7 @@ The RDS deployment is now configured to use Per User licensing mode with `DC-01.
 
 **📸 Screenshot 4 — DC-01 added as the RD Licensing server and Per User licensing mode configured**
 
-![DC-01 added as the RD Licensing server and Per User licensing mode configured](screenshots/Screenshot%20(4).png)
+![DC-01 added as the RD Licensing server and Per User licensing mode configured](screenshots/Screenshot%20(18).png)
 
 ### Step 10 — Test a Remote Desktop Connection from DC-01
 
@@ -275,11 +277,8 @@ The RDS deployment is now configured to use Per User licensing mode with `DC-01.
 
 **📸 Screenshot 5 — QuickSessionConnections showing EXAMPLE\\user01 and EXAMPLE\\user02 as Active**
 
-![QuickSessionConnections showing EXAMPLE user01 and EXAMPLE user02 as Active](screenshots/Screenshot%20(5).png)
+![QuickSessionConnections showing EXAMPLE user01 and EXAMPLE user02 as Active](screenshots/Screenshot%20(27).png)
 
-**📸 Screenshot 6 — Task Manager Users tab on DC-02 showing user01 and user02 sessions**
-
-![Task Manager Users tab on DC-02 showing user01 and user02 sessions](screenshots/Screenshot%20(6).png)
 
 ### Step 13 — Create a Self-Signed Certificate for RD Web Access
 
@@ -322,7 +321,7 @@ The HTTPS binding now uses the self-signed certificate created for this lab.
    `https://DC-02.example.com/rdweb`
 
 4. When the browser displays a privacy warning for the self-signed certificate, select **Advanced**.
-5. Select the option to continue to `dc-02.example.com).
+5. Select the option to continue to `dc-02.example.com.
 6. Verify that the RD Web Access sign-in page opens.
 7. Enter the domain user name:
 
@@ -331,9 +330,9 @@ The HTTPS binding now uses the self-signed certificate created for this lab.
 8. Enter the password for `user02` and select **Sign in**.
 9. Verify that the default RemoteApp programs are displayed.
 
-**📸 Screenshot 7 — RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in**
+**📸 Screenshot 6 — RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in**
 
-![RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in](screenshots/Screenshot%20(7).png)
+![RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in](screenshots/Screenshot%20(41).png)
 
 ### Step 16 — Launch Calculator Through RemoteApp
 
@@ -345,9 +344,9 @@ The HTTPS binding now uses the self-signed certificate created for this lab.
 6. Complete the sign-in.
 7. Verify that Calculator opens on `CLIENT-01` as a remotely delivered application.
 
-**📸 Screenshot 8 — Calculator successfully launched through RemoteApp on CLIENT-01**
+**📸 Screenshot 7 — Calculator successfully launched through RemoteApp on CLIENT-01**
 
-![Calculator successfully launched through RemoteApp on CLIENT-01](screenshots/Screenshot%20(8).png)
+![Calculator successfully launched through RemoteApp on CLIENT-01](screenshots/Screenshot%20(46).png)
 
 ## 🔎 Verification
 
@@ -410,4 +409,3 @@ The deployment was performed on an Additional Domain Controller to match the ava
 
 The Remote Desktop Services lab was completed successfully. A session-based RDS deployment was configured on DC-02, both domain users established remote sessions, and Calculator was launched through RD Web Access using RemoteApp.
 
-**Lab 62 Completed — Mission Accomplished!**
