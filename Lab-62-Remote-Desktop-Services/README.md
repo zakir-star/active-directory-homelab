@@ -112,6 +112,10 @@ Quick Start is used to create the basic session-based RDS deployment for this la
 
 This deployment scenario provides session-based desktops and RemoteApp capabilities through an RD Session Host.
 
+**📸 Screenshot 1 — Remote Desktop Services Installation wizard showing Quick Start and Session-based desktop deployment selections**
+
+![Remote Desktop Services Installation wizard showing Quick Start and Session-based desktop deployment selections](screenshots/Screenshot%20(1).png)
+
 ### Step 4 — Select the Deployment Server and Confirm the Roles
 
 1. On the server selection page, verify that `DC-02` is selected as the destination server.
@@ -126,6 +130,10 @@ This deployment scenario provides session-based desktops and RemoteApp capabilit
 
 The deployment process installs the selected RDS roles and automatically restarts `DC-02` when required. Wait for the deployment to complete before closing the wizard.
 
+**📸 Screenshot 2 — Successful RDS deployment on DC-02 showing the installed RDS roles**
+
+![Successful RDS deployment on DC-02 showing RD Connection Broker, RD Web Access, and RD Session Host](screenshots/Screenshot%20(2).png)
+
 ### Step 5 — Verify the RDS Deployment
 
 1. After the server restarts and the deployment completes, note the RD Web Access URL displayed by the wizard:
@@ -137,6 +145,10 @@ The deployment process installs the selected RDS roles and automatically restart
 4. Open the RDS deployment overview.
 5. Verify that the server FQDN is `DC-02.example.com`.
 6. Confirm that RD Connection Broker, RD Web Access, and RD Session Host are listed in the deployment.
+
+**📸 Screenshot 3 — QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs**
+
+![QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs](screenshots/Screenshot%20(3).png)
 
 ### Step 6 — Verify QuickSessionConnections and Default RemoteApp Programs
 
@@ -177,6 +189,10 @@ The deployment process installs the selected RDS roles and automatically restart
 6. Click **Apply**, then click **OK** to close the deployment properties.
 
 The RDS deployment is now configured to use Per User licensing mode with `DC-01.example.com` specified as its licensing server.
+
+**📸 Screenshot 4 — DC-01 added as the RD Licensing server and Per User licensing mode configured**
+
+![DC-01 added as the RD Licensing server and Per User licensing mode configured](screenshots/Screenshot%20(4).png)
 
 ### Step 10 — Test a Remote Desktop Connection from DC-01
 
@@ -257,6 +273,14 @@ The RDS deployment is now configured to use Per User licensing mode with `DC-01.
 6. Select the **Users** tab.
 7. Verify that both `user01` and `user02` are listed.
 
+**📸 Screenshot 5 — QuickSessionConnections showing EXAMPLE\\user01 and EXAMPLE\\user02 as Active**
+
+![QuickSessionConnections showing EXAMPLE user01 and EXAMPLE user02 as Active](screenshots/Screenshot%20(5).png)
+
+**📸 Screenshot 6 — Task Manager Users tab on DC-02 showing user01 and user02 sessions**
+
+![Task Manager Users tab on DC-02 showing user01 and user02 sessions](screenshots/Screenshot%20(6).png)
+
 ### Step 13 — Create a Self-Signed Certificate for RD Web Access
 
 1. On `DC-02`, open a browser and attempt to access:
@@ -307,6 +331,10 @@ The HTTPS binding now uses the self-signed certificate created for this lab.
 8. Enter the password for `user02` and select **Sign in**.
 9. Verify that the default RemoteApp programs are displayed.
 
+**📸 Screenshot 7 — RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in**
+
+![RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in](screenshots/Screenshot%20(7).png)
+
 ### Step 16 — Launch Calculator Through RemoteApp
 
 1. In the RD Web Access portal on `CLIENT-01`, select **Calculator**.
@@ -316,6 +344,10 @@ The HTTPS binding now uses the self-signed certificate created for this lab.
 5. When prompted, enter the credentials for `user02`.
 6. Complete the sign-in.
 7. Verify that Calculator opens on `CLIENT-01` as a remotely delivered application.
+
+**📸 Screenshot 8 — Calculator successfully launched through RemoteApp on CLIENT-01**
+
+![Calculator successfully launched through RemoteApp on CLIENT-01](screenshots/Screenshot%20(8).png)
 
 ## 🔎 Verification
 
@@ -363,27 +395,6 @@ Installed a Quick Start, session-based Remote Desktop Services deployment on `DC
 Added `DC-01.example.com` as the RD Licensing server and configured the deployment to use Per User licensing mode. Successfully connected to `DC-02.example.com` from `DC-01` as `user01` and from `CLIENT-01` as `user02`. Verified the remote host with `hostname`, inspected active connections with `netstat -n`, and confirmed both sessions in QuickSessionConnections and Task Manager.
 
 Created the self-signed `RDP-Cert` certificate and selected it for the Default Web Site HTTPS binding. Accessed RD Web Access from CLIENT-01, signed in as `user02@example.com`, and successfully launched Calculator through RemoteApp.
-
-## 📸 Screenshots
-
-Create the `screenshots` folder in this lab directory and place the selected evidence images there. The screenshot slots below are placeholders; add the final image links after selecting and uploading the screenshots.
-
-1. **Screenshot 1 — Remote Desktop Services Installation wizard with Quick Start and Session-based desktop deployment selected.**
-   - [Screenshot placeholder — add image link]
-2. **Screenshot 2 — Successful RDS deployment on DC-02 showing RD Connection Broker, RD Web Access, and RD Session Host.**
-   - [Screenshot placeholder — add image link]
-3. **Screenshot 3 — QuickSessionConnections showing DC-02 as Active and the default RemoteApp programs.**
-   - [Screenshot placeholder — add image link]
-4. **Screenshot 4 — DC-01 added successfully as the RD Licensing server with Per User licensing mode configured.**
-   - [Screenshot placeholder — add image link]
-5. **Screenshot 5 — QuickSessionConnections showing EXAMPLE\\user01 and EXAMPLE\\user02 as Active.**
-   - [Screenshot placeholder — add image link]
-6. **Screenshot 6 — Task Manager Users tab on DC-02 showing both user01 and user02 sessions.**
-   - [Screenshot placeholder — add image link]
-7. **Screenshot 7 — RD Web Access portal on CLIENT-01 displaying the available RemoteApp programs after user02 sign-in.**
-   - [Screenshot placeholder — add image link]
-8. **Screenshot 8 — Calculator successfully launched through RemoteApp on CLIENT-01.**
-   - [Screenshot placeholder — add image link]
 
 ## 🙏 Acknowledgment
 
