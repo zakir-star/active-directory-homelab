@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–62 completed
-> **Last updated:** November 16, 2026
+> **Status:** Labs 1–63 completed
+> **Last updated:** November 17, 2026
 
 ---
 
@@ -137,7 +137,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | **60** | [Routing and Remote Access Service (RRAS) – LAN Routing](Lab-60-Routing-and-Remote-Access-Service/README.md) | ✅ Completed | Configure RRAS LAN Routing on a dual-homed Windows Server to connect the `10.0.0.0/24` and `192.168.1.0/24` subnets, verify bidirectional connectivity, and promote `DC-02` as an additional domain controller |
 | **61** | Windows Deployment Services (WDS) | 📋 Planned | Explore network-based Windows deployment, PXE boot, deployment services, and prerequisites |
 | **62** | [Remote Desktop Services (RDS)](Lab-62-Remote-Desktop-Services/README.md) | ✅ Completed | Deploy Quick Start session-based RDS on DC-02, configure DC-01 as the RD Licensing server with Per User mode, verify concurrent remote sessions for two domain users, configure HTTPS for RD Web Access, and launch Calculator through RemoteApp |
-| **63** | VPN Server Configuration | 📋 Planned | Configure and test a remote-access VPN scenario, including authentication, address assignment, and access to internal resources where supported |
+| **63** | [VPN Server Configuration](Lab-63-VPN-Server-Configuration/README.md) | ✅ Completed | Configure RRAS VPN access on DC-02, allow an Active Directory user to authenticate, test an initial PPTP connection, configure a self-signed certificate for SSTP, assign VPN client addresses from a static pool, and verify access to DC-01.example.com |
 
 ### Phase 11 — Backup and Disaster Recovery
 
@@ -306,6 +306,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Windows Server DHCP scope creation and activation, exclusions, lease duration and DHCP options, DORA packet inspection with Wireshark, DHCP reservations, and MAC address Allow filtering
 - Windows Server RRAS installation and LAN Routing configuration between two IPv4 subnets, with bidirectional ping verification
 - Remote Desktop Services Quick Start session-based deployment, RD Connection Broker, RD Web Access, RD Session Host, RD Licensing server configuration with Per User mode, concurrent remote sessions, HTTPS certificate binding, and RemoteApp delivery
+- Remote-access VPN configuration using Windows Server RRAS, Active Directory dial-in permissions, PPTP and SSTP connection testing, self-signed certificate creation and client trust configuration, SSL certificate binding, static VPN address pools, and VPN client connectivity verification
 - Windows Admin Center installation and remote server management from a domain-joined client, including server overview, services, processes, storage, networks, Remote Desktop, files and sharing, roles and features, remote folder creation, and server-role removal
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - Screenshot-supported technical documentation
