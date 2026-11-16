@@ -19,6 +19,66 @@ Configure a remote-access VPN server on `DC-02` using Routing and Remote Access 
 - 🔐 **VPN Protocols Tested:** PPTP and SSTP
 - 📜 **SSTP Certificate:** Self-signed certificate named `SSTP`
 
+## 📚 Theory
+
+### What is a Virtual Private Network (VPN)?
+
+A **Virtual Private Network (VPN)** creates a logical, protected connection between a client and a remote network over an existing IP network. For remote-access VPNs, an individual user connects a computer to an organization's network through a VPN server. After the connection is authenticated and established, the client can communicate with permitted internal resources as if it were connected through an authorized network connection.
+
+A VPN does not automatically grant access to every internal system. Authentication, authorization, IP routing, DNS configuration, firewall rules, and resource permissions determine what the connected user can reach.
+
+### Remote-Access VPN and RRAS
+
+A **remote-access VPN** is designed for individual computers or users connecting from outside their organization's network. The VPN client initiates the connection to a VPN server, which authenticates the user, establishes the tunnel, and provides network configuration.
+
+**Routing and Remote Access Service (RRAS)** is a Windows Server role service that can provide VPN and routing capabilities. In this lab, RRAS was configured on `DC-02` using **Custom configuration → VPN access**. The server accepts VPN connections and assigns client addresses from the configured static IPv4 address pool.
+
+### VPN Authentication and Active Directory
+
+VPN authentication verifies the identity of the person attempting to connect. In this lab, the domain account `test_user` was used for authentication.
+
+The account's **Dial-in** tab in Active Directory Users and Computers was configured with **Allow access** under Network Access Permission. This setting explicitly permits the account to use remote-access connections. In a managed environment, VPN access should be controlled through appropriate user or group policies and organizational access requirements.
+
+### PPTP — Point-to-Point Tunneling Protocol
+
+**PPTP** is an older VPN tunneling protocol. It uses a control connection over TCP port **1723** and carries tunneled data using **GRE (Generic Routing Encapsulation)**.
+
+PPTP is easy to encounter in legacy environments, but its security is outdated and it is not recommended for new production deployments. In this lab, the first Windows built-in VPN profile used the **Automatic** VPN type. Windows established the connection using PPTP, which was then verified in the VPN adapter status.
+
+### SSTP — Secure Socket Tunneling Protocol
+
+**SSTP** is a VPN protocol that carries PPP traffic through an encrypted TLS channel over HTTPS, normally using TCP port **443**. Because it uses TLS over HTTPS, SSTP can often pass through network environments that permit standard HTTPS traffic.
+
+The VPN server presents a certificate during the TLS connection. The client must trust the issuing certificate authority and validate that the certificate is appropriate for the server name it is connecting to. A self-signed certificate can be used in a controlled lab, but each client must explicitly trust it. Production deployments should use a certificate issued by a trusted Certificate Authority and ensure its subject or Subject Alternative Name matches the VPN server's DNS name.
+
+In this lab, a self-signed certificate named `SSTP` was created in IIS, exported as a `.CER` file without its private key, selected in the RRAS **SSL Certificate Binding**, and imported on `CLIENT-01` into **Local Machine → Trusted Root Certification Authorities**.
+
+### Why the certificate is exported without the private key
+
+A certificate contains a public key and identity information. The corresponding private key must remain protected on the server because it is used by the server during the TLS handshake. The client needs the public certificate to establish trust; it does not need the server's private key.
+
+Therefore, the certificate was exported in CER format with **No, do not export the private key** selected. The server retained the certificate and its private key for the SSTP binding, while the client received only the public certificate.
+
+### VPN Address Pool and Client IP Assignment
+
+When a VPN client connects, it needs an IP address so it can communicate over the VPN. RRAS can assign addresses from a configured static address pool.
+
+This lab configured the pool from `223.0.0.10` to `223.0.0.20`. After the SSTP connection was established, the `VPN_SSTP` PPP adapter on `CLIENT-01` received `223.0.0.11`. This confirms that the client received an address from the configured pool.
+
+The VPN address pool must be planned carefully. It should use an appropriate private address range in a real deployment and must not overlap with the client's local network or the internal networks reachable through the VPN.
+
+### DNS and Access to Internal Resources
+
+A VPN client generally needs to resolve internal hostnames and route traffic to the required internal networks. DNS provides the mapping from a hostname to an IP address, while routing determines where packets are sent.
+
+In this lab, the additional network adapters were configured with `10.0.0.1` as the preferred DNS server. The successful command:
+
+```cmd
+ping DC-01.example.com
+```
+
+verified that the client could resolve the domain controller's hostname and receive a ping response while connected. This is a useful connectivity check, although it does not prove that every internal application or service is reachable.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Add a network adapter to DC-02
