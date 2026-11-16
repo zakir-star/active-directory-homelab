@@ -119,9 +119,9 @@ verified that the client could resolve the domain controller's hostname and rece
 8. When prompted to start the service, click **Start service**.
 9. Verify that the Routing and Remote Access service starts successfully.
 
-**📸 Screenshot 2 — RRAS configured with VPN access and service running on DC-02**
+**📸 Screenshot 2 — RRAS configured with VPN access on DC-02**
 
-![RRAS configured with VPN access and service running on DC-02](screenshots/Screenshot%20(2).png)
+![RRAS configured with VPN access and service running on DC-02](screenshots/Screenshot%20(7).png)
 
 ### Step 4 — Allow VPN access for the domain user
 
@@ -174,9 +174,9 @@ This setting allows the selected domain account to be used for remote-access aut
 
 11. Verify that the ping succeeds.
 
-**📸 Screenshot 3 — Initial VPN connection established using PPTP and DC-01.example.com responding to ping**
+**📸 Screenshot 3 — Initial VPN connection established using PPTP**
 
-![Initial VPN connection established using PPTP and DC-01.example.com responding to ping](screenshots/Screenshot%20(3).png)
+![Initial VPN connection established using PPTP and DC-01.example.com responding to ping](screenshots/Screenshot%20(20).png)
 
 ### Step 7 — Create a self-signed SSTP certificate on DC-02
 
@@ -210,7 +210,7 @@ This setting allows the selected domain account to be used for remote-access aut
 
 **📸 Screenshot 4 — SSTP self-signed certificate created and exported as a CER file**
 
-![SSTP self-signed certificate created and exported as a CER file](screenshots/Screenshot%20(4).png)
+![SSTP self-signed certificate created and exported as a CER file](screenshots/Screenshot%20(32).png)
 
 ### Step 8 — Bind the SSTP certificate in RRAS
 
@@ -238,7 +238,7 @@ The configured range provides addresses for remote VPN clients.
 
 **📸 Screenshot 5 — RRAS static IPv4 address pool configured from 223.0.0.10 to 223.0.0.20**
 
-![RRAS static IPv4 address pool configured from 223.0.0.10 to 223.0.0.20](screenshots/Screenshot%20(5).png)
+![RRAS static IPv4 address pool configured from 223.0.0.10 to 223.0.0.20](screenshots/Screenshot%20(40).png)
 
 ### Step 10 — Import and trust the SSTP certificate on CLIENT-01
 
@@ -263,7 +263,7 @@ The configured range provides addresses for remote VPN clients.
 
 **📸 Screenshot 6 — SSTP certificate successfully imported into Trusted Root Certification Authorities on CLIENT-01**
 
-![SSTP certificate successfully imported into Trusted Root Certification Authorities on CLIENT-01](screenshots/Screenshot%20(6).png)
+![SSTP certificate successfully imported into Trusted Root Certification Authorities on CLIENT-01](screenshots/Screenshot%20(49).png)
 
 ### Step 11 — Create and test the SSTP VPN connection
 
@@ -305,9 +305,9 @@ The configured range provides addresses for remote VPN clients.
    223.0.0.11
    ```
 
-**📸 Screenshot 7 — VPN_SSTP connected using SSTP with PPP address 223.0.0.11 and successful DC-01 ping**
+**📸 Screenshot 7 — VPN_SSTP connected using SSTP with PPP address 223.0.0.11**
 
-![VPN_SSTP connected using SSTP with PPP address 223.0.0.11 and successful DC-01 ping](screenshots/Screenshot%20(7).png)
+![VPN_SSTP connected using SSTP with PPP address 223.0.0.11 and successful DC-01 ping](screenshots/Screenshot%20(55).png)
 
 ## 🔎 Verification
 
