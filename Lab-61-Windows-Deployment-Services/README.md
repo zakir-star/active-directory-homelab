@@ -140,9 +140,9 @@ Windows PE is a lightweight operating environment designed for installing, deplo
 8. Enable **Require administrator approval for unknown computers**.
 9. Continue through the wizard, allow the configuration task to complete, and click **Finish**.
 
-**📸 Screenshot 1 — WDS server configuration with Active Directory integration and RemoteInstall folder**
+**📸 Screenshot 1 — WDS server configuration with Active Directory integration**
 
-![WDS server configuration with Active Directory integration and RemoteInstall folder](screenshots/Screenshot%20(1).png)
+![WDS server configuration with Active Directory integration and RemoteInstall folder](screenshots/Screenshot%20(6).png)
 
 ### Step 3 — Prepare and Mount the Windows 10 ISO
 
@@ -170,7 +170,7 @@ The Windows installation files are now available under the mounted DVD drive.
 
 **📸 Screenshot 2 — Windows 10 boot image imported and showing Online status**
 
-![Windows 10 boot image imported and showing Online status](screenshots/Screenshot%20(2).png)
+![Windows 10 boot image imported and showing Online status](screenshots/Screenshot%20(24).png)
 
 ### Step 5 — Add the Windows 10 Install Image
 
@@ -190,7 +190,7 @@ The Windows installation files are now available under the mounted DVD drive.
 
 **📸 Screenshot 3 — Windows10-client install image group with Windows 10 Pro available**
 
-![Windows10-client install image group with Windows 10 Pro available](screenshots/Screenshot%20(3).png)
+![Windows10-client install image group with Windows 10 Pro available](screenshots/Screenshot%20(31).png)
 
 ### Step 6 — Start the WDS Server
 
@@ -202,7 +202,7 @@ The Windows installation files are now available under the mounted DVD drive.
 
 **📸 Screenshot 4 — WDS server started and displaying the green status icon**
 
-![WDS server started and displaying the green status icon](screenshots/Screenshot%20(4).png)
+![WDS server started and displaying the green status icon](screenshots/Screenshot%20(36).png)
 
 ### Step 7 — Create the Windows 10 WDS Client Virtual Machine
 
@@ -231,7 +231,7 @@ The client successfully obtained an IP address through DHCP and proceeded with P
 
 **📸 Screenshot 5 — Windows 10 WDS client obtaining network configuration and starting PXE boot**
 
-![Windows 10 WDS client obtaining network configuration and starting PXE boot](screenshots/Screenshot%20(5).png)
+![Windows 10 WDS client obtaining network configuration and starting PXE boot](screenshots/Screenshot%20(38).png)
 
 ### Step 9 — Start Windows Setup from the WDS Client
 
@@ -249,11 +249,11 @@ The WDS client successfully reached the Windows Setup stage, accepted the domain
 
 **📸 Screenshot 6 — Windows 10 Pro selected in the WDS deployment interface**
 
-![Windows 10 Pro selected in the WDS deployment interface](screenshots/Screenshot%20(6).png)
+![Windows 10 Pro selected in the WDS deployment interface](screenshots/Screenshot%20(42).png)
 
 **📸 Screenshot 7 — Windows 10 Pro installation initiated on the WDS client**
 
-![Windows 10 Pro installation initiated on the WDS client](screenshots/Screenshot%20(7).png)
+![Windows 10 Pro installation initiated on the WDS client](screenshots/Screenshot%20(44).png)
 
 The installation was intentionally not allowed to complete because the physical laptop did not have sufficient free space available for the additional virtual machine. Therefore, this lab verifies the WDS configuration and the initial deployment workflow, not a completed Windows installation.
 
