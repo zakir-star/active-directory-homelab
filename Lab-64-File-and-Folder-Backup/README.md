@@ -212,7 +212,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 6 — Specify Remote Folder**
 
-![Specify Remote Folfer](screenshots/Screenshot%20(48).png)
+![Specify Remote Folder](screenshots/Screenshot%20(48).png)
 
 ### Step 8 — Configure a daily backup schedule for C:\DATA
 
