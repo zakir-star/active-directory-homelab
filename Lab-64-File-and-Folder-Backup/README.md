@@ -94,9 +94,9 @@ The schedule was configured successfully. The scheduled run itself was not obser
 7. After installation, open **Server Manager → Tools → Windows Server Backup**.
 8. Wait for the Windows Server Backup console to load.
 
-**📸 Screenshot 1 — Windows Server Backup installed and opened on DC-02**
+**📸 Screenshot 1 — Windows Server Backup installed on DC-02**
 
-![Windows Server Backup installed and opened on DC-02](screenshots/Screenshot%20(1).png)
+![Windows Server Backup installed and opened on DC-02](screenshots/Screenshot%20(2).png)
 
 ### Step 2 — Configure a one-time local backup
 
@@ -115,7 +115,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 2 — Local backup configuration showing C:\IIF and E: as the destination**
 
-![Local backup configuration showing C IIF and E drive as the destination](screenshots/Screenshot%20(2).png)
+![Local backup configuration showing C IIF and E drive as the destination](screenshots/Screenshot%20(12).png)
 
 ### Step 3 — Verify the local backup and delete the source folder
 
@@ -129,7 +129,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 3 — Successful local backup and backup folder on the E: drive**
 
-![Successful local backup and backup folder on the E drive](screenshots/Screenshot%20(3).png)
+![Successful local backup and backup folder on the E drive](screenshots/Screenshot%20(16).png)
 
 ### Step 4 — Recover the folder from the local backup
 
@@ -147,7 +147,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 4 — Successful recovery of C:\IIF from the local backup**
 
-![Successful recovery of C IIF from the local backup](screenshots/Screenshot%20(4).png)
+![Successful recovery of C IIF from the local backup](screenshots/Screenshot%20(29).png)
 
 ### Step 5 — Create and share a remote backup folder on CLIENT-01
 
@@ -163,7 +163,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 5 — Storage folder shared on CLIENT-01**
 
-![Storage folder shared on CLIENT-01](screenshots/Screenshot%20(5).png)
+![Storage folder shared on CLIENT-01](screenshots/Screenshot%20(32).png)
 
 ### Step 6 — Back up C:\IIF to the remote shared folder
 
@@ -210,9 +210,9 @@ The schedule was configured successfully. The scheduled run itself was not obser
 16. Wait for the recovery operation to complete and click **Close**.
 17. Open the C: drive on `DC-02` and verify that the `IIF` folder has been restored.
 
-**📸 Screenshot 6 — Successful recovery of C:\IIF from the remote shared-folder backup**
+**📸 Screenshot 6 — Specify Remote Folder**
 
-![Successful recovery of C IIF from the remote shared-folder backup](screenshots/Screenshot%20(6).png)
+![Successful recovery of C IIF from the remote shared-folder backup](screenshots/Screenshot%20(48).png)
 
 ### Step 8 — Configure a daily backup schedule for C:\DATA
 
@@ -231,7 +231,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 7 — Daily backup schedule configured for C:\DATA at 7:30 PM**
 
-![Daily backup schedule configured for C DATA at 7 30 PM](screenshots/Screenshot%20(7).png)
+![Daily backup schedule configured for C DATA at 7 30 PM](screenshots/Screenshot%20(66).png)
 
 ## 🔎 Verification
 
