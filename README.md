@@ -143,10 +143,9 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **64** | Install and Configure Windows Server Backup | 📋 Planned | Install the feature and review backup destinations and schedules |
-| **65** | File and Folder Backup | 📋 Planned | Back up selected data and test restoration |
-| **66** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
-| **67** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+| **64** | File and Folder Backup | 📋 Planned | Install Windows Server Backup, review backup destinations and scheduling, back up selected files and folders, restore the backed-up data, and verify successful recovery |
+| **65** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **66** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
 ### Phase 12 — Advanced File Services and Caching
 
@@ -154,11 +153,11 @@ These labs cover distributed file access, replication, caching, and storage effi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **68** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
-| **69** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
-| **70** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
-| **71** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
-| **72** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
+| **67** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
+| **68** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
+| **69** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
+| **70** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
+| **71** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
 
 ### Phase 13 — Hyper-V and Virtualization
@@ -167,10 +166,10 @@ Hyper-V labs will be performed only where the host hardware and nested-virtualiz
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **73** | Install and Configure Hyper-V | 📋 Planned | Review role prerequisites and configure Hyper-V where supported |
-| **74** | Hyper-V Virtual Machines and Virtual Switches | 📋 Planned | Create a VM and compare external, internal, and private virtual switches |
-| **75** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
-| **76** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
+| **72** | Install and Configure Hyper-V | 📋 Planned | Review role prerequisites and configure Hyper-V where supported |
+| **73** | Hyper-V Virtual Machines and Virtual Switches | 📋 Planned | Create a VM and compare external, internal, and private virtual switches |
+| **74** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
+| **75** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
 
 ### Phase 14 — High Availability and Resilience
 
@@ -178,31 +177,31 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **77** | Windows Server Failover Clustering | 📋 Planned | Understand cluster prerequisites, validation, nodes, and clustered roles |
-| **78** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
-| **79** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
-| **80** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
+| **76** | Windows Server Failover Clustering | 📋 Planned | Understand cluster prerequisites, validation, nodes, and clustered roles |
+| **77** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
+| **78** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
+| **79** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
 
 ### Phase 15 — Advanced Identity and Certificate Services
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **81** | Active Directory Certificate Services (AD CS) | 📋 Planned | Explore certificate authorities, certificate templates, enrollment, and revocation |
-| **82** | Kerberos Authentication and Troubleshooting | 📋 Planned | Understand ticket-based authentication and investigate common authentication issues |
-| **83** | Active Directory Federation Services (AD FS) | 📋 Planned | Learn federation concepts, prerequisites, and supported lab scenarios |
-| **84** | Active Directory Lightweight Directory Services (AD LDS) | 📋 Planned | Explore application directory instances outside the domain directory |
-| **85** | Active Directory Rights Management Services (AD RMS) | 📋 Planned | Understand information-protection concepts and the role's prerequisites |
-| **86** | Active Directory Auditing and Certificate-Based Authentication | 📋 Planned | Configure selected audit policies and explore certificate-based authentication using certificates issued in the AD CS lab; focus on auditing and authentication use cases rather than repeating CA and certificate-template setup |
+| **80** | Active Directory Certificate Services (AD CS) | 📋 Planned | Explore certificate authorities, certificate templates, enrollment, and revocation |
+| **81** | Kerberos Authentication and Troubleshooting | 📋 Planned | Understand ticket-based authentication and investigate common authentication issues |
+| **82** | Active Directory Federation Services (AD FS) | 📋 Planned | Learn federation concepts, prerequisites, and supported lab scenarios |
+| **83** | Active Directory Lightweight Directory Services (AD LDS) | 📋 Planned | Explore application directory instances outside the domain directory |
+| **84** | Active Directory Rights Management Services (AD RMS) | 📋 Planned | Understand information-protection concepts and the role's prerequisites |
+| **85** | Active Directory Auditing and Certificate-Based Authentication | 📋 Planned | Configure selected audit policies and explore certificate-based authentication using certificates issued in the AD CS lab; focus on auditing and authentication use cases rather than repeating CA and certificate-template setup |
 
 ### Phase 16 — Server Operations and Maintenance
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **87** | Windows Server Update Services (WSUS) | 📋 Planned | Explore update synchronization, approvals, and client update management |
-| **88** | Server Core and Remote Administration | 📋 Planned | Compare Server Core with Desktop Experience and manage a server remotely |
-| **89** | PowerShell for Windows Server Administration | 📋 Planned | Use PowerShell to inspect services, roles, users, and system configuration |
-| **90** | Event Viewer and Performance Monitoring | 📋 Planned | Use event logs, Performance Monitor, and Resource Monitor to investigate issues |
-| **91** | Server Role Maintenance, Migration, and Troubleshooting | 📋 Planned | Review role servicing, migration planning, and structured troubleshooting |
+| **86** | Windows Server Update Services (WSUS) | 📋 Planned | Explore update synchronization, approvals, and client update management |
+| **87** | Server Core and Remote Administration | 📋 Planned | Compare Server Core with Desktop Experience and manage a server remotely |
+| **88** | PowerShell for Windows Server Administration | 📋 Planned | Use PowerShell to inspect services, roles, users, and system configuration |
+| **89** | Event Viewer and Performance Monitoring | 📋 Planned | Use event logs, Performance Monitor, and Resource Monitor to investigate issues |
+| **90** | Server Role Maintenance, Migration, and Troubleshooting | 📋 Planned | Review role servicing, migration planning, and structured troubleshooting |
 
 ### Phase 17 — Additional Windows Server Infrastructure Services
 
@@ -210,12 +209,12 @@ These topics focus on Windows Server roles and infrastructure features rather th
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **92** | IP Address Management (IPAM) | 📋 Planned | Explore centralized management and monitoring of supported DHCP and DNS infrastructure |
-| **93** | Network Policy Server (NPS) and RADIUS | 📋 Planned | Understand network policy, RADIUS authentication, and supported test scenarios |
-| **94** | DirectAccess and Remote Connectivity Concepts | 📋 Planned | Learn DirectAccess purpose, prerequisites, and how it differs from the remote-access VPN lab; focus on architecture and comparison rather than repeating VPN configuration |
-| **95** | IPv6 Configuration on Windows Server | 📋 Planned | Configure and verify IPv6 settings in an isolated Windows Server lab |
-| **96** | DNSSEC | 📋 Planned | Explore DNSSEC signing, validation, and prerequisites |
-| **97** | DHCP Troubleshooting, Backup, and Migration | 📋 Planned | Investigate lease and scope issues and practice supported backup/restore or migration workflows |
+| **91** | IP Address Management (IPAM) | 📋 Planned | Explore centralized management and monitoring of supported DHCP and DNS infrastructure |
+| **92** | Network Policy Server (NPS) and RADIUS | 📋 Planned | Understand network policy, RADIUS authentication, and supported test scenarios |
+| **93** | DirectAccess and Remote Connectivity Concepts | 📋 Planned | Learn DirectAccess purpose, prerequisites, and how it differs from the remote-access VPN lab; focus on architecture and comparison rather than repeating VPN configuration |
+| **94** | IPv6 Configuration on Windows Server | 📋 Planned | Configure and verify IPv6 settings in an isolated Windows Server lab |
+| **95** | DNSSEC | 📋 Planned | Explore DNSSEC signing, validation, and prerequisites |
+| **96** | DHCP Troubleshooting, Backup, and Migration | 📋 Planned | Investigate lease and scope issues and practice supported backup/restore or migration workflows |
 
 ---
 
