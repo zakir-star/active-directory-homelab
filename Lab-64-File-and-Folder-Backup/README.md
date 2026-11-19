@@ -96,7 +96,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 1 — Windows Server Backup installed on DC-02**
 
-![Windows Server Backup installed and opened on DC-02](screenshots/Screenshot%20(2).png)
+![Windows Server Backup installed on DC-02](screenshots/Screenshot%20(2).png)
 
 ### Step 2 — Configure a one-time local backup
 
@@ -158,7 +158,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 5. Confirm that the shared folder can be accessed using the UNC path:
 
    ```text
-   \\\\CLIENT-01\\Storage
+   \\CLIENT-01\Storage
    ```
 
 **📸 Screenshot 5 — Storage folder shared on CLIENT-01**
@@ -177,7 +177,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 8. Under **Specify Remote Folder**, enter:
 
    ```text
-   \\\\CLIENT-01\\Storage
+   \\CLIENT-01\Storage
    ```
 
 9. Click **Next**.
@@ -195,7 +195,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 6. Under **Specify Remote Folder**, enter:
 
    ```text
-   \\\\CLIENT-01\\Storage
+   \\CLIENT-01\Storage
    ```
 
 7. Click **Next**.
@@ -212,7 +212,7 @@ The schedule was configured successfully. The scheduled run itself was not obser
 
 **📸 Screenshot 6 — Specify Remote Folder**
 
-![Successful recovery of C IIF from the remote shared-folder backup](screenshots/Screenshot%20(48).png)
+![Specify Remote Folfer](screenshots/Screenshot%20(48).png)
 
 ### Step 8 — Configure a daily backup schedule for C:\DATA
 
