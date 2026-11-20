@@ -97,7 +97,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 2 — Bare Metal Recovery selected with dependent backup items**
 
-![Bare Metal Recovery selected with dependent backup items](screenshots/Screenshot%20(2).png)
+![Bare Metal Recovery selected with dependent backup items](screenshots/Screenshot%20(5).png)
 
 ### Step 4 — Select the backup destination and run the backup
 
@@ -112,7 +112,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 3 — Bare-metal backup completed successfully**
 
-![Bare-metal backup completed successfully](screenshots/Screenshot%20(3).png)
+![Bare-metal backup completed successfully](screenshots/Screenshot%20(10).png)
 
 ### Step 5 — Replace the original operating-system disk
 
@@ -125,7 +125,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 4 — Replacement 60 GB virtual disk configured for DC-02**
 
-![Replacement 60 GB virtual disk configured for DC-02](screenshots/Screenshot%20(4).png)
+![Replacement 60 GB virtual disk configured for DC-02](screenshots/Screenshot%20(15).png)
 
 ### Step 6 — Start System Image Recovery
 
@@ -140,7 +140,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 5 — System Image Recovery displaying the DC-02 backup**
 
-![System Image Recovery displaying the DC-02 backup](screenshots/Screenshot%20(5).png)
+![System Image Recovery displaying the DC-02 backup](screenshots/Screenshot%20(20).png)
 
 ### Step 7 — Review and start the bare-metal recovery
 
@@ -155,7 +155,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 6 — Bare-metal recovery completed successfully**
 
-![Bare-metal recovery completed successfully](screenshots/Screenshot%20(6).png)
+![Bare-metal recovery completed successfully](screenshots/Screenshot%20(24).png)
 
 ### Step 8 — Verify the recovered domain controller
 
@@ -167,7 +167,7 @@ For production environments, maintain additional protected backup copies on inde
 
 **📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
 
-![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
+![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(25).png)
 
 ## 🔎 Verification
 
