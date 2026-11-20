@@ -72,7 +72,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 1 — Additional 20 GB disk configured as F: on DC-02**
 
-[Add Screenshot 1](screenshots/)
+![Additional 20 GB disk configured as F: on DC-02](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Open Windows Server Backup and start Backup Once
 
@@ -82,10 +82,6 @@ A backup should be stored on suitable independent storage, monitored, and tested
 4. Right-click **Local Backup** and select **Backup Once**.
 5. Select **Different options** and click **Next**.
 
-**📸 Screenshot 2 — Backup Once wizard on DC-02**
-
-[Add Screenshot 2](screenshots/)
-
 ### Step 3 — Select System State as the backup item
 
 1. Under **Select Backup Configuration**, choose **Custom** and click **Next**.
@@ -93,9 +89,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 3. Select the **System State** checkbox.
 4. Click **OK**, then click **Next**.
 
-**📸 Screenshot 3 — System State selected in Add Items**
+**📸 Screenshot 2 — System State selected in Add Items**
 
-[Add Screenshot 3](screenshots/)
+![System State selected in Add Items](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Select F: as the backup destination and run the backup
 
@@ -107,9 +103,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 6. Wait for the backup operation to complete.
 7. Close the wizard after completion.
 
-**📸 Screenshot 4 — System State backup completed successfully**
+**📸 Screenshot 3 — System State backup completed successfully**
 
-[Add Screenshot 4](screenshots/)
+![System State backup completed successfully](screenshots/Screenshot%20(3).png)
 
 ### Step 5 — Delete the test domain user
 
@@ -119,9 +115,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 4. Locate the domain user `test_user`.
 5. Delete `test_user` to create the recovery test condition.
 
-**📸 Screenshot 5 — test_user deleted from the Users container**
+**📸 Screenshot 4 — test_user deleted from the Users container**
 
-[Add Screenshot 5](screenshots/)
+![test_user deleted from the Users container](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Start DC-02 in Directory Services Restore Mode
 
@@ -134,9 +130,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 7. Restart `DC-02`.
 8. After startup, sign in as **Administrator** using the DSRM password.
 
-**📸 Screenshot 6 — System Configuration set to Active Directory Repair**
+**📸 Screenshot 5 — System Configuration set to Active Directory Repair**
 
-[Add Screenshot 6](screenshots/)
+![System Configuration set to Active Directory Repair](screenshots/Screenshot%20(5).png)
 
 ### Step 7 — Recover System State from the backup
 
@@ -153,9 +149,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 11. Wait for the System State recovery to complete.
 12. Accept the prompt to restart the server.
 
-**📸 Screenshot 7 — System State recovery completed**
+**📸 Screenshot 6 — System State recovery completed**
 
-[Add Screenshot 7](screenshots/)
+![System State recovery completed](screenshots/Screenshot%20(6).png)
 
 ### Step 8 — Return DC-02 to normal startup
 
@@ -167,10 +163,6 @@ A backup should be stored on suitable independent storage, monitored, and tested
 6. Restart `DC-02`.
 7. After normal startup, sign in using domain administrator credentials.
 
-**📸 Screenshot 8 — Safe boot disabled before normal startup**
-
-[Add Screenshot 8](screenshots/)
-
 ### Step 9 — Verify the recovered domain user
 
 1. Open **Server Manager → Tools → Active Directory Users and Computers**.
@@ -179,9 +171,9 @@ A backup should be stored on suitable independent storage, monitored, and tested
 4. Locate `test_user`.
 5. Confirm that the deleted user account is present again.
 
-**📸 Screenshot 9 — test_user successfully recovered in Active Directory Users and Computers**
+**📸 Screenshot 7 — test_user successfully recovered in Active Directory Users and Computers**
 
-[Add Screenshot 9](screenshots/)
+![test_user successfully recovered in Active Directory Users and Computers](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
