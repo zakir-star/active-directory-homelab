@@ -75,6 +75,10 @@ For production environments, maintain additional protected backup copies on inde
 4. Initialize and format the new disk if required, and assign it drive letter `F:\`.
 5. Open **This PC** and verify that the `F:\` volume is available.
 
+**📸 Screenshot 1 — DC-02 backup destination configured as F: (60 GB)**
+
+![DC-02 backup destination configured as F: (60 GB)](screenshots/Screenshot%20(1).png)
+
 ### Step 2 — Open Windows Server Backup and start Backup Once
 
 1. Open **Server Manager**.
@@ -91,6 +95,10 @@ For production environments, maintain additional protected backup copies on inde
 4. Verify that Windows Server Backup automatically selects the additional required items, including **System State** and the operating-system volume (`C:\`).
 5. Click **OK**, then click **Next**.
 
+**📸 Screenshot 2 — Bare Metal Recovery selected with dependent backup items**
+
+![Bare Metal Recovery selected with dependent backup items](screenshots/Screenshot%20(2).png)
+
 ### Step 4 — Select the backup destination and run the backup
 
 1. Under **Specify Destination Type**, select **Local drives** and click **Next**.
@@ -102,6 +110,10 @@ For production environments, maintain additional protected backup copies on inde
 7. Click **Close** after completion.
 8. Open **This PC** and verify that the `F:\` backup volume is present.
 
+**📸 Screenshot 3 — Bare-metal backup completed successfully**
+
+![Bare-metal backup completed successfully](screenshots/Screenshot%20(3).png)
+
 ### Step 5 — Replace the original operating-system disk
 
 1. Shut down the `DC-02` virtual machine.
@@ -110,6 +122,10 @@ For production environments, maintain additional protected backup copies on inde
 4. Add a new **60 GB** virtual hard disk to the VM as the replacement OS disk.
 5. Keep the backup disk containing the `F:\` backup available to the VM.
 6. Configure the VM to boot from the Windows Server installation media.
+
+**📸 Screenshot 4 — Replacement 60 GB virtual disk configured for DC-02**
+
+![Replacement 60 GB virtual disk configured for DC-02](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Start System Image Recovery
 
@@ -122,6 +138,10 @@ For production environments, maintain additional protected backup copies on inde
 7. Review the displayed backup location, date and time, and computer name (`DC-02`).
 8. Click **Next**.
 
+**📸 Screenshot 5 — System Image Recovery displaying the DC-02 backup**
+
+![System Image Recovery displaying the DC-02 backup](screenshots/Screenshot%20(5).png)
+
 ### Step 7 — Review and start the bare-metal recovery
 
 1. Review the recovery options on the next page.
@@ -133,6 +153,10 @@ For production environments, maintain additional protected backup copies on inde
 7. Wait for the recovery operation to complete.
 8. When prompted, click **Restart**.
 
+**📸 Screenshot 6 — Bare-metal recovery completed successfully**
+
+![Bare-metal recovery completed successfully](screenshots/Screenshot%20(6).png)
+
 ### Step 8 — Verify the recovered domain controller
 
 1. Allow `DC-02` to boot from the restored operating-system disk.
@@ -140,36 +164,6 @@ For production environments, maintain additional protected backup copies on inde
 3. Open **Server Manager → Tools → Active Directory Users and Computers**.
 4. Verify that Active Directory Users and Computers opens successfully.
 5. Open **This PC** and verify that the restored `C:\` drive is accessible.
-
-## 📸 Screenshots
-
-**📸 Screenshot 1 — DC-02 backup destination configured as F: (60 GB)**
-
-![DC-02 backup destination configured as F: (60 GB)](screenshots/Screenshot%20(1).png)
-
-**📸 Screenshot 2 — Bare Metal Recovery selected with dependent backup items**
-
-![Bare Metal Recovery selected with dependent backup items](screenshots/Screenshot%20(2).png)
-
-**📸 Screenshot 3 — Bare-metal backup completed successfully**
-
-![Bare-metal backup completed successfully](screenshots/Screenshot%20(3).png)
-
-**📸 Screenshot 4 — Replacement 60 GB virtual disk configured for DC-02**
-
-![Replacement 60 GB virtual disk configured for DC-02](screenshots/Screenshot%20(4).png)
-
-**📸 Screenshot 5 — System Image Recovery displaying the DC-02 backup**
-
-![System Image Recovery displaying the DC-02 backup](screenshots/Screenshot%20(5).png)
-
-**📸 Screenshot 6 — Bare-metal recovery completed successfully**
-
-![Bare-metal recovery completed successfully](screenshots/Screenshot%20(6).png)
-
-**📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
-
-![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
@@ -226,3 +220,7 @@ The verification documented here is limited to the successful boot, Domain Admin
 ## ✅ Closing
 
 The Bare-Metal Backup and Recovery lab demonstrates how Windows Server Backup can protect a domain controller for full-system recovery and how a server can be restored onto replacement storage without manually reinstalling and reconfiguring Windows Server.
+
+**📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
+
+![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
