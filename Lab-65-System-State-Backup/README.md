@@ -11,7 +11,7 @@ Create a System State backup of the additional domain controller `DC-02` using W
 - 🖥️ **Server:** Windows Server 2022 — `DC-02` (Additional Domain Controller)
 - 🛠️ **Backup Tool:** Windows Server Backup
 - 💽 **Backup Disk:** Additional 20 GB virtual disk
-- 🔤 **Backup Destination:** `F:\\`
+- 🔤 **Backup Destination:** `F:\`
 - 👤 **Test Domain User:** `test_user`
 - 🔧 **Recovery Mode:** Directory Services Restore Mode (DSRM)
 
@@ -91,7 +91,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 2 — System State selected in Add Items**
 
-![System State selected in Add Items](screenshots/Screenshot%20(2).png)
+![System State selected in Add Items](screenshots/Screenshot%20(6).png)
 
 ### Step 4 — Select F: as the backup destination and run the backup
 
@@ -105,7 +105,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 3 — System State backup completed successfully**
 
-![System State backup completed successfully](screenshots/Screenshot%20(3).png)
+![System State backup completed successfully](screenshots/Screenshot%20(11).png)
 
 ### Step 5 — Delete the test domain user
 
@@ -117,7 +117,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 4 — test_user deleted from the Users container**
 
-![test_user deleted from the Users container](screenshots/Screenshot%20(4).png)
+![test_user deleted from the Users container](screenshots/Screenshot%20(12).png)
 
 ### Step 6 — Start DC-02 in Directory Services Restore Mode
 
@@ -132,7 +132,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 5 — System Configuration set to Active Directory Repair**
 
-![System Configuration set to Active Directory Repair](screenshots/Screenshot%20(5).png)
+![System Configuration set to Active Directory Repair](screenshots/Screenshot%20(14).png)
 
 ### Step 7 — Recover System State from the backup
 
@@ -151,7 +151,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 6 — System State recovery completed**
 
-![System State recovery completed](screenshots/Screenshot%20(6).png)
+![System State recovery completed](screenshots/Screenshot%20(25).png)
 
 ### Step 8 — Return DC-02 to normal startup
 
@@ -173,7 +173,7 @@ A backup should be stored on suitable independent storage, monitored, and tested
 
 **📸 Screenshot 7 — test_user successfully recovered in Active Directory Users and Computers**
 
-![test_user successfully recovered in Active Directory Users and Computers](screenshots/Screenshot%20(7).png)
+![test_user successfully recovered in Active Directory Users and Computers](screenshots/Screenshot%20(31).png)
 
 ## 🔎 Verification
 
