@@ -141,6 +141,36 @@ For production environments, maintain additional protected backup copies on inde
 4. Verify that Active Directory Users and Computers opens successfully.
 5. Open **This PC** and verify that the restored `C:\` drive is accessible.
 
+## 📸 Screenshots
+
+**📸 Screenshot 1 — DC-02 backup destination configured as F: (60 GB)**
+
+![DC-02 backup destination configured as F: (60 GB)](screenshots/Screenshot%20(1).png)
+
+**📸 Screenshot 2 — Bare Metal Recovery selected with dependent backup items**
+
+![Bare Metal Recovery selected with dependent backup items](screenshots/Screenshot%20(2).png)
+
+**📸 Screenshot 3 — Bare-metal backup completed successfully**
+
+![Bare-metal backup completed successfully](screenshots/Screenshot%20(3).png)
+
+**📸 Screenshot 4 — Replacement 60 GB virtual disk configured for DC-02**
+
+![Replacement 60 GB virtual disk configured for DC-02](screenshots/Screenshot%20(4).png)
+
+**📸 Screenshot 5 — System Image Recovery displaying the DC-02 backup**
+
+![System Image Recovery displaying the DC-02 backup](screenshots/Screenshot%20(5).png)
+
+**📸 Screenshot 6 — Bare-metal recovery completed successfully**
+
+![Bare-metal recovery completed successfully](screenshots/Screenshot%20(6).png)
+
+**📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
+
+![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
+
 ## 🔎 Verification
 
 - Confirm that the additional 60 GB virtual disk was configured as the `F:\` backup destination.
