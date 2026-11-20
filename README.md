@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–64 completed
-> **Last updated:** November 19, 2026
+> **Status:** Labs 1–65 completed
+> **Last updated:** November 20, 2026
 
 ---
 
@@ -144,7 +144,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **64** | [File and Folder Backup](Lab-64-File-and-Folder-Backup/README.md) | ✅ Completed | Install Windows Server Backup, back up and recover selected files and folders using local and remote destinations, and configure a daily backup schedule |
-| **65** | System State Backup | 📋 Planned | Back up system state and understand recovery use cases |
+| **65** | [System State Backup and Recovery](Lab-65-System-State-Backup/README.md) | ✅ Completed | Create a System State backup of DC-02, recover it in Directory Services Restore Mode (DSRM), and verify restoration of a deleted domain user |
 | **66** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
 
 ### Phase 12 — Advanced File Services and Caching
