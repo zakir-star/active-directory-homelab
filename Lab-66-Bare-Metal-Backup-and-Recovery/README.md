@@ -165,6 +165,10 @@ For production environments, maintain additional protected backup copies on inde
 4. Verify that Active Directory Users and Computers opens successfully.
 5. Open **This PC** and verify that the restored `C:\` drive is accessible.
 
+**📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
+
+![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
+
 ## 🔎 Verification
 
 - Confirm that the additional 60 GB virtual disk was configured as the `F:\` backup destination.
@@ -220,7 +224,3 @@ The verification documented here is limited to the successful boot, Domain Admin
 ## ✅ Closing
 
 The Bare-Metal Backup and Recovery lab demonstrates how Windows Server Backup can protect a domain controller for full-system recovery and how a server can be restored onto replacement storage without manually reinstalling and reconfiguring Windows Server.
-
-**📸 Screenshot 7 — DC-02 booted successfully with ADUC and C: drive accessible**
-
-![DC-02 booted successfully with ADUC and C: drive accessible](screenshots/Screenshot%20(7).png)
