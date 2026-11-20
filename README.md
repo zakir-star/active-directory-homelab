@@ -145,7 +145,7 @@ These labs expand on the policy fundamentals introduced in Labs 7 and 8. Group P
 |-----|-------|--------|----------------|
 | **64** | [File and Folder Backup](Lab-64-File-and-Folder-Backup/README.md) | ✅ Completed | Install Windows Server Backup, back up and recover selected files and folders using local and remote destinations, and configure a daily backup schedule |
 | **65** | [System State Backup and Recovery](Lab-65-System-State-Backup/README.md) | ✅ Completed | Create a System State backup of DC-02, recover it in Directory Services Restore Mode (DSRM), and verify restoration of a deleted domain user |
-| **66** | Bare-Metal Recovery Backup | 📋 Planned | Explore full-server recovery preparation and limitations |
+| **66** | [Bare-Metal Backup and Recovery](Lab-66-Bare-Metal-Backup-and-Recovery/README.md) | ✅ Completed | Create a Bare-Metal Recovery backup of DC-02, replace its original OS disk, restore the system image onto a new virtual disk, and verify successful startup and access to Active Directory Users and Computers |
 
 ### Phase 12 — Advanced File Services and Caching
 
