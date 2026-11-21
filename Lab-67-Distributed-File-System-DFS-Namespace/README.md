@@ -114,7 +114,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot 1 — DFS Namespaces role service installed on DC-01**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (1).png to the `screenshots/` folder.
+[Screenshot 1](screenshots/Screenshot%20(1).png)
 
 ### Step 3 — Create a new domain-based DFS Namespace
 
@@ -139,7 +139,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot 2 — Domain-based namespace IT_Cources created successfully**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (2).png to the `screenshots/` folder.
+[Screenshot 2](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Add the MCSA folder to the namespace
 
@@ -184,7 +184,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot 3 — MCSA and CCNA folders listed under the DFS namespace**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (3).png to the `screenshots/` folder.
+[Screenshot 3](screenshots/Screenshot%20(3).png)
 
 ### Step 7 — Verify DFS Namespace access from CLIENT-01
 
@@ -200,11 +200,11 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot 4 — CCNA DFS tab showing its active target on DC-02**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (4).png to the `screenshots/` folder.
+[Screenshot 4](screenshots/Screenshot%20(4).png)
 
 **📸 Screenshot 5 — MCSA DFS tab showing its active target on DC-01**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (5).png to the `screenshots/` folder.
+[Screenshot 5](screenshots/Screenshot%20(5).png)
 
 ### Step 8 — Map the DFS Namespace as a Network Drive
 
@@ -223,11 +223,11 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot 6 — DFS namespace mapped as network drive Z: on CLIENT-01**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (6).png to the `screenshots/` folder.
+[Screenshot 6](screenshots/Screenshot%20(6).png)
 
 **📸 Screenshot 7 — MCSA and CCNA folders accessible through mapped drive Z:**
 
-> **Screenshot placeholder:** Add the actual screenshot link here after uploading Screenshot (7).png to the `screenshots/` folder.
+[Screenshot 7](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
