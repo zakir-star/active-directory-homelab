@@ -316,9 +316,9 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 The appearance of the test file on both members confirms that the file created through the DC-01 share was replicated to DC-02.
 
-**📸 Screenshot — Client_test1 verified in Repl_DATA on DC-01 and DC-02**
+**📸 Screenshot — Client_test1 verified in Repl_DATA on DC-01**
 
-![Client_test1 verified in Repl_DATA on DC-01 and DC-02](screenshots/Screenshot%20(7).png)
+**📸 Screenshot — Client_test1 verified in Repl_DATA on DC-02**
 
 ## 🔎 Verification
 
