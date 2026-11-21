@@ -147,9 +147,9 @@ Important data should still be protected with a separate backup solution and an 
 8. Repeat the same installation process on `DC-02`.
 9. Confirm that the DFS Replication role service is installed on both domain controllers.
 
-**📸 Screenshot 1 — DFS Replication role service installed on DC-01 and DC-02**
+**📸 Screenshot — DFS Replication role service installed on DC-01 and DC-02**
 
-[Add Screenshot Here](screenshots/)
+![DFS Replication role service installed on DC-01 and DC-02](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Create and share Repl_DATA on DC-01
 
@@ -192,9 +192,9 @@ Important data should still be protected with a separate backup solution and an 
 4. Leave the domain selected as `example.com`.
 5. Click **Next**.
 
-**📸 Screenshot 2 — Multipurpose replication group named Replication-1**
+**📸 Screenshot — Multipurpose replication group Replication-1 created**
 
-[Add Screenshot Here](screenshots/)
+![Multipurpose replication group Replication-1 created](screenshots/Screenshot%20(2).png)
 
 ### Step 6 — Add DC-01 and DC-02 as group members
 
@@ -217,9 +217,9 @@ Important data should still be protected with a separate backup solution and an 
 
 With two members in this replication group, Full Mesh provides a direct replication connection between `DC-01` and `DC-02`.
 
-**📸 Screenshot 3 — DC-01 and DC-02 selected with Full Mesh topology**
+**📸 Screenshot — DC-01 and DC-02 selected with Full Mesh topology**
 
-[Add Screenshot Here](screenshots/)
+![DC-01 and DC-02 selected with Full Mesh topology](screenshots/Screenshot%20(3).png)
 
 ### Step 8 — Configure the replication schedule and bandwidth
 
@@ -232,9 +232,9 @@ With two members in this replication group, Full Mesh provides a direct replicat
 1. On the **Primary Member** page, select `DC-01`.
 2. Click **Next**.
 
-**📸 Screenshot 4 — DC-01 selected as the Primary Member**
+**📸 Screenshot — DC-01 selected as the Primary Member**
 
-[Add Screenshot Here](screenshots/)
+![DC-01 selected as the Primary Member](screenshots/Screenshot%20(4).png)
 
 ### Step 10 — Add the Repl_DATA folder to replicate
 
@@ -258,9 +258,9 @@ With two members in this replication group, Full Mesh provides a direct replicat
 8. Verify that the local path for `DC-02` is configured as `C:\Repl_DATA`.
 9. Click **Next**.
 
-**📸 Screenshot 5 — Repl_DATA enabled with its local path configured on DC-02**
+**📸 Screenshot — Repl_DATA enabled with its local path configured on DC-02**
 
-[Add Screenshot Here](screenshots/)
+![Repl_DATA enabled with its local path configured on DC-02](screenshots/Screenshot%20(5).png)
 
 ### Step 12 — Review and create the replication group
 
@@ -277,9 +277,9 @@ With two members in this replication group, Full Mesh provides a direct replicat
 11. Read the notification message displayed by DFS Management and click **OK**.
 12. Verify that `Replication-1` appears under the Replication node and that both members show an **Enabled** status.
 
-**📸 Screenshot 6 — Replication-1 created successfully with both members enabled**
+**📸 Screenshot — Replication-1 created successfully with both members enabled**
 
-[Add Screenshot Here](screenshots/)
+![Replication-1 created successfully with both members enabled](screenshots/Screenshot%20(6).png)
 
 ### Step 13 — Verify the replication group on DC-02
 
@@ -316,9 +316,9 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 The appearance of the test file on both members confirms that the file created through the DC-01 share was replicated to DC-02.
 
-**📸 Screenshot 7 — Client_test1 verified in Repl_DATA on DC-01 and DC-02**
+**📸 Screenshot — Client_test1 verified in Repl_DATA on DC-01 and DC-02**
 
-[Add Screenshot Here](screenshots/)
+![Client_test1 verified in Repl_DATA on DC-01 and DC-02](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
