@@ -149,7 +149,7 @@ Important data should still be protected with a separate backup solution and an 
 
 **📸 Screenshot 1 — DFS Replication role service installed on DC-01 and DC-02**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 2 — Create and share Repl_DATA on DC-01
 
@@ -194,7 +194,7 @@ Important data should still be protected with a separate backup solution and an 
 
 **📸 Screenshot 2 — Multipurpose replication group named Replication-1**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 6 — Add DC-01 and DC-02 as group members
 
@@ -219,7 +219,7 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 **📸 Screenshot 3 — DC-01 and DC-02 selected with Full Mesh topology**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 8 — Configure the replication schedule and bandwidth
 
@@ -234,7 +234,7 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 **📸 Screenshot 4 — DC-01 selected as the Primary Member**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 10 — Add the Repl_DATA folder to replicate
 
@@ -260,7 +260,7 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 **📸 Screenshot 5 — Repl_DATA enabled with its local path configured on DC-02**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 12 — Review and create the replication group
 
@@ -279,7 +279,7 @@ With two members in this replication group, Full Mesh provides a direct replicat
 
 **📸 Screenshot 6 — Replication-1 created successfully with both members enabled**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ### Step 13 — Verify the replication group on DC-02
 
@@ -318,7 +318,7 @@ The appearance of the test file on both members confirms that the file created t
 
 **📸 Screenshot 7 — Client_test1 verified in Repl_DATA on DC-01 and DC-02**
 
-<!-- Screenshot placeholder: add the selected screenshot link here. -->
+[Add Screenshot Here](screenshots/)
 
 ## 🔎 Verification
 
