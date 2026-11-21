@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–65 completed
-> **Last updated:** November 20, 2026
+> **Status:** Labs 1–67 completed
+> **Last updated:** November 21, 2026
 
 ---
 
@@ -153,7 +153,7 @@ These labs cover distributed file access, replication, caching, and storage effi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **67** | DFS Namespaces | 📋 Planned | Create a namespace and provide a consistent path to shared folders |
+| **67** | [DFS Namespaces](Lab-67-Distributed-File-System-DFS-Namespace/README.md) | ✅ Completed | Create the domain-based `\\example.com\IT_Cources` namespace, add MCSA and CCNA folder targets hosted on DC-01 and DC-02, and verify access through the namespace from CLIENT-01 using mapped drive `Z:` |
 | **68** | DFS Replication | 📋 Planned | Explore replication groups, prerequisites, and multi-server folder replication |
 | **69** | BranchCache | 📋 Planned | Understand distributed and hosted cache modes and their requirements |
 | **70** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
@@ -309,6 +309,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Remote-access VPN configuration using Windows Server RRAS, Active Directory dial-in permissions, PPTP and SSTP connection testing, self-signed certificate creation and client trust configuration, SSL certificate binding, static VPN address pools, and VPN client connectivity verification
 - Windows Admin Center installation and remote server management from a domain-joined client, including server overview, services, processes, storage, networks, Remote Desktop, files and sharing, roles and features, remote folder creation, and server-role removal
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
+- DFS Namespace installation and domain-based namespace configuration, folder targets across multiple servers, and client access through a consistent namespace path
 - Screenshot-supported technical documentation
 
 ---
