@@ -112,9 +112,9 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 7. Wait for the installation to finish.
 8. Open **Server Manager → Tools → DFS Management**.
 
-**📸 Screenshot 1 — DFS Namespaces role service installed on DC-01**
+**📸 Screenshot — DFS Namespaces role service installed on DC-01**
 
-[Screenshot 1](screenshots/Screenshot%20(1).png)
+![DFS Namespaces role service installed on DC-01](screenshots/Screenshot%20(1).png)
 
 ### Step 3 — Create a new domain-based DFS Namespace
 
@@ -137,9 +137,9 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
     `\\example.com\IT_Cources`
 
-**📸 Screenshot 2 — Domain-based namespace IT_Cources created successfully**
+**📸 Screenshot — Domain-based namespace IT_Cources created successfully**
 
-[Screenshot 2](screenshots/Screenshot%20(2).png)
+![Domain-based namespace IT_Cources created successfully](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Add the MCSA folder to the namespace
 
@@ -182,9 +182,9 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 13. Complete the New Folder wizard.
 14. Verify that both `MCSA` and `CCNA` appear under `IT_Cources`.
 
-**📸 Screenshot 3 — MCSA and CCNA folders listed under the DFS namespace**
+**📸 Screenshot — MCSA and CCNA folders listed under the DFS namespace**
 
-[Screenshot 3](screenshots/Screenshot%20(3).png)
+![MCSA and CCNA folders listed under the DFS namespace](screenshots/Screenshot%20(3).png)
 
 ### Step 7 — Verify DFS Namespace access from CLIENT-01
 
@@ -198,13 +198,13 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 8. Repeat the verification for the `MCSA` folder.
 9. Verify that its actual folder target is `\\DC-01\MCSA` and its status is **Active**.
 
-**📸 Screenshot 4 — CCNA DFS tab showing its active target on DC-02**
+**📸 Screenshot — CCNA DFS tab showing its active target on DC-02**
 
-[Screenshot 4](screenshots/Screenshot%20(4).png)
+![CCNA DFS tab showing its active target on DC-02](screenshots/Screenshot%20(4).png)
 
-**📸 Screenshot 5 — MCSA DFS tab showing its active target on DC-01**
+**📸 Screenshot — MCSA DFS tab showing its active target on DC-01**
 
-[Screenshot 5](screenshots/Screenshot%20(5).png)
+![MCSA DFS tab showing its active target on DC-01](screenshots/Screenshot%20(5).png)
 
 ### Step 8 — Map the DFS Namespace as a Network Drive
 
@@ -221,13 +221,13 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 8. Verify that the mapped network drive `Z:` appears.
 9. Open drive `Z:` and confirm that both `MCSA` and `CCNA` folders are accessible.
 
-**📸 Screenshot 6 — DFS namespace mapped as network drive Z: on CLIENT-01**
+**📸 Screenshot — DFS namespace mapped as network drive Z: on CLIENT-01**
 
-[Screenshot 6](screenshots/Screenshot%20(6).png)
+![DFS namespace mapped as network drive Z: on CLIENT-01](screenshots/Screenshot%20(6).png)
 
-**📸 Screenshot 7 — MCSA and CCNA folders accessible through mapped drive Z:**
+**📸 Screenshot — MCSA and CCNA folders accessible through mapped drive Z:**
 
-[Screenshot 7](screenshots/Screenshot%20(7).png)
+![MCSA and CCNA folders accessible through mapped drive Z:](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
