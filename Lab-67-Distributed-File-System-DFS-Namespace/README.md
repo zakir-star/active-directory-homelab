@@ -114,7 +114,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — DFS Namespaces role service installed on DC-01**
 
-![DFS Namespaces role service installed on DC-01](screenshots/Screenshot%20(1).png)
+![DFS Namespaces role service installed on DC-01](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Create a new domain-based DFS Namespace
 
@@ -139,7 +139,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — Domain-based namespace IT_Cources created successfully**
 
-![Domain-based namespace IT_Cources created successfully](screenshots/Screenshot%20(2).png)
+![Domain-based namespace IT_Cources created successfully](screenshots/Screenshot%20(12).png)
 
 ### Step 4 — Add the MCSA folder to the namespace
 
@@ -184,7 +184,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — MCSA and CCNA folders listed under the DFS namespace**
 
-![MCSA and CCNA folders listed under the DFS namespace](screenshots/Screenshot%20(3).png)
+![MCSA and CCNA folders listed under the DFS namespace](screenshots/Screenshot%20(29).png)
 
 ### Step 7 — Verify DFS Namespace access from CLIENT-01
 
@@ -200,11 +200,11 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — CCNA DFS tab showing its active target on DC-02**
 
-![CCNA DFS tab showing its active target on DC-02](screenshots/Screenshot%20(4).png)
+![CCNA DFS tab showing its active target on DC-02](screenshots/Screenshot%20(32).png)
 
 **📸 Screenshot — MCSA DFS tab showing its active target on DC-01**
 
-![MCSA DFS tab showing its active target on DC-01](screenshots/Screenshot%20(5).png)
+![MCSA DFS tab showing its active target on DC-01](screenshots/Screenshot%20(33).png)
 
 ### Step 8 — Map the DFS Namespace as a Network Drive
 
@@ -223,7 +223,7 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — DFS namespace mapped as network drive Z: on CLIENT-01**
 
-![DFS namespace mapped as network drive Z: on CLIENT-01](screenshots/Screenshot%20(6).png)
+![DFS namespace mapped as network drive Z: on CLIENT-01](screenshots/Screenshot%20(34).png)
 
 **📸 Screenshot — MCSA and CCNA folders accessible through mapped drive Z:**
 
