@@ -223,11 +223,11 @@ In this lab, the namespace was mapped as drive `Z:\` on `CLIENT-01`.
 
 **📸 Screenshot — DFS namespace mapped as network drive Z: on CLIENT-01**
 
-![DFS namespace mapped as network drive Z: on CLIENT-01](screenshots/Screenshot%20(34).png)
+![DFS namespace mapped as network drive Z: on CLIENT-01](screenshots/Screenshot%20(36).png)
 
 **📸 Screenshot — MCSA and CCNA folders accessible through mapped drive Z:**
 
-![MCSA and CCNA folders accessible through mapped drive Z:](screenshots/Screenshot%20(7).png)
+![MCSA and CCNA folders accessible through mapped drive Z:](screenshots/Screenshot%20(37).png)
 
 ## 🔎 Verification
 
