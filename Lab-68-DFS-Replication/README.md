@@ -201,10 +201,7 @@ Important data should still be protected with a separate backup solution and an 
 1. On the **Group Members** page, click **Add**.
 2. In the **Select Computer** window, click **Advanced**.
 3. Click **Find Now**.
-4. Select `DC-01` from the search results.
-5. Click **OK**, then click **OK** again.
-6. Click **Add** once more.
-7. Repeat the computer search and select `DC-02`.
+4. Press **Ctrl** and select both `DC-01` and `DC-02`
 8. Click **OK**, then click **OK** again.
 9. Verify that both `DC-01` and `DC-02` appear as group members.
 10. Click **Next**.
@@ -318,11 +315,11 @@ The appearance of the test file on both members confirms that the file created t
 
 **📸 Screenshot — Client_test1 verified in Repl_DATA on DC-01**
 
-![Client_test1 verified in Repl_DATA on DC-01](screenshots/ADD-DC-01-SCREENSHOT.png)
+![Client_test1 verified in Repl_DATA on DC-01](screenshots/Screenshot%20(33).png)
 
 **📸 Screenshot — Client_test1 verified in Repl_DATA on DC-02**
 
-![Client_test1 verified in Repl_DATA on DC-02](screenshots/ADD-DC-02-SCREENSHOT.png)
+![Client_test1 verified in Repl_DATA on DC-02](screenshots/Screenshot%20(34).png)
 
 ## 🔎 Verification
 
