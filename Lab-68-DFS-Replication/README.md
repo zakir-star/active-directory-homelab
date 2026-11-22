@@ -318,11 +318,11 @@ The appearance of the test file on both members confirms that the file created t
 
 **📸 Screenshot — Client_test1 verified in Repl_DATA on DC-01**
 
-![Client_test1 verified in Repl_DATA on DC-01]()
+![Client_test1 verified in Repl_DATA on DC-01](screenshots/ADD-DC-01-SCREENSHOT.png)
 
 **📸 Screenshot — Client_test1 verified in Repl_DATA on DC-02**
 
-![Client_test1 verified in Repl_DATA on DC-02]()
+![Client_test1 verified in Repl_DATA on DC-02](screenshots/ADD-DC-02-SCREENSHOT.png)
 
 ## 🔎 Verification
 
