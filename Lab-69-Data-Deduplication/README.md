@@ -149,25 +149,31 @@ Get-DedupJob
 
 ## 📸 Screenshots
 
-Add the selected lab screenshots to the `screenshots` folder. The placeholders below identify the key evidence to include; add the actual image links after selecting the screenshots.
+Add the selected lab screenshots to the `screenshots` folder. Replace each placeholder image path with the actual screenshot filename when the images are added.
 
-1. **Data Deduplication role service installed**
-   <!-- Screenshot placeholder 1 -->
+### Screenshot 1 — Data Deduplication role service installed
 
-2. **E: drive test folders containing the copied Windows Server DVD contents**
-   <!-- Screenshot placeholder 2 -->
+![Data Deduplication role service installed](screenshots/PLACEHOLDER-1.png)
 
-3. **Data Deduplication configuration — General purpose file server and 0-day file age**
-   <!-- Screenshot placeholder 3 -->
+### Screenshot 2 — E: drive test folders containing the copied Windows Server DVD contents
 
-4. **PowerShell optimization job progress and completed status**
-   <!-- Screenshot placeholder 4 -->
+![E drive test folders containing copied Windows Server DVD contents](screenshots/PLACEHOLDER-2.png)
 
-5. **Final deduplication results — 54% rate and 5.26 GB savings**
-   <!-- Screenshot placeholder 5 -->
+### Screenshot 3 — Data Deduplication configuration
 
-6. **E: drive showing 15.5 GB free in This PC**
-   <!-- Screenshot placeholder 6 -->
+![General purpose file server type and 0-day file age configuration](screenshots/PLACEHOLDER-3.png)
+
+### Screenshot 4 — PowerShell optimization job
+
+![PowerShell optimization job progress and completed status](screenshots/PLACEHOLDER-4.png)
+
+### Screenshot 5 — Final deduplication results
+
+![54 percent deduplication rate and 5.26 GB savings](screenshots/PLACEHOLDER-5.png)
+
+### Screenshot 6 — E: drive free space verification
+
+![E drive showing 15.5 GB free in This PC](screenshots/PLACEHOLDER-6.png)
 
 ## 🌍 Real-World Use Case
 
