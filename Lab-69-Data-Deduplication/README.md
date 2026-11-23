@@ -75,7 +75,7 @@ Data Deduplication reduces repeated data; it does not replace a backup strategy.
 
 **📸 Screenshot — E: drive test folders containing the copied Windows Server DVD contents**
 
-![E drive test folders containing the copied Windows Server DVD contents](screenshots/Screenshot%20(2).png)
+![E drive test folders containing the copied Windows Server DVD contents](screenshots/Screenshot%20(3).png)
 
 ### Step 3 — Configure Data Deduplication on the E: volume
 
@@ -88,7 +88,7 @@ Data Deduplication reduces repeated data; it does not replace a backup strategy.
 
 **📸 Screenshot — Data Deduplication configured for General purpose file server with a 0-day file age**
 
-![Data Deduplication configured for General purpose file server with a 0-day file age](screenshots/Screenshot%20(3).png)
+![Data Deduplication configured for General purpose file server with a 0-day file age](screenshots/Screenshot%20(8).png)
 
 ### Step 4 — Start the optimization job
 
@@ -115,7 +115,7 @@ Get-DedupJob
 
 **📸 Screenshot — PowerShell optimization job completed**
 
-![PowerShell optimization job completed](screenshots/Screenshot%20(4).png)
+![PowerShell optimization job completed](screenshots/Screenshot%20(10).png)
 
 ### Step 6 — Verify deduplication savings
 
@@ -130,7 +130,7 @@ Get-DedupJob
 
 **📸 Screenshot — Final Data Deduplication results in Server Manager**
 
-![54 percent deduplication rate and 5.26 GB savings in Server Manager](screenshots/Screenshot%20(5).png)
+![54 percent deduplication rate and 5.26 GB savings in Server Manager](screenshots/Screenshot%20(11).png)
 
 ### Step 7 — Verify the volume in File Explorer
 
@@ -140,7 +140,7 @@ Get-DedupJob
 
 **📸 Screenshot — E: drive free space verified in This PC**
 
-![E drive showing 15.5 GB free in This PC](screenshots/Screenshot%20(6).png)
+![E drive showing 15.5 GB free in This PC](screenshots/Screenshot%20(12).png)
 
 ## 🔎 Verification
 
