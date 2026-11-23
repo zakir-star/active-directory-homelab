@@ -39,7 +39,7 @@ This means that multiple files can continue to appear as separate files to users
 Windows Server provides different usage profiles for Data Deduplication, including:
 
 - **General purpose file server:** Designed for common file-server workloads.
-- **Virtualization ( ಸು ):** Designed for supported virtual machine storage workloads.
+- **Virtualization:** Designed for supported virtual machine storage workloads.
 - **Backup:** Designed for supported backup application workloads.
 
 The exact available options depend on the Windows Server version and the installed Data Deduplication components. This lab uses **General purpose file server**.
