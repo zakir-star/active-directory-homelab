@@ -57,6 +57,10 @@ Data Deduplication reduces repeated data; it does not replace a backup strategy.
 3. Use **Add Roles and Features** to install the **Data Deduplication** role service under **File and Storage Services**.
 4. Complete the installation.
 
+**📸 Screenshot — Data Deduplication role service installed**
+
+![Data Deduplication role service installed](screenshots/Screenshot%20(1).png)
+
 ### Step 2 — Prepare duplicate test data on the E: drive
 
 1. Open the `E:\` drive in File Explorer. The drive has a capacity of **20 GB**.
@@ -69,6 +73,10 @@ Data Deduplication reduces repeated data; it does not replace a backup strategy.
 6. Paste the same contents into `E:\copy-2`.
 7. Check the available free space on the `E:\` drive before running deduplication. The initial free space observed in this lab was **10.5 GB**.
 
+**📸 Screenshot — E: drive test folders containing the copied Windows Server DVD contents**
+
+![E drive test folders containing the copied Windows Server DVD contents](screenshots/Screenshot%20(2).png)
+
 ### Step 3 — Configure Data Deduplication on the E: volume
 
 1. Open **Server Manager**.
@@ -77,6 +85,10 @@ Data Deduplication reduces repeated data; it does not replace a backup strategy.
 4. Select **General purpose file server** as the Data Deduplication type.
 5. Change **Deduplicate files older than** from **3** days to **0** days.
 6. Click **OK** to apply the configuration.
+
+**📸 Screenshot — Data Deduplication configured for General purpose file server with a 0-day file age**
+
+![Data Deduplication configured for General purpose file server with a 0-day file age](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Start the optimization job
 
@@ -101,6 +113,10 @@ Get-DedupJob
 3. In this lab, the progress was monitored at **0%**, **36%**, and **65%**.
 4. Continue monitoring until the optimization job reaches **100%** and completes.
 
+**📸 Screenshot — PowerShell optimization job completed**
+
+![PowerShell optimization job completed](screenshots/Screenshot%20(4).png)
+
 ### Step 6 — Verify deduplication savings
 
 1. Open **Server Manager**.
@@ -112,11 +128,19 @@ Get-DedupJob
    - **Deduplication Rate:** 54%
    - **Deduplication Savings:** 5.26 GB
 
+**📸 Screenshot — Final Data Deduplication results in Server Manager**
+
+![54 percent deduplication rate and 5.26 GB savings in Server Manager](screenshots/Screenshot%20(5).png)
+
 ### Step 7 — Verify the volume in File Explorer
 
 1. Open **File Explorer → This PC**.
 2. Locate the `E:\` drive.
 3. Confirm that the displayed free space is **15.5 GB** after optimization.
+
+**📸 Screenshot — E: drive free space verified in This PC**
+
+![E drive showing 15.5 GB free in This PC](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
@@ -146,34 +170,6 @@ Get-DedupJob
 - The optimization job completes successfully.
 - Server Manager reports a **54%** deduplication rate and **5.26 GB** of deduplication savings.
 - File Explorer shows **15.5 GB** of free space on the `E:\` drive.
-
-## 📸 Screenshots
-
-Add the selected lab screenshots to the `screenshots` folder. Replace each placeholder image path with the actual screenshot filename when the images are added.
-
-### Screenshot 1 — Data Deduplication role service installed
-
-![Data Deduplication role service installed](screenshots/PLACEHOLDER-1.png)
-
-### Screenshot 2 — E: drive test folders containing the copied Windows Server DVD contents
-
-![E drive test folders containing copied Windows Server DVD contents](screenshots/PLACEHOLDER-2.png)
-
-### Screenshot 3 — Data Deduplication configuration
-
-![General purpose file server type and 0-day file age configuration](screenshots/PLACEHOLDER-3.png)
-
-### Screenshot 4 — PowerShell optimization job
-
-![PowerShell optimization job progress and completed status](screenshots/PLACEHOLDER-4.png)
-
-### Screenshot 5 — Final deduplication results
-
-![54 percent deduplication rate and 5.26 GB savings](screenshots/PLACEHOLDER-5.png)
-
-### Screenshot 6 — E: drive free space verification
-
-![E drive showing 15.5 GB free in This PC](screenshots/PLACEHOLDER-6.png)
 
 ## 🌍 Real-World Use Case
 
