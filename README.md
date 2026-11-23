@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–68 completed
+> **Status:** Labs 1–69 completed
 > **Last updated:** November 23, 2026
 
 ---
@@ -155,7 +155,7 @@ These labs cover distributed file access, replication, caching, and storage effi
 |-----|-------|--------|----------------|
 | **67** | [DFS Namespaces](Lab-67-Distributed-File-System-DFS-Namespace/README.md) | ✅ Completed | Create the domain-based `\\example.com\IT_Cources` namespace, add MCSA and CCNA folder targets hosted on DC-01 and DC-02, and verify access through the namespace from CLIENT-01 using mapped drive `Z:` |
 | **68** | [DFS Replication](Lab-68-DFS-Replication/README.md) | ✅ Completed | Configure a Multipurpose Replication Group named `Replication-1` between DC-01 and DC-02 using Full Mesh topology, continuous replication, and Full bandwidth; verify a client-created file is replicated to both members |
-| **69** | Data Deduplication | 📋 Planned | Explore supported data deduplication scenarios and verify storage savings |
+| **69** | [Data Deduplication](Lab-69-Data-Deduplication/README.md) | ✅ Completed | Install the Data Deduplication role service, configure the `E:\` volume for General purpose file server optimization, run and monitor an optimization job, and verify a 54% deduplication rate with 5.26 GB in reported savings |
 | **70** | Network File System (NFS) | 📋 Planned | Explore Windows Server NFS file services, configuration requirements, and client access |
 
 
@@ -310,6 +310,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - FSMO role identification, seizure, transfer, and verification during a domain controller disaster-recovery scenario
 - DFS Namespace installation and domain-based namespace configuration, folder targets across multiple servers, and client access through a consistent namespace path
 - DFS Replication role installation, Multipurpose Replication Group configuration, Full Mesh topology, continuous replication settings, Primary Member selection, replicated folder configuration, and client-initiated file replication verification across two domain controllers
+- Windows Server Data Deduplication role installation, General purpose file server configuration, optimization job execution and monitoring with PowerShell, and verification of deduplication rate, reported storage savings, and volume free space
 - Screenshot-supported technical documentation
 
 ---
