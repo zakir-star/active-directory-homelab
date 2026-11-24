@@ -98,9 +98,9 @@ Keeping virtual machine configuration files and virtual hard disk files in separ
 6. Under **Virtualization Engine**, enable all the available virtualization options.
 7. Apply the changes and close the virtual machine settings.
 
-**Screenshot 1 — VMware virtual machine settings showing the additional 40 GB disk and enabled virtualization options**
+**📸 Screenshot — VMware settings showing the additional 40 GB virtual disk and enabled virtualization options**
 
-<!-- Screenshot 1 placeholder: Add the selected VMware settings screenshot here. -->
+![image alt](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Initialize the New Disk and Create Hyper-V Folders
 
@@ -121,9 +121,9 @@ E:\
     └── VM\
 ```
 
-**Screenshot 2 — Initialized E: drive with the Hyper V, VHD, and VM folder structure**
+**📸 Screenshot — E: drive with the Hyper V, VHD, and VM folder structure**
 
-<!-- Screenshot 2 placeholder: Add the storage and folder-structure screenshot here. -->
+![image alt](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Install the Hyper-V Role
 
@@ -135,9 +135,9 @@ E:\
 6. Continue through the wizard and complete the Hyper-V role installation.
 7. Restart the server if the installation wizard requests it.
 
-**Screenshot 3 — Hyper-V role selected or successfully installed on DC-01**
+**📸 Screenshot — Hyper-V role installed successfully on DC-01**
 
-<!-- Screenshot 3 placeholder: Add the Hyper-V role installation evidence here. -->
+![image alt](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Open Hyper-V Manager
 
@@ -145,10 +145,6 @@ E:\
 2. Select **Tools → Hyper-V Manager**.
 3. In Hyper-V Manager, select the server `DC-01`.
 4. Confirm that the server currently has no virtual machines listed.
-
-**Screenshot 4 — Hyper-V Manager showing DC-01 before creating the virtual machine**
-
-<!-- Screenshot 4 placeholder: Add the Hyper-V Manager view here. -->
 
 ### Step 5 — Create an External Virtual Switch
 
@@ -167,9 +163,9 @@ E:\
 8. Read the network connectivity warning and click **Yes** to continue.
 9. After the switch is created, click **OK** to close Virtual Switch Manager.
 
-**Screenshot 5 — External virtual switch SW-1 created in Virtual Switch Manager**
+**📸 Screenshot — External virtual switch SW-1 created in Virtual Switch Manager**
 
-<!-- Screenshot 5 placeholder: Add the External switch configuration screenshot here. -->
+![image alt](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Create the DC-02 Virtual Machine
 
@@ -194,10 +190,6 @@ E:\
 9. On **Assign Memory**, enter **2048 MB** and click **Next**.
 10. On **Configure Networking**, select `SW-1` from the Connection drop-down list and click **Next**.
 
-**Screenshot 6 — DC-02 name and storage location, Generation 2, memory, and SW-1 network selection**
-
-<!-- Screenshot 6 placeholder: Add the relevant New Virtual Machine Wizard configuration screenshot(s) here. -->
-
 ### Step 7 — Configure the Virtual Hard Disk and Installation Media
 
 1. On **Connect Virtual Hard Disk**, select the option to create a virtual hard disk.
@@ -216,9 +208,9 @@ E:\
 9. Review the Summary page and confirm the virtual machine configuration.
 10. Click **Finish** to create the virtual machine.
 
-**Screenshot 7 — DC-02 virtual hard disk location and installation ISO selection**
+**📸 Screenshot — DC-02 virtual machine configuration reviewed in the New Virtual Machine Wizard summary**
 
-<!-- Screenshot 7 placeholder: Add the virtual hard disk and bootable ISO configuration screenshot here. -->
+![image alt](screenshots/Screenshot%20(5).png)
 
 ### Step 8 — Start DC-02 and Install Windows Server
 
@@ -229,9 +221,9 @@ E:\
 5. Complete the Windows Server installation process.
 6. After installation, confirm that `DC-02` starts and is shown as **Running** in Hyper-V Manager.
 
-**Screenshot 8 — DC-02 running in Hyper-V Manager after Windows Server installation**
+**📸 Screenshot — DC-02 running in Hyper-V Manager after Windows Server installation**
 
-<!-- Screenshot 8 placeholder: Add the final DC-02 running-state screenshot here. -->
+![image alt](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
