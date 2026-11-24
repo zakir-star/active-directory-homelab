@@ -6,19 +6,20 @@ Install and configure the Hyper-V role on Windows Server 2022 running inside VMw
 
 ## 🖥️ Lab Environment
 
-- **Hypervisor:** VMware Workstation
-- **Host Server:** Windows Server 2022 — `DC-01`
-- **Nested Hypervisor:** Microsoft Hyper-V
-- **Virtual Machine:** `DC-02`
-- **Virtual Machine Generation:** Generation 2
-- **Startup Memory:** 2048 MB
-- **Virtual Switch:** `SW-1` (External)
-- **Additional Virtual Disk:** 40 GB
-- **Virtual Machine Storage:** `E:\\Hyper V\\VM`
-- **Virtual Hard Disk Storage:** `E:\\Hyper V\\VHD`
-- **Virtual Hard Disk Size:** 127 GB
-- **Installation Media:** Windows Server ISO
-- **Tools:** VMware Workstation, Server Manager, Hyper-V Manager, and File Explorer
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Host Server:** Windows Server 2022 — `DC-01`
+- ⚙️ **Nested Hypervisor:** Microsoft Hyper-V
+- 💻 **Guest Virtual Machine:** `DC-02`
+- 💿 **Guest Operating System:** Windows Server (installed from Windows Server ISO)
+- 🧬 **Virtual Machine Generation:** Generation 2
+- 🧠 **Startup Memory:** 2048 MB
+- 🌐 **Virtual Switch:** `SW-1` (External)
+- 💽 **Additional Virtual Disk:** 40 GB
+- 📁 **Virtual Machine Storage:** `E:\\Hyper V\\VM`
+- 📂 **Virtual Hard Disk Storage:** `E:\\Hyper V\\VHD`
+- 💾 **Virtual Hard Disk Size:** 127 GB
+- 📀 **Installation Media:** Windows Server ISO
+- 🛠️ **Tools:** VMware Workstation, Server Manager, Hyper-V Manager, and File Explorer
 
 ## 📚 Theory — Hyper-V and Nested Virtualization
 
