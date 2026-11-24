@@ -100,7 +100,7 @@ Keeping virtual machine configuration files and virtual hard disk files in separ
 
 **📸 Screenshot — VMware settings showing the additional 40 GB virtual disk and enabled virtualization options**
 
-![image alt](screenshots/Screenshot%20(1).png)
+![VMware Workstation settings showing the additional 40 GB virtual disk and enabled virtualization options](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Initialize the New Disk and Create Hyper-V Folders
 
@@ -123,7 +123,7 @@ E:\
 
 **📸 Screenshot — E: drive with the Hyper V, VHD, and VM folder structure**
 
-![image alt](screenshots/Screenshot%20(2).png)
+![E drive containing the Hyper V, VHD, and VM folders](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Install the Hyper-V Role
 
@@ -137,7 +137,7 @@ E:\
 
 **📸 Screenshot — Hyper-V role installed successfully on DC-01**
 
-![image alt](screenshots/Screenshot%20(3).png)
+![Hyper V role installed successfully on DC 01](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Open Hyper-V Manager
 
@@ -165,7 +165,7 @@ E:\
 
 **📸 Screenshot — External virtual switch SW-1 created in Virtual Switch Manager**
 
-![image alt](screenshots/Screenshot%20(4).png)
+![External virtual switch SW 1 configured in Hyper V Virtual Switch Manager](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Create the DC-02 Virtual Machine
 
@@ -210,7 +210,7 @@ E:\
 
 **📸 Screenshot — DC-02 virtual machine configuration reviewed in the New Virtual Machine Wizard summary**
 
-![image alt](screenshots/Screenshot%20(5).png)
+![DC 02 configuration summary in the New Virtual Machine Wizard](screenshots/Screenshot%20(5).png)
 
 ### Step 8 — Start DC-02 and Install Windows Server
 
@@ -223,7 +223,7 @@ E:\
 
 **📸 Screenshot — DC-02 running in Hyper-V Manager after Windows Server installation**
 
-![image alt](screenshots/Screenshot%20(6).png)
+![DC 02 running in Hyper V Manager after Windows Server installation](screenshots/Screenshot%20(6).png)
 
 ## 🔎 Verification
 
