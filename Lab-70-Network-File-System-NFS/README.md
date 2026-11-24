@@ -103,7 +103,7 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — CLIENT-01 IP address and successful connectivity to DC-01**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![CLIENT-01 IP address and successful connectivity to DC-01](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Install Server for NFS on Windows Server
 
@@ -114,7 +114,7 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — Server for NFS role service installed on DC-01**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![Server for NFS role service installed on DC-01](screenshots/Screenshot%20(2).png)
 
 ### Step 3 — Create the NFS share
 
@@ -130,7 +130,7 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — NFS Share-Quick location and authentication configuration**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![NFS Share-Quick location and authentication configuration](screenshots/Screenshot%20(3).png)
 
 ### Step 4 — Configure NFS host permissions
 
@@ -149,11 +149,11 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — CLIENT-01 host entry with Read and Write NFS share permissions**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![CLIENT-01 host entry with Read and Write NFS share permissions](screenshots/Screenshot%20(4).png)
 
 **📸 Screenshot — Successful creation of the NFS share**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![Successful creation of the NFS share](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Create a test file on Windows Server
 
@@ -206,7 +206,7 @@ This file will be used to verify that the Linux client can read data from the Wi
 
 **📸 Screenshot — NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully](screenshots/Screenshot%20(6).png)
 
 ### Step 7 — Create a file from Linux and verify it on Windows
 
@@ -235,7 +235,7 @@ This confirms that the Linux client successfully wrote a file to the Windows-hos
 
 **📸 Screenshot — Linux-created test2.txt visible on DC-01 with the expected content**
 
-<!-- Screenshot placeholder — add the selected image in the screenshots folder -->
+![Linux-created test2.txt visible on DC-01 with the expected content](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
