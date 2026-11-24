@@ -103,7 +103,8 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — CLIENT-01 IP address and successful connectivity to DC-01**
 
-![CLIENT-01 IP address and successful connectivity to DC-01](screenshots/Screenshot%20(1).png)
+![CLIENT-01 IP address](screenshots/Screenshot%20(1).png)
+![CLIENT-01 successful connectivity to DC-01](screenshots/Screenshot%20(2).png)
 
 ### Step 2 — Install Server for NFS on Windows Server
 
@@ -114,7 +115,7 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — Server for NFS role service installed on DC-01**
 
-![Server for NFS role service installed on DC-01](screenshots/Screenshot%20(2).png)
+![Server for NFS role service installed on DC-01](screenshots/Screenshot%20(3).png)
 
 ### Step 3 — Create the NFS share
 
@@ -128,9 +129,9 @@ These are prerequisite details only; the screenshot evidence below begins with t
 8. Under **Authentication**, select all the available checkboxes except **Allow anonymous access**.
 9. Continue to the share permissions page.
 
-**📸 Screenshot — NFS Share-Quick location and authentication configuration**
+**📸 Screenshot — NFS Share authentication configuration**
 
-![NFS Share-Quick location and authentication configuration](screenshots/Screenshot%20(3).png)
+![NFS Share-Quick location and authentication configuration](screenshots/Screenshot%20(11).png)
 
 ### Step 4 — Configure NFS host permissions
 
@@ -149,11 +150,8 @@ These are prerequisite details only; the screenshot evidence below begins with t
 
 **📸 Screenshot — CLIENT-01 host entry with Read and Write NFS share permissions**
 
-![CLIENT-01 host entry with Read and Write NFS share permissions](screenshots/Screenshot%20(4).png)
+![CLIENT-01 host entry with Read and Write NFS share permissions](screenshots/Screenshot%20(13).png)
 
-**📸 Screenshot — Successful creation of the NFS share**
-
-![Successful creation of the NFS share](screenshots/Screenshot%20(5).png)
 
 ### Step 5 — Create a test file on Windows Server
 
@@ -167,6 +165,10 @@ These are prerequisite details only; the screenshot evidence below begins with t
    ```
 
 This file will be used to verify that the Linux client can read data from the Windows-hosted NFS share.
+
+**📸 Screenshot — E: drive test1 file**
+
+![CLIENT-01 host entry with Read and Write NFS share permissions](screenshots/Screenshot%20(19).png)
 
 ### Step 6 — Create the Linux mount point and mount the NFS export
 
@@ -204,9 +206,6 @@ This file will be used to verify that the Linux client can read data from the Wi
 
 8. Confirm that the output displays `HI`.
 
-**📸 Screenshot — NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully**
-
-![NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully](screenshots/Screenshot%20(6).png)
 
 ### Step 7 — Create a file from Linux and verify it on Windows
 
@@ -230,12 +229,15 @@ This file will be used to verify that the Linux client can read data from the Wi
    ```text
    HI, I'm Linux user
    ```
+**📸 Screenshot — NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully**
+
+![NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully](screenshots/Screenshot%20(20).png)
 
 This confirms that the Linux client successfully wrote a file to the Windows-hosted NFS share.
 
 **📸 Screenshot — Linux-created test2.txt visible on DC-01 with the expected content**
 
-![Linux-created test2.txt visible on DC-01 with the expected content](screenshots/Screenshot%20(7).png)
+![Linux-created test2.txt visible on DC-01 with the expected content](screenshots/Screenshot%20(21).png)
 
 ## 🔎 Verification
 
