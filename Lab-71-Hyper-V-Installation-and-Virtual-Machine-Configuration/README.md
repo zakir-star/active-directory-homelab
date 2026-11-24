@@ -166,7 +166,7 @@ E:\
 
 **📸 Screenshot — External virtual switch SW-1 created in Virtual Switch Manager**
 
-![External virtual switch SW 1 configured in Hyper V Virtual Switch Manager](screenshots/Screenshot%20(4).png)
+![External virtual switch SW 1 configured in Hyper V Virtual Switch Manager](screenshots/Screenshot%20(8).png)
 
 ### Step 6 — Create the DC-02 Virtual Machine
 
@@ -211,7 +211,7 @@ E:\
 
 **📸 Screenshot — DC-02 virtual machine configuration reviewed in the New Virtual Machine Wizard summary**
 
-![DC 02 configuration summary in the New Virtual Machine Wizard](screenshots/Screenshot%20(5).png)
+![DC 02 configuration summary in the New Virtual Machine Wizard](screenshots/Screenshot%20(24).png)
 
 ### Step 8 — Start DC-02 and Install Windows Server
 
@@ -224,7 +224,7 @@ E:\
 
 **📸 Screenshot — DC-02 running in Hyper-V Manager after Windows Server installation**
 
-![DC 02 running in Hyper V Manager after Windows Server installation](screenshots/Screenshot%20(6).png)
+![DC 02 running in Hyper V Manager after Windows Server installation](screenshots/Screenshot%20(27).png)
 
 ## 🔎 Verification
 
