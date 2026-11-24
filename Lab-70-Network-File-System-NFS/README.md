@@ -229,7 +229,7 @@ This file will be used to verify that the Linux client can read data from the Wi
    ```text
    HI, I'm Linux user
    ```
-**📸 Screenshot — NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully**
+**📸 Screenshot — NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully and created test2.txt**
 
 ![NFS mounted on CLIENT-01 and Windows-created test1.txt read successfully](screenshots/Screenshot%20(20).png)
 
