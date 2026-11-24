@@ -165,10 +165,8 @@ Hyper-V labs will be performed only where the host hardware and nested-virtualiz
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **71** | Install and Configure Hyper-V | 📋 Planned | Review role prerequisites and configure Hyper-V where supported |
-| **72** | Hyper-V Virtual Machines and Virtual Switches | 📋 Planned | Create a VM and compare external, internal, and private virtual switches |
-| **73** | Virtual Disks, Checkpoints, and VM Export | 📋 Planned | Manage virtual hard disks, checkpoints, and export/import workflows |
-| **74** | Hyper-V Replica and Migration Concepts | 📋 Planned | Learn replication and migration prerequisites, including features that require additional hosts or licensing |
+| **71** | Hyper-V Installation and Virtual Machine Configuration | 📋 Planned | Review prerequisites, install and configure the Hyper-V role, explore Hyper-V Manager, compare External, Internal, and Private virtual switches, and create and verify a virtual machine |
+| **72** | Hyper-V Virtual Disk and VM Management | 📋 Planned | Create and manage VHD/VHDX disks, expand virtual disks, create and restore checkpoints, and export/import virtual machines; review Hyper-V Replica and Live Migration concepts and prerequisites |
 
 ### Phase 14 — High Availability and Resilience
 
