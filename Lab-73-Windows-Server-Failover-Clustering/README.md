@@ -18,7 +18,7 @@ Configure a two-node Windows Server Failover Cluster (WSFC) using NODE-1 and NOD
 - 🔢 **NODE-1 Heartbeat IP:** `192.168.1.1/24`
 - 🔢 **NODE-2 Heartbeat IP:** `192.168.1.2/24`
 - 💽 **Shared Storage:** 50 GB iSCSI virtual disk hosted on DC-01
-- 📁 **Shared Disk Drive Letter:** `E:\\` on both cluster nodes
+- 📁 **Shared Disk Drive Letter:** `E:\` on both cluster nodes
 - 🏷️ **Cluster Name:** `Cluster-1`
 - 🌐 **Cluster FQDN:** `Cluster-1.example.com`
 - 🔢 **Cluster IP Address:** `10.0.0.10/24`
@@ -101,7 +101,7 @@ Failover clustering is used in server environments where service availability is
 4. Repeat the installation on NODE-2.
 5. Confirm that the feature is installed on both nodes.
 
-**📸 Screenshot 1 — Failover Clustering feature installed on NODE-1 and NODE-2**
+**📸 Screenshot 1 — Failover Clustering feature installed on NODE-1**
 
 ![Failover Clustering feature installed on both cluster nodes](screenshots/Screenshot%20(1).png)
 
@@ -127,7 +127,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 2 — Validate Configuration results and warnings report**
 
-![Validate Configuration results and warnings report](screenshots/Screenshot%20(2).png)
+![Validate Configuration results and warnings report](screenshots/Screenshot%20(15).png)
 
 ### Step 4 — Create the Failover Cluster
 
@@ -155,12 +155,12 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 3 — Cluster-1 created with both NODE-1 and NODE-2 online**
 
-![Cluster-1 with NODE-1 and NODE-2 shown as Up](screenshots/Screenshot%20(3).png)
+![Cluster-1 with NODE-1 and NODE-2 shown as Up](screenshots/Screenshot%20(23).png)
 
 ### Step 5 — Verify the Shared iSCSI Disk and Create the Test Folder
 
 1. On NODE-1, open **File Explorer → This PC**.
-2. Locate the shared clustered disk assigned drive letter `E:\\`.
+2. Locate the shared clustered disk assigned drive letter `E:\`.
 3. Open the drive and create a folder named:
 
    ```text
@@ -174,7 +174,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 4 — Shared E: drive containing the shared_cluster folder on NODE-1**
 
-![Shared E drive and shared_cluster folder on NODE-1](screenshots/Screenshot%20(4).png)
+![Shared E drive and shared_cluster folder on NODE-1](screenshots/Screenshot%20(26).png)
 
 ### Step 6 — Verify Access Through the Cluster IP
 
@@ -182,14 +182,14 @@ The validation completed with warnings. The report was opened and reviewed; the 
 2. In the address bar, enter the cluster UNC path:
 
    ```text
-   \\\\10.0.0.10
+   \\10.0.0.10
    ```
 
 3. Confirm that the `shared_cluster` folder is visible through the cluster address.
 
 **📸 Screenshot 5 — shared_cluster folder accessed from DC-01 using the cluster IP**
 
-![shared_cluster folder accessed from DC-01 through the cluster IP](screenshots/Screenshot%20(5).png)
+![shared_cluster folder accessed from DC-01 through the cluster IP](screenshots/Screenshot%20(27).png)
 
 ### Step 7 — Perform the Node Shutdown Test
 
@@ -197,22 +197,22 @@ The validation completed with warnings. The report was opened and reviewed; the 
 2. On NODE-2, open **Server Manager → Tools → Failover Cluster Manager**.
 3. Expand `Cluster-1` and select **Nodes**.
 4. Confirm that NODE-1 is shown as **Down** while NODE-2 remains available.
-5. On NODE-2, open **File Explorer → This PC** and confirm that the shared clustered `E:\\` drive is present.
+5. On NODE-2, open **File Explorer → This PC** and confirm that the shared clustered `E:\` drive is present.
 6. In File Explorer on NODE-2, enter the same cluster UNC path:
 
    ```text
-   \\\\10.0.0.10
+   \\10.0.0.10
    ```
 
 7. Confirm that the `shared_cluster` folder is accessible during the test with NODE-1 shut down.
 
 **📸 Screenshot 6 — NODE-1 shown as Down in Failover Cluster Manager on NODE-2**
 
-![NODE-1 shown as Down in the cluster Nodes view on NODE-2](screenshots/Screenshot%20(6).png)
+![NODE-1 shown as Down in the cluster Nodes view on NODE-2](screenshots/Screenshot%20(29).png)
 
 **📸 Screenshot 7 — shared_cluster folder accessible from NODE-2 through the cluster IP while NODE-1 is down**
 
-![shared_cluster folder accessible from NODE-2 through the cluster IP](screenshots/Screenshot%20(7).png)
+![shared_cluster folder accessible from NODE-2 through the cluster IP](screenshots/Screenshot%20(31).png)
 
 ## 🔎 Verification
 
@@ -220,23 +220,22 @@ The validation completed with warnings. The report was opened and reviewed; the 
 - Confirm that Validate Configuration completed and its warning report was reviewed.
 - Confirm that `Cluster-1.example.com` was created with cluster IP address `10.0.0.10`.
 - Confirm that NODE-1 and NODE-2 initially appeared as **Up** in Failover Cluster Manager.
-- Confirm that both nodes could see the 50 GB shared iSCSI disk as drive `E:\\`.
+- Confirm that both nodes could see the 50 GB shared iSCSI disk as drive `E:\`.
 - Confirm that the `shared_cluster` folder was created and shared from NODE-1.
 - Confirm that DC-01 could browse the cluster UNC path and see the test folder.
 - After NODE-1 was shut down, confirm that NODE-1 appeared as **Down** in the Nodes view on NODE-2.
-- Confirm that the shared `E:\\` drive was visible on NODE-2 and that the test folder was accessible through `\\\\10.0.0.10` during the test.
+- Confirm that the shared `E:\` drive was visible on NODE-2 and that the test folder was accessible through `\\10.0.0.10` during the test.
 
 ## ⚠️ Important Notes
 
 - The cluster IP address `10.0.0.10` is separate from the individual node IP addresses.
 - The heartbeat network uses `192.168.1.0/24` for communication between NODE-1 and NODE-2. RRAS is not required for the nodes to communicate directly on this subnet.
-- DC-01 hosts the iSCSI Target and presents the shared 50 GB disk to both cluster nodes. The shared disk is assigned drive letter `E:\\` in the nodes.
+- DC-01 hosts the iSCSI Target and presents the shared 50 GB disk to both cluster nodes. The shared disk is assigned drive letter `E:\` in the nodes.
 - Shared cluster storage must be managed through WSFC. Do not independently initialize or format the same shared disk from each node.
 - The Validate Configuration wizard completed with warnings. The exact warning details are contained in the validation report and should be assessed before treating the configuration as suitable for production.
 - The folder was shared directly from File Explorer on NODE-1. A dedicated **File Server** clustered role was not created in this exercise. Therefore, this test should not be described as a complete deployment of a highly available clustered SMB file server.
 - The observed shutdown test confirmed that NODE-1 was Down, the shared disk was visible on NODE-2, and the test folder could be accessed through the cluster address. It does not establish that every client connection or workload would automatically recover in a production deployment.
 - A quorum witness was not configured in this practical exercise. Two-node cluster quorum and witness planning should be considered before production use.
-- RRAS was not installed because routing between separate networks was not part of this cluster configuration.
 
 ## 🎯 Expected Result
 
@@ -244,7 +243,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 - The cluster configuration validation completes and its report is reviewed.
 - A two-node cluster named `Cluster-1` is created with the cluster IP address `10.0.0.10`.
 - Both nodes initially appear as **Up** in Failover Cluster Manager.
-- Both nodes are connected to the shared 50 GB iSCSI disk, visible as drive `E:\\`.
+- Both nodes are connected to the shared 50 GB iSCSI disk, visible as drive `E:\`.
 - The `shared_cluster` folder is created and shared from NODE-1.
 - DC-01 can browse the cluster UNC path and see the shared folder.
 - After NODE-1 is shut down, NODE-1 appears as **Down** on NODE-2, and the shared disk and test folder are verified from NODE-2 through the cluster address.
@@ -255,7 +254,7 @@ Organizations use Windows Server Failover Clustering to reduce service interrupt
 
 ## 📌 Outcome
 
-Installed Failover Clustering on NODE-1 and NODE-2, validated the two-node configuration, reviewed the validation warnings, and created the `Cluster-1` failover cluster with IP address `10.0.0.10`. Verified both nodes as Up, used the shared 50 GB iSCSI disk as drive `E:\\`, and created the `shared_cluster` folder on NODE-1. Accessed the folder from DC-01 through the cluster address, shut down NODE-1, and verified from NODE-2 that NODE-1 was Down, the shared disk was present, and the test folder remained accessible through the cluster address.
+Installed Failover Clustering on NODE-1 and NODE-2, validated the two-node configuration, reviewed the validation warnings, and created the `Cluster-1` failover cluster with IP address `10.0.0.10`. Verified both nodes as Up, used the shared 50 GB iSCSI disk as drive `E:\`, and created the `shared_cluster` folder on NODE-1. Accessed the folder from DC-01 through the cluster address, shut down NODE-1, and verified from NODE-2 that NODE-1 was Down, the shared disk was present, and the test folder remained accessible through the cluster address.
 
 ## 🙏 Acknowledgment
 
