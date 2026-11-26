@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–72 completed
-> **Last updated:** November 26, 2026
+> **Status:** Labs 1–73 completed
+> **Last updated:** November 27, 2026
 
 ---
 
@@ -174,7 +174,7 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
-| **73** | Windows Server Failover Clustering | 📋 Planned | Understand cluster prerequisites, validation, nodes, and clustered roles |
+| **73** | [Windows Server Failover Clustering](Lab-73-Windows-Server-Failover-Clustering/README.md) | ✅ Completed | Configure a two-node cluster using NODE-1 and NODE-2, validate the configuration, create the Cluster-1 access point, connect shared iSCSI storage, and perform a node shutdown test |
 | **74** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
 | **75** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
 | **76** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
@@ -312,6 +312,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Windows Server NFS share creation, client host permissions, Red Hat Linux NFS mounting, and bidirectional cross-platform file access verification
 - Nested virtualization setup in VMware Workstation, Hyper-V role installation, External virtual switch configuration, Generation 2 virtual machine creation, virtual hard disk placement, and Windows Server installation
 - Hyper-V fixed-size virtual hard disk creation and attachment, guest disk initialization and NTFS volume formatting, checkpoint creation and restoration, separate test-forest domain controller deployment, and virtual machine export
+- Windows Server Failover Clustering feature installation, configuration validation, two-node cluster creation, cluster access-point configuration, shared iSCSI storage, and basic node shutdown testing
 - Screenshot-supported technical documentation
 
 ---
