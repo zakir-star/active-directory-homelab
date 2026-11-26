@@ -4,6 +4,24 @@
 
 Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Windows 10 client as an iSCSI initiator. Initialize and format the remote disk, then verify read/write access from the client.
 
+## 🖥️ Lab Environment
+
+- 🖥️ **Hypervisor:** VMware Workstation
+- 🏢 **Target Server:** Windows Server 2022 — `DC-01`
+- 💻 **Initiator Client:** Windows 10, joined to the domain
+- 🌐 **Network:** Both machines are on the same network
+- 🔢 **Target Server IP:** `10.0.0.1`
+- 💽 **Virtual Disk Name:** `iSCSI-Disk01`
+- 📁 **Virtual Disk Location:** Server-side `F:\` volume
+- 📏 **Virtual Disk Capacity:** 5 GB
+- ⚙️ **Provisioning Type:** Dynamically expanding
+- 🎯 **iSCSI Target Name:** `WIN10-Target`
+- 🔐 **Initiator Identification:** Windows 10 initiator IQN
+- 🔒 **CHAP Authentication:** Disabled for this introductory lab
+- 💾 **Client Volume:** `F:\`, labeled `iSCSI-Storage`
+- 🗂️ **Partition Style:** GPT
+- 📁 **File System:** NTFS
+
 ## 📘 Theory — Understanding iSCSI
 
 **Internet Small Computer Systems Interface (iSCSI)** is a storage networking protocol that carries SCSI commands over TCP/IP. It allows a computer to access storage located on another machine as though the storage were a locally attached disk. Unlike file-sharing protocols such as SMB, iSCSI provides **block-level access**: the initiator sees a remote disk and manages its partitions and file system.
@@ -41,25 +59,6 @@ This lab uses a **5 GB dynamically expanding** iSCSI virtual disk.
 ### 🌍 Where iSCSI Is Used
 
 iSCSI is commonly used to provide shared block storage in Storage Area Networks (SANs), server environments, and virtualization infrastructure. It can allow servers to access centralized storage across an Ethernet network without requiring locally attached disks.
-
-
-## 🖥️ Lab Environment
-
-- 🖥️ **Hypervisor:** VMware Workstation
-- 🏢 **Target Server:** Windows Server 2022 — `DC-01`
-- 💻 **Initiator Client:** Windows 10, joined to the domain
-- 🌐 **Network:** Both machines are on the same network
-- 🔢 **Target Server IP:** `10.0.0.1`
-- 💽 **Virtual Disk Name:** `iSCSI-Disk01`
-- 📁 **Virtual Disk Location:** Server-side `F:\` volume
-- 📏 **Virtual Disk Capacity:** 5 GB
-- ⚙️ **Provisioning Type:** Dynamically expanding
-- 🎯 **iSCSI Target Name:** `WIN10-Target`
-- 🔐 **Initiator Identification:** Windows 10 initiator IQN
-- 🔒 **CHAP Authentication:** Disabled for this introductory lab
-- 💾 **Client Volume:** `F:\`, labeled `iSCSI-Storage`
-- 🗂️ **Partition Style:** GPT
-- 📁 **File System:** NTFS
 
 ## ⚙️ Lab Configuration
 
