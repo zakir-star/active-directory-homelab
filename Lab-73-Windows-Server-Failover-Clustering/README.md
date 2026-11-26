@@ -103,9 +103,7 @@ Failover clustering is used in server environments where service availability is
 
 **📸 Screenshot 1 — Failover Clustering feature installed on NODE-1 and NODE-2**
 
-[Insert screenshot here]
-
-![Failover Clustering feature installed on both cluster nodes](screenshots/)
+![Failover Clustering feature installed on both cluster nodes](screenshots/Screenshot%20(1).png)
 
 ### Step 2 — Open Failover Cluster Manager on NODE-1
 
@@ -129,9 +127,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 2 — Validate Configuration results and warnings report**
 
-[Insert screenshot here]
-
-![Validate Configuration results and warnings report](screenshots/)
+![Validate Configuration results and warnings report](screenshots/Screenshot%20(2).png)
 
 ### Step 4 — Create the Failover Cluster
 
@@ -159,9 +155,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 3 — Cluster-1 created with both NODE-1 and NODE-2 online**
 
-[Insert screenshot here]
-
-![Cluster-1 with NODE-1 and NODE-2 shown as Up](screenshots/)
+![Cluster-1 with NODE-1 and NODE-2 shown as Up](screenshots/Screenshot%20(3).png)
 
 ### Step 5 — Verify the Shared iSCSI Disk and Create the Test Folder
 
@@ -180,9 +174,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 4 — Shared E: drive containing the shared_cluster folder on NODE-1**
 
-[Insert screenshot here]
-
-![Shared E drive and shared_cluster folder on NODE-1](screenshots/)
+![Shared E drive and shared_cluster folder on NODE-1](screenshots/Screenshot%20(4).png)
 
 ### Step 6 — Verify Access Through the Cluster IP
 
@@ -197,9 +189,7 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 5 — shared_cluster folder accessed from DC-01 using the cluster IP**
 
-[Insert screenshot here]
-
-![shared_cluster folder accessed from DC-01 through the cluster IP](screenshots/)
+![shared_cluster folder accessed from DC-01 through the cluster IP](screenshots/Screenshot%20(5).png)
 
 ### Step 7 — Perform the Node Shutdown Test
 
@@ -218,15 +208,11 @@ The validation completed with warnings. The report was opened and reviewed; the 
 
 **📸 Screenshot 6 — NODE-1 shown as Down in Failover Cluster Manager on NODE-2**
 
-[Insert screenshot here]
-
-![NODE-1 shown as Down in the cluster Nodes view on NODE-2](screenshots/)
+![NODE-1 shown as Down in the cluster Nodes view on NODE-2](screenshots/Screenshot%20(6).png)
 
 **📸 Screenshot 7 — shared_cluster folder accessible from NODE-2 through the cluster IP while NODE-1 is down**
 
-[Insert screenshot here]
-
-![shared_cluster folder accessible from NODE-2 through the cluster IP](screenshots/)
+![shared_cluster folder accessible from NODE-2 through the cluster IP](screenshots/Screenshot%20(7).png)
 
 ## 🔎 Verification
 
