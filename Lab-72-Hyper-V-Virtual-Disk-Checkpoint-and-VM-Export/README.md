@@ -80,7 +80,7 @@ A checkpoint can be renamed to make its purpose easier to identify. Applying a c
 
 Import options and available choices depend on the virtual machine files and the Hyper-V host configuration. Storage capacity, virtual switch availability, and compatibility should be checked before importing.
 
-In this lab, the virtual machine is successfully exported to the host's `E:\\Export` folder. Import is covered in theory only because the physical laptop did not have sufficient free storage to perform another import test.
+In this lab, the virtual machine is successfully exported to the host's `E:\Export` folder. Import is covered in theory only because the physical laptop did not have sufficient free storage to perform another import test.
 
 ### Checkpoints and Backups Are Different
 
