@@ -4,6 +4,45 @@
 
 Configure an iSCSI target on Windows Server 2022 and connect a domain-joined Windows 10 client as an iSCSI initiator. Initialize and format the remote disk, then verify read/write access from the client.
 
+## 📘 Theory — Understanding iSCSI
+
+**Internet Small Computer Systems Interface (iSCSI)** is a storage networking protocol that carries SCSI commands over TCP/IP. It allows a computer to access storage located on another machine as though the storage were a locally attached disk. Unlike file-sharing protocols such as SMB, iSCSI provides **block-level access**: the initiator sees a remote disk and manages its partitions and file system.
+
+### 🔹 iSCSI Target and Initiator
+
+- **iSCSI Target:** The server-side component that makes storage available over the network. In this lab, DC-01 hosts the target and its virtual disk.
+- **iSCSI Initiator:** The client-side component that connects to the target and accesses the presented disk. In this lab, the Windows 10 client acts as the initiator.
+- **iSCSI Virtual Disk:** A file-backed virtual disk created on the target server and presented to the initiator as a block device.
+- **Target Portal:** The network address and TCP port through which an initiator discovers and connects to a target. The standard iSCSI TCP port is **3260**.
+
+### 🔹 Initiator IQN and Access Control
+
+An **iSCSI Qualified Name (IQN)** is a unique identifier used to identify an iSCSI initiator or target. The target can use the initiator's IQN to control which systems are allowed to access its storage. Joining a Windows client to an Active Directory domain does not automatically authorize it to connect to an iSCSI target; the initiator must be permitted by the target's access configuration.
+
+### 🔹 Block Storage and File Systems
+
+With iSCSI, the target presents a disk to the initiator. The client then initializes the disk, creates partitions and volumes, assigns a drive letter, and formats the volume with a file system such as NTFS. These disk-management operations take place on the initiator, while the underlying virtual disk file remains stored on the target server.
+
+### 🔹 Virtual Disk Provisioning
+
+- **Dynamically expanding:** The virtual disk file starts small and grows as data is written, up to its configured maximum size. It can save storage space, but the host volume must still have enough free capacity for future growth.
+- **Fixed-size:** The full configured virtual disk capacity is allocated when the virtual disk is created. This provides predictable allocation but uses the full capacity immediately.
+
+This lab uses a **5 GB dynamically expanding** iSCSI virtual disk.
+
+### 🔹 CHAP Authentication
+
+**Challenge Handshake Authentication Protocol (CHAP)** provides an additional authentication mechanism for iSCSI connections. The target challenges the initiator to prove knowledge of a shared secret. CHAP is disabled in this introductory lab; in production, authentication should be selected alongside network isolation, least-privilege access, and other storage-security controls.
+
+### 🔹 GPT and NTFS
+
+**GUID Partition Table (GPT)** is a modern partitioning scheme that supports large disks and more partitions than the older MBR layout. **New Technology File System (NTFS)** is the Windows file system used to format the client-side volume in this exercise. GPT defines the disk's partition layout, while NTFS organizes files and directories within the formatted volume.
+
+### 🌍 Where iSCSI Is Used
+
+iSCSI is commonly used to provide shared block storage in Storage Area Networks (SANs), server environments, and virtualization infrastructure. It can allow servers to access centralized storage across an Ethernet network without requiring locally attached disks.
+
+
 ## 🖥️ Lab Environment
 
 - 🖥️ **Hypervisor:** VMware Workstation
