@@ -135,10 +135,6 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 ![Disk Management showing the initialized 5 GB disk and NTFS Simple Volume](screenshots/Screenshot%20(2).png)
 
-**📸 Screenshot — This PC showing the newly created E: drive in DC-02**
-
-![This PC showing the newly created E drive in DC-02](screenshots/Screenshot%20(3).png)
-
 ### Step 3 — Create the Fresh Machine Checkpoint
 
 1. Shut down the `DC-02` virtual machine.
@@ -224,10 +220,6 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 This verifies that applying the Fresh Machine checkpoint returned the virtual machine to the state captured before the `lab.local` domain controller configuration.
 
-**📸 Screenshot — Hyper-V checkpoint Apply warning for DC-02 Fresh Machine**
-
-![Hyper-V checkpoint Apply warning for DC-02 Fresh Machine](screenshots/Screenshot%20(7).png)
-
 **📸 Screenshot — DC-02 restored to its Fresh Machine state in Server Manager**
 
 ![DC-02 restored to its Fresh Machine state in Server Manager](screenshots/Screenshot%20(8).png)
@@ -246,12 +238,8 @@ This verifies that applying the Fresh Machine checkpoint returned the virtual ma
 
 6. Select the `Export` folder as the destination.
 7. Click **Export** and wait for the operation to finish.
-8. Open **This PC → E:Export** on the Hyper-V host.
+8. Open **File Explorer → This PC → E: → Export** on the Hyper-V host.
 9. Confirm that the exported virtual machine folders and files are present.
-
-**📸 Screenshot — Hyper-V Export operation completed for DC-02**
-
-![Hyper-V Export operation completed for DC-02](screenshots/Screenshot%20(9).png)
 
 **📸 Screenshot — Exported DC-02 virtual machine files visible in E:\Export**
 
