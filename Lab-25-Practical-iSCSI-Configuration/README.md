@@ -111,7 +111,7 @@ On DC-01, open **Server Manager → Manage → Add Roles and Features**. Under *
 
 1. On DC-01, confirm that `WIN10-Target` and `iSCSI-Disk01` are listed in Server Manager under **File and Storage Services → iSCSI**.
 2. On Windows 10, verify that the target remains connected.
-3. Confirm that `F:\\iSCSI-Test\\Verification.txt` exists and opens successfully.
+3. Confirm that `F:\iSCSI-Test\Verification.txt` exists and opens successfully.
 
 **📸 Screenshot — Final iSCSI target verification on DC-01**
 
