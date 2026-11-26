@@ -12,13 +12,13 @@ Create and attach a fixed-size virtual hard disk to the Hyper-V virtual machine 
 - 💻 **Hyper-V Virtual Machine:** `DC-02`
 - 🧬 **Virtual Machine Generation:** Generation 2 (created in Lab 71)
 - 🌐 **Virtual Switch:** `SW-1` (External)
-- 💽 **Host VHD Storage:** `E:\\Hyper V\\VHD`
+- 💽 **Host VHD Storage:** `E:\Hyper V\VHD`
 - 💽 **New Virtual Hard Disk:** `VHD-1` — 5 GB, Fixed Size
 - 📁 **Guest Volume:** `E:\` (created from the attached 5 GB virtual disk)
 - 🏷️ **Guest Computer Name:** `DC-02`
 - 🌐 **Guest IP Address:** `20.0.0.1`
 - 🏢 **Active Directory Domain:** `lab.local`
-- 📦 **Export Destination:** `E:\\Export` on the Hyper-V host
+- 📦 **Export Destination:** `E:\Export` on the Hyper-V host
 - 🛠️ **Tools:** Hyper-V Manager, Virtual Machine Connection, Server Manager, Disk Management, and File Explorer
 
 ## 📚 Theory — Hyper-V Virtual Disks, Checkpoints, and Export
@@ -117,7 +117,7 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 **📸 Screenshot — DC-02 settings showing the newly attached 5 GB VHD-1**
 
-![DC-02 settings showing the newly attached 5 GB VHD-1](screenshots/Screenshot%20(1).png)
+![DC-02 settings showing the newly attached 5 GB VHD-1](screenshots/Screenshot%20(13).png)
 
 ### Step 2 — Initialize and Format the Virtual Hard Disk in DC-02
 
@@ -133,7 +133,7 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 **📸 Screenshot — Disk Management showing the initialized 5 GB disk and NTFS Simple Volume**
 
-![Disk Management showing the initialized 5 GB disk and NTFS Simple Volume](screenshots/Screenshot%20(2).png)
+![Disk Management showing the initialized 5 GB disk and NTFS Simple Volume](screenshots/Screenshot%20(15).png)
 
 ### Step 3 — Create the Fresh Machine Checkpoint
 
@@ -152,7 +152,7 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 **📸 Screenshot — DC-02 Fresh Machine checkpoint created and renamed**
 
-![DC-02 Fresh Machine checkpoint created and renamed](screenshots/Screenshot%20(4).png)
+![DC-02 Fresh Machine checkpoint created and renamed](screenshots/Screenshot%20(19).png)
 
 ### Step 4 — Configure DC-02 as a Domain Controller for lab.local
 
@@ -185,7 +185,7 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 **📸 Screenshot — DC-02 promoted as the root domain controller for lab.local**
 
-![DC-02 promoted as the root domain controller for lab.local](screenshots/Screenshot%20(5).png)
+![DC-02 promoted as the root domain controller for lab.local](screenshots/Screenshot%20(20).png)
 
 ### Step 5 — Create the Domain Controller Checkpoint
 
@@ -203,7 +203,7 @@ A checkpoint is intended for short-term state management and testing. It usually
 
 **📸 Screenshot — DC-02 Domain_Controller lab.local checkpoint created and renamed**
 
-![DC-02 Domain_Controller lab.local checkpoint created and renamed](screenshots/Screenshot%20(6).png)
+![DC-02 Domain_Controller lab.local checkpoint created and renamed](screenshots/Screenshot%20(21).png)
 
 ### Step 6 — Apply the Fresh Machine Checkpoint
 
@@ -222,7 +222,7 @@ This verifies that applying the Fresh Machine checkpoint returned the virtual ma
 
 **📸 Screenshot — DC-02 restored to its Fresh Machine state in Server Manager**
 
-![DC-02 restored to its Fresh Machine state in Server Manager](screenshots/Screenshot%20(8).png)
+![DC-02 restored to its Fresh Machine state in Server Manager](screenshots/Screenshot%20(24).png)
 
 ### Step 7 — Export the DC-02 Virtual Machine
 
@@ -243,7 +243,7 @@ This verifies that applying the Fresh Machine checkpoint returned the virtual ma
 
 **📸 Screenshot — Exported DC-02 virtual machine files visible in E:\Export**
 
-![Exported DC-02 virtual machine files visible in E Export](screenshots/Screenshot%20(10).png)
+![Exported DC-02 virtual machine files visible in E Export](screenshots/Screenshot%20(29).png)
 
 ## 🔎 Verification
 
