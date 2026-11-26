@@ -3,8 +3,8 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–71 completed
-> **Last updated:** November 23, 2026
+> **Status:** Labs 1–72 completed
+> **Last updated:** November 26, 2026
 
 ---
 
@@ -166,7 +166,7 @@ Hyper-V labs will be performed only where the host hardware and nested-virtualiz
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **71** | [Hyper-V Installation and Virtual Machine Configuration](Lab-71-Hyper-V-Installation-and-Virtual-Machine-Configuration/README.md) | ✅ Completed | Enable nested virtualization, install Hyper-V on DC-01, create an External virtual switch named SW-1, and deploy and install Windows Server on the Generation 2 DC-02 virtual machine |
-| **72** | Hyper-V Virtual Disk and VM Management | 📋 Planned | Create and manage VHD/VHDX disks, expand virtual disks, create and restore checkpoints, and export/import virtual machines; review Hyper-V Replica and Live Migration concepts and prerequisites |
+| **72** | [Hyper-V Virtual Disk, Checkpoint, and VM Export Management](Lab-72-Hyper-V-Virtual-Disk-Checkpoint-and-VM-Export/README.md) | ✅ Completed | Create and attach a 5 GB fixed-size VHD, initialize and format it as an NTFS volume, create and apply VM checkpoints, promote DC-02 as the root domain controller for lab.local, and export the virtual machine; review import concepts in theory |
 
 ### Phase 14 — High Availability and Resilience
 
@@ -311,6 +311,7 @@ Short, focused guides for common Active Directory tasks that complement the main
 - Windows Server Data Deduplication role installation, General purpose file server configuration, optimization job execution and monitoring with PowerShell, and verification of deduplication rate, reported storage savings, and volume free space
 - Windows Server NFS share creation, client host permissions, Red Hat Linux NFS mounting, and bidirectional cross-platform file access verification
 - Nested virtualization setup in VMware Workstation, Hyper-V role installation, External virtual switch configuration, Generation 2 virtual machine creation, virtual hard disk placement, and Windows Server installation
+- Hyper-V fixed-size virtual hard disk creation and attachment, guest disk initialization and NTFS volume formatting, checkpoint creation and restoration, separate test-forest domain controller deployment, and virtual machine export
 - Screenshot-supported technical documentation
 
 ---
