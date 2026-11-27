@@ -17,6 +17,55 @@ Deploy a custom desktop wallpaper to users in the IT Organizational Unit using G
 - 🔗 **Share Name:** `Wallpaper`
 - ⚙️ **GPO Name:** `IT Group Desktop Wallpaper`
 
+## 📚 Theory
+
+### 1. Understanding Group Policy
+
+**Group Policy** is a Windows feature used by administrators to centrally manage user and computer settings in an Active Directory domain. Group Policy settings are collected in **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). When a user or computer processes an applicable GPO, the configured settings are applied according to the policy scope, filtering, and processing rules.
+
+### 2. User Configuration and Computer Configuration
+
+A GPO contains two main configuration sections:
+- **User Configuration:** Controls settings that apply to user accounts, regardless of which domain-joined computer they use, subject to policy scope and processing.
+- **Computer Configuration:** Controls settings that apply to computer accounts, regardless of which user signs in, subject to policy scope and processing.
+
+The Desktop Wallpaper policy used in this lab is under **User Configuration**, because it controls the desktop appearance for users.
+
+### 3. GPO Linking and Organizational Units
+
+A GPO does not apply simply because it exists in Group Policy Management. It must be linked to an Active Directory site, domain, or OU within the intended policy scope. Linking a GPO to an OU allows administrators to target the users or computers located in that OU. In this lab, the `IT Group Desktop Wallpaper` GPO is linked to the `IT` OU, where `user01` and `user02` are located.
+
+### 4. Group Policy Processing and Refresh
+
+Domain clients periodically refresh Group Policy settings. Administrators can also request an immediate refresh using:
+
+```cmd
+gpupdate /force
+```
+
+User policies are generally processed at user sign-in and during background refresh. Some settings take effect immediately, while others may require the user to sign out and sign in again.
+
+### 5. Desktop Wallpaper Policy
+
+The **Desktop Wallpaper** administrative template policy configures the wallpaper displayed for targeted users. When enabled, the administrator specifies the image path and a wallpaper style, such as Fill, Fit, Stretch, Tile, or Center, depending on the available options. This lab uses the **Fill** style and points the policy to a PNG image stored on a network share.
+
+### 6. UNC Paths and Shared Folder Permissions
+
+A **Universal Naming Convention (UNC)** path identifies a network resource using the format:
+
+```text
+\\ServerName\ShareName\Folder\FileName
+```
+
+A UNC path allows domain clients to retrieve a centrally stored wallpaper without relying on a local file path that exists only on the server. The user accounts processing the policy must be able to read the image. In this lab, `IT_Users_Group` is granted **Read** permission on the `\\DC-01\Wallpaper` share, allowing its members to access the wallpaper file. In a complete Windows file-sharing permission model, both share permissions and NTFS permissions determine effective network access.
+
+### 7. Group-Based Access and Policy Scope
+
+Organizational Units and security groups serve different purposes:
+- **OU:** Organizes Active Directory objects and provides a scope for linking and applying Group Policy.
+- **Security group:** Groups users or computers so permissions can be assigned to the group rather than configuring each account separately.
+
+In this lab, the GPO is linked to the `IT` OU, while `IT_Users_Group` controls read access to the shared wallpaper. These are separate functions: the OU determines the GPO's scope, and the security group is used for share access.
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 📁 Create the wallpaper folder
