@@ -16,6 +16,44 @@ Create and verify primary, extended, and logical partitions on a separate 10 GB 
 
 > **Safety note:** The partitioning work in this lab is performed on the additional 10 GB virtual disk (Disk 1), not the Windows operating-system disk. Always verify the selected disk number before making partition changes.
 
+## 📚 Theory
+
+### 1. What Is Disk Partitioning?
+
+Disk partitioning is the process of dividing a physical or virtual disk into separate logical sections called partitions. Each partition can be managed and formatted independently, allowing administrators to organize storage for operating systems, applications, and data.
+
+### 2. What Is a Partition Style?
+
+A partition style defines how a disk stores information about its partitions and how the operating system identifies them. Windows supports the Master Boot Record (MBR) and GUID Partition Table (GPT) partition styles. This lab uses MBR to demonstrate its traditional partition structure.
+
+### 3. What Is Master Boot Record (MBR)?
+
+Master Boot Record (MBR) is a legacy disk-partitioning scheme. It stores partition information in a partition table located in the disk's first sector. MBR supports disks up to approximately 2 TB when using the traditional 512-byte sector layout and provides four partition-table entries.
+
+### 4. What Is a Primary Partition?
+
+A primary partition is a partition defined directly by one of the MBR partition-table entries. An MBR disk can contain up to four primary partitions, or three primary partitions and one extended partition. A primary partition can be formatted with a supported file system and assigned a drive letter for normal Windows use.
+
+### 5. What Is an Extended Partition?
+
+An extended partition is a special MBR partition type that acts as a container for logical drives. It occupies one of the four MBR partition-table entries and allows the disk to be divided into more usable volumes than the four-entry limit would otherwise permit. The extended partition itself is not normally used as a data volume.
+
+### 6. What Is a Logical Drive?
+
+A logical drive is a partition created inside an extended partition. It can be formatted with a file system, assigned a drive letter, and used to store data. A logical drive is useful when an MBR disk needs more than the available primary partition entries.
+
+### 7. Understanding the MBR Four-Entry Limit
+
+An MBR disk has four partition-table entries. These can be used for four primary partitions, or commonly three primary partitions and one extended partition. The extended partition can contain multiple logical drives. Remaining unallocated space does not automatically become an extended partition; the administrator must create it explicitly.
+
+### 8. Formatting a Partition with NTFS
+
+Creating a partition reserves a section of disk space, but formatting prepares that partition with a file system. NTFS is the standard Windows file system used in this exercise. It supports features such as access control lists, file-system journaling, large volumes, and file permissions. Assigning a drive letter makes a formatted volume accessible through File Explorer.
+
+### 9. Disk Management and DiskPart
+
+Disk Management provides a graphical interface for initializing disks, creating partitions, formatting volumes, and assigning drive letters. DiskPart is a command-line utility that performs many of the same disk and partition-management tasks. Administrators must carefully select and verify the target disk before running commands that modify its layout.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Add a Separate Virtual Disk
@@ -109,14 +147,6 @@ The final `list partition` output should show the **Primary**, **Extended**, and
 **📸 Screenshot 7 — This PC showing the Primary (F:) and Logical (G:) volumes**
 
 ![Screenshot 7 — F and G volumes in This PC](screenshots/Screenshot%20(20).png)
-
-## 🧠 MBR Partition Notes
-
-- An MBR-partitioned disk has **four partition-table entries**.
-- Those entries can be used for four primary partitions, or commonly three primary partitions plus one extended partition.
-- The extended partition uses one of the four entries and can contain multiple logical drives.
-- Remaining space does **not** automatically become an extended partition. An extended partition must be created explicitly.
-- GPT uses a different partitioning scheme and does not use the MBR four-entry layout. A hands-on MBR limit and GPT comparison will be covered in a separate lab.
 
 ## ✅ Verification
 
