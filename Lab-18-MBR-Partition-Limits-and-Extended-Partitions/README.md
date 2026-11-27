@@ -15,6 +15,40 @@ Demonstrate the four-entry partition-table limit of an MBR disk by creating four
 
 > **Safety note:** This lab uses a disposable 10 GB virtual disk. The `clean` command removes partition information from the selected disk. Always verify that Disk 1 is the intended test disk before running destructive commands. Do not select the operating-system disk.
 
+## 📚 Theory
+
+### 1. Understanding MBR Partitioning
+
+Master Boot Record (MBR) is a legacy disk-partitioning scheme used to describe how a disk is divided into partitions. The partition information is stored in the disk's MBR structure, located in the first sector of the disk. Windows uses this information to identify the partitions available on an MBR-initialized disk.
+
+### 2. The Four-Entry Partition Table Limit
+
+The MBR partition table contains four entries. Each entry can describe a primary partition or an extended partition. Because there are only four entries, an MBR disk can contain up to four primary partitions. Once all four entries are occupied, another primary partition cannot be created without changing the existing layout.
+
+### 3. Primary Partitions
+
+A primary partition is defined directly in one of the four MBR partition-table entries. It can be formatted with a file system, assigned a drive letter, and used to store data. Four primary partitions use all four available MBR entries, leaving no entry available for an extended partition.
+
+### 4. Extended Partitions
+
+An extended partition is a special partition that acts as a container for logical partitions. It uses one of the four MBR partition-table entries. A common MBR layout therefore consists of three primary partitions and one extended partition. The extended partition provides a way to create additional logical volumes without requiring another primary partition-table entry for each one.
+
+### 5. Logical Partitions
+
+Logical partitions are created inside an extended partition. They are described through a linked structure of Extended Boot Records (EBRs), rather than occupying separate entries in the main MBR partition table. Logical partitions can be formatted and used as volumes in Windows, just like primary partitions.
+
+### 6. Why the Extended Partition Must Be Created Explicitly
+
+Unallocated disk space is not automatically treated as an extended partition. The administrator must create the extended partition in the available space before creating logical partitions inside it. In DiskPart, the `create partition extended` command creates the container, and `create partition logical` creates a logical partition within that container.
+
+### 7. What Happens When a Fifth Primary Partition Is Attempted?
+
+When all four MBR partition-table entries are already occupied by primary partitions, Windows cannot add a fifth primary partition. DiskPart reports an error because no partition-table entry remains. To use the remaining space for additional volumes, an administrator can redesign the layout to use an extended partition with one or more logical partitions.
+
+### 8. MBR Compared with GPT
+
+GUID Partition Table (GPT) is a newer partitioning scheme that does not use the MBR four-entry primary/extended partition structure. GPT supports many more partitions and is designed for modern systems, including disks larger than the traditional MBR 2 TB limit (with standard 512-byte sectors). This lab focuses on the MBR layout; a separate lab can demonstrate MBR and GPT side by side.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Add and Initialize a Fresh Test Disk
@@ -109,15 +143,6 @@ The output should show three primary partitions, one extended partition, and one
 **📸 Screenshot 5 — Logical partition created inside the extended partition**
 
 ![Screenshot 5 — Logical partition verification](screenshots/Screenshot%20(9).png)
-
-## 🧠 Key Concepts
-
-- MBR provides **four partition-table entries**.
-- An MBR disk can use those entries for up to four primary partitions.
-- A common alternative is **three primary partitions and one extended partition**.
-- The extended partition consumes one of the four entries and can contain multiple logical partitions.
-- Unallocated space does **not** automatically become an extended partition; it must be created explicitly.
-- GPT uses a different partitioning scheme and is not subject to the MBR four-entry layout. A hands-on GPT comparison can be documented separately.
 
 ## ✅ Verification
 
