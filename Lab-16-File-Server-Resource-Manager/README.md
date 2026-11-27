@@ -12,6 +12,44 @@ Install and use File Server Resource Manager (FSRM) on Windows Server 2022 to ma
 - 🗄️ **Volume:** `E:\` (NTFS)
 - 🛠️ **Role Service:** File Server Resource Manager (FSRM)
 
+## 📚 Theory
+
+### 1. What Is File Server Resource Manager (FSRM)?
+
+File Server Resource Manager (FSRM) is a Windows Server role service that helps administrators classify, control, and monitor data stored on file servers. It provides tools for managing storage quotas, applying file-screening policies, and generating storage reports. These features help organizations maintain control over shared storage and enforce file-server policies.
+
+### 2. What Is a Storage Quota?
+
+A storage quota sets a limit or monitoring threshold for the amount of data that can be stored in a folder or volume. Administrators use quotas to prevent a user, department, or shared location from consuming more storage than intended. FSRM supports both hard quotas and soft quotas.
+
+### 3. Hard Quota
+
+A hard quota enforces a strict storage limit. When the configured limit is reached, FSRM prevents additional data from being written to the quota-controlled location. A hard quota is useful when a storage location must not exceed a defined capacity.
+
+### 4. Soft Quota
+
+A soft quota monitors storage consumption but does not block users from writing additional data after the configured limit is reached. It is useful when administrators want to observe growth, receive notifications, or identify locations that may need more storage without interrupting normal file operations.
+
+### 5. Quota Templates and Notification Thresholds
+
+Quota templates allow administrators to define reusable quota settings, including the size limit, quota type, and notification thresholds. A template can then be applied to one or more folders. Thresholds such as 85%, 95%, and 100% help administrators identify when storage usage is approaching or has reached its configured limit. Depending on the configured actions, FSRM can generate notifications or log events at these thresholds.
+
+### 6. What Is File Screening?
+
+File screening allows administrators to control which file types can be stored in a folder. FSRM uses file groups, which contain filename patterns or extensions, to identify matching files. A file-screening policy can then be applied to a selected folder using a predefined or custom file-screen template.
+
+### 7. Active and Passive File Screening
+
+Active file screening prevents users from saving files that match the configured file group in the screened location. Passive file screening allows the files to be saved but monitors and records matching activity. The choice depends on whether the organization needs to block a file type or only monitor its presence.
+
+### 8. File Screening Templates
+
+File-screening templates provide reusable settings for file groups and screening behavior. For example, the predefined **Block Image File** template uses the **Image Files** group to block matching image files when applied as an active file screen. Templates simplify policy management and help maintain consistent settings across folders.
+
+### 9. FSRM in File-Server Administration
+
+FSRM helps administrators manage file-server capacity and apply storage policies without changing the underlying NTFS permissions or share permissions. Quotas manage storage consumption, while file screening controls the types of files that may be stored in selected locations. These features complement normal file-server access controls rather than replacing them.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Install File Server Resource Manager
@@ -150,10 +188,6 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 The quota tests used dedicated folders on the E: volume. The existing `E:\IT_DATA` folder was left untouched.
 
-## ✅ Closing
-
-Use hard quotas when storage limits must be enforced, soft quotas when usage should be monitored without blocking writes, and active file screening when matching file types must be prevented from being stored.
-
 ## 📌 Lab Note
 
 - The hard quota test used four 20 MB files (approximately 80% usage); the fifth copy was blocked.
@@ -161,3 +195,7 @@ Use hard quotas when storage limits must be enforced, soft quotas when usage sho
 - Passive file screening and Storage Reports Management were not included in this lab because those functions could not be configured successfully in this environment. They are not presented as completed exercises.
 - The `E:\FSRM_Passive_Screen` folder was created but not used for a passive-screening test.
 - The existing `E:\IT_DATA` folder was not modified.
+
+## ✅ Closing
+
+Use hard quotas when storage limits must be enforced, soft quotas when usage should be monitored without blocking writes, and active file screening when matching file types must be prevented from being stored.
