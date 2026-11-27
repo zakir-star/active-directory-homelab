@@ -18,6 +18,42 @@
 - 👤 **Domain User:** `user01`
 - 💿 **Virtualization:** VMware Workstation
 
+## 📘 Theory
+
+### What Is a Domain-Joined Computer?
+
+A domain-joined computer is a Windows device whose computer account is registered in an Active Directory domain. Once joined, the computer can participate in domain authentication and be managed through domain-based administration, including Group Policy.
+
+### What Is a Computer Account in Active Directory?
+
+When a Windows computer joins an Active Directory domain, a computer account is created in the directory. This account represents the device and allows it to establish a trusted relationship with the domain. By default, a newly joined computer account is commonly placed in the domain's built-in `Computers` container, unless a different location has been configured.
+
+### Why Is DNS Required for Domain Joining?
+
+Active Directory relies on DNS so that clients can locate domain controllers and other domain services. During a domain join, the client uses DNS records to discover an appropriate domain controller. Therefore, the client's preferred DNS server should point to the domain's DNS server, which in this lab is `DC-01` at `10.0.0.1`. Using an unrelated public DNS server can prevent domain discovery.
+
+### Why Must the Client Have Network Connectivity to the Domain Controller?
+
+The client must be able to communicate with a domain controller to locate the domain, authenticate the account used for joining, and complete the domain-join process. Correct IP addressing, subnet configuration, DNS settings, firewall rules, and required network connectivity all contribute to a successful join.
+
+### What Is Domain Authentication?
+
+Domain authentication verifies a user's identity against the domain's authentication services rather than validating a local account stored only on the client computer. After the client joins `example.com`, an authorized domain user such as `user01` can sign in using a domain-qualified username, provided the account is valid and permitted to log on.
+
+### What Is the Difference Between a Local User and a Domain User?
+
+A local user account is stored and managed on an individual Windows computer. A domain user account is stored centrally in Active Directory and can be used to access authorized domain resources from domain-joined computers. The account's access still depends on assigned permissions and applicable policies.
+
+### What Is Group Policy?
+
+Group Policy is an Active Directory feature that allows administrators to centrally configure supported Windows settings for users and computers. Group Policy Objects (GPOs) can be linked to sites, domains, and Organizational Units, helping organizations apply consistent configuration and security settings to domain-joined devices and user accounts.
+
+### How Can Domain Membership Be Verified?
+
+Domain membership can be checked from the client by examining the signed-in identity and the computer's reported domain. In this lab, `whoami` identifies the current domain user, while `systeminfo` displays the computer's domain information. The computer account can also be confirmed in Active Directory Users and Computers on the domain controller.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Configure the Windows Client
