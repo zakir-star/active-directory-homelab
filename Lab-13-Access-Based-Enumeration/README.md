@@ -17,6 +17,47 @@ Enable Access-Based Enumeration (ABE) on the existing `IT_DATA` network share an
 - 📂 **Demonstration Folder:** `IT_Confidential`
 - 🛠️ **Tools:** File Explorer, Folder Properties, Server Manager
 
+## 📚 Theory
+
+### 1. What Is Access-Based Enumeration (ABE)?
+
+Access-Based Enumeration (ABE) is a Windows file-server feature that filters the folders and files displayed to a user when browsing a shared folder. With ABE enabled, users see only the items they have permission to access, rather than seeing every item in the share.
+
+### 2. How Does ABE Work?
+
+When a user browses an SMB network share, the file server checks the user's permissions on the folders and files within that share. ABE uses those access permissions to determine which items should appear in the directory listing. Items the user is not permitted to access are hidden from that user's view.
+
+### 3. ABE Does Not Replace NTFS or Share Permissions
+
+ABE is a visibility feature, not a permission-management system. It does not grant, remove, or modify access rights. NTFS permissions and Share Permissions continue to determine whether a user can access a resource over the network. Both permission layers must be configured correctly.
+
+### 4. ABE and NTFS Permissions
+
+NTFS permissions control access to files and folders on the server, including access through a network share. In this lab, the `IT_Confidential` folder has permissions that allow `user01` access while `user02` is not granted access. ABE uses these permissions to filter what each user sees when browsing `IT_DATA`.
+
+### 5. ABE and Network Share Permissions
+
+Share Permissions apply when users connect to a folder through a network share. ABE works alongside the existing share and NTFS permissions; enabling it does not make a restrictive permission more permissive or bypass an access restriction. Effective network access remains subject to both permission layers.
+
+### 6. ABE Is Configured on the Shared Folder
+
+On Windows Server, ABE can be enabled through the share's properties in Server Manager under **File and Storage Services → Shares → Share Properties → Settings**. The setting applies to browsing that particular share. It does not need to be enabled separately on every client computer.
+
+### 7. ABE Visibility Is User-Specific
+
+The contents displayed in a shared folder can differ between users because each user's access permissions may be different. An authorized user may see and open a restricted folder, while another user may not see that folder in the share listing.
+
+### 8. ABE Is Not a Security Boundary
+
+Hiding a folder from a directory listing does not replace proper access control. Administrators must still configure NTFS and Share Permissions correctly. A user who knows a resource's direct path must still be prevented from opening it by the underlying permissions.
+
+### 9. Benefits of Access-Based Enumeration
+
+- Reduces clutter when users browse shared folders.
+- Prevents users from seeing folder and file names for resources they cannot access.
+- Makes large departmental shares easier to navigate.
+- Provides a cleaner view of shared resources without changing the existing permission structure.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Verify the Existing IT_DATA Share
