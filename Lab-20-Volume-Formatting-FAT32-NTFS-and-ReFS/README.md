@@ -14,6 +14,53 @@ Create and format test volumes using FAT32, NTFS, and ReFS in Windows Server 202
 
 > **Safety note:** Confirm the disk number, capacity, and contents before making disk changes. This lab uses the newly added 10 GB Disk 1. Do not modify the operating-system disk or any disk containing data you need.
 
+## 📚 Theory
+
+### 1. Understanding File Systems
+
+A file system defines how an operating system organizes, stores, names, and retrieves data on a formatted volume. It manages information such as files, folders, metadata, and available storage space. Windows supports several file systems, including FAT32, NTFS, and ReFS, each designed for different requirements.
+
+### 2. FAT32 (File Allocation Table 32)
+
+FAT32 is an older file system known for broad compatibility with different operating systems and devices.
+
+Key characteristics:
+- Supported by a wide range of computers, removable drives, and embedded devices.
+- Has a maximum individual file size of 4 GiB minus 1 byte.
+- Does not provide the same advanced permissions, journaling, and resiliency features as NTFS.
+- Commonly used where compatibility is more important than advanced Windows storage features.
+
+### 3. NTFS (New Technology File System)
+
+NTFS is the standard general-purpose file system for modern Windows installations and data volumes.
+
+Key characteristics:
+- Supports Windows file and folder permissions through access-control lists (ACLs).
+- Provides journaling to help maintain file-system consistency after unexpected interruptions.
+- Supports features such as file compression, encryption (EFS), disk quotas, and large files.
+- Commonly used for Windows operating-system volumes, application data, and file-server storage.
+
+### 4. ReFS (Resilient File System)
+
+ReFS is a Microsoft file system designed to provide resiliency, scalability, and data integrity for supported Windows Server storage workloads.
+
+Key characteristics:
+- Uses integrity mechanisms to help detect data corruption.
+- Can use Storage Spaces features, including data integrity and repair capabilities, when supported and configured.
+- Designed for large data sets and supported server-storage scenarios.
+- Does not support every NTFS feature; for example, ReFS does not provide NTFS-style file compression or EFS.
+- Availability and supported features depend on the Windows Server version, edition, and storage configuration.
+
+### 5. File System vs. Partition Style
+
+A partition style defines how partitions are laid out on a disk. A file system defines how data is organized inside a formatted volume. **MBR and GPT are partition styles**, whereas **FAT32, NTFS, and ReFS are file systems**. A GPT disk can contain volumes formatted with supported file systems; choosing GPT does not automatically select NTFS or ReFS.
+
+### 6. Allocation Unit Size and Quick Formatting
+
+The allocation unit size, also called cluster size, is the smallest unit of disk space allocated to store a file's data. The default size is suitable for many general-purpose workloads, while specialized workloads may require a different choice.
+
+Quick format creates a new file-system structure without performing a full sector-by-sector scan of the volume. It should not be treated as a secure data-erasure method.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Add a new virtual disk
