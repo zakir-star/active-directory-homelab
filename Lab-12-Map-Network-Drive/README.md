@@ -16,6 +16,52 @@ Map the existing `IT_DATA` shared folder on `DC-01` as the `Z:` network drive on
 - 💽 **Mapped Drive Letter:** `Z:`
 - 🛠️ **Tools:** File Explorer, Map Network Drive wizard
 
+## 📚 Theory
+
+### 1. What Is a Network Drive?
+
+A network drive is a shared folder or storage location on another computer or server that a user accesses over a network. Windows can assign a drive letter to this shared location so it appears in File Explorer like a locally available drive.
+
+### 2. What Does Mapping a Network Drive Mean?
+
+Mapping a network drive connects a shared folder to a drive letter on a client computer. Instead of typing the full network path every time, users can open the mapped drive through **This PC**. In this lab, the shared folder on DC-01 is mapped to drive `Z:` on the Windows 10 client.
+
+### 3. What Is a UNC Path?
+
+A Universal Naming Convention (UNC) path identifies a network resource using the server name and share name. Its general format is:
+
+`\\ServerName\ShareName`
+
+For this lab, the UNC path is `\\DC-01\IT_DATA`. The server name identifies the computer hosting the share, while the share name identifies the shared folder.
+
+### 4. What Is a Drive Letter?
+
+Windows uses drive letters such as `C:`, `D:`, and `Z:` to identify accessible storage locations. When a network share is mapped, an available drive letter acts as a convenient shortcut to the remote folder. The assigned letter exists on the client and does not change the folder's actual location on the server.
+
+### 5. Methods of Mapping a Network Drive
+
+Windows provides multiple ways to map a shared folder. A user can right-click a visible network share and select **Map network drive**, or open **This PC** and use the **Map network drive** wizard. Both methods create a connection between the selected drive letter and the same UNC path.
+
+### 6. Reconnecting at Sign-In
+
+The **Reconnect at sign-in** option allows Windows to attempt to restore a mapped network drive when the user signs in again. Successful reconnection depends on network availability, server availability, and the user's access permissions. This lab demonstrates manual mapping and does not configure a persistent sign-in connection.
+
+### 7. Access Permissions and Authentication
+
+Mapping a network drive does not grant additional permissions to the user. Windows still uses the user's network credentials and evaluates the applicable Share Permissions and NTFS permissions on the server. If the user does not have sufficient access, mapping the drive will not bypass those restrictions.
+
+### 8. Disconnecting a Mapped Network Drive
+
+Disconnecting a mapped network drive removes the drive-letter connection from the client. It does not delete the shared folder or its files from the server. In this lab, drive `Z:` is disconnected after the first method so the second method can be demonstrated independently.
+
+### 9. Managing Network Drives in Organizations
+
+In a domain environment, administrators can deploy mapped network drives centrally using Group Policy Preferences. This can provide users with consistent drive letters for departmental folders or shared resources based on their user accounts or group membership.
+
+### 🌍 Where Network Drive Mapping Is Used
+
+Network drive mapping is commonly used in organizations where employees access shared departmental folders, project documents, and centralized file-server resources. Assigning familiar drive letters makes these resources easier to locate and use from domain-joined computers.
+
 ## ⚙️ Lab Configuration
 
 ### Method 1: Map the Drive from the Shared Folder
