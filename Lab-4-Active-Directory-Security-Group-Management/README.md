@@ -17,6 +17,45 @@
 - 👥 **Security Group:** `IT_Users_Group`
 - 🧰 **Tool:** Active Directory Users and Computers (ADUC)
 
+## 📘 Theory
+
+### What Is an Active Directory Security Group?
+
+A security group is an Active Directory object used to collect user and computer accounts so that permissions can be assigned to the group rather than to each account individually. When a user is added to a security group, the user can receive the access granted to that group, subject to the permissions configured on the resource.
+
+### Why Use Security Groups?
+
+Security groups simplify access administration. Instead of assigning the same permissions separately to many users, an administrator can assign permissions once to a group and manage membership as people join or leave a team. This makes access management easier to maintain and audit.
+
+### What Is Group Scope?
+
+Group scope determines where a group can be used to assign permissions and which accounts can be members. Active Directory supports three main scopes:
+
+- **Global:** Typically contains accounts from the same domain and can be granted permissions in domains across the forest or trusted domains.
+- **Domain Local:** Can contain accounts and groups from trusted domains and is generally used to assign permissions to resources in its own domain.
+- **Universal:** Can contain accounts and groups from any domain in the forest and can be granted permissions across the forest.
+
+### What Is a Global Security Group?
+
+A Global Security Group is commonly used to organize users according to their role or department within a domain. It can be granted permissions to resources in its own domain or in trusted domains. In this lab, `IT_Users_Group` is created with Global scope and Security type.
+
+### Security Groups vs. Distribution Groups
+
+Active Directory provides two group types:
+
+- **Security groups:** Used to assign permissions to resources and can also be used for email distribution in supported environments.
+- **Distribution groups:** Used for email distribution and cannot be used to assign security permissions.
+
+### What Is Group Membership?
+
+Group membership is the relationship between an account and a group. Adding `user01` to `IT_Users_Group` makes the account a member of that group. Administrators can review membership through the group's **Properties → Members** tab in Active Directory Users and Computers.
+
+### Does Creating a Security Group Automatically Grant Access?
+
+No. Creating a security group and adding users to it does not automatically grant access to files, folders, or other resources. An administrator must separately assign the required permissions to the group on each resource.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Active Directory Users and Computers
