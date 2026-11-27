@@ -13,6 +13,48 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from changing 
 - 🗂️ **Organizational Unit:** `IT`
 - ⚙️ **GPO Name:** `remove computer icon for IT OU`
 
+## 📚 Theory
+
+### 1. Understanding Group Policy Objects
+
+**Group Policy** enables administrators to centrally manage user and computer settings in an Active Directory environment. These settings are stored in **Group Policy Objects (GPOs)**, which can be linked to an Active Directory site, domain, or Organizational Unit (OU). A GPO applies to users or computers within its scope, subject to policy processing and filtering.
+
+### 2. User Configuration and Desktop Policies
+
+GPOs contain two main sections:
+- **User Configuration:** Applies policy settings to user accounts, regardless of the domain-joined computer they use, subject to the policy scope and processing rules.
+- **Computer Configuration:** Applies policy settings to computer accounts, regardless of which user signs in.
+
+Desktop appearance and personalization settings are commonly found under **User Configuration → Policies → Administrative Templates → Desktop**. The policy in this lab is a user-side setting.
+
+### 3. The Remove Computer Icon on the Desktop Policy
+
+The **Remove Computer icon on the desktop** administrative template policy controls whether the Computer icon is available as a desktop icon for users targeted by the policy. When enabled, the policy removes the Computer icon from the desktop and prevents users from restoring it through the normal Desktop Icon Settings interface. This is a policy restriction; it does not delete the computer object from Active Directory or remove the computer from the domain.
+
+In this lab, the policy is enabled in the `remove computer icon for IT OU` GPO, and the client-side verification checks that the **Computer** option is greyed out in Desktop Icon Settings.
+
+### 4. Linking a GPO to an Organizational Unit
+
+A GPO must be linked to an appropriate Active Directory location to apply within the intended scope. Linking a GPO to an OU targets the user or computer accounts located in that OU, depending on whether the configured settings are under User Configuration or Computer Configuration.
+
+In this lab, the GPO is linked to the `IT` OU and contains a **User Configuration** setting. Therefore, the intended users are those whose user accounts are located in the `IT` OU.
+
+### 5. Group Policy Refresh and Processing
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate refresh by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed during user sign-in and background refresh. Depending on the setting and the current session, signing out and signing back in may be necessary to observe the result.
+
+### 6. Verifying Applied Group Policy
+
+Administrators should verify both the GPO configuration and its effect on a targeted client. Group Policy Management can be used to confirm the GPO link and enabled setting. On the client, the Desktop Icon Settings interface can be checked to confirm that the Computer option is unavailable for user modification.
+
+Policy scope matters: a GPO linked to the `IT` OU does not automatically target users located in other OUs. Administrators should verify the location of user accounts and review policy processing when the expected setting is not applied.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
