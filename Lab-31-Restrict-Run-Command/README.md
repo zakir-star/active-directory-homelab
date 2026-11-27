@@ -14,6 +14,42 @@ Use Group Policy to remove the Run command from the Start Menu for users in the 
 - ⚙️ **GPO Name:** `block the run`
 - 🚫 **Restricted Feature:** Run command
 
+## 📚 Theory
+
+### 1. Understanding Group Policy
+
+**Group Policy** is an Active Directory feature that allows administrators to centrally manage Windows user and computer settings. Settings are organized into **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). A GPO applies to accounts within its scope, subject to policy processing and security filtering.
+
+### 2. User Configuration and Administrative Templates
+
+GPOs contain **User Configuration** and **Computer Configuration** sections. User Configuration applies settings to user accounts, while Computer Configuration applies settings to computer accounts. The Run command restriction in this lab is a user-based setting located under **User Configuration → Policies → Administrative Templates → Start Menu and Taskbar**.
+
+### 3. Remove Run Menu from Start Menu Policy
+
+The **Remove Run menu from Start Menu** policy removes access to the Run command from the Start Menu and prevents users from opening the Run dialog through the standard Run interface. When enabled, Windows also blocks the **Windows + R** keyboard shortcut from opening the Run dialog for users who receive the policy.
+
+This policy restricts the Run interface; it does not disable every possible way to launch applications or commands in Windows. It should be considered a user-interface restriction rather than a complete security boundary.
+
+### 4. Linking a GPO to an Organizational Unit
+
+A GPO must be linked to an Active Directory site, domain, or OU to apply within the intended scope. Linking a GPO to an OU targets the user or computer accounts located in that OU, depending on where the configured settings are defined.
+
+In this lab, the `block the run` GPO is linked to the `IT` OU and contains a **User Configuration** setting. Therefore, the policy is intended to apply to users whose accounts are located in the `IT` OU, subject to normal Group Policy processing and filtering.
+
+### 5. Group Policy Refresh and Processing
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate update by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed at sign-in and during background refresh. Depending on the setting and current session, signing out and signing back in may be necessary to observe the updated configuration.
+
+### 6. Verifying the Applied Restriction
+
+Administrators should verify that the GPO is linked to the intended OU and that **Remove Run menu from Start Menu** is enabled. On a client logged in with a targeted domain user, pressing **Windows + R** can be used to test whether the Run dialog is blocked and Windows displays the restriction message.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
