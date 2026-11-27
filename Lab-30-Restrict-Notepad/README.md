@@ -15,6 +15,46 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from opening N
 - ⚙️ **GPO Name:** `block notepad`
 - 📝 **Restricted Application:** `notepad.exe`
 
+## 📚 Theory
+
+### 1. Understanding Application Restrictions Through Group Policy
+
+Group Policy provides centralized control over Windows user and computer settings in an Active Directory domain. Administrators can use Administrative Templates to configure restrictions, including policies that limit which Windows applications users can run.
+
+### 2. Don't Run Specified Windows Applications
+
+The **Don't run specified Windows applications** policy is a user-based Administrative Template setting located under **User Configuration → Policies → Administrative Templates → System**. When enabled, the administrator supplies a list of executable file names that users are prevented from running through the policy-controlled interface.
+
+In this lab, `notepad.exe` is added to the list, preventing targeted users from launching Notepad. This policy is an administrative restriction, not a substitute for application control or endpoint security. It should not be treated as a strong security boundary against users with ways to launch or rename executables outside the policy's scope.
+
+### 3. GPO Linking and Policy Scope
+
+A GPO must be linked to an Active Directory site, domain, or Organizational Unit (OU) to apply within that location's scope. Because the `block notepad` GPO is linked to the `IT` OU, its user settings are intended for user accounts located in that OU, subject to security filtering and Group Policy processing.
+
+### 4. GPO Security Filtering and Apply Group Policy Permission
+
+GPO security permissions determine which users and computers can read and apply a Group Policy Object. The **Read** permission allows an account to read the GPO, while **Apply Group Policy** determines whether the policy is applied to that account when the GPO is in scope.
+
+In this lab, `user02` retains **Read → Allow** but is assigned **Apply Group Policy → Deny** on the `block notepad` GPO. This excludes `user02` from applying this specific GPO without moving the account out of the `IT` OU or removing it from `IT_Users_Group`.
+
+Explicit **Deny** permissions take precedence over conflicting **Allow** permissions. Because of that precedence, administrators should apply GPO security exclusions carefully and review group memberships and inherited permissions before using them in production.
+
+### 5. Understanding the User Exception
+
+An OU link establishes the initial policy scope, while GPO security permissions can narrow which users within that scope actually apply the policy. This makes it possible to apply a common configuration to a department while creating a controlled exception for a particular account.
+
+In this lab, `user01` remains subject to the restriction, while `user02` is excluded through the GPO's security permissions. Both accounts remain members of the existing `IT_Users_Group`; the exception is configured on the GPO itself.
+
+### 6. Group Policy Refresh and Verification
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate refresh by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed at sign-in and during background refresh. After changing GPO security permissions, signing out and signing back in helps ensure the user session processes the updated policy. Verify the result separately with each account: `user01` should be blocked from opening Notepad, while `user02` should be able to open it.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
