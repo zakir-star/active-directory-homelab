@@ -15,6 +15,45 @@ Create a three-disk RAID 5 volume in Windows Server 2022, save a test file, and 
 - 🏷️ **Volume label:** `RAID5_PARITY`
 - 📁 **File system:** NTFS
 
+## 📚 Theory
+
+### 1. Understanding RAID 5
+
+RAID 5 is a storage configuration that combines **striping** with **distributed parity** across three or more disks. Data is divided into blocks and distributed across the member disks, while parity information is also distributed among those disks. This parity information allows the array to reconstruct missing data if one member disk becomes unavailable.
+
+### 2. How RAID 5 Works
+
+Unlike RAID 1, which keeps duplicate copies of data, RAID 5 uses parity to provide fault tolerance with less capacity overhead. Data blocks and parity blocks are spread across the disks rather than keeping all parity on a single dedicated disk.
+
+Key characteristics:
+- Requires at least **three disks**.
+- Data is striped across the member disks.
+- Parity information is distributed across all member disks.
+- Can tolerate the failure or unavailability of **one member disk** while keeping the volume accessible, provided the array was healthy beforehand and the remaining disks are functioning correctly.
+- Write operations involve parity calculations, so write performance can be affected by the workload and implementation.
+
+### 3. RAID 5 Usable Capacity
+
+RAID 5 uses the equivalent capacity of one member disk for distributed parity. With three equal-sized 10 GB disks, usable capacity is approximately **20 GB** before formatting and other overhead. In general, usable capacity is approximately:
+
+`(Number of disks - 1) × Capacity of the smallest disk`
+
+When disks have different capacities, the smallest disk determines the capacity contribution used from each member.
+
+### 4. Fault Tolerance and Degraded Operation
+
+RAID 5 can tolerate the loss of one member disk. The volume can continue operating in a **degraded** state because the missing data can be reconstructed from the remaining data and parity blocks. However, the array has no remaining single-disk fault tolerance while degraded. If another member becomes unavailable before the array is repaired and rebuilt, the volume may become inaccessible and data may be lost.
+
+After replacing or returning a member disk, the array must complete its recovery or rebuild process before full redundancy is restored. Rebuild time and risk depend on disk size, workload, and implementation.
+
+### 5. Windows RAID 5 Volumes
+
+On supported Windows Server editions, Disk Management can create a RAID 5 volume using the **New RAID-5 Volume** wizard on supported dynamic disks. The wizard combines space from at least three disks and presents it as one logical volume. Administrators should monitor disk and volume health and follow a supported recovery procedure when a member becomes unavailable.
+
+### 6. RAID 5 Is Not a Backup
+
+RAID 5 helps maintain availability after a single member disk failure, but it does not protect against accidental deletion, file corruption, malware, or failures affecting multiple disks. RAID therefore does not replace independent backups. Administrators should maintain separate backups and regularly verify that data can be restored.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Prepare the data disks
