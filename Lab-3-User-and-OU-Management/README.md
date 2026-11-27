@@ -13,6 +13,34 @@
 - 🏷️ **Domain Controller:** `DC-01`
 - 🌐 **Domain Name:** `example.com`
 
+## 📘 Theory
+
+### What Is an Organizational Unit (OU)?
+
+An Organizational Unit is a container within an Active Directory domain that is used to organize directory objects such as users, computers, and groups. OUs help administrators structure the directory according to departments, locations, or administrative responsibilities. In this lab, the `IT` OU is created inside the `example.com` domain.
+
+### Why Are Organizational Units Used?
+
+OUs make it easier to manage domain objects in a structured way. Administrators can link Group Policy Objects (GPOs) to an OU to apply settings to the users or computers it contains. OUs can also be used to delegate specific administrative tasks without granting full domain-level privileges.
+
+### What Is a Domain User Account?
+
+A domain user account is an identity stored in Active Directory that allows a person to authenticate to the domain and access authorized network resources. Unlike a local user account, which is managed on an individual computer, a domain account is centrally managed by Active Directory.
+
+### What Is a User Logon Name?
+
+The User Principal Name (UPN) and the pre-Windows 2000 logon name are formats used to identify a user during sign-in. The user logon name entered when creating an account is used by Windows domain authentication. In this lab, the account is created with the logon name `LabUser01`.
+
+### Why Create Users Inside an OU?
+
+Placing users in the appropriate OU keeps the directory organized and allows administrators to apply relevant policies and delegated permissions to the correct set of accounts. Creating `LabUser01` inside the `IT` OU demonstrates how a domain user can be organized under a department-specific container.
+
+### What Is Accidental Deletion Protection?
+
+Active Directory provides an option to protect an OU from accidental deletion. When enabled, it adds permissions that help prevent the OU from being deleted unintentionally through common administrative tools. This protection is useful for important containers, although it is not a replacement for proper backups and access control.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Active Directory Users and Computers
