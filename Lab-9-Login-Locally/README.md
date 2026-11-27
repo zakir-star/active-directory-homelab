@@ -12,6 +12,44 @@ Demonstrate that a local user account cannot sign in interactively to the Domain
 - 👤 **Domain users:** `user01`, `user02`
 - 🛠️ **Tool:** Group Policy Management
 
+## 📚 Theory
+
+### 1. What Is User Rights Assignment?
+
+User Rights Assignment is a Windows security setting that determines which users and groups can perform specific actions on a computer. These rights are configured through Local Security Policy or Group Policy.
+
+### 2. What Does Allow Log on Locally Mean?
+
+**Allow log on locally** grants an account the right to sign in interactively at a computer's keyboard and display. On a Windows Server, this controls who can sign in directly to the server console.
+
+### 3. What Does Deny Log on Locally Mean?
+
+**Deny log on locally** explicitly blocks selected users or groups from signing in interactively. A deny assignment takes precedence over an allow assignment, so an account that is covered by both settings will be denied access.
+
+### 4. What Is the Default Domain Controllers Policy?
+
+The **Default Domain Controllers Policy** is a Group Policy Object linked to the **Domain Controllers** OU. It contains security settings that apply to domain controllers. Editing this policy affects domain controllers within its scope, so changes must be made carefully.
+
+### 5. What Is the Difference Between a Domain Account and a Local Account?
+
+A domain account is managed centrally by Active Directory and can be used to access domain resources according to assigned permissions. A local account is stored and managed on an individual Windows computer. The account type and the user rights assigned on the target computer both influence whether an interactive sign-in is permitted.
+
+### 6. Why Are Existing Entries in User Rights Assignment Preserved?
+
+Windows may require existing system accounts and groups to retain specific logon rights. Removing required entries can interfere with administration or system operation. When adding users, preserve the existing entries unless there is a clear, understood reason to change them.
+
+### 7. Why Must Deny Log on Locally Be Checked?
+
+An account can be listed in **Allow log on locally** and still be unable to sign in if it is also covered by **Deny log on locally**. Checking both policies helps identify conflicting assignments before testing the sign-in.
+
+### 8. How Does Group Policy Apply the Changes?
+
+Group Policy distributes configured settings to computers within the policy's scope. Running `gpupdate /force` requests an immediate refresh of applicable policies; the sign-in test then verifies whether the effective user rights allow the selected domain users to log on.
+
+### 9. Why Should Interactive Logon to a Domain Controller Be Restricted?
+
+Domain Controllers hold critical identity and authentication services. In production environments, interactive logon should be limited to authorized administrative accounts and managed according to organizational security policy. This lab uses selected domain users only to demonstrate how User Rights Assignment works in an isolated learning environment.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Demonstrate the Local Account Sign-in Restriction
