@@ -14,6 +14,44 @@ Compare the Master Boot Record (MBR) and GUID Partition Table (GPT) partition st
 
 > **Safety note:** Confirm the disk number, capacity, and partition style before initializing, formatting, or modifying a disk. Do not run destructive commands against the operating-system disk or a disk containing data you need.
 
+## 📚 Theory
+
+### 1. Understanding Disk Partition Styles
+
+A disk partition style defines how partition information is organized and stored on a physical or virtual disk. Windows supports two main partition styles: **Master Boot Record (MBR)** and **GUID Partition Table (GPT)**. The selected style affects partition layout, supported disk capacity, and compatibility with system firmware.
+
+### 2. Master Boot Record (MBR)
+
+MBR is an older partitioning standard commonly associated with legacy BIOS-based systems. It stores its boot code and partition information in the first sector of a disk.
+
+Key characteristics:
+- Supports a maximum of four primary partition entries.
+- One of those entries can be an extended partition, which can contain multiple logical drives.
+- With traditional 512-byte logical sectors, MBR has a practical disk-size limit of approximately 2 TiB.
+- Its partition information is stored in a single primary partition table, making it less resilient to partition-table corruption than GPT.
+
+### 3. GUID Partition Table (GPT)
+
+GPT is the modern partitioning standard commonly used with UEFI-based Windows systems. It uses globally unique identifiers (GUIDs) to identify partitions and stores partition information in structured headers and tables.
+
+Key characteristics:
+- Supports many partitions without using extended or logical partitions. Windows commonly supports up to 128 partitions on a basic GPT disk.
+- Supports disk capacities well beyond the traditional MBR limit.
+- Maintains a backup GPT header and partition-entry array near the end of the disk.
+- Uses CRC checks to help detect corruption in GPT structures.
+
+### 4. MBR and GPT with BIOS and UEFI
+
+For standard Windows installations, legacy BIOS boot is associated with MBR, while native UEFI boot requires a GPT system disk. This distinction is important when installing Windows or selecting a disk layout for a server. A data disk can use either partition style independently of the system's boot configuration.
+
+### 5. Partition Style vs. File System
+
+MBR and GPT describe the partition layout of a disk; they do not determine how files are stored inside a volume. A file system such as **NTFS** is created when a volume is formatted. Therefore, a GPT disk and an MBR disk can both contain NTFS-formatted volumes.
+
+### 6. Why Administrators Use GPT
+
+GPT is generally preferred for modern Windows deployments because it supports larger disks, more partitions, and redundant partition metadata. MBR remains relevant when compatibility with older systems or legacy boot environments is required.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Add a separate virtual disk
