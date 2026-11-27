@@ -19,6 +19,38 @@
 - 👥 **Security Group:** IT_Users_Group
 - 💻 **Client Machine:** Windows client
 
+## 📘 Theory
+
+### What Is Domain User Account Management?
+
+Domain user account management is the administration of user identities stored in Active Directory. It includes controlling account status, maintaining passwords, responding to account lockouts, and setting account restrictions. These tasks help administrators manage access throughout a user's time in an organization.
+
+### What Does Disabling a Domain User Account Do?
+
+Disabling an account prevents the user from using that account to authenticate to the domain. Administrators may disable accounts when a person leaves an organization or when access must be temporarily suspended. Disabling an account does not delete the user object or remove its group memberships and other directory information.
+
+### Why Re-enable a Domain User Account?
+
+An account can be enabled again when the reason for suspending access has been resolved. Re-enabling restores the account's ability to authenticate, subject to its password, account settings, logon restrictions, and other security controls.
+
+### What Is a Domain User Password Reset?
+
+A password reset allows an administrator with the appropriate permissions to set a new password for a domain user. It is commonly used when a user forgets a password or when credentials must be changed during account recovery. A reset is different from a user changing their own password, and the administrator should communicate the new credential securely.
+
+### What Is an Active Directory Account Lockout?
+
+Account lockout is a security control that temporarily prevents an account from authenticating after a configured number of unsuccessful sign-in attempts. It helps reduce repeated password-guessing attempts. An administrator can unlock the account after verifying the situation and following the organization's procedures. The lockout threshold and duration are controlled by the applicable account lockout policy.
+
+### What Are Logon Hours?
+
+Logon hours are an account setting in Active Directory that specifies the times when a user is permitted to log on to the domain. Administrators can use this setting to establish a permitted schedule, such as allowing sign-in on weekdays and denying it on weekends. Logon hours restrict permitted logon times; they do not automatically sign a user out or terminate an existing session when permitted hours end.
+
+### Why Verify Domain User Authentication on a Client?
+
+Testing sign-in from a domain-joined Windows client confirms that the user can authenticate through the domain environment after account changes have been made. Successful sign-in depends on the account being enabled, valid credentials, network connectivity to a domain controller, DNS configuration, and any applicable account restrictions or policies.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Active Directory Users and Computers
