@@ -14,6 +14,42 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 - ⚙️ **GPO Name:** `Restrict CMD`
 - 🚫 **Restricted Feature:** Command Prompt
 
+## 📚 Theory
+
+### 1. Understanding Group Policy
+
+**Group Policy** is an Active Directory feature that allows administrators to centrally manage Windows user and computer settings. Settings are stored in **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). A GPO applies to accounts within its scope, subject to policy processing and security filtering.
+
+### 2. User Configuration and Administrative Templates
+
+GPOs contain **User Configuration** and **Computer Configuration** sections. User Configuration applies settings to user accounts, while Computer Configuration applies settings to computer accounts. The Command Prompt restriction in this lab is a user-based setting located under **User Configuration → Policies → Administrative Templates → System**.
+
+### 3. Prevent Access to the Command Prompt Policy
+
+The **Prevent access to the command prompt** policy controls whether targeted users can run the Windows Command Prompt (`cmd.exe`). When enabled, Windows prevents users from opening Command Prompt and displays an administrator restriction message.
+
+The policy also includes an option named **Disable the command prompt script processing also?**. Setting this option to **Yes** prevents users from running command scripts such as batch files (`.bat` and `.cmd`) through the command processor. Leaving it at **No**, as in this lab, keeps command-script processing enabled even though interactive Command Prompt access is restricted. This distinction is important when applications or logon scripts depend on command scripts.
+
+### 4. Linking a GPO to an Organizational Unit
+
+A GPO must be linked to an Active Directory site, domain, or OU to apply within the intended scope. Linking a GPO to an OU targets the user or computer accounts located in that OU, depending on where the configured settings are defined.
+
+In this lab, the `Restrict CMD` GPO is linked to the `IT` OU and contains a **User Configuration** setting. Therefore, it is intended to apply to users whose accounts are located in the `IT` OU, subject to normal Group Policy processing and filtering.
+
+### 5. Group Policy Refresh and Processing
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate update by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed at sign-in and during background refresh. Depending on the setting and current session, signing out and signing back in may be necessary to observe the updated configuration.
+
+### 6. Verifying the Applied Restriction
+
+Administrators should confirm that the GPO is linked to the intended OU and that **Prevent access to the command prompt** is enabled with the script-processing option set as intended. On a client logged in with a targeted domain user, attempting to open Command Prompt verifies whether Windows blocks access and displays the administrator restriction message.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
