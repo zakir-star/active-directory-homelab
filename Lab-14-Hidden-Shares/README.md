@@ -16,6 +16,28 @@ Create a hidden network share on Windows Server 2022 and verify that a domain us
 - 🔗 **Hidden Share:** `HiddenData$`
 - 🛠️ **Tools:** File Explorer, Folder Properties, Advanced Sharing
 
+## 📚 Theory
+
+### 1. What Is a Hidden Share?
+
+A hidden share is a Windows network share that is not displayed when users browse a server's available shares through standard network discovery. It remains a normal SMB share and can still be accessed when a user knows its exact network path and has the required permissions.
+
+### 2. The Purpose of the Dollar Sign ($)
+
+In Windows, a share name ending with the dollar sign (\`$\`) is treated as a hidden share. For example, naming a share \`HiddenData$\` prevents it from appearing in the normal share listing when browsing \`\\DC-01\`. The suffix changes how the share is displayed; it does not change the folder's underlying access permissions.
+
+### 3. Accessing a Hidden Share with a UNC Path
+
+A hidden share can be opened directly by entering its full Universal Naming Convention (UNC) path in File Explorer. The UNC path identifies the server and the shared resource, using the format \`\\ServerName\ShareName$\`. In this lab, the path is \`\\DC-01\HiddenData$\`.
+
+### 4. Hidden Shares Do Not Provide Security
+
+Hiding a share only reduces its visibility during ordinary network browsing. It does not prevent users from connecting if they know the share path. NTFS permissions and Share Permissions continue to control whether a user can access or modify the shared data.
+
+### 5. Hidden Shares and Administrative Shares
+
+Windows Server also creates built-in administrative shares, such as \`C$\` and \`ADMIN$\`, for administrative and system-management purposes. These are different from a manually created hidden data share. Their existence does not mean that ordinary users can access them; access remains subject to authentication and permissions.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create the HiddenData Folder and Test File
@@ -96,13 +118,13 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 This lab was performed in a Windows Server 2022 Active Directory environment with a domain-joined Windows 10 client.
 
-## ✅ Closing
-
-A share name ending in `$` is hidden from ordinary share browsing, but the share remains accessible to users who know its path and have the required permissions. More labs to follow!
-
 ## 📌 Lab Note
 
 - The `$` suffix hides a share from normal network browsing; it does not secure the share by itself.
 - Share permissions and NTFS permissions still determine effective access.
 - Use `\\DC-01\HiddenData$` to access the hidden share directly.
 - The administrative shares `C$` and `ADMIN$` were observed on `DC-01`, but remote access to them was not verified in this lab.
+
+## ✅ Closing
+
+A share name ending in `$` is hidden from ordinary share browsing, but the share remains accessible to users who know its path and have the required permissions. More labs to follow!
