@@ -17,6 +17,42 @@
 - 🌐 **Static IPv4 Address:** `10.0.0.1/24`
 - 📡 **Preferred DNS Server:** `127.0.0.1`
 
+## 📘 Theory
+
+### What Is Active Directory?
+
+Active Directory (AD) is Microsoft's directory service for Windows domain networks. It stores information about network objects such as users, computers, groups, and organizational units. Administrators use it to organize resources and manage access centrally instead of configuring every computer and account separately.
+
+### What Is Active Directory Domain Services (AD DS)?
+
+Active Directory Domain Services is the Windows Server role that provides the directory database and domain-based authentication and management. It allows domain-joined computers and users to use centrally managed accounts and policies. Installing the AD DS role adds the required server components, but the server must also be promoted before it becomes a domain controller.
+
+### What Is a Domain?
+
+A domain is a logical administrative boundary within Active Directory. It contains directory objects such as user accounts, computer accounts, groups, and organizational units, and provides centralized authentication and administration. In this lab, the new domain is named `example.com`.
+
+### What Is a Domain Controller?
+
+A Domain Controller (DC) is a Windows Server running AD DS that stores a copy of the domain directory database and provides authentication and directory services to domain clients. In this lab, the server named `DC-01` is promoted as the first domain controller for the new `example.com` forest.
+
+### What Is an Active Directory Forest?
+
+A forest is the top-level structure in Active Directory. It contains one or more domains that share a common schema, configuration, and global catalog. When creating a new forest, the first domain is also its forest root domain. This lab creates a new forest with `example.com` as its root domain.
+
+### Why Configure a Static IP Address and DNS?
+
+A domain controller should use a stable IP address so that domain clients and other servers can reliably locate its services. DNS is essential to Active Directory because clients use DNS records to locate domain controllers and domain services. The lab configures `DC-01` with the static address `10.0.0.1/24` and points its preferred DNS setting to the local loopback address, `127.0.0.1`.
+
+### What Is Directory Services Restore Mode (DSRM)?
+
+Directory Services Restore Mode is a special startup mode used for maintenance and recovery of Active Directory Domain Services. During domain controller promotion, an administrator sets a separate DSRM password. It is used when starting the domain controller in DSRM for directory repair or recovery tasks.
+
+### Why Is Domain Controller Promotion Required?
+
+Installing the AD DS role alone does not create a domain or make the server a domain controller. Promotion configures the server as a domain controller, creates or joins the required domain, and establishes the directory services needed for domain authentication. In this lab, promotion creates the new `example.com` forest and its first domain controller.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Rename the Server
