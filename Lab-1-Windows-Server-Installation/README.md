@@ -13,6 +13,30 @@
 - 🏷️ **Virtual Machine Name:** DC-01
 - 🎯 **Purpose:** Prepare the Windows Server virtual machine for the Active Directory homelab.
 
+## 📘 Theory
+
+### What Is Windows Server?
+
+Windows Server is Microsoft's server operating system, designed to provide centralized services and resources across a network. It supports server roles and features such as Active Directory Domain Services (AD DS), DNS, DHCP, file services, and remote access. Administrators install the operating system first and then configure the required roles according to the needs of the environment.
+
+### What Is Virtualization?
+
+Virtualization allows multiple isolated virtual computers to run on a single physical computer. Each virtual machine (VM) is provided with virtual hardware resources such as CPU, memory, storage, and network adapters. This makes it possible to build and practice with a server environment without requiring a separate physical machine for every server.
+
+### What Is VMware Workstation?
+
+VMware Workstation is a desktop virtualization platform that runs virtual machines on a host computer. It provides the virtual hardware and controls needed to create, configure, start, stop, and manage VMs. In this lab, VMware Workstation hosts the Windows Server 2022 virtual machine named `DC-01`.
+
+### What Is an ISO Image?
+
+An ISO image is a file that contains the contents of an installation disc. A Windows Server ISO can be connected to a virtual machine as virtual installation media. The VM can then boot from that media and run Windows Setup to install the operating system on its virtual disk.
+
+### Why Is This Installation Important?
+
+Installing Windows Server is the foundation for the remaining Active Directory homelab. In this lab, the goal is only to create the `DC-01` virtual machine and install Windows Server 2022. Active Directory Domain Services, domain creation, DNS configuration, and domain controller promotion are handled in the following lab.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create the Virtual Machine
