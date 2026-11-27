@@ -12,6 +12,51 @@ Configure the domain password policy in Group Policy, apply the changes, and ver
 - 🛠️ **Console:** Group Policy Management
 - 📋 **Policy:** Default Domain Policy
 
+## 📘 Theory
+
+### What Is a Domain Password Policy?
+
+A domain password policy is a set of rules that determines how passwords are created and maintained for domain user accounts. It helps an organization establish consistent password requirements, such as minimum length, password history, and password expiration. In a traditional Active Directory domain, the account policy configured at the domain level applies to domain accounts.
+
+### What Is Group Policy?
+
+Group Policy is a Windows feature that allows administrators to centrally configure settings for users and computers in an Active Directory environment. Group Policy Objects (GPOs) contain configuration settings and can be linked to Active Directory sites, domains, and Organizational Units. Password and account policies for the domain are configured under the domain's Group Policy settings.
+
+### What Is the Default Domain Policy?
+
+The Default Domain Policy is a GPO created automatically when an Active Directory domain is established. It is linked to the domain and is commonly used for domain-wide account policies, including password and account lockout settings. In this lab, the password policy is configured through the Default Domain Policy for `example.com`.
+
+### What Is Enforce Password History?
+
+Enforce password history specifies how many previous passwords are remembered and cannot be reused. Remembering previous passwords helps prevent users from repeatedly cycling between a small set of familiar passwords. This lab configures a history of **5 passwords**.
+
+### What Are Maximum and Minimum Password Age?
+
+- **Maximum password age** defines how long a password can be used before Windows requires it to be changed. This lab sets it to **60 days**.
+- **Minimum password age** defines how long a password must be used before a user can change it again. This helps prevent users from quickly cycling through passwords to bypass password history. This lab uses **1 day**.
+
+### What Is Minimum Password Length?
+
+Minimum password length specifies the smallest number of characters allowed in a password. Requiring longer passwords helps make guessing and brute-force attacks more difficult. This lab sets the minimum length to **8 characters**.
+
+### What Is Password Complexity?
+
+The password complexity setting enforces rules that make passwords less predictable. When enabled, passwords must meet Windows complexity requirements, including restrictions on using the account name and requirements to include characters from multiple character categories. Complexity is one control within a broader password security approach; it does not replace strong password practices or other security protections.
+
+### What Is Reversible Password Encryption?
+
+The reversible encryption setting allows Windows to store passwords in a form that can be converted back to the original password. Enabling it creates a significant security risk and is required only by a small number of legacy applications and authentication scenarios. For normal domain environments, it should remain **Disabled**, as configured in this lab.
+
+### How Is a Group Policy Update Applied and Verified?
+
+After changing a GPO, policy processing updates the applicable settings on domain controllers and client computers. The `gpupdate /force` command requests an immediate refresh of Group Policy on the computer where it is run. The `net accounts` command can display several effective domain or local account-policy values, but it does not show every password policy setting, such as complexity and reversible encryption. Those settings should also be reviewed in the policy editor or with appropriate policy-reporting tools.
+
+### What Are Fine-Grained Password Policies?
+
+Active Directory supports Fine-Grained Password Policies (FGPP), which can assign different password and account lockout settings to selected users or global security groups. They are configured through Password Settings Objects (PSOs) and can take precedence over the domain's default password policy for the users to which they apply. This lab focuses on the standard domain password policy configured through the Default Domain Policy.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Default Domain Policy
