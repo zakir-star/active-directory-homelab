@@ -14,6 +14,42 @@ Use Group Policy to prevent users in the `IT` Organizational Unit from accessing
 - ⚙️ **GPO Name:** `Block Control Panel`
 - 🚫 **Restricted Feature:** Control Panel and PC settings
 
+## 📚 Theory
+
+### 1. Understanding Group Policy
+
+**Group Policy** is an Active Directory feature that enables administrators to centrally manage Windows user and computer settings. Settings are stored in **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). A GPO applies to accounts within its scope, subject to policy processing and security filtering.
+
+### 2. User Configuration and Administrative Templates
+
+GPOs contain **User Configuration** and **Computer Configuration** sections. User Configuration applies settings to user accounts, while Computer Configuration applies settings to computer accounts. The restriction in this lab is a user-based Administrative Template setting located under **User Configuration → Policies → Administrative Templates → Control Panel**.
+
+### 3. Prohibit Access to Control Panel and PC Settings
+
+The **Prohibit access to Control Panel and PC settings** policy prevents targeted users from opening Control Panel and the Windows Settings app. When enabled, Windows blocks access and displays a message indicating that the operation has been cancelled due to restrictions in effect on the computer.
+
+This policy is useful when administrators need to prevent users from changing managed system, hardware, network, or personalization settings through these interfaces. It restricts access to the interfaces; it does not remove the underlying Windows configuration tools or replace appropriate administrative security controls.
+
+### 4. Linking a GPO to an Organizational Unit
+
+A GPO must be linked to an Active Directory site, domain, or OU to apply within the intended scope. Linking a GPO to an OU targets the user or computer accounts located in that OU, depending on where the configured settings are defined.
+
+In this lab, the `Block Control Panel` GPO is linked to the `IT` OU and contains a **User Configuration** setting. Therefore, it is intended to apply to users whose accounts are located in the `IT` OU, subject to normal Group Policy processing and filtering.
+
+### 5. Group Policy Refresh and Processing
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate update by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed at sign-in and during background refresh. Depending on the setting and current session, signing out and signing back in may be necessary to observe the updated configuration.
+
+### 6. Verifying the Applied Restriction
+
+Administrators should confirm that the GPO is linked to the intended OU and that **Prohibit access to Control Panel and PC settings** is enabled. On a client logged in with a targeted domain user, attempting to open Control Panel and the relevant Windows Settings pages verifies that the restriction is applied. In this lab, Desktop Icon Settings is also checked as a client-side test.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
