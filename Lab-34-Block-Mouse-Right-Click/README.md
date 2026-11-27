@@ -14,6 +14,42 @@ Use Group Policy to remove the default context menu for users in the `IT` Organi
 - ⚙️ **GPO Name:** `Block Mouse Right Click`
 - 🚫 **Restricted Feature:** Default context menu
 
+## 📚 Theory
+
+### 1. Understanding Group Policy
+
+**Group Policy** allows Active Directory administrators to centrally manage Windows user and computer settings. These settings are stored in **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). A GPO applies to accounts within its scope, subject to policy processing and security filtering.
+
+### 2. User Configuration and Administrative Templates
+
+GPOs contain **User Configuration** and **Computer Configuration** sections. User Configuration applies settings to user accounts, while Computer Configuration applies settings to computer accounts. The context-menu setting in this lab is a user-based Administrative Template policy located under **User Configuration → Policies → Administrative Templates → Windows Components → File Explorer**.
+
+### 3. Remove File Explorer's Default Context Menu
+
+The **Remove File Explorer's default context menu** policy controls access to the standard context menu provided by File Explorer. When enabled, it removes the default context menu for users who receive the policy, restricting access to the commands normally presented through that menu.
+
+This lab verifies the effect by right-clicking the Windows desktop. The documentation records that this desktop test succeeded; right-click behavior inside File Explorer has not been tested, so that additional result should not be assumed.
+
+### 4. Linking a GPO to an Organizational Unit
+
+A GPO must be linked to an Active Directory site, domain, or OU to apply within the intended scope. Linking a GPO to an OU targets the user or computer accounts located in that OU, depending on where the configured settings are defined.
+
+In this lab, the `Block Mouse Right Click` GPO is linked to the `IT` OU and contains a **User Configuration** setting. It is therefore intended to apply to users whose accounts are located in the `IT` OU, subject to normal Group Policy processing and filtering.
+
+### 5. Group Policy Refresh and Processing
+
+Windows clients periodically refresh domain Group Policy. Administrators can request an immediate update by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed at sign-in and during background refresh. Depending on the setting and current session, signing out and signing back in may be necessary to observe the updated configuration.
+
+### 6. Verifying the Applied Restriction
+
+Administrators should confirm that the GPO is linked to the intended OU and that **Remove File Explorer's default context menu** is enabled. Test the relevant right-click locations on a client signed in with a targeted domain user and document each result separately. In this lab, the Windows desktop right-click test was successful, while File Explorer right-click behavior remains untested.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create and link the Group Policy Object
