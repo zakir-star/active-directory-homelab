@@ -13,6 +13,41 @@ Create a two-disk RAID 0 striped volume on Windows Server 2022, save a test file
 - 💽 **Operating-system disk:** Disk 0 — left unchanged
 - 💽 **Data disks:** Two 10 GB virtual disks
 
+## 📚 Theory
+
+### 1. Understanding RAID
+
+RAID (Redundant Array of Independent Disks) combines multiple physical or virtual disks into a logical storage unit. Depending on the RAID level, this can improve performance, provide fault tolerance, or achieve a balance of both. RAID is commonly used in servers and storage systems to meet availability and performance requirements.
+
+### 2. RAID 0 — Striping
+
+RAID 0 distributes data across two or more disks in blocks. These blocks are written across the member disks, allowing read and write operations to be performed in parallel.
+
+Key characteristics:
+- Requires at least two disks.
+- Presents the combined capacity of the member disks, subject to the smallest member's capacity.
+- Can improve read and write performance through parallel disk operations.
+- Provides **no redundancy or fault tolerance**.
+- If any member disk becomes unavailable, the entire striped volume becomes unavailable because portions of the data are distributed across all members.
+
+### 3. RAID 0 Capacity
+
+For equal-sized disks, usable capacity is the sum of the capacities of all member disks. For example, two 10 GB disks provide approximately 20 GB of raw volume capacity before formatting and file-system overhead.
+
+For unequal-sized disks, the capacity contributed by each member is limited by the smallest disk. The remaining capacity on larger disks is not used by that striped set.
+
+### 4. RAID 0 and Data Availability
+
+RAID 0 improves performance by splitting data across disks, but it does not create copies or parity information. Unlike mirrored or parity-based RAID levels, it cannot continue operating with a missing member. Important data stored on RAID 0 must be protected with a separate backup strategy.
+
+### 5. Windows Striped Volumes
+
+In Windows Disk Management, a striped volume is the software RAID 0 implementation on supported dynamic disks. The New Striped Volume wizard combines unallocated space from multiple disks into one logical volume. The member disks must remain available for the volume to work.
+
+### 6. RAID Is Not a Backup
+
+RAID can support performance or availability goals, depending on its level, but it does not replace backups. Accidental deletion, malware, file-system corruption, and other events can still affect data. A separate backup copy is necessary for recovery.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Prepare the data disks
