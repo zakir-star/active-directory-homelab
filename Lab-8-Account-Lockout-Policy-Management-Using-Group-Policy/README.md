@@ -13,6 +13,52 @@ Configure the domain account lockout policy, apply the changes, and verify the l
 - 🛠️ **Console:** Group Policy Management
 - 📋 **Policy:** Default Domain Policy
 
+## 📘 Theory
+
+### What Is an Account Lockout Policy?
+
+An account lockout policy is a security setting in Active Directory that controls how Windows responds to repeated unsuccessful sign-in attempts. It helps protect domain accounts against password guessing by temporarily preventing authentication after a configured number of failed attempts. In this lab, the policy is configured through the Default Domain Policy for the `example.com` domain.
+
+### What Is the Account Lockout Threshold?
+
+The account lockout threshold defines the number of consecutive invalid logon attempts allowed before an account is locked. A threshold of **0** means that accounts are not locked out because of failed logon attempts. This lab sets the threshold to **5 invalid logon attempts**.
+
+### What Is Account Lockout Duration?
+
+Account lockout duration specifies how long an account remains locked before it is automatically unlocked. Depending on the configured policy, an administrator may also unlock the account manually before the duration expires. This lab configures a duration of **15 minutes**.
+
+### What Is the Reset Account Lockout Counter After Setting?
+
+This setting determines how long Windows waits after a failed logon attempt before resetting the failed-attempt counter to zero, provided the account has not been locked out. It defines the observation window used when counting unsuccessful attempts. This lab sets the reset interval to **15 minutes**.
+
+### How Do the Three Account Lockout Settings Work Together?
+
+The threshold, duration, and counter-reset interval work together to control account lockout behavior:
+
+- **Threshold:** Determines how many failed attempts trigger a lockout.
+- **Duration:** Determines how long the account remains locked.
+- **Reset counter after:** Determines when the failed-attempt count is cleared if the threshold has not been reached.
+
+For this lab, five invalid attempts trigger a lockout, the account remains locked for 15 minutes, and the failed-attempt counter resets after 15 minutes.
+
+### What Is the Default Domain Policy?
+
+The Default Domain Policy is a Group Policy Object created when an Active Directory domain is established. It is linked to the domain and is commonly used to configure domain-wide account policies, including password and account lockout settings. This lab uses Group Policy Management to configure the account lockout settings for `example.com`.
+
+### Why Use a Dedicated Test Account?
+
+A dedicated test account allows administrators to verify account lockout behavior without repeatedly risking the lockout of a real user account. In this lab, `lockout.test` is created specifically to test failed sign-in attempts, confirm the lockout state in Active Directory Users and Computers (ADUC), and verify that the account can authenticate after it is unlocked.
+
+### How Is a Locked Domain Account Verified and Unlocked?
+
+Administrators can inspect a domain user's Account properties in ADUC to determine whether the account is locked. If appropriate, an administrator with sufficient permissions can select **Unlock account** to restore the account's ability to authenticate. The account's enabled status, password validity, and other restrictions still apply; unlocking does not reset the user's password.
+
+### Why Must Account Lockout Settings Be Balanced?
+
+A strict lockout policy can reduce password-guessing opportunities, but overly restrictive settings can also cause legitimate users to be locked out and may be abused to disrupt access. Administrators should choose thresholds and durations based on organizational requirements, monitor repeated lockouts, and use additional protections such as multi-factor authentication where available.
+
+---
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Default Domain Policy
