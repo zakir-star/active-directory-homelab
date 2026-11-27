@@ -15,6 +15,38 @@ Create a two-disk RAID 1 mirrored volume in Windows Server 2022, save test data,
 - 🏷️ **Volume label:** `RAID1_MIRROR`
 - 📁 **File system:** NTFS
 
+## 📚 Theory
+
+### 1. Understanding RAID 1
+
+RAID 1 is a storage configuration that uses **mirroring** to maintain duplicate copies of data on two or more disks. When data is written to the mirrored volume, the same data is written to each member disk. This provides redundancy if one member becomes unavailable.
+
+### 2. How Disk Mirroring Works
+
+In a two-disk mirror, both disks contain the same data. The operating system presents the mirrored storage as one logical volume, while the mirror maintains a copy on each member.
+
+Key characteristics:
+- Requires at least two disks.
+- Data is duplicated across the member disks.
+- The volume can remain accessible if one member disk becomes unavailable, provided the mirror was healthy and the remaining member is functioning.
+- Write operations must update both copies; read performance may benefit in some workloads, but performance depends on the implementation and workload.
+
+### 3. RAID 1 Usable Capacity
+
+A two-disk mirror provides usable capacity approximately equal to the size of the smallest member disk. For example, two 10 GB disks provide approximately 10 GB of usable mirrored capacity before formatting and file-system overhead. The second disk stores the duplicate copy rather than adding its capacity to the volume.
+
+### 4. Fault Tolerance and Degraded Operation
+
+RAID 1 can tolerate the loss of one member in a two-disk mirror. The volume may continue operating in a **degraded** state using the remaining disk, but it no longer has full redundancy. If the remaining member also becomes unavailable before the mirror is repaired, the data may become inaccessible.
+
+### 5. Windows Mirrored Volumes
+
+Windows Disk Management can create a mirrored volume using the **New Mirrored Volume** wizard on supported dynamic disks. The wizard combines space from two disks and presents the result as a single volume. Administrators should monitor the mirror status and follow an appropriate recovery procedure when a member disk becomes unavailable.
+
+### 6. RAID 1 Is Not a Backup
+
+Mirroring maintains duplicate copies of current data, but it also duplicates accidental deletions, file corruption, and malicious changes. RAID 1 therefore does not replace independent backups. Administrators should maintain separate backups and regularly verify that data can be restored.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Prepare the data disks
