@@ -16,6 +16,56 @@ Configure share permissions on the existing `E:\IT_DATA` folder and test how Sha
 - 🖥️ **Client:** Domain-joined Windows 10
 - 🛠️ **Tools:** File Explorer, Folder Properties, Advanced Sharing
 
+## 📚 Theory
+
+### 1. What Are Share Permissions?
+
+Share Permissions control how users and groups access a folder when they connect to it over a network share. They are configured through the folder's **Sharing** tab and apply to network access through the share path. They do not control access when a user works directly on the server's local folder.
+
+### 2. What Is a Network Share?
+
+A network share makes a folder available to other computers over a network. Users can access it through a Universal Naming Convention (UNC) path, such as `\\DC-01\IT_DATA`. The share name provides a network-accessible entry point to the server-side folder.
+
+### 3. Share Permission Levels
+
+Windows provides three basic share permission levels:
+
+- **Read:** Allows users to view folder contents and open files.
+- **Change:** Includes Read permissions and allows users to create, modify, and delete files and folders.
+- **Full Control:** Includes Read and Change permissions and also allows users to change share permissions.
+
+Share permissions can be assigned to individual users or, preferably, security groups.
+
+### 4. What Is the Everyone Group?
+
+The built-in `Everyone` group represents a broad set of users. In this lab, it retains the default **Read** share permission while `IT_Users_Group` is granted **Read** and **Change**. The resulting access still depends on the permissions assigned to the user and the other applicable access controls.
+
+### 5. Share Permissions vs. NTFS Permissions
+
+NTFS permissions are configured on files and folders and apply to both local and network access. Share permissions apply only when the folder is accessed through a network share.
+
+When a user accesses a shared folder over the network, Windows evaluates both permission layers. The effective access is the most restrictive combination of the applicable Share and NTFS permissions. A permissive share setting cannot override a more restrictive NTFS permission.
+
+### 6. How Share and NTFS Permissions Work Together
+
+For example, if a user has **Change** permission at the share level but only **Read** permission at the NTFS level, the user can read the file but cannot modify it over the network. This is demonstrated in this lab: `user02` is a member of `IT_Users_Group`, but the account's NTFS permission from Lab 10 remains read-only.
+
+### 7. Why Use Security Groups for Share Permissions?
+
+Assigning permissions to security groups makes access easier to manage. Instead of configuring the share separately for every user, an administrator can grant access to a group and manage membership as users join or leave a team. In this lab, `IT_Users_Group` is used to provide the shared access settings.
+
+### 8. Best Practices for Share Permissions
+
+- Assign permissions to security groups where practical rather than maintaining many individual entries.
+- Grant only the access users need to perform their tasks.
+- Review Share and NTFS permissions together when troubleshooting network access.
+- Avoid granting **Everyone** broad write or Full Control access without a clear requirement.
+- Test access with standard user accounts to confirm the intended restrictions.
+
+### 🌍 Where Share Permissions Are Used
+
+Share Permissions are commonly used on Windows file servers to control network access to departmental folders, team documents, and shared resources. Combined with NTFS permissions, they help administrators manage access for different users and teams.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Advanced Sharing
