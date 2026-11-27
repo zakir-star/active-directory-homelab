@@ -62,10 +62,6 @@ Assigning permissions to security groups makes access easier to manage. Instead 
 - Avoid granting **Everyone** broad write or Full Control access without a clear requirement.
 - Test access with standard user accounts to confirm the intended restrictions.
 
-### 🌍 Where Share Permissions Are Used
-
-Share Permissions are commonly used on Windows file servers to control network access to departmental folders, team documents, and shared resources. Combined with NTFS permissions, they help administrators manage access for different users and teams.
-
 ## ⚙️ Lab Configuration
 
 ### Step 1: Open Advanced Sharing
@@ -160,7 +156,7 @@ Although `IT_Users_Group` has **Read + Change** share permissions, `user02` has 
 
 ![Screenshot - user02 save denied](screenshots/Screenshot%20(18).png)
 
-### Step 9: Verify the Files on DC-01
+### Step 8: Verify the Files on DC-01
 
 1. Return to `DC-01`.
 2. Open `E:\IT_DATA`.
@@ -190,6 +186,10 @@ The successful edit to `Test2.rtf` was visible through the share and on the serv
 
 Share Permissions and NTFS permissions are evaluated together for network access. In this lab, the Share Permissions allow members of `IT_Users_Group` to read and change files, but the more restrictive NTFS permissions still prevent `user02` from modifying files.
 
+## 🌍 Real-World Use Case
+
+In an organization, departments often store documents on centralized Windows file servers so employees can access shared resources over the network. Share Permissions provide a network-level access layer, while NTFS permissions control access to the underlying files and folders. For example, an IT team can grant a department security group **Change** access to its shared folder while keeping selected users read-only through NTFS permissions. This layered approach helps protect shared data and supports access based on job responsibilities.
+
 ## 📌 Outcome
 
 Configured Share Permissions on the existing `E:\IT_DATA` folder without changing the NTFS permissions from Lab 10. Verified successful write access for `user01`, read-only behavior for `user02`, and checked the files on `DC-01`.
@@ -202,6 +202,12 @@ This lab is part of my Active Directory homelab learning journey. Thanks for tak
 
 This lab was performed in a Windows Server 2022 Active Directory environment with a domain-joined Windows 10 client.
 
+## ✅ Closing
+
+This lab demonstrates how Share Permissions and NTFS permissions work together to control network access to shared folders. Testing with separate domain accounts confirmed the intended read/write and read-only behavior. More labs to follow!
+
 ## 📌 Lab Note
 
-This configuration is for an isolated learning environment. The effective access to a network-shared file depends on the applicable Share Permissions and NTFS permissions. Preserve and review both permission layers when troubleshooting access.
+- This configuration is for an isolated learning environment.
+- Share Permissions apply to network access through the share; NTFS permissions also apply to local access.
+- Review both permission layers when troubleshooting access to a network-shared file.
