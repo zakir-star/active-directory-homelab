@@ -14,6 +14,48 @@ Configure NTFS permissions on a data folder for selected domain accounts, then v
 - 👤 **Domain Accounts:** `user01` (read/write), `user02` (read-only), `administrator@example.com` (Full Control)
 - 🛠️ **Management Tool:** File Explorer — Folder Properties — Security — Advanced
 
+## 📚 Theory
+
+### 1. What Is NTFS?
+
+NTFS (New Technology File System) is the file system used by Windows to organize and manage data on a volume. It supports file and folder permissions, ownership, auditing, compression, and other features used to manage and protect stored data.
+
+### 2. What Are NTFS Permissions?
+
+NTFS permissions control what users and groups can do with files and folders on an NTFS-formatted volume. They can be assigned to individual accounts or security groups to regulate access to data.
+
+### 3. What Is Read and Write Access?
+
+Read permission allows a user to view files and folder contents. Write permission allows a user to create files and folders or make changes to data, subject to the specific permission entries and their scope. In this lab, `user01` is assigned the intended read and write access so the account can modify and save a test file.
+
+### 4. What Is Read-Only Access?
+
+Read-only access allows a user to view and open permitted files without being allowed to modify their contents. In this lab, `user02` is assigned read-only access, and the save attempt is used to verify that the account cannot write changes.
+
+### 5. What Is Full Control?
+
+Full Control is a permission level that includes the ability to read, write, modify, and delete files and folders, as well as change permissions and take ownership. It should be assigned only to accounts that require this level of administration.
+
+### 6. What Is Permission Inheritance?
+
+NTFS permission inheritance allows files and subfolders to receive applicable permissions from their parent folder. Disabling inheritance stops permissions from being inherited from the parent; Windows provides options to convert inherited entries into explicit entries or remove them. Existing required access should be reviewed before changing inheritance.
+
+### 7. What Are Explicit and Inherited Permissions?
+
+Explicit permissions are assigned directly to a file or folder. Inherited permissions are passed down from a parent folder. Both can contribute to a user's effective access, so administrators should review the complete permission list when troubleshooting access.
+
+### 8. What Are Allow and Deny Permissions?
+
+Allow entries grant the specified rights, while Deny entries explicitly block them. When applicable Allow and Deny entries conflict, Deny generally takes precedence. Permission evaluation can also be affected by group membership and the combination of permissions on the object.
+
+### 9. What Is the Difference Between NTFS Permissions and Share Permissions?
+
+NTFS permissions apply to files and folders on an NTFS volume, whether accessed locally or over a network. Share permissions apply when a folder is accessed through a network share. When accessing a shared folder over the network, the effective access is determined by the combined restrictions of share permissions and NTFS permissions.
+
+### 10. Why Test Permissions with Separate Domain Accounts?
+
+Testing with separate accounts confirms that access is controlled by the permissions assigned to each identity. Using `user01` and `user02` demonstrates how different permission levels produce different results when users attempt to modify files.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1: Create a Data Drive
