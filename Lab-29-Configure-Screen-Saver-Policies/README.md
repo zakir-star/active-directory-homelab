@@ -18,6 +18,60 @@ Deploy the Bubbles screen saver to users in the `IT` Organizational Unit using G
 - 🖼️ **Screen Saver File:** `Bubbles.scr`
 - ⚙️ **GPO Name:** `deploy_screen_saver`
 
+## 📚 Theory
+
+### 1. Understanding Group Policy for User Settings
+
+**Group Policy** allows administrators to centrally manage user and computer configurations in an Active Directory domain. Settings are stored in **Group Policy Objects (GPOs)**, which can be linked to sites, domains, or Organizational Units (OUs). The settings in this lab are configured under **User Configuration**, so they are intended to apply to targeted user accounts rather than every computer they sign in to.
+
+### 2. Force Specific Screen Saver
+
+The **Force specific screen saver** policy specifies the screen saver program that Windows uses for targeted users. When the policy is enabled, the administrator provides the screen saver file name or path. In this lab, the selected screen saver is `Bubbles.scr`, stored on a network share and referenced through its UNC path:
+
+```text
+\\DC-01\screensaver\Bubbles.scr
+```
+
+The client must be able to reach the file and have permission to read it when the screen saver is used. If the file is unavailable or inaccessible, the configured screen saver may not run as expected.
+
+### 3. Screen Saver Timeout
+
+The **Screen saver timeout** policy specifies how long the user session must remain idle before Windows starts the screen saver. The value is configured in seconds. This lab sets the timeout to **10 seconds** to make the result easy to observe during testing. In production environments, administrators generally choose a timeout that meets organizational security and usability requirements.
+
+### 4. Hosting a Screen Saver on a Network Share
+
+A network share provides a central location for storing a screen saver file so that multiple domain clients can use the same copy. A **Universal Naming Convention (UNC)** path identifies the shared resource in the following format:
+
+```text
+\\ServerName\ShareName\Folder\FileName
+```
+
+In this lab, `Bubbles.scr` is stored in `E:\screensaver` on `DC-01` and accessed through `\\DC-01\screensaver\Bubbles.scr`. Using a UNC path avoids relying on a local path that exists only on the server.
+
+### 5. Share Permissions and NTFS Permissions
+
+Share permissions control access to a folder when it is accessed over the network. NTFS permissions control access to the folder and its contents on the file system. When a user accesses a shared folder remotely, both sets of permissions apply; the effective access is the most restrictive combination.
+
+In this lab, `IT_Users_Group` is granted **Read** share permission and `Everyone` is removed from the share permissions. The folder's NTFS permissions must also allow the intended users to read the screen saver file. Granting share permission alone does not override restrictive NTFS permissions.
+
+### 6. GPO Scope and Security Groups
+
+An OU and a security group have different roles in Active Directory:
+- **Organizational Unit (OU):** Organizes directory objects and provides a location where a GPO can be linked.
+- **Security group:** Collects user or computer accounts so permissions can be assigned to the group instead of configuring each account individually.
+
+In this lab, the `deploy_screen_saver` GPO is linked to the `IT` OU to target user accounts in that OU. The `IT_Users_Group` security group is used to grant Read access to the shared screen saver folder. The GPO link and the share permission are separate controls.
+
+### 7. Group Policy Refresh and Verification
+
+Domain clients periodically refresh Group Policy. Administrators can request an immediate update by running:
+
+```cmd
+gpupdate /force
+```
+
+User policy settings are processed during user sign-in and background refresh. Signing out and signing back in can help ensure user settings are processed for the session. Administrators should verify both the policy configuration and the client result, including access to the shared screen saver file and the configured timeout.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — Create the screen saver folder
