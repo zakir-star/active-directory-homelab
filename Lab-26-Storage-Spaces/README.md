@@ -20,6 +20,59 @@ Create a Storage Spaces storage pool from three additional virtual disks, create
 - 📁 **File System:** NTFS
 - 🔤 **Drive Letter:** `F\:`
 
+## 📚 Theory
+
+### 1. Understanding Storage Spaces
+
+**Storage Spaces** is a Windows storage-virtualization technology that combines eligible physical disks into a **storage pool**. Administrators can then create virtual disks from the pool instead of managing each physical disk as a separate storage volume.
+
+This approach provides flexible storage management, allowing capacity from multiple drives to be pooled and allocated to virtual disks with selected resiliency and provisioning settings.
+
+### 2. Physical Disks and Storage Pools
+
+- **Physical disks:** The underlying drives that contribute storage capacity to a pool.
+- **Storage pool:** A logical collection of physical disks managed together by Storage Spaces.
+- **Primordial pool:** The default group that contains eligible disks that have not yet been assigned to a user-created storage pool.
+- **Virtual disk:** A logical disk created from pool capacity. Windows presents it to the operating system so it can be initialized, partitioned, and formatted like other disks.
+
+In this lab, three additional 5 GB virtual disks are combined into the storage pool named `POOL1`, providing **15 GB of raw capacity** before resiliency and metadata overhead.
+
+### 3. Storage Spaces Resiliency Types
+
+Storage Spaces offers different resiliency layouts. The available choices depend on the Windows edition, disk configuration, and number of physical disks.
+
+- **Simple:** Uses striping across disks without maintaining redundant copies or parity. It provides capacity and performance but does not protect data against a physical-disk failure.
+- **Two-way Mirror:** Maintains two copies of data on separate physical disks. It can tolerate one physical-disk failure when the layout has sufficient healthy disks and the copies remain available.
+- **Three-way Mirror:** Maintains three copies of data and can tolerate up to two physical-disk failures when the layout and disk count support that resiliency.
+- **Parity:** Distributes data and parity information across disks. It provides fault tolerance with less capacity overhead than mirroring, but has different performance characteristics and minimum disk requirements.
+
+This lab uses **Two-way Mirror** resiliency. It creates two copies of data rather than using parity.
+
+### 4. Understanding Two-way Mirroring
+
+With two-way mirroring, Storage Spaces writes two copies of data to separate physical disks in the pool. If one physical disk becomes unavailable, the remaining copy can keep the virtual disk accessible, provided the pool layout and remaining hardware are healthy.
+
+Mirroring consumes more raw capacity than a non-resilient Simple layout. For example, storing 1 GB of user data requires approximately 2 GB of physical capacity for the two copies, excluding metadata and other overhead.
+
+### 5. Thin and Fixed Provisioning
+
+Storage Spaces supports different virtual-disk provisioning methods:
+
+- **Thin provisioning:** The virtual disk is presented with its configured maximum capacity, but physical pool capacity is allocated as data is written. The amount of physical storage consumed can therefore be smaller than the virtual disk's presented size.
+- **Fixed provisioning:** Physical capacity for the virtual disk is allocated from the pool at creation time, providing more predictable capacity reservation.
+
+This lab creates `VHD-1` as a **9 GB thin-provisioned** virtual disk. Thin provisioning does not add physical capacity: administrators must monitor pool free space and ensure enough capacity is available for future writes. With two-way mirroring, physical consumption includes the space needed for both copies, plus metadata and overhead.
+
+### 6. Virtual Disk, Volume, and File System
+
+A Storage Spaces virtual disk is not yet a regular file-storage volume. After creating it, the administrator initializes the virtual disk, creates a partition or volume, assigns a drive letter, and formats it with a file system such as NTFS.
+
+In this lab, the 9 GB `VHD-1` virtual disk is formatted as NTFS and assigned drive letter `F:\\`. The resulting volume can then be accessed through File Explorer.
+
+### 7. Storage Spaces Is Not a Backup
+
+Resiliency helps protect against supported physical-disk failures, but it does not protect against accidental deletion, malware, file corruption, or every storage-pool failure scenario. Changes and deletions can affect the data stored in the virtual disk. Storage Spaces therefore does not replace independent backups and tested recovery procedures.
+
 ## ⚙️ Lab Configuration
 
 ### Step 1 — 💽 Attach three additional virtual disks
