@@ -3,7 +3,7 @@
 Hands-on Active Directory and Windows Server labs using **Windows Server 2022** and **VMware Workstation**.  
 This repository documents my journey of building, managing, and expanding a Windows domain environment from scratch.
 
-> **Status:** Labs 1–73 completed
+> **Status:** Labs 1–74 completed
 > **Last updated:** November 27, 2026
 
 ---
@@ -175,7 +175,7 @@ Some exercises require multiple Windows Server VMs, compatible storage, and addi
 | Lab | Title | Status | What it covers |
 |-----|-------|--------|----------------|
 | **73** | [Windows Server Failover Clustering](Lab-73-Windows-Server-Failover-Clustering/README.md) | ✅ Completed | Configure a two-node cluster using NODE-1 and NODE-2, validate the configuration, create the Cluster-1 access point, connect shared iSCSI storage, and perform a node shutdown test |
-| **74** | Cluster Quorum and Witness | 📋 Planned | Explore quorum models and witness options |
+| **74** | [Cluster Quorum and Disk Witness](Lab-74-Cluster-Quorum-and-Witness/README.md) | ✅ Completed | Create a 1 GB iSCSI disk on DC-01, connect it to NODE-1 and NODE-2, add it to Cluster-1 as a disk witness, and verify cluster status and shared-folder access during a node shutdown test |
 | **75** | Network Load Balancing (NLB) | 📋 Planned | Learn NLB concepts, prerequisites, and a supported test scenario |
 | **76** | Storage Replica and Replicated Storage | 📋 Planned | Review replication use cases, prerequisites, and supported configurations |
 
