@@ -119,12 +119,12 @@ Organizations use cluster witnesses in high-availability environments to help ma
 
 **📸 Screenshot 1 — Quorum iSCSI virtual disk and target created on DC-01**
 
-![Quorum iSCSI virtual disk and vhd-target-1 created on DC-01](screenshots/Screenshot%20(1).png)
+![Quorum iSCSI virtual disk and vhd-target-1 created on DC-01](screenshots/Screenshot%20(12).png)
 
 ### Step 2 — Discover and Connect the iSCSI Target from NODE-1
 
 1. Sign in to **NODE-1**.
-2. Open the Run dialog, type `iscsicpl`, and press Enter to open **iSCSI Initiator**.
+2. Open the Run dialog, type `iscsi.cpl`, and press Enter to open **iSCSI Initiator**.
 3. Navigate to the **Discovery** tab and click **Discover Portal**.
 4. In the **Discover Target Portal** window, click **Advanced**.
 5. Configure the advanced settings:
@@ -145,12 +145,12 @@ Organizations use cluster witnesses in high-availability environments to help ma
 
 **📸 Screenshot 2 — iSCSI target connected and 1 GB Quorum disk initialized on NODE-1**
 
-![Connected iSCSI target and initialized 1 GB Quorum volume on NODE-1](screenshots/Screenshot%20(2).png)
+![Connected iSCSI target and initialized 1 GB Quorum volume on NODE-1](screenshots/Screenshot%20(25).png)
 
 ### Step 3 — Discover and Connect the iSCSI Target from NODE-2
 
 1. Sign in to **NODE-2**.
-2. Open the Run dialog, type `iscsicpl`, and press Enter to open **iSCSI Initiator**.
+2. Open the Run dialog, type `iscsi.cpl`, and press Enter to open **iSCSI Initiator**.
 3. Navigate to the **Discovery** tab and click **Discover Portal**.
 4. In the **Discover Target Portal** window, click **Advanced**.
 5. Configure the advanced settings:
@@ -172,7 +172,7 @@ The target is now connected from both cluster nodes. Do not independently initia
 
 **📸 Screenshot 3 — iSCSI target connected from NODE-2**
 
-![vhd-target-1 connected in iSCSI Initiator on NODE-2](screenshots/Screenshot%20(3).png)
+![vhd-target-1 connected in iSCSI Initiator on NODE-2](screenshots/Screenshot%20(33).png)
 
 ### Step 4 — Add the Quorum Disk to Cluster-1
 
@@ -188,7 +188,7 @@ The target is now connected from both cluster nodes. Do not independently initia
 
 **📸 Screenshot 4 — 50 GB and 1 GB disks added to Cluster-1**
 
-![Both the existing 50 GB disk and new 1 GB disk listed in cluster storage](screenshots/Screenshot%20(4).png)
+![Both the existing 50 GB disk and new 1 GB disk listed in cluster storage](screenshots/Screenshot%20(37).png)
 
 ### Step 5 — Configure the 1 GB Disk as the Quorum Witness
 
@@ -207,7 +207,7 @@ The target is now connected from both cluster nodes. Do not independently initia
 
 **📸 Screenshot 5 — 1 GB disk configured as Disk Witness in Quorum**
 
-![Cluster storage showing the 1 GB Disk Witness in Quorum and 50 GB Available Storage](screenshots/Screenshot%20(5).png)
+![Cluster storage showing the 1 GB Disk Witness in Quorum and 50 GB Available Storage](screenshots/Screenshot%20(45).png)
 
 ### Step 6 — Verify Cluster Operation While NODE-1 Is Shut Down
 
@@ -227,11 +227,11 @@ The target is now connected from both cluster nodes. Do not independently initia
 
 **📸 Screenshot 6 — NODE-1 shown as Down while the cluster disks remain listed**
 
-![NODE-1 shown as Down in Failover Cluster Manager on NODE-2](screenshots/Screenshot%20(6).png)
+![NODE-1 shown as Down in Failover Cluster Manager on NODE-2](screenshots/Screenshot%20(48).png)
 
 **📸 Screenshot 7 — Shared folder accessed from DC-01 while NODE-1 is shut down**
 
-![Shared folder accessed from DC-01 using the cluster UNC path while NODE-1 is down](screenshots/Screenshot%20(7).png)
+![Shared folder accessed from DC-01 using the cluster UNC path while NODE-1 is down](screenshots/Screenshot%20(49).png)
 
 ### Step 7 — Bring NODE-1 Back Online
 
