@@ -19,7 +19,7 @@ Understand Windows Server Failover Cluster quorum, create a dedicated 1 GB iSCSI
 - 💽 **Existing Cluster Disk:** 50 GB iSCSI virtual disk
 - 💽 **Quorum Virtual Disk:** 1 GB, dynamically expanding
 - 🏷️ **iSCSI Target Name:** `vhd-target-1`
-- 📁 **Initial Drive Letter on NODE-1:** `Q:\\`
+- 📁 **Initial Drive Letter on NODE-1:** `Q:\`
 - 🗳️ **Quorum Configuration:** Node and Disk Majority (disk witness)
 - 🛠️ **Tools:** Server Manager, iSCSI Initiator, Disk Management, and Failover Cluster Manager
 
@@ -141,7 +141,7 @@ Organizations use cluster witnesses in high-availability environments to help ma
     - **Target portal IP:** `10.0.0.1`
 11. Click **OK**, then click **OK** to connect.
 12. Confirm that the target status changes to **Connected**.
-13. Open **Disk Management**. Locate the newly presented 1 GB disk, initialize it, create and format the volume, and assign drive letter `Q:\\` on NODE-1.
+13. Open **Disk Management**. Locate the newly presented 1 GB disk, initialize it, create and format the volume, and assign drive letter `Q:\` on NODE-1.
 
 **📸 Screenshot 2 — iSCSI target connected and 1 GB Quorum disk initialized on NODE-1**
 
@@ -220,7 +220,7 @@ The target is now connected from both cluster nodes. Do not independently initia
 7. On **DC-01**, open File Explorer and enter the cluster UNC path:
 
    ```text
-   \\\\10.0.0.10
+   \\10.0.0.10
    ```
 
 8. Confirm that the shared folder is accessible during this test.
@@ -245,12 +245,12 @@ The target is now connected from both cluster nodes. Do not independently initia
 - Confirm that DC-01 hosts the 1 GB dynamically expanding iSCSI virtual disk named `Quorum`.
 - Confirm that the iSCSI target `vhd-target-1` allows the initiator IP addresses of NODE-1 and NODE-2.
 - Confirm that NODE-1 and NODE-2 each discover and connect to the iSCSI target using their respective initiator IP addresses.
-- Confirm that the 1 GB disk was initialized and assigned drive letter `Q:\\` on NODE-1 before it was added to the cluster.
+- Confirm that the 1 GB disk was initialized and assigned drive letter `Q:\` on NODE-1 before it was added to the cluster.
 - Confirm that the 1 GB disk was added to `Cluster-1` alongside the existing 50 GB disk.
 - Confirm that the 1 GB disk is displayed as **Disk Witness in Quorum**.
 - Confirm that the 50 GB disk is displayed as **Available Storage**.
 - Shut down NODE-1 and verify that it appears as **Down** in Failover Cluster Manager on NODE-2.
-- Confirm that the cluster disks remain listed and that the shared folder was accessible from DC-01 through `\\\\10.0.0.10` during the test.
+- Confirm that the cluster disks remain listed and that the shared folder was accessible from DC-01 through `\\10.0.0.10` during the test.
 - Restart NODE-1 and confirm that both cluster nodes return to **Up**.
 
 ## ⚠️ Important Notes
@@ -260,7 +260,7 @@ The target is now connected from both cluster nodes. Do not independently initia
 - The iSCSI target is hosted on DC-01 (`10.0.0.1`) and is accessed by NODE-1 (`10.0.0.2`) and NODE-2 (`10.0.0.3`).
 - The 1 GB disk was initialized and formatted on NODE-1 before it was added to the cluster. Do not independently initialize or format a shared disk from multiple nodes.
 - A disk witness provides a quorum vote; it is not a data backup and does not contain a second copy of the shared folder.
-- The shared-folder access check through `\\\\10.0.0.10` records the behavior observed during this lab. This exercise did not configure a dedicated clustered File Server role, so the test should not be presented as proof that a highly available SMB File Server role was deployed or that every client workload will automatically fail over.
+- The shared-folder access check through `\\10.0.0.10` records the behavior observed during this lab. This exercise did not configure a dedicated clustered File Server role, so the test should not be presented as proof that a highly available SMB File Server role was deployed or that every client workload will automatically fail over.
 - The node shutdown test verifies the observed node status, cluster disk listing, and shared-folder access at the time of testing. It does not cover every possible node, storage, or network failure scenario.
 - Authentication was left at the iSCSI wizard's default settings in this isolated lab environment.
 
@@ -280,7 +280,7 @@ In a production environment, a cluster witness helps a failover cluster maintain
 
 ## 📌 Outcome
 
-Created a 1 GB dynamically expanding iSCSI virtual disk named `Quorum` on DC-01 and presented it through the `vhd-target-1` target to NODE-1 and NODE-2. Connected both nodes to the target, initialized the disk on NODE-1, and added it to the existing `Cluster-1` failover cluster. Configured the 1 GB disk as **Disk Witness in Quorum**, leaving the 50 GB disk as **Available Storage**. During verification, shut down NODE-1, confirmed its **Down** status and the cluster disk listing from NODE-2, accessed the shared folder from DC-01 through `\\\\10.0.0.10`, and restarted NODE-1 to verify that both nodes were **Up**.
+Created a 1 GB dynamically expanding iSCSI virtual disk named `Quorum` on DC-01 and presented it through the `vhd-target-1` target to NODE-1 and NODE-2. Connected both nodes to the target, initialized the disk on NODE-1, and added it to the existing `Cluster-1` failover cluster. Configured the 1 GB disk as **Disk Witness in Quorum**, leaving the 50 GB disk as **Available Storage**. During verification, shut down NODE-1, confirmed its **Down** status and the cluster disk listing from NODE-2, accessed the shared folder from DC-01 through `\\10.0.0.10`, and restarted NODE-1 to verify that both nodes were **Up**.
 
 ## 🙏 Acknowledgment
 
